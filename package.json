@@ -1,0 +1,60 @@
+{
+  "name": "@balena/jellyfish-plugin-default",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/product-os/jellyfish-plugin-default.git"
+  },
+  "engines": {
+    "node": ">=14.2.0"
+  },
+  "description": "Default Jellyfish Plugin",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "deplint": {
+    "files": [
+      "lib/**/*.{js}"
+    ],
+    "modules": [
+      "lib"
+    ]
+  },
+  "scripts": {
+    "test": "npm run doc && catch-uncommitted --skip-node-versionbot-changes && make lint",
+    "doc": "jsdoc2md --template doc/README.hbs lib/index.js lib/**/*.js > README.md",
+    "postinstall": "if [ -z \"$CI\" ] && [ -d \".git\" ]; then husky install; fi"
+  },
+  "author": "Balena.io. <hello@balena.io>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@balena/jellyfish-client-sdk": "^2.7.2",
+    "@balena/jellyfish-core": "^0.2.12",
+    "lodash": "^4.17.20",
+    "pluralize": "^8.0.0"
+  },
+  "devDependencies": {
+    "@balena/jellycheck": "^0.0.9",
+    "ava": "^3.14.0",
+    "catch-uncommitted": "^1.6.2",
+    "depcheck": "^1.3.1",
+    "deplint": "^1.1.2",
+    "eslint": "^7.15.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsdoc": "^30.7.8",
+    "eslint-plugin-lodash": "^7.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "husky": "^5.0.6",
+    "jsdoc-to-markdown": "^6.0.1",
+    "lint-staged": "^10.5.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --cache --fix",
+      "npm run doc"
+    ]
+  }
+}
