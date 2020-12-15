@@ -30,7 +30,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "@balena/jellyfish-client-sdk": "^2.7.2",
-    "@balena/jellyfish-core": "^0.2.15",
+    "@balena/jellyfish-core": "^0.2.16",
     "lodash": "^4.17.20",
     "pluralize": "^8.0.0"
   },
