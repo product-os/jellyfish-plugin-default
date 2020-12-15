@@ -22,7 +22,7 @@
     ]
   },
   "scripts": {
-    "test": "npm run doc && catch-uncommitted --skip-node-versionbot-changes && make lint",
+    "test": "npm run doc && catch-uncommitted --skip-node-versionbot-changes && make lint && make test",
     "doc": "jsdoc2md --template doc/README.hbs lib/index.js lib/**/*.js > README.md",
     "postinstall": "if [ -z \"$CI\" ] && [ -d \".git\" ]; then husky install; fi"
   },
@@ -49,7 +49,8 @@
     "eslint-plugin-promise": "^4.2.1",
     "husky": "^5.0.6",
     "jsdoc-to-markdown": "^6.0.1",
-    "lint-staged": "^10.5.3"
+    "lint-staged": "^10.5.3",
+    "sinon": "^9.2.2"
   },
   "lint-staged": {
     "*.js": [
