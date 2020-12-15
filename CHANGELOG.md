@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+# v0.0.5
+## (2020-12-15)
+
+* Add with-relationships unit test [Graham McCulloch]
+
 # v0.0.4
 ## (2020-12-15)
 
