@@ -11,7 +11,7 @@ const coreMixins = require('@balena/jellyfish-core/lib/cards/mixins')
 const defaultPlugin = require('@balena/jellyfish-plugin-default')
 
 // Load cards from this plugin, can use custom mixins
-const cards = defaultPlugin.cards(coreMixins)
+const cards = defaultPlugin.loadCards(coreMixins)
 console.dir(cards)
 ```
 
