@@ -5,6 +5,14 @@
 
 # v0.0.3
 
+# v1.0.0
+## (2020-12-16)
+
+* Update documentation example [Graham McCulloch]
+* Cards are keyed by slug [Graham McCulloch]
+* Export plugin as a class [Graham McCulloch]
+* Fix slug and name of view [Graham McCulloch]
+
 # v0.0.6
 ## (2020-12-15)
 
