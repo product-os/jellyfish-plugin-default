@@ -1,6 +1,6 @@
 {
-  "slug": "view-support-threads-to-audit",
-  "name": "Users Pending Update",
+  "slug": "view-support-threads-pending-update",
+  "name": "Support Threads Pending Update",
   "type": "view@1.0.0",
   "markers": [ "org-balena" ],
   "data": {
