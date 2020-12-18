@@ -5,6 +5,12 @@
 
 # v0.0.3
 
+## 1.1.0 - 2020-12-18
+
+* Add front-mirror tests [Graham McCulloch]
+* Add pipeline CI task [Josh Bowling]
+* Add all sync integrations [Josh Bowling]
+
 # v1.0.4
 ## (2020-12-18)
 
