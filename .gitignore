@@ -86,3 +86,6 @@ dist/
 
 # tmp directory
 tmp/
+
+# Optional custom dotenv file
+custom.env

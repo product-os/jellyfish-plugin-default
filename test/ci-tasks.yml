@@ -5,6 +5,14 @@ environment:
   - name: 'AVA_OPTS'
     value: '--fail-fast'
 tasks:
+  - name: 'front-mirror'
+    description: 'Front Mirror Tests'
+    command: 'make test'
+    cwd: '/usr/src/jellyfish'
+    required: true
+    environment:
+      - name: 'FILES'
+        value: './test/integration/sync/front-mirror.spec.js'
   - name: 'pipeline'
     description: 'Pipeline Tests'
     command: 'make test'
@@ -13,6 +21,8 @@ tasks:
     environment:
       - name: 'FILES'
         value: './test/integration/sync/pipeline.spec.js'
+    dependencies:
+      - 'front-mirror'
   - name: 'balena-api-translate'
     description: 'Balena API Translate Tests'
     command: 'make test'
