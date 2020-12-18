@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 1.1.1 - 2020-12-18
+
+* patch: Update dependency marked to ^1.2.7 [Renovate Bot]
+
 ## 1.1.0 - 2020-12-18
 
 * Add front-mirror tests [Graham McCulloch]
