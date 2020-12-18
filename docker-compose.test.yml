@@ -1,0 +1,48 @@
+version: '2.1'
+
+services:
+  sut:
+    build:
+      context: .
+      dockerfile: Dockerfile.ci
+      args:
+        NPM_TOKEN: $NPM_TOKEN
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      - DATABASE=postgres
+      - LOGLEVEL=crit
+      - NODE_ENV=test
+      - POSTGRES_DATABASE=jellyfish
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_USER=docker
+      - REDIS_HOST=redis
+      - REDIS_PASSWORD=
+      - REDIS_PORT=6379
+      - OAUTH_REDIRECT_BASE_URL=https://jel.ly.fish
+      - INTEGRATION_BALENA_API_OAUTH_BASE_URL=https://api.balena-cloud.com
+      - INTEGRATION_BALENA_API_PRIVATE_KEY
+      - INTEGRATION_BALENA_API_PUBLIC_KEY_PRODUCTION
+      - INTEGRATION_BALENA_API_PUBLIC_KEY_STAGING=foobar
+      - INTEGRATION_DEFAULT_USER
+      - INTEGRATION_DISCOURSE_SIGNATURE_KEY
+      - INTEGRATION_DISCOURSE_TOKEN
+      - INTEGRATION_DISCOURSE_USERNAME
+      - INTEGRATION_FLOWDOCK_SIGNATURE_KEY
+      - INTEGRATION_FLOWDOCK_TOKEN
+      - INTEGRATION_FRONT_TOKEN
+      - INTEGRATION_GITHUB_APP_ID
+      - INTEGRATION_GITHUB_PRIVATE_KEY
+      - INTEGRATION_GITHUB_SIGNATURE_KEY
+      - INTEGRATION_GITHUB_TOKEN
+      - INTEGRATION_INTERCOM_TOKEN
+      - INTEGRATION_OUTREACH_APP_ID
+      - INTEGRATION_OUTREACH_APP_SECRET
+      - INTEGRATION_OUTREACH_SIGNATURE_KEY
+      - INTEGRATION_TYPEFORM_SIGNATURE_KEY
+      - CI=1
+      - NPM_TOKEN
+    networks:
+      - internal
