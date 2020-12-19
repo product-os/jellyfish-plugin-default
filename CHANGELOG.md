@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 1.1.3 - 2020-12-19
+
+* patch: Update non-major [Renovate Bot]
+
 ## 1.1.2 - 2020-12-19
 
 * patch: Update non-major [Renovate Bot]
