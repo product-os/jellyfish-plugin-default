@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 1.1.14 - 2020-12-21
+
+* patch: Update dependency @balena/jellyfish-core to ^0.2.33 [Renovate Bot]
+
 ## 1.1.13 - 2020-12-21
 
 * Gracefully handle unexpected mirror IDs [Graham McCulloch]
