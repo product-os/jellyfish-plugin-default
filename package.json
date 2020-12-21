@@ -58,7 +58,8 @@
     "pluralize": "^8.0.0",
     "randomstring": "^1.1.5",
     "request": "^2.88.2",
-    "request-promise": "^4.2.6"
+    "request-promise": "^4.2.6",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@balena/ci-task-runner": "^0.2.66",
@@ -88,8 +89,7 @@
     "morgan": "^1.10.0",
     "nock": "^13.0.5",
     "sinon": "^9.2.2",
-    "typed-errors": "^1.1.0",
-    "uuid": "^8.3.2"
+    "typed-errors": "^1.1.0"
   },
   "lint-staged": {
     "*.js": [
