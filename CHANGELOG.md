@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 1.1.11 - 2020-12-21
+
+* Move uuid dependency [Graham McCulloch]
+* Fix issue where slug name is sometimes undefined in balena integration [Lucian Buzzo]
+
 ## 1.1.10 - 2020-12-20
 
 * patch: Update dependency @balena/jellyfish-core to ^0.2.31 [Renovate Bot]
