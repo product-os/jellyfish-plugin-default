@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 1.1.13 - 2020-12-21
+
+* Gracefully handle unexpected mirror IDs [Graham McCulloch]
+* Use pattern matching when finding front mirrors [Lucian Buzzo]
+
 ## 1.1.12 - 2020-12-21
 
 * Rename default-cards to cards [Graham McCulloch]
