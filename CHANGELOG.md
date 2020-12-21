@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 1.1.12 - 2020-12-21
+
+* Rename default-cards to cards [Graham McCulloch]
+
 ## 1.1.11 - 2020-12-21
 
 * Move uuid dependency [Graham McCulloch]
