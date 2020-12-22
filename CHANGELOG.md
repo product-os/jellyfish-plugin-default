@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 1.1.16 - 2020-12-22
+
+* Fix incorrect import of uuid library [Lucian Buzzo]
+
 ## 1.1.15 - 2020-12-22
 
 * patch: Update dependency @balena/jellyfish-core to ^0.2.34 [Renovate Bot]
