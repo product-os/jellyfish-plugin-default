@@ -4,7 +4,6 @@
  * Proprietary and confidential.
  */
 
-const combinatorics = require('js-combinatorics')
 const nock = require('nock')
 const Bluebird = require('bluebird')
 const {
@@ -30,9 +29,8 @@ const tailSort = [
 
 const getVariations = (sequence, options = {}) => {
 	const invariant = _.last(sequence)
-	return combinatorics
-		.permutationCombination(sequence)
-		.toArray()
+	return Array
+		.from(new utils.PermutationCombination(sequence))
 		.filter((combination) => {
 			return _.includes(combination, invariant)
 		})
