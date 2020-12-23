@@ -4,6 +4,7 @@
  * Proprietary and confidential.
  */
 
+const combinatorics = require('js-combinatorics/commonjs/combinatorics')
 const {
 	v4: uuid
 } = require('uuid')
@@ -25,4 +26,19 @@ exports.generateRandomSlug = (options = {}) => {
 	}
 
 	return slug
+}
+
+exports.PermutationCombination = class PermutationCombination {
+	constructor (seed) {
+		this.seed = [ ...seed ]
+	}
+
+	[Symbol.iterator] () {
+		return (function *(it) {
+			// eslint-disable-next-line id-length
+			for (let index = 1, l = it.length; index <= l; index++) {
+				yield * new combinatorics.Permutation(it, index)
+			}
+		}(this.seed))
+	}
 }
