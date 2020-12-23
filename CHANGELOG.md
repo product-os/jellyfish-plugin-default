@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 1.1.17 - 2020-12-23
+
+* Update js-combinatorics dependency [Graham McCulloch]
+
 ## 1.1.16 - 2020-12-22
 
 * Fix incorrect import of uuid library [Lucian Buzzo]
