@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 1.1.24 - 2020-12-27
+
+* patch: Update dependency @balena/ci-task-runner to ^0.2.68 [Renovate Bot]
+
 ## 1.1.23 - 2020-12-27
 
 * patch: Update dependency @balena/jellyfish-core to ^0.2.44 [Renovate Bot]
