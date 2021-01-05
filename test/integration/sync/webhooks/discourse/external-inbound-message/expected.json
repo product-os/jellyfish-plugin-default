@@ -10,10 +10,13 @@
     "data": {
       "environment": "production",
       "tags": [],
+      "participants": [],
       "inbox": "Sandbox",
       "mirrors": [
         "https://forums.balena.io/t/6108"
       ],
+      "mentionsGroup": [],
+      "alertsGroup": [],
       "mentionsUser": [],
       "alertsUser": [],
       "description": "",
@@ -45,10 +48,13 @@
           "data": {
             "environment": "production",
             "tags": [],
+            "participants": [],
             "inbox": "Sandbox",
             "mirrors": [
               "https://forums.balena.io/t/6108"
             ],
+            "mentionsGroup": [],
+            "alertsGroup": [],
             "mentionsUser": [],
             "alertsUser": [],
             "description": "",

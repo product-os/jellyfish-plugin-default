@@ -17,6 +17,9 @@
       "mirrors": [
         "https://forums.balena.io/t/6085"
       ],
+      "participants": [],
+      "mentionsGroup": [],
+      "alertsGroup": [],
       "mentionsUser": [],
       "alertsUser": [],
       "description": "",
@@ -55,6 +58,9 @@
             "mirrors": [
               "https://forums.balena.io/t/6085"
             ],
+            "participants": [],
+            "mentionsGroup": [],
+            "alertsGroup": [],
             "mentionsUser": [],
             "alertsUser": [],
             "description": "",

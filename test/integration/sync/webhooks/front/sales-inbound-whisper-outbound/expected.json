@@ -13,6 +13,9 @@
       "mirrors": [
         "https://api2.frontapp.com/conversations/cnv_23kgkub"
       ],
+      "participants": [],
+      "mentionsGroup": [],
+      "alertsGroup": [],
       "mentionsUser": [],
       "alertsUser": [],
       "description": "",
@@ -80,6 +83,9 @@
             "mirrors": [
               "https://api2.frontapp.com/conversations/cnv_23kgkub"
             ],
+            "participants": [],
+            "mentionsGroup": [],
+            "alertsGroup": [],
             "mentionsUser": [],
             "alertsUser": [],
             "description": "",

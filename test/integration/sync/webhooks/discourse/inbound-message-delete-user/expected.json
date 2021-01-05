@@ -14,8 +14,11 @@
       "mirrors": [
         "https://forums.balena.io/t/6108"
       ],
+      "participants": [],
       "mentionsUser": [],
+      "mentionsGroup": [],
       "alertsUser": [],
+      "alertsGroup": [],
       "description": "",
       "status": "open"
     }
@@ -49,8 +52,11 @@
             "mirrors": [
               "https://forums.balena.io/t/6108"
             ],
+            "participants": [],
             "mentionsUser": [],
+            "mentionsGroup": [],
             "alertsUser": [],
+            "alertsGroup": [],
             "description": "",
             "status": "open"
           }
