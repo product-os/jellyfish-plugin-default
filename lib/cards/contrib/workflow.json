@@ -16,7 +16,7 @@
           "items": {
             "type": "string"
           },
-          "$$formula": "AGGREGATE($events, 'tags')"
+          "$$formula": "UNIQUE(FLATMAP(this.links['is attached to'], 'tags'))"
         },
         "data": {
           "type": "object",

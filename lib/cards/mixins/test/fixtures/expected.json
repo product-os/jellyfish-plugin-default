@@ -67,14 +67,14 @@
             },
             "alertsUser": {
               "type": "array",
-              "$$formula": "AGGREGATE($events, 'data.payload.alertsUser')"
+              "$$formula": "UNIQUE(FLATMAP(this.links['is attached to'], 'data.payload.alertsUser'))"
             },
             "repository": {
               "type": "string"
             },
             "alertsGroup": {
               "type": "array",
-              "$$formula": "AGGREGATE($events, 'data.payload.alertsGroup')"
+              "$$formula": "UNIQUE(FLATMAP(this.links['is attached to'], 'data.payload.alertsGroup'))"
             },
             "description": {
               "type": "string",
@@ -82,15 +82,15 @@
             },
             "mentionsUser": {
               "type": "array",
-              "$$formula": "AGGREGATE($events, 'data.payload.mentionsUser')"
+              "$$formula": "UNIQUE(FLATMAP(this.links['is attached to'], 'data.payload.mentionsUser'))"
             },
             "participants": {
               "type": "array",
-              "$$formula": "AGGREGATE($events, 'data.actor')"
+              "$$formula": "UNIQUE(FLATMAP(this.links['is attached to'], 'data.actor'))"
             },
             "mentionsGroup": {
               "type": "array",
-              "$$formula": "AGGREGATE($events, 'data.payload.mentionsGroup')"
+              "$$formula": "UNIQUE(FLATMAP(this.links['is attached to'], 'data.payload.mentionsGroup'))"
             }
           }
         },
@@ -103,7 +103,7 @@
           "items": {
             "type": "string"
           },
-          "$$formula": "AGGREGATE($events, 'tags')",
+          "$$formula": "UNIQUE(FLATMAP(this.links['is attached to'], 'tags'))",
           "fullTextSearch": true
         }
       }
