@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.0.0 - 2021-01-05
+
+* Remove product-os cards [Lucian Buzzo]
+
 ## 1.1.29 - 2021-01-05
 
 * patch: Update non-major [Renovate Bot]
