@@ -5,6 +5,12 @@
 
 # v0.0.3
 
+## 2.2.0 - 2021-01-08
+
+* Add UI schema for pipeline status field [Graham McCulloch]
+* Use withRelationships plugin on brainstorm-topic card [Graham McCulloch]
+* Add category field to brainstorm-topic card [Graham McCulloch]
+
 ## 2.1.6 - 2021-01-07
 
 * patch: Update dependency @balena/jellyfish-core to ^0.2.59 [Renovate Bot]
