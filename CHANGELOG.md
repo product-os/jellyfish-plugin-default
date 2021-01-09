@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.2.1 - 2021-01-09
+
+* patch: Update non-major [Renovate Bot]
+
 ## 2.2.0 - 2021-01-08
 
 * Add UI schema for pipeline status field [Graham McCulloch]
