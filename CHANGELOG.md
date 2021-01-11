@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.2.4 - 2021-01-11
+
+* Test jellyfish-core card patch fix [Josh Bowling]
+
 ## 2.2.3 - 2021-01-09
 
 * patch: Update dependency @balena/jellyfish-core to ^0.2.63 [Renovate Bot]
