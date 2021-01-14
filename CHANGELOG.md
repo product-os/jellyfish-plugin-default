@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.2.5 - 2021-01-11
+
+* patch: Update dependency eslint-plugin-jsdoc to v31 [Renovate Bot]
+
 ## 2.2.4 - 2021-01-11
 
 * Use company token for renovate [Josh Bowling]
