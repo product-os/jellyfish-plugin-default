@@ -13,7 +13,7 @@ const DefaultPlugin = require('@balena/jellyfish-plugin-default')
 const plugin = new DefaultPlugin()
 
 // Load cards from this plugin, can use custom mixins
-const cards = plugin.getCards(coreMixins)
+const cards = plugin.getCards(context, coreMixins)
 console.dir(cards)
 ```
 
@@ -25,8 +25,5 @@ A plugin for providing default cards and functionality for Jellyfish.
 
 ### module.exports ⏏
 The default Jellyfish plugin.
-
-TODO: use TypeScript to define a plugin interface
-that this class must implement.
 
 **Kind**: Exported class  
