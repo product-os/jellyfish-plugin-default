@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.2.8 - 2021-01-15
+
+* Remove status slice from opportunity card [StefKors]
+
 ## 2.2.7 - 2021-01-15
 
 * patch: Update dependency @balena/jellyfish-core to ^0.2.87 [Renovate Bot]
