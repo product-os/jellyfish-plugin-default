@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.2.9 - 2021-01-16
+
+* patch: Update non-major [Renovate Bot]
+
 ## 2.2.8 - 2021-01-15
 
 * Remove status slice from opportunity card [StefKors]
