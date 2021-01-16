@@ -37,7 +37,7 @@
   "dependencies": {
     "@balena/jellyfish-assert": "^1.0.50",
     "@balena/jellyfish-client-sdk": "^2.11.1",
-    "@balena/jellyfish-core": "^0.2.88",
+    "@balena/jellyfish-core": "^0.2.89",
     "@balena/jellyfish-environment": "^2.3.22",
     "@balena/jellyfish-uuid": "^1.0.54",
     "@octokit/auth-app": "^2.10.5",
