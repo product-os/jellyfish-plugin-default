@@ -62,7 +62,7 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@balena/ci-task-runner": "^0.2.77",
+    "@balena/ci-task-runner": "^0.2.78",
     "@balena/jellycheck": "^0.1.1",
     "@balena/jellyfish-action-library": "^6.0.0",
     "@balena/jellyfish-sync": "^4.0.0",
@@ -77,7 +77,7 @@
     "eslint": "^7.18.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsdoc": "^31.0.5",
+    "eslint-plugin-jsdoc": "^31.0.6",
     "eslint-plugin-lodash": "^7.1.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
