@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.3.0 - 2021-01-18
+
+* BalenaApi: Handle decrypt errors [Kakhaber]
+
 ## 2.2.17 - 2021-01-18
 
 * patch: Update non-major [Renovate Bot]
