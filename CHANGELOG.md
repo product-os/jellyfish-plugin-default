@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.4.0 - 2021-01-19
+
+* Add support for exclude argument in withRelationships mixin [Graham McCulloch]
+
 ## 2.3.1 - 2021-01-18
 
 * patch: Update non-major [Renovate Bot]
