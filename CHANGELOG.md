@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.5.2 - 2021-01-20
+
+* patch: Update dependency @balena/jellyfish-client-sdk to ^2.11.5 [Renovate Bot]
+
 ## 2.5.1 - 2021-01-20
 
 * patch: Update dependency nock to ^13.0.6 [Renovate Bot]
