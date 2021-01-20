@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 2.5.0 - 2021-01-20
+
+* Update jellyfish-core dependency [Graham McCulloch]
+* Add UI schema snippet view modes [Graham McCulloch]
+
 ## 2.4.3 - 2021-01-20
 
 * patch: Update non-major [Renovate Bot]
