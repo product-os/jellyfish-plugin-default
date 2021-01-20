@@ -37,8 +37,8 @@
   "dependencies": {
     "@balena/jellyfish-assert": "^1.0.51",
     "@balena/jellyfish-client-sdk": "^2.11.4",
-    "@balena/jellyfish-core": "^1.0.0",
-    "@balena/jellyfish-environment": "^2.3.24",
+    "@balena/jellyfish-core": "^1.0.3",
+    "@balena/jellyfish-environment": "^2.3.25",
     "@balena/jellyfish-uuid": "^1.0.55",
     "@octokit/auth-app": "^2.10.5",
     "@octokit/plugin-retry": "^3.0.6",
@@ -62,7 +62,7 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@balena/ci-task-runner": "^0.2.79",
+    "@balena/ci-task-runner": "^0.2.80",
     "@balena/jellycheck": "^0.1.1",
     "@balena/jellyfish-action-library": "^6.0.0",
     "@balena/jellyfish-sync": "^4.0.0",
