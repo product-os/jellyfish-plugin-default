@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.6.1 - 2021-01-21
+
+* patch: Update dependency @octokit/plugin-throttling to ^3.4.0 [Renovate Bot]
+
 ## 2.6.0 - 2021-01-21
 
 * Remove Balena Chat view [Graham McCulloch]
