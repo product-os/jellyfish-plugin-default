@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.6.0 - 2021-01-21
+
+* Remove Balena Chat view [Graham McCulloch]
+
 ## 2.5.2 - 2021-01-20
 
 * patch: Update dependency @balena/jellyfish-client-sdk to ^2.11.5 [Renovate Bot]
