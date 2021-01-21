@@ -2,6 +2,7 @@
   "slug": "view-balena-chat",
   "name": "Balena chat",
   "type": "view@1.0.0",
+  "active": false,
   "markers": [ "org-balena" ],
   "data": {
     "namespace": "Comms",
