@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.7.1 - 2021-01-22
+
+* patch: Update dependency @octokit/rest to ^18.0.14 [Renovate Bot]
+
 ## 2.7.0 - 2021-01-22
 
 * Bump dependency on jellyfish-core [Graham McCulloch]
