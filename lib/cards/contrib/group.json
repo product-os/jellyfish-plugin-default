@@ -27,6 +27,38 @@
         "name"
       ]
     },
+    "uiSchema": {
+      "snippet": {
+        "data": {
+          "ui:order": [
+            "namespace",
+            "description"
+          ],
+          "namespace": {
+            "ui:title": null,
+            "ui:widget": "Badge"
+          },
+          "description": {
+            "ui:title": null
+          }
+        }
+      },
+      "fields": {
+        "data": {
+          "ui:order": [
+            "namespace",
+            "description"
+          ],
+          "namespace": {
+            "ui:title": null,
+            "ui:widget": "Badge"
+          },
+          "description": {
+            "ui:title": null
+          }
+        }
+      }
+    },
     "indexed_fields": [
       [ "name" ]
     ],
