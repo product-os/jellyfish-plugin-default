@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 2.7.0 - 2021-01-22
+
+* Bump dependency on jellyfish-core [Graham McCulloch]
+* Add snippet view modes to card types [Graham McCulloch]
+
 ## 2.6.1 - 2021-01-21
 
 * patch: Update dependency @octokit/plugin-throttling to ^3.4.0 [Renovate Bot]
