@@ -36,8 +36,8 @@
   "license": "UNLICENSED",
   "dependencies": {
     "@balena/jellyfish-assert": "^1.0.51",
-    "@balena/jellyfish-client-sdk": "^2.12.0",
-    "@balena/jellyfish-environment": "^2.3.31",
+    "@balena/jellyfish-client-sdk": "^2.12.1",
+    "@balena/jellyfish-environment": "^2.3.32",
     "@balena/jellyfish-uuid": "^1.0.55",
     "@octokit/auth-app": "^2.10.5",
     "@octokit/plugin-retry": "^3.0.6",
@@ -61,7 +61,7 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@balena/ci-task-runner": "^0.2.87",
+    "@balena/ci-task-runner": "^0.2.88",
     "@balena/jellycheck": "^0.1.1",
     "@balena/jellyfish-action-library": "^6.0.0",
     "@balena/jellyfish-core": "^1.2.0",
@@ -77,7 +77,7 @@
     "eslint": "^7.18.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsdoc": "^31.3.2",
+    "eslint-plugin-jsdoc": "^31.3.3",
     "eslint-plugin-lodash": "^7.1.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
