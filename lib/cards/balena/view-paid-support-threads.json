@@ -87,7 +87,8 @@
     "lenses": [
       "lens-support-threads",
       "lens-table",
-      "lens-kanban"
+      "lens-kanban",
+      "lens-chart"
     ]
   }
 }
