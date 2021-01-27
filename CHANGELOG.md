@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.8.0 - 2021-01-27
+
+* Make sure the 'Threads' tab doesn't show on the repository view [Graham McCulloch]
+
 ## 2.7.17 - 2021-01-27
 
 * patch: Update dependency eslint-plugin-jsdoc to ^31.4.0 [Renovate Bot]
