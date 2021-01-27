@@ -5,6 +5,12 @@
 
 # v0.0.3
 
+## 2.7.15 - 2021-01-27
+
+* Update reference to sync-context [Graham McCulloch]
+* Bump jellyfish-action-library dependency [Graham McCulloch]
+* Bump dependency on jellyfish-sync [Graham McCulloch]
+
 ## 2.7.14 - 2021-01-26
 
 * patch: Update dependency @balena/jellyfish-client-sdk to ^2.12.2 [Renovate Bot]
