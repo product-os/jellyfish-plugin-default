@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.7.16 - 2021-01-27
+
+* patch: Update dependency @balena/jellyfish-environment to ^2.3.33 [Renovate Bot]
+
 ## 2.7.15 - 2021-01-27
 
 * patch: Update non-major [Renovate Bot]
