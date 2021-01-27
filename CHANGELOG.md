@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.8.2 - 2021-01-27
+
+* Add chart lens [StefKors]
+
 ## 2.8.1 - 2021-01-27
 
 * patch: Update non-major [Renovate Bot]
