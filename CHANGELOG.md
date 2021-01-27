@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.9.0 - 2021-01-27
+
+* Add 'ongoing' as a brainstorm-topic status option [Graham McCulloch]
+
 ## 2.8.2 - 2021-01-27
 
 * Add chart lens [StefKors]
