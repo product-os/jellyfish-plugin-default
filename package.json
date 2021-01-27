@@ -63,7 +63,7 @@
   "devDependencies": {
     "@balena/ci-task-runner": "^0.2.88",
     "@balena/jellycheck": "^0.1.1",
-    "@balena/jellyfish-action-library": "^6.0.0",
+    "@balena/jellyfish-action-library": "^7.0.0",
     "@balena/jellyfish-core": "^1.2.0",
     "@balena/jellyfish-sync": "5.0.0-check-id-on-upsert-813feb5f44273e1ecc022c6385b177570c3288ca",
     "@balena/jellyfish-queue": "0.0.268",
