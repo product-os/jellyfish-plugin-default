@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.8.1 - 2021-01-27
+
+* patch: Update non-major [Renovate Bot]
+
 ## 2.8.0 - 2021-01-27
 
 * Make sure the 'Threads' tab doesn't show on the repository view [Graham McCulloch]
