@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.9.1 - 2021-01-28
+
+* patch: Update dependency husky to ^5.0.8 [Renovate Bot]
+
 ## 2.9.0 - 2021-01-27
 
 * Add 'ongoing' as a brainstorm-topic status option [Graham McCulloch]
