@@ -15,9 +15,13 @@ const {
 const Front = require('front-sdk').Front
 const Bluebird = require('bluebird')
 const Sync = require('@balena/jellyfish-sync').Sync
-const integrations = require('../../../lib/integrations')
 const environment = require('@balena/jellyfish-environment')
+const {
+	loadSyncIntegrations
+} = require('../utils')
 const TOKEN = environment.integration.front
+
+const integrations = loadSyncIntegrations()
 
 // Because Front might take a while to process
 // message creation requests.

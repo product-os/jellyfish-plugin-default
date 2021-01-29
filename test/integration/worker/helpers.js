@@ -12,12 +12,12 @@ const Producer = require('@balena/jellyfish-queue').Producer
 const Worker = require('@balena/jellyfish-worker').Worker
 const Sync = require('@balena/jellyfish-sync').Sync
 const actionLibrary = require('@balena/jellyfish-action-library')
-const integrations = require('../../../lib/integrations')
 const queueErrors = require('@balena/jellyfish-queue').errors
 const utils = require('../utils')
 const errio = require('errio')
 
 const defaultCards = utils.loadDefaultCards()
+const integrations = utils.loadSyncIntegrations()
 
 const before = async (test, options) => {
 	await helpers.before(test, options && {
