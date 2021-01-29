@@ -5,6 +5,12 @@
 
 # v0.0.3
 
+## 2.9.3 - 2021-01-29
+
+* Removed console log [Graham McCulloch]
+* Add dependency on jellyfish-plugin-base [Graham McCulloch]
+* Use JellyfishPlugin base class [Graham McCulloch]
+
 ## 2.9.2 - 2021-01-28
 
 * patch: Update dependency @balena/jellyfish-environment to ^2.3.35 [Renovate Bot]
