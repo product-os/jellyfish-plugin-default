@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.9.4 - 2021-01-29
+
+* patch: Update non-major [Renovate Bot]
+
 ## 2.9.3 - 2021-01-29
 
 * Removed console log [Graham McCulloch]
