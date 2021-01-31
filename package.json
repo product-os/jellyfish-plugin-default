@@ -36,7 +36,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "@balena/jellyfish-assert": "^1.0.52",
-    "@balena/jellyfish-client-sdk": "^2.12.4",
+    "@balena/jellyfish-client-sdk": "^2.12.5",
     "@balena/jellyfish-environment": "^2.3.35",
     "@balena/jellyfish-plugin-base": "^1.0.0",
     "@balena/jellyfish-uuid": "^1.0.56",
@@ -88,7 +88,7 @@
     "jsdoc-to-markdown": "^6.0.1",
     "lint-staged": "^10.5.3",
     "morgan": "^1.10.0",
-    "nock": "^13.0.6",
+    "nock": "^13.0.7",
     "sinon": "^9.2.4",
     "typed-errors": "^1.1.0"
   },
