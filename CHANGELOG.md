@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.9.8 - 2021-01-31
+
+* patch: Update non-major [Renovate Bot]
+
 ## 2.9.7 - 2021-01-31
 
 * Bump jellyfish-sync devDependency to 4.1.12 [Josh Bowling]
