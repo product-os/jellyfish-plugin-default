@@ -5,6 +5,12 @@
 
 # v0.0.3
 
+## 2.9.7 - 2021-01-31
+
+* Bump jellyfish-sync devDependency to 4.1.12 [Josh Bowling]
+* Get sync context from sync module [Josh Bowling]
+* patch: Update dependency @balena/jellyfish-action-library to v7 [Renovate Bot]
+
 ## 2.9.6 - 2021-01-31
 
 * patch: Update non-major [Renovate Bot]
