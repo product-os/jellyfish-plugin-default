@@ -9,20 +9,33 @@ const {
 	v4: uuid
 } = require('uuid')
 const coreMixins = require('@balena/jellyfish-core/lib/cards/mixins')
+const {
+	PluginManager
+} = require('@balena/jellyfish-plugin-base')
+const ActionLibrary = require('@balena/jellyfish-action-library')
 const DefaultPlugin = require('../../lib/index')
 
 const context = {
 	id: 'jellyfish-plugin-default-test'
 }
 
-const plugin = new DefaultPlugin()
+const pluginManager = new PluginManager(context, {
+	plugins: [
+		ActionLibrary,
+		DefaultPlugin
+	]
+})
 
-exports.loadDefaultCards = () => {
-	return plugin.getCards(context, coreMixins)
+exports.loadCards = () => {
+	return pluginManager.getCards(context, coreMixins)
 }
 
 exports.loadSyncIntegrations = () => {
-	return plugin.getSyncIntegrations(context)
+	return pluginManager.getSyncIntegrations(context)
+}
+
+exports.loadActions = () => {
+	return pluginManager.getActions(context)
 }
 
 exports.generateRandomID = () => {

@@ -14,7 +14,7 @@ const _ = require('lodash')
 const helpers = require('./helpers')
 const utils = require('../utils')
 
-const defaultCards = utils.loadDefaultCards()
+const allCards = utils.loadCards()
 
 const TRANSLATE_PREFIX = uuid()
 
@@ -345,29 +345,29 @@ module.exports = {
 		})
 
 		await test.context.jellyfish.insertCard(test.context.context, test.context.session,
-			defaultCards['external-event'])
+			allCards['external-event'])
 		await test.context.jellyfish.insertCard(test.context.context, test.context.session,
-			defaultCards.issue)
+			allCards.issue)
 		await test.context.jellyfish.insertCard(test.context.context, test.context.session,
-			defaultCards['pull-request'])
+			allCards['pull-request'])
 		await test.context.jellyfish.insertCard(test.context.context, test.context.session,
-			defaultCards['email-sequence'])
+			allCards['email-sequence'])
 		await test.context.jellyfish.insertCard(test.context.context, test.context.session,
-			defaultCards['form-response'])
+			allCards['form-response'])
 		await test.context.jellyfish.insertCard(test.context.context, test.context.session,
-			defaultCards['user-feedback'])
+			allCards['user-feedback'])
 		await test.context.jellyfish.insertCard(test.context.context, test.context.session,
-			defaultCards.repository)
+			allCards.repository)
 		await test.context.jellyfish.insertCard(test.context.context, test.context.session,
-			defaultCards['gh-push'])
+			allCards['gh-push'])
 		await test.context.jellyfish.insertCard(test.context.context, test.context.session,
-			defaultCards['support-thread'])
+			allCards['support-thread'])
 		await test.context.jellyfish.insertCard(test.context.context, test.context.session,
-			defaultCards['sales-thread'])
+			allCards['sales-thread'])
 		await test.context.jellyfish.insertCard(test.context.context, test.context.session,
-			defaultCards.thread)
+			allCards.thread)
 		await test.context.jellyfish.insertCard(test.context.context, test.context.session,
-			defaultCards.whisper)
+			allCards.whisper)
 
 		nock.cleanAll()
 		nock.disableNetConnect()
