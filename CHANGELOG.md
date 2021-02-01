@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.11.1 - 2021-02-01
+
+* patch: Update dependency deplint to ^1.1.3 [Renovate Bot]
+
 ## 2.11.0 - 2021-02-01
 
 * Re-instate status slice in opportunity type card [Graham McCulloch]
