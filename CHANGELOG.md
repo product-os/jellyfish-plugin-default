@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.10.0 - 2021-02-01
+
+* Set default status of GitHub issue to 'open' [Graham McCulloch]
+
 ## 2.9.13 - 2021-01-31
 
 * patch: Update non-major [Renovate Bot]
