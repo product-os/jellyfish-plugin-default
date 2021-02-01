@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.11.0 - 2021-02-01
+
+* Re-instate status slice in opportunity type card [Graham McCulloch]
+
 ## 2.10.0 - 2021-02-01
 
 * Set default status of GitHub issue to 'open' [Graham McCulloch]
