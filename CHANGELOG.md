@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.11.3 - 2021-02-02
+
+* patch: Update non-major [Renovate Bot]
+
 ## 2.11.2 - 2021-02-02
 
 * Add .whitesource configuration file [whitesource-bolt-for-github[bot]]
