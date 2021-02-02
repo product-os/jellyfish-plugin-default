@@ -64,8 +64,8 @@
   "devDependencies": {
     "@balena/ci-task-runner": "^0.2.94",
     "@balena/jellycheck": "^0.1.1",
-    "@balena/jellyfish-action-library": "^7.0.13",
-    "@balena/jellyfish-core": "^1.2.0",
+    "@balena/jellyfish-action-library": "7.1.0-handle-session-scope-ba524931375ece85d768414cf2af746cb8270474",
+    "@balena/jellyfish-core": "1.4.0-add-session-scope-d9e92d6fec120104343a2140dcab41fdc14d472e",
     "@balena/jellyfish-sync": "^4.1.12",
     "@balena/jellyfish-queue": "0.0.268",
     "@balena/jellyfish-worker": "^2.2.2",
