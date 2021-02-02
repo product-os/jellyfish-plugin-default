@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.11.2 - 2021-02-02
+
+* Add .whitesource configuration file [whitesource-bolt-for-github[bot]]
+
 ## 2.11.1 - 2021-02-01
 
 * patch: Update dependency deplint to ^1.1.3 [Renovate Bot]
