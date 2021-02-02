@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.11.4 - 2021-02-02
+
+* Improve Mirroring log event to include the integration name [StefKors]
+
 ## 2.11.3 - 2021-02-02
 
 * patch: Update non-major [Renovate Bot]
