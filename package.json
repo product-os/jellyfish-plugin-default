@@ -40,7 +40,7 @@
     "@balena/jellyfish-environment": "^2.4.1",
     "@balena/jellyfish-plugin-base": "^1.0.2",
     "@balena/jellyfish-uuid": "^1.0.58",
-    "@octokit/auth-app": "^2.10.6",
+    "@octokit/auth-app": "^2.11.0",
     "@octokit/plugin-retry": "^3.0.7",
     "@octokit/plugin-throttling": "^3.4.1",
     "@octokit/rest": "^18.1.0",
