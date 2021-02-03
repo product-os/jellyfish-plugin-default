@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.12.2 - 2021-02-03
+
+* Test scoped sessions [Josh Bowling]
+
 ## 2.12.1 - 2021-02-03
 
 * patch: Update non-major [Renovate Bot]
