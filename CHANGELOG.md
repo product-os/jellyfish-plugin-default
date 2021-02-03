@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.12.1 - 2021-02-03
+
+* patch: Update non-major [Renovate Bot]
+
 ## 2.12.0 - 2021-02-03
 
 * Add mentionsUser to brainstorm-topic snippet view mode [Graham McCulloch]
