@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.12.0 - 2021-02-03
+
+* Add mentionsUser to brainstorm-topic snippet view mode [Graham McCulloch]
+
 ## 2.11.5 - 2021-02-03
 
 * patch: Update dependency @octokit/rest to ^18.1.0 [Renovate Bot]
