@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.12.2 - 2021-02-04
+
+* patch: Update dependency @octokit/auth-app to ^2.11.0 [Renovate Bot]
+
 ## 2.12.1 - 2021-02-03
 
 * patch: Update non-major [Renovate Bot]
