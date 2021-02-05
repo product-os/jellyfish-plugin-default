@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 3.0.0 - 2021-02-05
+
+* Add actions to plugin [Graham McCulloch]
+
 ## 2.13.3 - 2021-02-05
 
 * patch: Update dependency @balena/jellyfish-plugin-base to ^1.1.0 [Renovate Bot]
