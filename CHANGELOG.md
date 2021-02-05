@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.13.2 - 2021-02-05
+
+* patch: Update non-major [Renovate Bot]
+
 ## 2.13.1 - 2021-02-05
 
 * Set renovate npm version [Josh Bowling]
