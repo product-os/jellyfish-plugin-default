@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 3.0.3 - 2021-02-05
+
+* patch: Update dependency lint-staged to ^10.5.4 [Renovate Bot]
+
 ## 3.0.2 - 2021-02-05
 
 * Fix pipeline relationships [Graham McCulloch]
