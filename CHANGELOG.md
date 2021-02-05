@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.13.0 - 2021-02-05
+
+* Add status slice to pull-request type [Graham McCulloch]
+
 ## 2.12.4 - 2021-02-04
 
 * patch: Update dependency @balena/jellyfish-client-sdk to ^2.13.0 [Renovate Bot]
