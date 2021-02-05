@@ -35,11 +35,11 @@
   "author": "Balena.io. <hello@balena.io>",
   "license": "UNLICENSED",
   "dependencies": {
-    "@balena/jellyfish-assert": "^1.0.54",
-    "@balena/jellyfish-client-sdk": "^2.13.0",
-    "@balena/jellyfish-environment": "^2.4.1",
-    "@balena/jellyfish-plugin-base": "^1.0.2",
-    "@balena/jellyfish-uuid": "^1.0.58",
+    "@balena/jellyfish-assert": "^1.0.55",
+    "@balena/jellyfish-client-sdk": "^2.13.1",
+    "@balena/jellyfish-environment": "^2.4.2",
+    "@balena/jellyfish-plugin-base": "^1.0.3",
+    "@balena/jellyfish-uuid": "^1.0.59",
     "@octokit/auth-app": "^2.11.0",
     "@octokit/plugin-retry": "^3.0.7",
     "@octokit/plugin-throttling": "^3.4.1",
@@ -62,7 +62,7 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@balena/ci-task-runner": "^0.2.94",
+    "@balena/ci-task-runner": "^0.2.95",
     "@balena/jellycheck": "^0.1.1",
     "@balena/jellyfish-action-library": "^7.0.13",
     "@balena/jellyfish-core": "^1.2.0",
