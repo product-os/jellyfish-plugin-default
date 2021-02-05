@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 2.13.1 - 2021-02-05
+
+* Set renovate npm version [Josh Bowling]
+
 ## 2.13.0 - 2021-02-05
 
 * Add status slice to pull-request type [Graham McCulloch]
