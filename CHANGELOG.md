@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 3.0.2 - 2021-02-05
+
+* Fix pipeline relationships [Graham McCulloch]
+
 ## 3.0.1 - 2021-02-05
 
 * patch: Update dependency @balena/jellyfish-logger to v0.0.231 [Renovate Bot]
