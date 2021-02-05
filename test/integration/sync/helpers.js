@@ -5,11 +5,10 @@
  */
 
 const helpers = require('../worker/helpers')
-const actionLibrary = require('@balena/jellyfish-action-library')
 
 module.exports = {
 	beforeEach: async (test, options) => {
-		await helpers.worker.before(test, actionLibrary, options)
+		await helpers.worker.before(test, options)
 		test.context.syncContext = test.context.context.sync.getActionContext(
 			'test',
 			test.context.worker.getActionContext(test.context.context),
