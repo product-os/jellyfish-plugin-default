@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 3.0.7 - 2021-02-06
+
+* Use shared renovate config base [Josh Bowling]
+
 ## 3.0.6 - 2021-02-06
 
 * patch: Update non-major [Renovate Bot]
