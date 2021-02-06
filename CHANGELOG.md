@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 3.0.8 - 2021-02-06
+
+* patch: Update non-major Docker tags [Renovate Bot]
+
 ## 3.0.7 - 2021-02-06
 
 * Use shared renovate config base [Josh Bowling]
