@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 3.0.9 - 2021-02-07
+
+* patch: Update dependency @balena/jellyfish-logger to v1 [Renovate Bot]
+
 ## 3.0.8 - 2021-02-06
 
 * patch: Update non-major Docker tags [Renovate Bot]
