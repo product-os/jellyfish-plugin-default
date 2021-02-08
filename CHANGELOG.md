@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 3.0.13 - 2021-02-08
+
+* Convert error messages to objects when logging balena decryption errors [Lucian Buzzo]
+
 ## 3.0.12 - 2021-02-07
 
 * patch: Update non-major [Renovate Bot]
