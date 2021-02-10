@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 3.1.1 - 2021-02-10
+
+* Log an exception when failing to decrypt balena webhooks [Lucian Buzzo]
+
 ## 3.1.0 - 2021-02-10
 
 * Improve brainstorm-call and brainstorm-topic cards [Graham McCulloch]
