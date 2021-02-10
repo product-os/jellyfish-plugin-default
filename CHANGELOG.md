@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 3.1.2 - 2021-02-10
+
+* patch: Update resinci/jellyfish-test Docker tag to v1.3.35 [Renovate Bot]
+
 ## 3.1.1 - 2021-02-10
 
 * Log an exception when failing to decrypt balena webhooks [Lucian Buzzo]
