@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 3.1.0 - 2021-02-10
+
+* Improve brainstorm-call and brainstorm-topic cards [Graham McCulloch]
+
 ## 3.0.13 - 2021-02-08
 
 * Convert error messages to objects when logging balena decryption errors [Lucian Buzzo]
