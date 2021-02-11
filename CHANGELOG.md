@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 3.1.5 - 2021-02-11
+
+* Add fullTextSearch indexes to GH cards [Graham McCulloch]
+
 ## 3.1.4 - 2021-02-10
 
 * patch: Update non-major [Renovate Bot]
