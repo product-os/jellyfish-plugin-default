@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 3.1.7 - 2021-02-11
+
+* patch: Update non-major [Renovate Bot]
+
 ## 3.1.6 - 2021-02-11
 
 * Add fullTextSearch indexes to mirrors fields [Graham McCulloch]
