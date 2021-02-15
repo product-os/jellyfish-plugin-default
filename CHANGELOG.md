@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 3.1.18 - 2021-02-15
+
+* patch: Update non-major [Renovate Bot]
+
 ## 3.1.17 - 2021-02-15
 
 * patch: Update dependency eslint-plugin-jsdoc to v32 [Renovate Bot]
