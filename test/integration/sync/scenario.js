@@ -355,8 +355,6 @@ module.exports = {
 		await test.context.jellyfish.insertCard(test.context.context, test.context.session,
 			allCards['form-response'])
 		await test.context.jellyfish.insertCard(test.context.context, test.context.session,
-			allCards['user-feedback'])
-		await test.context.jellyfish.insertCard(test.context.context, test.context.session,
 			allCards.repository)
 		await test.context.jellyfish.insertCard(test.context.context, test.context.session,
 			allCards['gh-push'])

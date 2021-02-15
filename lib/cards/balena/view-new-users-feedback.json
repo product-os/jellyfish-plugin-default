@@ -3,6 +3,7 @@
   "name": "New",
   "type": "view@1.0.0",
   "markers": [ "org-balena" ],
+  "active": false,
   "data": {
     "namespace": "User Feedback",
     "allOf": [
