@@ -55,16 +55,6 @@ tasks:
         value: './test/integration/sync/flowdock-translate.spec.js'
     dependencies:
       - 'github-translate'
-  - name: 'typeform-translate'
-    description: 'Typeform Translate Tests'
-    command: 'make test'
-    cwd: '/usr/src/jellyfish'
-    required: true
-    environment:
-      - name: 'FILES'
-        value: './test/integration/sync/typeform-translate.spec.js'
-    dependencies:
-      - 'flowdock-translate'
   - name: 'outreach-translate'
     description: 'Outreach Translate Tests'
     command: 'make test'
@@ -74,7 +64,7 @@ tasks:
       - name: 'FILES'
         value: './test/integration/sync/outreach-translate.spec.js'
     dependencies:
-      - 'typeform-translate'
+      - 'flowdock-translate'
   - name: 'front-translate'
     description: 'Front Translate Tests'
     command: 'make test'
