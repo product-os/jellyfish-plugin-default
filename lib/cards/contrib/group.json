@@ -9,7 +9,8 @@
       "properties": {
         "name": {
           "type": "string",
-          "pattern": "^[A-Za-z0-9-_]+$"
+          "pattern": "^[A-Za-z0-9-_]+$",
+          "fullTextSearch": true
         },
         "data": {
           "type": "object",

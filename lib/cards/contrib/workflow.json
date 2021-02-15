@@ -8,7 +8,8 @@
       "type": "object",
       "properties": {
         "name": {
-          "type": [ "string", "null" ]
+          "type": [ "string", "null" ],
+          "fullTextSearch": true
         },
         "tags": {
           "type": "array",
