@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 3.1.14 - 2021-02-15
+
+* Add more fullTextSearch indexes [Graham McCulloch]
+
 ## 3.1.13 - 2021-02-13
 
 * patch: Update non-major [Renovate Bot]
