@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 3.1.17 - 2021-02-15
+
+* patch: Update dependency eslint-plugin-jsdoc to v32 [Renovate Bot]
+
 ## 3.1.16 - 2021-02-15
 
 * patch: Update resinci/jellyfish-test Docker tag to v1.3.37 [Renovate Bot]
