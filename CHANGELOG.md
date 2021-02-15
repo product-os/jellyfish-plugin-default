@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 3.1.15 - 2021-02-15
+
+* Bump core and action-library [Josh Bowling]
+
 ## 3.1.14 - 2021-02-15
 
 * Add more fullTextSearch indexes [Graham McCulloch]
