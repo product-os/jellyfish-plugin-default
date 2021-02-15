@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 3.1.16 - 2021-02-15
+
+* Test date column switch in core [Josh Bowling]
+
 ## 3.1.15 - 2021-02-15
 
 * Bump core and action-library [Josh Bowling]
