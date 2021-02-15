@@ -9,7 +9,8 @@
       "properties": {
         "name": {
           "type": "string",
-          "pattern": "^.*\\S.*$"
+          "pattern": "^.*\\S.*$",
+          "fullTextSearch": true
         },
         "tags": {
           "type": "array",

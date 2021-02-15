@@ -10,7 +10,8 @@
       "properties": {
         "name": {
           "type": "string",
-          "pattern": "^.*\\S.*$"
+          "pattern": "^.*\\S.*$",
+          "fullTextSearch": true
         },
         "slug": {
           "type": "string",
@@ -22,7 +23,8 @@
           "properties": {
             "url": {
               "type": "string",
-              "format": "uri"
+              "format": "uri",
+              "fullTextSearch": true
             }
           }
         }
