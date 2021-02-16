@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 3.1.25 - 2021-02-16
+
+* patch: Update non-major [Renovate Bot]
+
 ## 3.1.24 - 2021-02-16
 
 * patch: Update non-major Docker tags [Renovate Bot]
