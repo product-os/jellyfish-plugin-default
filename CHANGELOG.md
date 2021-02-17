@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 4.0.0 - 2021-02-17
+
+* Remove typeform from default plugin [Graham McCulloch]
+
 ## 3.1.28 - 2021-02-17
 
 * patch: Update non-major [Renovate Bot]
