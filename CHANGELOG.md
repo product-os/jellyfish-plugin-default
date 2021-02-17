@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 4.0.0 - 2021-02-17
+
+* Log exceptions if balena-api events are not valid [Lucian Buzzo]
+
 ## 3.1.28 - 2021-02-17
 
 * patch: Update non-major [Renovate Bot]
