@@ -6,20 +6,18 @@
 
 const ava = require('ava')
 const _ = require('lodash')
-const scenario = require('./scenario')
 const environment = require('@balena/jellyfish-environment')
+const {
+	syncIntegrationScenario
+} = require('@balena/jellyfish-test-harness')
+const ActionLibrary = require('@balena/jellyfish-action-library')
+const DefaultPlugin = require('../../../lib')
 const TOKEN = environment.integration.front
-const helpers = require('./helpers')
 
-ava.serial.before(async (test) => {
-	await scenario.before(test)
-	await helpers.save(test)
-})
-
-ava.serial.after.always(scenario.after)
-ava.serial.afterEach.always(scenario.afterEach)
-
-scenario.run(ava, {
+syncIntegrationScenario.run(ava, {
+	basePath: __dirname,
+	plugins: [ ActionLibrary, DefaultPlugin ],
+	cards: [ 'support-thread', 'sales-thread', 'whisper', 'message' ],
 	integration: require('../../../lib/integrations/front'),
 	scenarios: require('./webhooks/front'),
 	slices: _.range(0, 50),

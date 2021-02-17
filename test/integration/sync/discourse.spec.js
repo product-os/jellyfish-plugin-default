@@ -14,26 +14,16 @@ const {
 } = require('@balena/jellyfish-test-harness')
 const ActionLibrary = require('@balena/jellyfish-action-library')
 const DefaultPlugin = require('../../../lib')
-const environment = require('@balena/jellyfish-environment')
-const TOKEN = environment.integration.discourse
 
-syncIntegrationScenario.run(ava, {
-	basePath: __dirname,
-	plugins: [ ActionLibrary, DefaultPlugin ],
-	cards: [ 'support-thread', 'message', 'whisper' ],
-	integration: require('../../../lib/integrations/discourse'),
-	scenarios: require('./webhooks/discourse'),
-	baseUrl: 'https://forums.balena.io',
-	stubRegex: /.*/,
-	source: 'discourse',
-	options: {
-		token: TOKEN
-	},
-	isAuthorized: (self, request) => {
-		return request.headers['api-key'] === self.options.token.api &&
-			request.headers['api-username'] === self.options.token.username
-	}
+ava.serial.before(async (test) => {
+	const plugins = [ ActionLibrary, DefaultPlugin ]
+	const cards = [ 'support-thread', 'message', 'whisper' ]
+	await syncIntegrationScenario.before(test, plugins, cards)
+	await syncIntegrationScenario.save(test)
 })
+
+ava.serial.after.always(syncIntegrationScenario.after)
+ava.serial.afterEach.always(syncIntegrationScenario.afterEach)
 
 ava.serial('should not change the same user email', async (test) => {
 	await test.context.jellyfish.insertCard(

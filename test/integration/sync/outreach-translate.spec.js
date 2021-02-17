@@ -6,10 +6,13 @@
 
 const ava = require('ava')
 const _ = require('lodash')
-const scenario = require('./scenario')
 const environment = require('@balena/jellyfish-environment')
+const {
+	syncIntegrationScenario
+} = require('@balena/jellyfish-test-harness')
+const ActionLibrary = require('@balena/jellyfish-action-library')
+const DefaultPlugin = require('../../../lib')
 const TOKEN = environment.integration.outreach
-const helpers = require('./helpers')
 
 const OAUTH_DETAILS = {
 	access_token: 'MTQ0NjJkZmQ5OTM2NDE1ZTZjNGZmZjI3',
@@ -19,9 +22,7 @@ const OAUTH_DETAILS = {
 	scope: 'create'
 }
 
-ava.serial.before(async (test) => {
-	await scenario.before(test)
-
+const before = async (test) => {
 	const userCard = await test.context.jellyfish.getCardBySlug(
 		test.context.context,
 		test.context.jellyfish.sessions.admin,
@@ -44,14 +45,13 @@ ava.serial.before(async (test) => {
 		], {
 			type: 'user'
 		})
+}
 
-	await helpers.save(test)
-})
-
-ava.serial.after.always(scenario.after)
-ava.serial.afterEach.always(scenario.afterEach)
-
-scenario.run(ava, {
+syncIntegrationScenario.run(ava, {
+	basePath: __dirname,
+	plugins: [ ActionLibrary, DefaultPlugin ],
+	cards: [ 'email-sequence' ],
+	before,
 	integration: require('../../../lib/integrations/outreach'),
 	scenarios: require('./webhooks/outreach'),
 	slices: _.range(0, 50),

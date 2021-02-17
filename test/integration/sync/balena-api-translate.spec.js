@@ -10,18 +10,13 @@ const randomstring = require('randomstring')
 const url = require('native-url')
 const jose = require('node-jose')
 const jws = require('jsonwebtoken')
-const scenario = require('./scenario')
 const environment = require('@balena/jellyfish-environment')
+const {
+	syncIntegrationScenario
+} = require('@balena/jellyfish-test-harness')
+const ActionLibrary = require('@balena/jellyfish-action-library')
+const DefaultPlugin = require('../../../lib')
 const TOKEN = environment.integration['balena-api']
-const helpers = require('./helpers')
-
-ava.serial.before(async (test) => {
-	await scenario.before(test)
-	await helpers.save(test)
-})
-
-ava.serial.after.always(scenario.after)
-ava.serial.afterEach.always(scenario.afterEach)
 
 const prepareEvent = async (event) => {
 	const signedToken = jws.sign({
@@ -50,7 +45,10 @@ const prepareEvent = async (event) => {
 	return event
 }
 
-scenario.run(ava, {
+syncIntegrationScenario.run(ava, {
+	basePath: __dirname,
+	plugins: [ ActionLibrary, DefaultPlugin ],
+	cards: [],
 	integration: require('../../../lib/integrations/balena-api'),
 	scenarios: require('./webhooks/balena-api'),
 	baseUrl: 'https://api.balena-cloud.com',

@@ -7,16 +7,15 @@
 const ava = require('ava')
 const nock = require('nock')
 const jwt = require('jsonwebtoken')
-const scenario = require('./scenario')
 const environment = require('@balena/jellyfish-environment')
+const {
+	syncIntegrationScenario
+} = require('@balena/jellyfish-test-harness')
+const ActionLibrary = require('@balena/jellyfish-action-library')
+const DefaultPlugin = require('../../../lib')
 const TOKEN = environment.integration.github
-const helpers = require('./helpers')
 
-ava.serial.before(async (test) => {
-	await scenario.before(test)
-	await helpers.save(test)
-})
-ava.serial.beforeEach(async (test) => {
+const beforeEach = async (test) => {
 	if (TOKEN.api && TOKEN.key) {
 		await nock('https://api.github.com')
 			.persist()
@@ -45,12 +44,13 @@ ava.serial.beforeEach(async (test) => {
 				})
 			})
 	}
-})
+}
 
-ava.serial.after.always(scenario.after)
-ava.serial.afterEach.always(scenario.afterEach)
-
-scenario.run(ava, {
+syncIntegrationScenario.run(ava, {
+	basePath: __dirname,
+	plugins: [ ActionLibrary, DefaultPlugin ],
+	cards: [ 'issue', 'pull-request', 'message', 'repository', 'gh-push' ],
+	beforeEach,
 	integration: require('../../../lib/integrations/github'),
 	scenarios: require('./webhooks/github'),
 	baseUrl: 'https://api.github.com',
