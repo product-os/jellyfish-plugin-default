@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 4.0.1 - 2021-02-18
+
+* patch: Update dependency @balena/jellyfish-client-sdk to ^2.14.0 [Renovate Bot]
+
 ## 4.0.0 - 2021-02-17
 
 * Log exceptions if balena-api events are not valid [Lucian Buzzo]
