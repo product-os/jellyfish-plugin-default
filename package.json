@@ -66,7 +66,7 @@
     "@balena/ci-task-runner": "^0.2.105",
     "@balena/jellycheck": "^0.1.1",
     "@balena/jellyfish-action-library": "^8.0.22",
-    "@balena/jellyfish-core": "^2.0.3",
+    "@balena/jellyfish-core": "2.0.16-remove-references-to-old-date-columns-ac2618d2a774f0c80279ffca5267dc33a3d9d86b",
     "@balena/jellyfish-sync": "^5.0.0",
     "@balena/jellyfish-queue": "0.0.268",
     "@balena/jellyfish-worker": "^3.0.0",
