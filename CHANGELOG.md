@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 4.0.12 - 2021-02-22
+
+* Test core: remove references to old date columns [Josh Bowling]
+
 ## 4.0.11 - 2021-02-22
 
 * patch: Update non-major [Renovate Bot]
