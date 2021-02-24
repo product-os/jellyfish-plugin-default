@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 5.0.2 - 2021-02-24
+
+* patch: Update balena/open-balena-base Docker tag to v11.1.0 [Renovate Bot]
+
 ## 5.0.1 - 2021-02-24
 
 * Add new integration test file to test scripts [Graham McCulloch]
