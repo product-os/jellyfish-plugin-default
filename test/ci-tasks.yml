@@ -84,6 +84,6 @@ tasks:
     required: true
     environment:
       - name: 'FILES'
-        value: './test/integration/sync/discourse-translate.spec.js'
+        value: './test/integration/sync/discourse*.spec.js'
     dependencies:
       - 'outreach-translate'

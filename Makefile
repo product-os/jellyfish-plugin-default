@@ -201,6 +201,7 @@ test-translate:
 	FILES="'./test/integration/sync/typeform-translate.spec.js'" make test
 	INTEGRATION_FRONT_TOKEN=foobar FILES="'./test/integration/sync/front-translate.spec.js'" make test
 	FILES="'./test/integration/sync/discourse-translate.spec.js'" make test
+	FILES="'./test/integration/sync/discourse.spec.js'" make test
 
 test-mirror:
 	FILES="'./test/integration/sync/*-mirror.spec.js'" make test
