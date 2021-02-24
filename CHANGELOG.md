@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 5.0.0 - 2021-02-24
+
+* Use jellyfish-test-harness to run sync integration tests [Graham McCulloch]
+* Remove typeform from default plugin [Graham McCulloch]
+
 ## 4.0.22 - 2021-02-24
 
 * patch: Update dependency @octokit/rest to ^18.2.1 [Renovate Bot]

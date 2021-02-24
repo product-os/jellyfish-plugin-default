@@ -1,4 +1,28 @@
 - commits:
+    - subject: Use jellyfish-test-harness to run sync integration tests
+      hash: bc15a6b9f96c9e84061178641f2de82772a98f89
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+    - subject: Remove typeform from default plugin
+      hash: d03a009091928f20da58b48e16482ed1c312770d
+      body: |
+        Support for Typeform will now reside in jellyfish-plugin-typeform.
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 5.0.0
+  date: 2021-02-24T05:34:12.751Z
+- commits:
     - subject: 'patch: Update dependency @octokit/rest to ^18.2.1'
       hash: 8617d88f865fdeaebfe67315c10a528a1c90156e
       body: ''
