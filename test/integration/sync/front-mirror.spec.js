@@ -17,11 +17,11 @@ const Bluebird = require('bluebird')
 const Sync = require('@balena/jellyfish-sync').Sync
 const environment = require('@balena/jellyfish-environment')
 const {
-	loadSyncIntegrations
-} = require('../utils')
+	PluginManager
+} = require('@balena/jellyfish-plugin-base')
+const ActionLibrary = require('@balena/jellyfish-action-library')
+const DefaultPlugin = require('../../../lib')
 const TOKEN = environment.integration.front
-
-const integrations = loadSyncIntegrations()
 
 // Because Front might take a while to process
 // message creation requests.
@@ -184,6 +184,15 @@ ava.serial.before(async (test) => {
 			return object
 		}
 	}
+
+	const pluginManager = new PluginManager(test.context.mirrorContext, {
+		plugins: [
+			ActionLibrary,
+			DefaultPlugin
+		]
+	})
+
+	const integrations = pluginManager.getSyncIntegrations(test.context.mirrorContext)
 
 	test.context.sync = new Sync({
 		integrations

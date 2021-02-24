@@ -9,17 +9,22 @@ const _ = require('lodash')
 const typedErrors = require('typed-errors')
 const pipeline = require('@balena/jellyfish-sync/lib/pipeline')
 const errors = require('@balena/jellyfish-sync/lib/errors')
+const {
+	syncIntegrationScenario
+} = require('@balena/jellyfish-test-harness')
+const ActionLibrary = require('@balena/jellyfish-action-library')
+const DefaultPlugin = require('../../../lib')
 const NoOpIntegration = require('./noop-integration')
-const scenario = require('./scenario')
-const helpers = require('./helpers')
 
 ava.serial.before(async (test) => {
-	await scenario.before(test)
-	await helpers.save(test)
+	const plugins = [ ActionLibrary, DefaultPlugin ]
+	const cards = []
+	await syncIntegrationScenario.before(test, plugins, cards)
+	await syncIntegrationScenario.save(test)
 })
 
-ava.serial.after.always(scenario.after)
-ava.serial.afterEach.always(scenario.afterEach)
+ava.serial.after.always(syncIntegrationScenario.after)
+ava.serial.afterEach.always(syncIntegrationScenario.afterEach)
 
 ava('.importCards() should import no card', async (test) => {
 	const result = await pipeline.importCards(test.context.syncContext, [])
