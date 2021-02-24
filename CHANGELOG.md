@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 5.0.1 - 2021-02-24
+
+* Add new integration test file to test scripts [Graham McCulloch]
+
 ## 5.0.0 - 2021-02-24
 
 * Use jellyfish-test-harness to run sync integration tests [Graham McCulloch]

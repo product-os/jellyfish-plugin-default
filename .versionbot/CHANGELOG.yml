@@ -1,4 +1,19 @@
 - commits:
+    - subject: Add new integration test file to test scripts
+      hash: 4a508895dc3a011690aa8780a2d62570a25d9d7c
+      body: >
+        This was omitted previously as I forgot we explicitly name the
+        integration test files we are running!
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 5.0.1
+  date: 2021-02-24T06:19:49.350Z
+- commits:
     - subject: Use jellyfish-test-harness to run sync integration tests
       hash: bc15a6b9f96c9e84061178641f2de82772a98f89
       body: ''
