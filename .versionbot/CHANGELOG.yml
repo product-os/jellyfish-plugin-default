@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency @octokit/rest to ^18.2.1'
+      hash: 8617d88f865fdeaebfe67315c10a528a1c90156e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 4.0.22
+  date: 2021-02-24T01:28:27.213Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^1.2.21'
       hash: 72267c0661d746d3fb76fa5a6ca3f672da2ff091
       body: ''

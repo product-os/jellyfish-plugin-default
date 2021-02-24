@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 4.0.22 - 2021-02-24
+
+* patch: Update dependency @octokit/rest to ^18.2.1 [Renovate Bot]
+
 ## 4.0.21 - 2021-02-23
 
 * patch: Update dependency @balena/jellyfish-plugin-base to ^1.2.21 [Renovate Bot]
