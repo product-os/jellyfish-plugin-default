@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency nock to ^13.0.8'
+      hash: bccfebd004de57a2c0b08f54283ca2e279c0363d
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 5.0.3
+  date: 2021-02-25T03:19:27.911Z
+- commits:
     - subject: 'patch: Update balena/open-balena-base Docker tag to v11.1.0'
       hash: 86b13c4f59cc7721c907ecaf1893f366c7cf5085
       body: ''
