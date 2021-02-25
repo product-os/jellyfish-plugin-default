@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-client-sdk to ^2.14.6'
+      hash: e1c428fd1e0182353e7640e6e5822294f79915dd
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 5.0.4
+  date: 2021-02-25T08:23:04.056Z
+- commits:
     - subject: 'patch: Update dependency nock to ^13.0.8'
       hash: bccfebd004de57a2c0b08f54283ca2e279c0363d
       body: ''
