@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 5.0.5 - 2021-02-26
+
+* patch: Update resinci/jellyfish-test Docker tag to v1.3.40 [Renovate Bot]
+
 ## 5.0.4 - 2021-02-25
 
 * patch: Update dependency @balena/jellyfish-client-sdk to ^2.14.6 [Renovate Bot]
