@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update non-major'
+      hash: 10a5418fb4d3bfbc7d82c1cd093f2ff22c25fd36
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 5.0.8
+  date: 2021-02-27T04:55:36.578Z
+- commits:
     - subject: 'patch: Update dependency @octokit/rest to ^18.3.0'
       hash: ff605b4f27c9ed8d994dd6f4670f388696d6a595
       body: ''
