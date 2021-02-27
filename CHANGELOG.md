@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 5.0.9 - 2021-02-27
+
+* patch: Update non-major [Renovate Bot]
+
 ## 5.0.8 - 2021-02-27
 
 * patch: Update non-major [Renovate Bot]
