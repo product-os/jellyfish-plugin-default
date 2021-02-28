@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 5.0.14 - 2021-02-28
+
+* patch: Update dependency jsdoc-to-markdown to v7 [Renovate Bot]
+
 ## 5.0.13 - 2021-02-28
 
 * patch: Update dependency @balena/jellyfish-logger to v1.0.38 [Renovate Bot]
