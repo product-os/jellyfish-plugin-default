@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove references to obsolete form-response type
+      hash: 8f7f43669c089fce2b63ad4fa386da145fcbd401
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 5.0.17
+  date: 2021-03-01T13:07:41.420Z
+- commits:
     - subject: 'patch: Update non-major'
       hash: 7a11a1c1128cef3482aa3a15b3d63682e1af6b21
       body: ''
