@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update non-major'
+      hash: 7d6e32d9d1881bdbcd97502d2e3ef9a4e2d9b845
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 5.0.18
+  date: 2021-03-01T18:14:36.775Z
+- commits:
     - subject: Remove references to obsolete form-response type
       hash: 8f7f43669c089fce2b63ad4fa386da145fcbd401
       body: ''
