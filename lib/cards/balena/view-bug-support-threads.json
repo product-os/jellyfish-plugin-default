@@ -1,5 +1,5 @@
 {
-  "slug": "view-security-support-threads",
+  "slug": "view-bug-support-threads",
   "name": "Bug Reports",
   "type": "channel@1.0.0",
   "markers": [ "org-balena" ],
