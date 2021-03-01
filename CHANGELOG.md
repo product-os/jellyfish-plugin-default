@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 5.0.15 - 2021-03-01
+
+* patch: Update non-major [Renovate Bot]
+
 ## 5.0.14 - 2021-02-28
 
 * patch: Update dependency jsdoc-to-markdown to v7 [Renovate Bot]
