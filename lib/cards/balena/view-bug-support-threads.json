@@ -1,6 +1,6 @@
 {
   "slug": "view-security-support-threads",
-  "name": "Security",
+  "name": "Bug Reports",
   "type": "channel@1.0.0",
   "markers": [ "org-balena" ],
   "data": {
@@ -57,7 +57,7 @@
               "type": "object",
               "properties": {
                 "category": {
-                  "const": "security"
+                  "const": "bugs"
                 }
               },
               "required": [ "category" ]
