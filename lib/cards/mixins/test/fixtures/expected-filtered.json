@@ -19,11 +19,6 @@
           "title": "Specifications"
         },
         {
-          "link": "is attached",
-          "type": "form-response",
-          "title": "Form Responses"
-        },
-        {
           "link": "is attached to",
           "type": "user-feedback",
           "title": "User Feedbacks"
