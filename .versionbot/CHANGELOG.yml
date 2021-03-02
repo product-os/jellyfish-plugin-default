@@ -1,4 +1,28 @@
 - commits:
+    - subject: Update discourse integration fixtures
+      hash: b224c0ab0c73d9abc22987bf0ae201d5e6f1015d
+      body: |
+        Calculated array fields are now always populated.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+    - subject: Use link notation instead of $events keyword
+      hash: 9101e18624ab5ef5f2e3fff5e55e6f1dcc73527b
+      body: ''
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 6.0.0
+  date: 2021-03-02T17:33:21.260Z
+- commits:
     - subject: 'patch: Update non-major'
       hash: 93f19c9c5424ab676196fc9bef0e32336f484607
       body: ''

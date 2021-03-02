@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 6.0.0 - 2021-03-02
+
+* Update discourse integration fixtures [Graham McCulloch]
+* Use link notation instead of $events keyword [Graham McCulloch]
+
 ## 5.0.20 - 2021-03-02
 
 * patch: Update non-major [Renovate Bot]
