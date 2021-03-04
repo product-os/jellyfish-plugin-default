@@ -1,4 +1,20 @@
 - commits:
+    - subject: Updates to chart-configuration card
+      hash: feb1cbf28baed727461d94c8f47138ec36114fb1
+      body: |
+        Added index on chartingLibrary field
+        Added UI schema for data.settings
+        Set format to markdown for data.settings
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 5.2.0
+  date: 2021-03-04T06:58:26.402Z
+- commits:
     - subject: Add new chart-configuration type card
       hash: 1d7e83e8a363c3c14344bcc868aa61b44cd291a6
       body: >

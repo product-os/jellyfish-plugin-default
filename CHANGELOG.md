@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 5.2.0 - 2021-03-04
+
+* Updates to chart-configuration card [Graham McCulloch]
+
 ## 5.1.0 - 2021-03-04
 
 * Add new chart-configuration type card [Graham McCulloch]
