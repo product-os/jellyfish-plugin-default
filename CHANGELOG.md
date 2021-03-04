@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 5.3.2 - 2021-03-04
+
+* Fix chart-configuration indexed_fields [Graham McCulloch]
+
 ## 5.3.1 - 2021-03-04
 
 * patch: Update dependency @balena/jellyfish-uuid to ^1.0.68 [Renovate Bot]

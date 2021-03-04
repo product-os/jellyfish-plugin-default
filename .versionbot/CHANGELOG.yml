@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix chart-configuration indexed_fields
+      hash: 828ed31d0c978e12613f76c8077178c010e070dd
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 5.3.2
+  date: 2021-03-04T15:53:21.129Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-uuid to ^1.0.68'
       hash: 38ae2b2dc6051d71fdb5979ff7e87dea17a66b01
       body: ''
