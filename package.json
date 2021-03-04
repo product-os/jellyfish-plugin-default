@@ -66,7 +66,7 @@
     "@balena/ci-task-runner": "^0.2.109",
     "@balena/jellycheck": "^0.1.1",
     "@balena/jellyfish-action-library": "^8.0.22",
-    "@balena/jellyfish-core": "^2.0.3",
+    "@balena/jellyfish-core": "2.6.0-5508-pre-build-versions-c15bcf123db9df0bd64f4804bf919ee1012f35b5",
     "@balena/jellyfish-sync": "^5.0.0",
     "@balena/jellyfish-test-harness": "^1.0.0",
     "ava": "^3.15.0",
