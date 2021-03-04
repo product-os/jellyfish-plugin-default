@@ -1,4 +1,17 @@
 - commits:
+    - subject: Test core build and prerelease versions
+      hash: e08696662b11a96fc47ffd05230839ca0b007e3e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 5.0.24
+  date: 2021-03-04T01:16:51.857Z
+- commits:
     - subject: 'patch: Update dependency @octokit/rest to ^18.3.2'
       hash: d34401ac89a00f9895c145cdb1c9d5c9e74f1b0e
       body: ''
