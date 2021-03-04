@@ -1,4 +1,15 @@
 - commits:
+    - subject: Add oauth provider and client cards
+      hash: 7a9d107de95f2a181ba9a06132801d68b60a56cc
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Kakhaber
+      nested: []
+  version: 5.3.0
+  date: 2021-03-04T07:29:07.638Z
+- commits:
     - subject: Updates to chart-configuration card
       hash: feb1cbf28baed727461d94c8f47138ec36114fb1
       body: |

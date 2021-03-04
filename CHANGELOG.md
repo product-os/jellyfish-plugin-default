@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 5.3.0 - 2021-03-04
+
+* Add oauth provider and client cards [Kakhaber]
+
 ## 5.2.0 - 2021-03-04
 
 * Updates to chart-configuration card [Graham McCulloch]
