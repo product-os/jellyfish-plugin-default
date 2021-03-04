@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 5.3.1 - 2021-03-04
+
+* patch: Update dependency @balena/jellyfish-uuid to ^1.0.68 [Renovate Bot]
+
 ## 5.3.0 - 2021-03-04
 
 * Add oauth provider and client cards [Kakhaber]
