@@ -1,4 +1,19 @@
 - commits:
+    - subject: Add new chart-configuration type card
+      hash: 1d7e83e8a363c3c14344bcc868aa61b44cd291a6
+      body: >
+        This will be used to save chart configuration - initially just for
+        Plotly but other chart libraries could be supported.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 5.1.0
+  date: 2021-03-04T02:43:41.049Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-client-sdk to ^2.17.0'
       hash: 046b8c8b5f2d4a78fab67126c04ef3fa68bf6db4
       body: ''
