@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 5.3.4 - 2021-03-05
+
+* test JF-core with prerelase version [Martin Rauscher]
+
 ## 5.3.3 - 2021-03-04
 
 * patch: Update dependency @balena/jellyfish-uuid to ^1.0.69 [Renovate Bot]

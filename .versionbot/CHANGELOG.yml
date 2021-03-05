@@ -1,4 +1,17 @@
 - commits:
+    - subject: test JF-core with prerelase version
+      hash: ec6f464ba2de45b747e214c47754dbca1e1f5ad9
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Martin Rauscher <martin@balena.io>
+        signed-off-by: Martin Rauscher <martin@balena.io>
+      author: Martin Rauscher
+      nested: []
+  version: 5.3.4
+  date: 2021-03-05T11:13:41.538Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-uuid to ^1.0.69'
       hash: a52c7369ef0ced206ea7b8ca6436505eceb9b683
       body: ''
