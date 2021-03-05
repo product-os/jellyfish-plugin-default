@@ -1,4 +1,147 @@
 - commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-uuid to ^1.0.69'
+      hash: a52c7369ef0ced206ea7b8ca6436505eceb9b683
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 5.3.3
+  date: 2021-03-04T16:29:31.181Z
+- commits:
+    - subject: Fix chart-configuration indexed_fields
+      hash: 828ed31d0c978e12613f76c8077178c010e070dd
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 5.3.2
+  date: 2021-03-04T15:53:21.129Z
+- commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-uuid to ^1.0.68'
+      hash: 38ae2b2dc6051d71fdb5979ff7e87dea17a66b01
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 5.3.1
+  date: 2021-03-04T08:11:03.597Z
+- commits:
+    - subject: Add oauth provider and client cards
+      hash: 7a9d107de95f2a181ba9a06132801d68b60a56cc
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Kakhaber
+      nested: []
+  version: 5.3.0
+  date: 2021-03-04T07:29:07.638Z
+- commits:
+    - subject: Updates to chart-configuration card
+      hash: feb1cbf28baed727461d94c8f47138ec36114fb1
+      body: |
+        Added index on chartingLibrary field
+        Added UI schema for data.settings
+        Set format to markdown for data.settings
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 5.2.0
+  date: 2021-03-04T06:58:26.402Z
+- commits:
+    - subject: Add new chart-configuration type card
+      hash: 1d7e83e8a363c3c14344bcc868aa61b44cd291a6
+      body: >
+        This will be used to save chart configuration - initially just for
+        Plotly but other chart libraries could be supported.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 5.1.0
+  date: 2021-03-04T02:43:41.049Z
+- commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-client-sdk to ^2.17.0'
+      hash: 046b8c8b5f2d4a78fab67126c04ef3fa68bf6db4
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 5.0.24
+  date: 2021-03-04T02:04:11.214Z
+- commits:
+    - subject: 'patch: Update dependency @octokit/rest to ^18.3.2'
+      hash: d34401ac89a00f9895c145cdb1c9d5c9e74f1b0e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 5.0.23
+  date: 2021-03-03T08:18:29.499Z
+- commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-client-sdk to ^2.16.2'
+      hash: 0188403b8a343cf0f0ac7e75bd10278bf3692945
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 5.0.22
+  date: 2021-03-03T00:36:46.913Z
+- commits:
+    - subject: 'patch: Update dependency nock to ^13.0.10'
+      hash: 7e790732e5f851b084562d607541ae06a37c221e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 5.0.21
+  date: 2021-03-02T21:45:42.448Z
+- commits:
+    - subject: 'patch: Update non-major'
+      hash: 93f19c9c5424ab676196fc9bef0e32336f484607
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 5.0.20
+  date: 2021-03-02T05:09:38.177Z
+- commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^1.2.29'
+      hash: 9b1c646414ba259e79faff126a56cf0535a042c7
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 5.0.19
+  date: 2021-03-01T18:49:56.541Z
+- commits:
     - subject: 'patch: Update non-major'
       hash: 7d6e32d9d1881bdbcd97502d2e3ef9a4e2d9b845
       body: ''

@@ -5,6 +5,54 @@
 
 # v0.0.3
 
+## 5.3.3 - 2021-03-04
+
+* patch: Update dependency @balena/jellyfish-uuid to ^1.0.69 [Renovate Bot]
+
+## 5.3.2 - 2021-03-04
+
+* Fix chart-configuration indexed_fields [Graham McCulloch]
+
+## 5.3.1 - 2021-03-04
+
+* patch: Update dependency @balena/jellyfish-uuid to ^1.0.68 [Renovate Bot]
+
+## 5.3.0 - 2021-03-04
+
+* Add oauth provider and client cards [Kakhaber]
+
+## 5.2.0 - 2021-03-04
+
+* Updates to chart-configuration card [Graham McCulloch]
+
+## 5.1.0 - 2021-03-04
+
+* Add new chart-configuration type card [Graham McCulloch]
+
+## 5.0.24 - 2021-03-04
+
+* patch: Update dependency @balena/jellyfish-client-sdk to ^2.17.0 [Renovate Bot]
+
+## 5.0.23 - 2021-03-03
+
+* patch: Update dependency @octokit/rest to ^18.3.2 [Renovate Bot]
+
+## 5.0.22 - 2021-03-03
+
+* patch: Update dependency @balena/jellyfish-client-sdk to ^2.16.2 [Renovate Bot]
+
+## 5.0.21 - 2021-03-02
+
+* patch: Update dependency nock to ^13.0.10 [Renovate Bot]
+
+## 5.0.20 - 2021-03-02
+
+* patch: Update non-major [Renovate Bot]
+
+## 5.0.19 - 2021-03-01
+
+* patch: Update dependency @balena/jellyfish-plugin-base to ^1.2.29 [Renovate Bot]
+
 ## 5.0.18 - 2021-03-01
 
 * patch: Update non-major [Renovate Bot]
