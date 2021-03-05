@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 5.3.4 - 2021-03-05
+
+* patch: Update non-major [Renovate Bot]
+
 ## 5.3.3 - 2021-03-04
 
 * patch: Update dependency @balena/jellyfish-uuid to ^1.0.69 [Renovate Bot]
