@@ -1,4 +1,19 @@
 - commits:
+    - subject: Remove incorrect filter on $$links from product improvements view
+      hash: 4a9fa890fcd7e07f5053cf5f6ad806d3677c7590
+      body: >
+        This item in the schema was preventing any product improvements showing
+        up in the list unless they were attached to another card.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 6.0.1
+  date: 2021-03-08T10:03:35.956Z
+- commits:
     - subject: Stop updating status on Front translate
       hash: 33a7800a75943cb0a295a590790e38bfb6be33a7
       body: ''

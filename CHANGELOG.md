@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 6.0.1 - 2021-03-08
+
+* Remove incorrect filter on $$links from product improvements view [Graham McCulloch]
+
 ## 6.0.0 - 2021-03-08
 
 * Stop updating status on Front translate [Josh Bowling]
