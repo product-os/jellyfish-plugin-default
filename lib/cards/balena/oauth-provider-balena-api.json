@@ -7,7 +7,7 @@
 		"tokenUrl": "https://api.balena-cloud.com/oauth/token",
 		"whoamiUrl": "https://api.balena-cloud.com/user/v1/whoami",
 		"whoamiFieldMap": {
-			"username": []
+			"username": [ "username" ]
 		}
 	}
 }
