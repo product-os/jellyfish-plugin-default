@@ -68,7 +68,7 @@
     "@balena/jellyfish-action-library": "^8.0.22",
     "@balena/jellyfish-core": "^2.0.3",
     "@balena/jellyfish-sync": "^5.0.0",
-    "@balena/jellyfish-test-harness": "^1.0.0",
+    "@balena/jellyfish-test-harness": "1.0.2-test-trigger-contract-matching-19cfc0d87965b7f364589b0575e6b95494d12e9b",
     "ava": "^3.15.0",
     "body-parser": "^1.19.0",
     "catch-uncommitted": "^1.6.2",
