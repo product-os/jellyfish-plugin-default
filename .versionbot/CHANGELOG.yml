@@ -1,4 +1,18 @@
 - commits:
+    - subject: Bump jellyfish-test-harness dependency
+      hash: 8903012b2c018bfa55602e4b949a9c12593ea7d4
+      body: |
+        Tests https://github.com/product-os/jellyfish-worker/pull/485
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 6.0.1
+  date: 2021-03-08T04:03:37.978Z
+- commits:
     - subject: Stop updating status on Front translate
       hash: 33a7800a75943cb0a295a590790e38bfb6be33a7
       body: ''
