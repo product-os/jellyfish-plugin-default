@@ -1,4 +1,17 @@
 - commits:
+    - subject: Stop updating status on Front translate
+      hash: 33a7800a75943cb0a295a590790e38bfb6be33a7
+      body: ''
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 6.0.0
+  date: 2021-03-08T01:04:10.985Z
+- commits:
     - subject: 'patch: Update non-major'
       hash: 05d21e7d815db12fe005e8060ed0bd75ecff9e94
       body: ''

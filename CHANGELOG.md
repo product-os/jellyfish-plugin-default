@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 6.0.0 - 2021-03-08
+
+* Stop updating status on Front translate [Josh Bowling]
+
 ## 5.3.6 - 2021-03-07
 
 * patch: Update non-major [Renovate Bot]
