@@ -8,11 +8,6 @@
       {
         "name": "All Product Improvements",
         "schema": {
-          "$$links": {
-            "has attached": {
-              "type": "object"
-            }
-          },
           "type": "object",
           "properties": {
             "type": {
