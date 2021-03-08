@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'Oauth: Fix balena oauth provider card'
+      hash: adba82a2aa4d78f851f28cbd47af226a48c3ce22
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kakhaber
+      nested: []
+  version: 6.0.2
+  date: 2021-03-08T14:55:10.264Z
+- commits:
     - subject: Remove incorrect filter on $$links from product improvements view
       hash: 4a9fa890fcd7e07f5053cf5f6ad806d3677c7590
       body: >

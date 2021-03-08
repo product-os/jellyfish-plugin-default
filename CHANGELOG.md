@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 6.0.2 - 2021-03-08
+
+* Oauth: Fix balena oauth provider card [Kakhaber]
+
 ## 6.0.1 - 2021-03-08
 
 * Remove incorrect filter on $$links from product improvements view [Graham McCulloch]
