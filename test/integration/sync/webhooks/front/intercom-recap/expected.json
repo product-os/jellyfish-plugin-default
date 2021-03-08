@@ -16,7 +16,7 @@
       "mentionsUser": [],
       "alertsUser": [],
       "description": "",
-      "status": "closed"
+      "status": "open"
     }
   },
   "tail": [
@@ -53,33 +53,6 @@
       "requires": [],
       "tags": [],
       "type": "create@1.0.0",
-      "version": "1.0.0"
-    },
-    {
-      "active": true,
-      "capabilities": [],
-      "data": {
-        "actor": {
-          "active": true,
-          "slug": "user-jviotti"
-        },
-        "payload": [
-          {
-            "op": "replace",
-            "path": "/data/translateDate",
-            "value": "2019-01-17T17:18:42.975Z"
-          },
-          {
-            "op": "replace",
-            "path": "/data/status",
-            "value": "closed"
-          }
-        ],
-        "timestamp": "2019-01-02T17:05:02.029Z"
-      },
-      "requires": [],
-      "tags": [],
-      "type": "update@1.0.0",
       "version": "1.0.0"
     },
     {
