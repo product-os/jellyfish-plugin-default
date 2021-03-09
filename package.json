@@ -68,7 +68,7 @@
     "@balena/jellycheck": "^0.1.1",
     "@balena/jellyfish-action-library": "^8.0.22",
     "@balena/jellyfish-core": "^2.0.3",
-    "@balena/jellyfish-sync": "^5.0.0",
+    "@balena/jellyfish-sync": "5.2.0-pipeline-importcards-jsonpatch-4966443b29c634ccd134eb2f48bf8cbb384a8160",
     "@balena/jellyfish-test-harness": "^1.0.0",
     "ava": "^3.15.0",
     "body-parser": "^1.19.0",
