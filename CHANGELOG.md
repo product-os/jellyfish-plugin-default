@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 6.1.0 - 2021-03-09
+
+* Update jellyfish-test-harness [Josh Bowling]
+* Update to latest version of the sync module [Lucian Buzzo]
+
 ## 6.0.4 - 2021-03-09
 
 * patch: Update dependency @balena/jellyfish-client-sdk to ^2.18.0 [Renovate Bot]

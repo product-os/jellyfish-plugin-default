@@ -1,4 +1,27 @@
 - commits:
+    - subject: Update jellyfish-test-harness
+      hash: c9ea355c89860a0c0166d5e610cd13c13d8b1258
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Update to latest version of the sync module
+      hash: 4aa5cd065e7a3a42ff03a781fbd27ae0a2cb9e31
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 6.1.0
+  date: 2021-03-09T22:28:41.169Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-client-sdk to ^2.18.0'
       hash: 5748f9fb7fa4ae5abb43d8d7561ebebe81283ffb
       body: ''
