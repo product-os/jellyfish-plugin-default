@@ -16,7 +16,7 @@
       "mentionsUser": [],
       "alertsUser": [],
       "description": "",
-      "status": "open"
+      "status": "closed"
     }
   },
   "tail": [
@@ -93,6 +93,11 @@
             "op": "replace",
             "path": "/data/translateDate",
             "value": "2019-01-02T16:08:45.557Z"
+          },
+          {
+            "op": "replace",
+            "path": "/data/status",
+            "value": "closed"
           },
           {
             "op": "add",

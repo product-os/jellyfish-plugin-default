@@ -16,7 +16,7 @@
       "mentionsUser": [],
       "alertsUser": [],
       "description": "",
-      "status": "open"
+      "status": "archived"
     }
   },
   "tail": [
@@ -98,6 +98,11 @@
             "op": "replace",
             "path": "/data/translateDate",
             "value": "2018-10-08T18:35:32.544Z"
+          },
+          {
+            "op": "replace",
+            "path": "/data/status",
+            "value": "archived"
           }
         ]
       }

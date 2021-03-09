@@ -98,6 +98,11 @@
             "op": "replace",
             "path": "/data/translateDate",
             "value": "2018-10-10T22:28:47.412Z"
+          },
+          {
+            "op": "replace",
+            "path": "/data/status",
+            "value": "archived"
           }
         ]
       }
@@ -120,6 +125,11 @@
             "op": "replace",
             "path": "/data/translateDate",
             "value": "2018-10-10T22:29:00.113Z"
+          },
+          {
+            "op": "replace",
+            "path": "/data/status",
+            "value": "open"
           }
         ]
       }
