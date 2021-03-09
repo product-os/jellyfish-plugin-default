@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency @octokit/rest to ^18.3.5'
+      hash: 4db8046811f12016935b482e7fec2f3d9790c3be
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 6.0.3
+  date: 2021-03-09T01:26:35.950Z
+- commits:
     - subject: 'Oauth: Fix balena oauth provider card'
       hash: adba82a2aa4d78f851f28cbd47af226a48c3ce22
       body: ''
