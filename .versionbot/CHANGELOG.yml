@@ -1,4 +1,17 @@
 - commits:
+    - subject: Revert "Stop updating status on Front translate"
+      hash: b5aa38f35b97ad750721619acbd4542098bf179e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 6.0.4
+  date: 2021-03-09T09:03:27.516Z
+- commits:
     - subject: 'patch: Update dependency @octokit/rest to ^18.3.5'
       hash: 4db8046811f12016935b482e7fec2f3d9790c3be
       body: ''
