@@ -1,4 +1,57 @@
 - commits:
+    - subject: Bump sync and test-harness
+      hash: f31ea9c9984d257ecdc8a9bcd61899543ff8ffa2
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Fix tags JSONpatch generation logic
+      hash: 1fa45b1ca6dd006a0c3f9dba17847c2407027228
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Update test-harness with beta package
+      hash: 6e2619dbe9e99ff998b1621c4c9dca1898cd76a3
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Fix patch apply call
+      hash: c0a06a838856024d5cba028777f8a93cbcc9cd9b
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Generate JSON patch for thread Front translates
+      hash: bc377dd39755da1711c262f98a62a7c381f4e4ee
+      body: ''
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 7.0.0
+  date: 2021-03-09T15:22:21.256Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-client-sdk to ^2.18.0'
       hash: 5748f9fb7fa4ae5abb43d8d7561ebebe81283ffb
       body: ''

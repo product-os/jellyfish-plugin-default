@@ -5,6 +5,14 @@
 
 # v0.0.3
 
+## 7.0.0 - 2021-03-09
+
+* Bump sync and test-harness [Josh Bowling]
+* Fix tags JSONpatch generation logic [Josh Bowling]
+* Update test-harness with beta package [Josh Bowling]
+* Fix patch apply call [Josh Bowling]
+* Generate JSON patch for thread Front translates [Josh Bowling]
+
 ## 6.0.4 - 2021-03-09
 
 * patch: Update dependency @balena/jellyfish-client-sdk to ^2.18.0 [Renovate Bot]
