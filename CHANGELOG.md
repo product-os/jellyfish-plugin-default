@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 6.0.4 - 2021-03-09
+
+* patch: Update dependency @balena/jellyfish-client-sdk to ^2.18.0 [Renovate Bot]
+
 ## 6.0.3 - 2021-03-09
 
 * patch: Update dependency @octokit/rest to ^18.3.5 [Renovate Bot]
