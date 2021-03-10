@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 7.0.1 - 2021-03-10
+
+* patch: Update non-major [Renovate Bot]
+
 ## 7.0.0 - 2021-03-10
 
 * Use JSONpatch for thread Front translates [Josh Bowling]

@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update non-major'
+      hash: adcda30002ce6309d6896fe3466bf9aa5f83c939
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 7.0.1
+  date: 2021-03-10T09:25:56.083Z
+- commits:
     - subject: Use JSONpatch for thread Front translates
       hash: 472387fac439d7bbe1be75312d39810c81d5905c
       body: ''
