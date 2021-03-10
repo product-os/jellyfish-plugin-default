@@ -1,4 +1,17 @@
 - commits:
+    - subject: Use JSONpatch for thread Front translates
+      hash: 472387fac439d7bbe1be75312d39810c81d5905c
+      body: ''
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 7.0.0
+  date: 2021-03-10T04:27:36.475Z
+- commits:
     - subject: Update jellyfish-test-harness
       hash: c9ea355c89860a0c0166d5e610cd13c13d8b1258
       body: ''
