@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update non-major'
+      hash: 2dff38a6f3ee29c4bd877b1f41552bd4c2e19aff
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 7.0.5
+  date: 2021-03-11T12:31:38.170Z
+- commits:
     - subject: Remove obsolete lenses field from view cards
       hash: 1f82b6a2fd98c0387d7726b66aafd466bd015988
       body: >

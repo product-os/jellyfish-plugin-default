@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 7.0.5 - 2021-03-11
+
+* patch: Update non-major [Renovate Bot]
+
 ## 7.0.4 - 2021-03-11
 
 * Remove obsolete lenses field from view cards [Graham McCulloch]
