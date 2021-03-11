@@ -1,4 +1,18 @@
 - commits:
+    - subject: brainstorm-topic.data.reporter now uses username UI schema def
+      hash: 9a805fb9806bee3cb770546cbde5a646e7c82572
+      body: |
+        Depends on https://github.com/product-os/jellyfish-core/pull/521
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 7.0.3
+  date: 2021-03-11T03:03:40.622Z
+- commits:
     - subject: 'patch: Update non-major'
       hash: eb10723ffc53113454edfa20d83e50a9277bd0bb
       body: ''

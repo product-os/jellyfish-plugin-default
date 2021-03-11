@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 7.0.3 - 2021-03-11
+
+* brainstorm-topic.data.reporter now uses username UI schema def [Graham McCulloch]
+
 ## 7.0.2 - 2021-03-11
 
 * patch: Update non-major [Renovate Bot]
