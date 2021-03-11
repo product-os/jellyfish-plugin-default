@@ -1,4 +1,19 @@
 - commits:
+    - subject: Remove obsolete lenses field from view cards
+      hash: 1f82b6a2fd98c0387d7726b66aafd466bd015988
+      body: >
+        Also removed lenses field from event cards that should never have been
+        set.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 7.0.4
+  date: 2021-03-11T08:18:16.653Z
+- commits:
     - subject: brainstorm-topic.data.reporter now uses username UI schema def
       hash: 9a805fb9806bee3cb770546cbde5a646e7c82572
       body: |

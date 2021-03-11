@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 7.0.4 - 2021-03-11
+
+* Remove obsolete lenses field from view cards [Graham McCulloch]
+
 ## 7.0.3 - 2021-03-11
 
 * brainstorm-topic.data.reporter now uses username UI schema def [Graham McCulloch]
