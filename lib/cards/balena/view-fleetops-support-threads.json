@@ -71,11 +71,6 @@
           "additionalProperties": true
         }
       }
-    ],
-    "lenses": [
-      "lens-support-threads",
-      "lens-table",
-      "lens-kanban"
     ]
   }
 }

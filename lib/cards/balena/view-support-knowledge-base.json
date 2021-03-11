@@ -23,11 +23,6 @@
           ]
         }
       }
-    ],
-    "lenses": [
-      "lens-list",
-      "lens-table",
-      "lens-support-issue-table"
     ]
   }
 }

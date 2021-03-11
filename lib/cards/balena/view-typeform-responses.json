@@ -22,10 +22,6 @@
           "additionalProperties": true
         }
       }
-    ],
-    "lenses": [
-      "lens-list",
-      "lens-kanban"
     ]
   }
 }

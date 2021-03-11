@@ -75,9 +75,6 @@
         }
       }
     },
-    "lenses": [
-      "lens-interleaved"
-    ],
     "indexed_fields": [
       [ "data.readBy" ],
       [ "data.payload.mentionsUser" ],

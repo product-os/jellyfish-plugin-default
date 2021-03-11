@@ -51,11 +51,6 @@
           "additionalProperties": true
         }
       }
-    ],
-    "lenses": [
-      "lens-crm-table",
-      "lens-list",
-      "lens-kanban"
     ]
   }
 }

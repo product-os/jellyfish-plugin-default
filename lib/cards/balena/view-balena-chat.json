@@ -36,9 +36,6 @@
           }
         }
       }
-    ],
-    "lenses": [
-      "lens-interleaved"
     ]
   }
 }

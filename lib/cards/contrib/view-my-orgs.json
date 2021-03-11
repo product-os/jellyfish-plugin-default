@@ -29,9 +29,6 @@
           "additionalProperties": true
         }
       }
-    ],
-    "lenses": [
-      "lens-list"
     ]
   }
 }

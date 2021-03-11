@@ -22,10 +22,6 @@
           ]
         }
       }
-    ],
-    "lenses": [
-      "lens-list",
-      "lens-kanban"
     ]
   }
 }
