@@ -63,10 +63,6 @@
           "additionalProperties": true
         }
       }
-    ],
-    "lenses": [
-      "lens-table",
-      "lens-kanban"
     ]
   }
 }

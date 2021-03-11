@@ -21,10 +21,6 @@
           ]
         }
       }
-    ],
-    "lenses": [
-      "lens-list",
-      "lens-table"
     ]
   }
 }
