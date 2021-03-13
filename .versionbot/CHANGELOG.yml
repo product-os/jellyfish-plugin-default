@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update non-major'
+      hash: c7a45294007c09cf6eca50dbbc731735869d0d35
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 7.0.10
+  date: 2021-03-13T14:39:58.478Z
+- commits:
     - subject: Bump jellyfish-core to v2.9.8
       hash: 82f50d29627c6e568ab9ea1031792f7fe7f469ca
       body: ''

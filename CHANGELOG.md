@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 7.0.10 - 2021-03-13
+
+* patch: Update non-major [Renovate Bot]
+
 ## 7.0.9 - 2021-03-13
 
 * Bump jellyfish-core to v2.9.8 [Josh Bowling]
