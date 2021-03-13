@@ -1,4 +1,17 @@
 - commits:
+    - subject: Bump jellyfish-core to v2.9.8
+      hash: 82f50d29627c6e568ab9ea1031792f7fe7f469ca
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 7.0.9
+  date: 2021-03-13T01:41:21.240Z
+- commits:
     - subject: 'patch: Update non-major'
       hash: a03239d25e63a66dfea9bc3a14aadd30aae9126f
       body: ''
