@@ -1,4 +1,17 @@
 - commits:
+    - subject: Test adding optional authentication token
+      hash: 6530ad1be1b37259985c190aaecf6847cb2f885a
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 7.0.10
+  date: 2021-03-13T10:34:20.928Z
+- commits:
     - subject: Bump jellyfish-core to v2.9.8
       hash: 82f50d29627c6e568ab9ea1031792f7fe7f469ca
       body: ''
