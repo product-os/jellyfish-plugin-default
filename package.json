@@ -67,7 +67,7 @@
     "@balena/ci-task-runner": "^0.2.111",
     "@balena/jellycheck": "^0.1.1",
     "@balena/jellyfish-action-library": "^8.0.22",
-    "@balena/jellyfish-core": "^2.9.8",
+    "@balena/jellyfish-core": "2.10.0-add-authentication-token-40c36bd75768f562c82148e3da89778a721591a9",
     "@balena/jellyfish-sync": "^5.2.0",
     "@balena/jellyfish-test-harness": "^1.1.0",
     "ava": "^3.15.0",
