@@ -1,4 +1,18 @@
 - commits:
+    - subject: Remove obsolete cards
+      hash: 126e018f71a893ad02f04c6844d447c4daa82869
+      body: |
+        No longer required.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 7.1.0
+  date: 2021-03-14T07:00:57.712Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^1.2.31'
       hash: 5b5ca5e2c5d99b53be29003f5e5e06cf5a5a76f7
       body: ''

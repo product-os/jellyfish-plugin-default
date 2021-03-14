@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 7.1.0 - 2021-03-14
+
+* Remove obsolete cards [Graham McCulloch]
+
 ## 7.0.11 - 2021-03-14
 
 * patch: Update dependency @balena/jellyfish-plugin-base to ^1.2.31 [Renovate Bot]
