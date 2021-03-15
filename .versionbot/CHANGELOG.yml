@@ -1,4 +1,17 @@
 - commits:
+    - subject: Test core build and prerelease version additions
+      hash: 85bfc3eeed15dfed4508055232eb7592b5eafff9
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 7.1.2
+  date: 2021-03-15T05:18:51.871Z
+- commits:
     - subject: Remove references to obsolete view-all-users
       hash: 2b81401684809037476efda1d456c52096ff5aa2
       body: ''
