@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove references to obsolete view-all-users
+      hash: 2b81401684809037476efda1d456c52096ff5aa2
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 7.1.1
+  date: 2021-03-15T03:18:14.417Z
+- commits:
     - subject: Remove obsolete cards
       hash: 126e018f71a893ad02f04c6844d447c4daa82869
       body: |
