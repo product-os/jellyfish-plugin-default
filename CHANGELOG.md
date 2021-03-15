@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 7.1.2 - 2021-03-15
+
+* patch: Update non-major [Renovate Bot]
+
 ## 7.1.1 - 2021-03-15
 
 * Remove references to obsolete view-all-users [Graham McCulloch]

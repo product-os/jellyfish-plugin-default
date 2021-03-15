@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update non-major'
+      hash: 80a9e84f2521da0feaf190bca73e475de0054f93
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 7.1.2
+  date: 2021-03-15T18:49:07.142Z
+- commits:
     - subject: Remove references to obsolete view-all-users
       hash: 2b81401684809037476efda1d456c52096ff5aa2
       body: ''
