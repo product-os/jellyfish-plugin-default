@@ -10,25 +10,6 @@
 				{
 					"type": "object",
 					"additionalProperties": true,
-					"required": [ "slug", "type", "data"],
-					"properties": {
-						"type": {
-							"type": "string",
-							"const": "view@1.0.0"
-						},
-						"slug": {
-							"type": "string",
-							"const": "view-all-users"
-						},
-						"data": {
-							"type": "object",
-							"additionalProperties": true
-						}
-					}
-				},
-				{
-					"type": "object",
-					"additionalProperties": true,
 				  "required": ["slug"],
 					"properties": {
 						"slug": {
