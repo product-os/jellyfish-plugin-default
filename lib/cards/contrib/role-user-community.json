@@ -189,8 +189,7 @@
                 "enum": [
                   "view-active",
                   "view-active-triggered-actions",
-                  "view-non-executed-action-requests",
-                  "view-all-users"
+                  "view-non-executed-action-requests"
                 ]
               }
             },
