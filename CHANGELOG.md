@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 7.2.0 - 2021-03-16
+
+* Make use of JellyfishUser widget [Graham McCulloch]
+
 ## 7.1.2 - 2021-03-15
 
 * patch: Update non-major [Renovate Bot]
