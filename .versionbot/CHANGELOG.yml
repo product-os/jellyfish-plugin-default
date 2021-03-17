@@ -1,4 +1,17 @@
 - commits:
+    - subject: Test jellyfish-environment/pull/175
+      hash: 60757ade32e081f07caa4c00267350ebdeecdd84
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 7.2.1
+  date: 2021-03-17T03:56:02.008Z
+- commits:
     - subject: Make use of JellyfishUser widget
       hash: dfe4c750ef7462c389ac2f966a22b82786495823
       body: ''

@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 7.2.1 - 2021-03-17
+
+* Test jellyfish-environment/pull/175 [Josh Bowling]
+
 ## 7.2.0 - 2021-03-16
 
 * Make use of JellyfishUser widget [Graham McCulloch]
