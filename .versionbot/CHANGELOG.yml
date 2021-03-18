@@ -1,4 +1,17 @@
 - commits:
+    - subject: Test jellyfish-core/pull/347
+      hash: 1ba2f1bab4206ed9f9d17afbdf852f9256f89c4a
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 7.2.4
+  date: 2021-03-18T02:55:48.533Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-environment to v3'
       hash: 68f739274a683d985094d48ef58e5417cc1728f2
       body: ''
