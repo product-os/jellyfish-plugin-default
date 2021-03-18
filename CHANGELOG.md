@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 7.2.4 - 2021-03-18
+
+* testing action library with prerelease support [Martin Rauscher]
+
 ## 7.2.3 - 2021-03-17
 
 * patch: Update dependency @balena/jellyfish-environment to v3 [Renovate Bot]
