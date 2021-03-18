@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 7.3.0 - 2021-03-18
+
+* Generate card type definitions [Kakhaber]
+
 ## 7.2.3 - 2021-03-17
 
 * patch: Update dependency @balena/jellyfish-environment to v3 [Renovate Bot]

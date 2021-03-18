@@ -1,4 +1,15 @@
 - commits:
+    - subject: Generate card type definitions
+      hash: c974fb3f8e7103ae79c90bfcc27b98857e96f84f
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Kakhaber
+      nested: []
+  version: 7.3.0
+  date: 2021-03-18T11:26:40.995Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-environment to v3'
       hash: 68f739274a683d985094d48ef58e5417cc1728f2
       body: ''
