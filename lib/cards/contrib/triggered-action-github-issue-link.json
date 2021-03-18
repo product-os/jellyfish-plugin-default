@@ -6,42 +6,62 @@
   "data": {
     "schedule": "async",
     "filter": {
+      "title": "Create event for link between support thread and GitHub issue/PR",
       "type": "object",
-      "required": [
-        "type",
-        "data"
-      ],
+      "required": [ "active", "type", "data" ],
+      "additionalProperties": true,
       "properties": {
+        "active": {
+          "type": "boolean",
+          "const": true
+        },
         "type": {
           "type": "string",
-          "enum": [ "link", "link@1.0.0" ]
+          "const": "create@1.0.0"
         },
         "data": {
           "type": "object",
-          "required": [ "from", "to" ],
+          "required": [ "payload" ],
           "properties": {
-            "from": {
+            "payload": {
               "type": "object",
-              "required": [ "type" ],
+              "required": [ "type", "data" ],
               "properties": {
                 "type": {
                   "type": "string",
-                  "enum": [ "support-thread", "support-thread@1.0.0" ]
-                }
-              }
-            },
-            "to": {
-              "type": "object",
-              "required": [ "type" ],
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "enum": [
-                    "issue",
-                    "pull-request",
-                    "issue@1.0.0",
-                    "pull-request@1.0.0"
-                  ]
+                  "const": "link@1.0.0"
+                },
+                "data": {
+                  "type": "object",
+                  "required": [ "from", "to" ],
+                  "properties": {
+                    "from": {
+                      "type": "object",
+                      "required": [ "type" ],
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "support-thread@1.0.0",
+                            "sales-thread@1.0.0"
+                          ]
+                        }
+                      }
+                    },
+                    "to": {
+                      "type": "object",
+                      "required": [ "type" ],
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "issue@1.0.0",
+                            "pull-request@1.0.0"
+                          ]
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -51,10 +71,10 @@
     },
     "action": "action-broadcast@1.0.0",
     "target": {
-      "$eval": "source.data.to.id"
+      "$eval": "source.data.payload.data.to.id"
     },
     "arguments": {
-      "message": "This ${source.data.inverseName} https://jel.ly.fish/${source.data.from.id}"
+      "message": "This ${source.data.payload.data.inverseName} https://jel.ly.fish/${source.data.payload.data.from.id}"
     }
   }
 }
