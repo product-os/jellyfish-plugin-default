@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 7.2.3 - 2021-03-17
+
+* patch: Update dependency @balena/jellyfish-environment to v3 [Renovate Bot]
+
 ## 7.2.2 - 2021-03-17
 
 * patch: Update non-major Docker tags [Renovate Bot]
