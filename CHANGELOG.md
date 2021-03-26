@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 7.2.9 - 2021-03-26
+
+* Replace husky with simple-git-hooks [Graham McCulloch]
+
 ## 7.2.8 - 2021-03-22
 
 * patch: Update dependency @balena/jellyfish-logger to v1.0.57 [Renovate Bot]
