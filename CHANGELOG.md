@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 7.2.10 - 2021-03-31
+
+* Bump jellyfish dev dependencies [Josh Bowling]
+
 ## 7.2.9 - 2021-03-26
 
 * Replace husky with simple-git-hooks [Graham McCulloch]

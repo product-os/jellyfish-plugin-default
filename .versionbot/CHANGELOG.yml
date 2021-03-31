@@ -1,4 +1,17 @@
 - commits:
+    - subject: Bump jellyfish dev dependencies
+      hash: 8a160c1a47664f6ba741af5e9d63cf54a4b69b32
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 7.2.10
+  date: 2021-03-31T07:22:40.981Z
+- commits:
     - subject: Replace husky with simple-git-hooks
       hash: e0d25ee137876251e0e61009c60b0c85f2789961
       body: ''
