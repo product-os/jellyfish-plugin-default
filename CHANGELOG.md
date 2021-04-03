@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 7.2.11 - 2021-04-03
+
+* patch: Update dependency @balena/jellyfish-plugin-base to v2 [Renovate Bot]
+
 ## 7.2.10 - 2021-03-31
 
 * Bump jellyfish dev dependencies [Josh Bowling]
