@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 8.0.0 - 2021-04-05
+
+* emove unused support views [Lucian Buzzo]
+
 ## 7.2.13 - 2021-04-05
 
 * Fix github issue link triggered action [Graham McCulloch]

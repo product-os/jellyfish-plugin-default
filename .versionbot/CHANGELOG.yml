@@ -1,4 +1,20 @@
 - commits:
+    - subject: emove unused support views
+      hash: b240426d53fdf590149e0d39cbf2bdf09c5b5506
+      body: |
+        The paid support view will now show support threads from the categories
+        the removed views used to display. We should continue to improve the
+        situation until the seperate "categories" are no longer needed.
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 8.0.0
+  date: 2021-04-05T15:16:40.809Z
+- commits:
     - subject: Fix github issue link triggered action
       hash: ae6a7b4c65023389c8a82455c79f17599809bd90
       body: >
