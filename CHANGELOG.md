@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 7.2.13 - 2021-04-05
+
+* Fix github issue link triggered action [Graham McCulloch]
+
 ## 7.2.12 - 2021-04-04
 
 * patch: Update dependency @balena/jellyfish-logger to v2 [Renovate Bot]

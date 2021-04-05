@@ -1,4 +1,19 @@
 - commits:
+    - subject: Fix github issue link triggered action
+      hash: ae6a7b4c65023389c8a82455c79f17599809bd90
+      body: >
+        Ensure the action is only triggered on the create card and not the link
+        card itself.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 7.2.13
+  date: 2021-04-05T10:23:11.169Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-logger to v2'
       hash: 52aef5fa6f83cd3baaccbbfcb0ed8c1ba0197cf3
       body: ''
