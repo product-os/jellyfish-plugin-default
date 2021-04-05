@@ -66,8 +66,13 @@
                   }
                 },
                 "category": {
-                  "description": "This field is not required and should match cases where the field is not present OR is 'general'",
-                  "const": "general"
+                  "description": "This field is not required and should match cases where the field is not present OR is not in the enum",
+                  "not": {
+                    "enum": [
+                      "customer-success",
+                      "security"
+                    ]
+                  }
                 },
                 "product": {
                   "const": "balenaCloud"
