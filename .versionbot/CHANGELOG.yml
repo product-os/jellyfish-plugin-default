@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency sinon to v10'
+      hash: e8e71c1d1d0da195ef3ddb13f38c206562552eec
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 8.0.1
+  date: 2021-04-05T15:50:41.736Z
+- commits:
     - subject: emove unused support views
       hash: b240426d53fdf590149e0d39cbf2bdf09c5b5506
       body: |

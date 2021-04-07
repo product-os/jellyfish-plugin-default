@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 8.0.1 - 2021-04-05
+
+* patch: Update dependency sinon to v10 [Renovate Bot]
+
 ## 8.0.0 - 2021-04-05
 
 * emove unused support views [Lucian Buzzo]
