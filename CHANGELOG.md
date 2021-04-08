@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 8.0.2 - 2021-04-08
+
+* patch: Update balena/open-balena-base Docker tag to v11.1.2 [Renovate Bot]
+
 ## 8.0.1 - 2021-04-05
 
 * patch: Update dependency sinon to v10 [Renovate Bot]
