@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.0.0 - 2021-04-09
+
+* Remove "Support threads to audit" view [Lucian Buzzo]
+
 ## 8.0.2 - 2021-04-08
 
 * patch: Update balena/open-balena-base Docker tag to v11.1.2 [Renovate Bot]

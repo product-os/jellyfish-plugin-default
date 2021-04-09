@@ -1,4 +1,20 @@
 - commits:
+    - subject: Remove "Support threads to audit" view
+      hash: 844717172eaebad52be4bb5193c243f766e758e3
+      body: |
+        The data in this view can be accessed using the "all support threads"
+        view and setting a filter on the status field. This view is redundant
+        and can be removed
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 9.0.0
+  date: 2021-04-09T10:35:41.766Z
+- commits:
     - subject: 'patch: Update balena/open-balena-base Docker tag to v11.1.2'
       hash: fae9a44c8406761c9d07a24726d45ef2c5b9577d
       body: ''
