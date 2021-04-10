@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.0.1 - 2021-04-10
+
+* patch: Update resinci/jellyfish-test Docker tag to v1.3.42 [Renovate Bot]
+
 ## 9.0.0 - 2021-04-09
 
 * Remove "Support threads to audit" view [Lucian Buzzo]
