@@ -7,7 +7,7 @@
 const ava = require('ava')
 const nock = require('nock')
 const jwt = require('jsonwebtoken')
-const environment = require('@balena/jellyfish-environment')
+const environment = require('@balena/jellyfish-environment').defaultEnvironment
 const {
 	syncIntegrationScenario
 } = require('@balena/jellyfish-test-harness')

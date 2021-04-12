@@ -10,7 +10,7 @@ const randomstring = require('randomstring')
 const url = require('native-url')
 const jose = require('node-jose')
 const jws = require('jsonwebtoken')
-const environment = require('@balena/jellyfish-environment')
+const environment = require('@balena/jellyfish-environment').defaultEnvironment
 const {
 	syncIntegrationScenario
 } = require('@balena/jellyfish-test-harness')

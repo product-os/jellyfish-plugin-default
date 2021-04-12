@@ -6,7 +6,7 @@
 
 const ava = require('ava')
 const _ = require('lodash')
-const environment = require('@balena/jellyfish-environment')
+const environment = require('@balena/jellyfish-environment').defaultEnvironment
 const {
 	syncIntegrationScenario
 } = require('@balena/jellyfish-test-harness')
