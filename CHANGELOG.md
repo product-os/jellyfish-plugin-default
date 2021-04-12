@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 9.0.3 - 2021-04-12
+
+* Update jellyfish-environment requires [Josh Bowling]
+* patch: Update dependency @balena/jellyfish-environment to v4 [Renovate Bot]
+
 ## 9.0.2 - 2021-04-10
 
 * patch: Update dependency eslint-plugin-promise to v5 [Renovate Bot]

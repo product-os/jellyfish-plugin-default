@@ -1,4 +1,25 @@
 - commits:
+    - subject: Update jellyfish-environment requires
+      hash: d41a2c4b5122e03aed753b81798f341b66865f76
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: 'patch: Update dependency @balena/jellyfish-environment to v4'
+      hash: d8091a08078317103e625e6776a39a5f3c5dec09
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 9.0.3
+  date: 2021-04-12T02:45:14.093Z
+- commits:
     - subject: 'patch: Update dependency eslint-plugin-promise to v5'
       hash: 2c25b0cf005d53822d7ba993c45dc9ddb013ddd0
       body: ''
