@@ -15,7 +15,7 @@ const {
 const Front = require('front-sdk').Front
 const Bluebird = require('bluebird')
 const Sync = require('@balena/jellyfish-sync').Sync
-const environment = require('@balena/jellyfish-environment')
+const environment = require('@balena/jellyfish-environment').defaultEnvironment
 const {
 	PluginManager
 } = require('@balena/jellyfish-plugin-base')

@@ -14,7 +14,7 @@ const {
 } = require('@balena/jellyfish-test-harness')
 const ActionLibrary = require('@balena/jellyfish-action-library')
 const DefaultPlugin = require('../../../lib')
-const environment = require('@balena/jellyfish-environment')
+const environment = require('@balena/jellyfish-environment').defaultEnvironment
 const TOKEN = environment.integration.discourse
 
 syncIntegrationScenario.run(ava, {
