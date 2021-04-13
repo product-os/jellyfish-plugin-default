@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.1.1 - 2021-04-13
+
+* Uncomment tests [Dan Goodman]
+
 ## 9.1.0 - 2021-04-13
 
 * Add GitHub Check Run support [Dan Goodman]

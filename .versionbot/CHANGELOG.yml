@@ -1,4 +1,15 @@
 - commits:
+    - subject: Uncomment tests
+      hash: 5ee7892c520953485387adb79c8a3266c752d962
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Dan Goodman
+      nested: []
+  version: 9.1.1
+  date: 2021-04-13T14:47:59.165Z
+- commits:
     - subject: Add GitHub Check Run support
       hash: 02be00e15ef907518ec544998293c5b302f21f87
       body: ''
