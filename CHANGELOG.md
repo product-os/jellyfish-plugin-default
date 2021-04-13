@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.0.5 - 2021-04-13
+
+* Test action-library TypeScript [Josh Bowling]
+
 ## 9.0.4 - 2021-04-12
 
 * Replace jellyfish-uuid [Josh Bowling]

@@ -1,4 +1,17 @@
 - commits:
+    - subject: Test action-library TypeScript
+      hash: c11427c778702d08211f307a82fd96a2fb79a48e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 9.0.5
+  date: 2021-04-13T00:41:25.503Z
+- commits:
     - subject: Replace jellyfish-uuid
       hash: 46d13ba59689392e3c0263ff82714c21ec314cab
       body: ''
