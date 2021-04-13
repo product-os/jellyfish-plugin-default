@@ -14,12 +14,10 @@
         "type": {
           "type": "string",
           "enum": [
-            "message",
-            "issue",
-            "pull-request",
             "message@1.0.0",
             "issue@1.0.0",
-            "pull-request@1.0.0"
+            "pull-request@1.0.0",
+            "check-run@1.0.0"
           ]
         }
       }

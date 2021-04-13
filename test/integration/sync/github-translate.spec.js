@@ -49,7 +49,7 @@ const beforeEach = async (test) => {
 syncIntegrationScenario.run(ava, {
 	basePath: __dirname,
 	plugins: [ ActionLibrary, DefaultPlugin ],
-	cards: [ 'issue', 'pull-request', 'message', 'repository', 'gh-push' ],
+	cards: [ 'issue', 'pull-request', 'message', 'repository', 'gh-push', 'check-run' ],
 	beforeEach,
 	integration: require('../../../lib/integrations/github'),
 	scenarios: require('./webhooks/github'),
