@@ -1,4 +1,15 @@
 - commits:
+    - subject: Add GitHub Check Run support
+      hash: 02be00e15ef907518ec544998293c5b302f21f87
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Dan Goodman
+      nested: []
+  version: 9.1.0
+  date: 2021-04-13T11:43:31.207Z
+- commits:
     - subject: Replace jellyfish-uuid
       hash: 46d13ba59689392e3c0263ff82714c21ec314cab
       body: ''
