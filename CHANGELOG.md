@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.1.3 - 2021-04-14
+
+* make pull-requests trigger transformers [Martin Rauscher]
+
 ## 9.1.2 - 2021-04-14
 
 * patch: Update dependency @balena/jellyfish-action-library to v9 [Renovate Bot]
