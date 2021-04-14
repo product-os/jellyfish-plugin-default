@@ -1,0 +1,113 @@
+{
+	"slug": "triggered-action-pull-request-artifact-ready-initial",
+	"type": "triggered-action@1.0.0",
+	"name": "Triggered action for marking PR for import (for first occurrence)",
+	"markers": [],
+	"data": {
+		"schedule": "sync",
+		"filter": {
+      "type": "object",
+      "$$links": {
+        "is attached to": {
+          "type": "object",
+          "required": [ "active", "type" ],
+          "properties": {
+            "active": {
+              "type": "boolean",
+              "const": true
+            },
+            "type": {
+              "type": "string",
+              "const": "pull-request@1.0.0"
+            },
+            "data": {
+              "type":"object",
+              "properties":{
+                "$transformer":{
+                  "type": "boolean",
+                  "const": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "active",
+        "type",
+        "data"
+      ],
+      "properties": {
+        "active": {
+          "type": "boolean",
+          "const": true
+        },
+        "type": {
+          "type": "string",
+          "const": "update@1.0.0"
+        },
+        "data": {
+          "type": "object",
+          "required": [
+            "payload"
+          ],
+          "properties": {
+            "payload": {
+              "type": "array",
+              "minItems": 1,
+              "contains": {
+                "type": "object",
+                "required": [
+                  "op",
+                  "path"
+                ],
+                "properties": {
+                  "op": {
+                    "type": "string",
+                    "anyOf": [
+                      {
+                        "const": "add"
+                      },
+                      {
+                        "const": "replace"
+                      }
+                    ]
+                  },
+                  "path": {
+                    "type": "string",
+                    "anyOf": [
+                      {
+                        "const": "/data/head"
+                      },
+                      {
+                        "const": "/data/head/sha"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+		"action": "action-update-card@1.0.0",
+		"target": {
+			"$eval": "source.links['is attached to'][0].id"
+		},
+		"arguments": {
+			"reason": "PR branch was changed - need to import commit",
+			"patch": [
+				{
+					"op": "add",
+					"path": "/data/$transformer",
+					"value": {
+            "artifactReady": {
+              "$eval": "now"
+            }
+          }
+				}
+			]
+		}
+	}
+}
