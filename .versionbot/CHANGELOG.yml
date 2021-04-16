@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update to latest sync version to fix broken metric import
+      hash: d7cc8105b5b5ce755480456f85dc172e40aac34c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 9.1.3
+  date: 2021-04-16T20:07:26.818Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-action-library to v9'
       hash: ee9c0862b2590d5a2912e5b5db9306c9a1cd30c7
       body: ''

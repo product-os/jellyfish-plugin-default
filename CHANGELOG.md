@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.1.3 - 2021-04-16
+
+* Update to latest sync version to fix broken metric import [Lucian Buzzo]
+
 ## 9.1.2 - 2021-04-14
 
 * patch: Update dependency @balena/jellyfish-action-library to v9 [Renovate Bot]
