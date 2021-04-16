@@ -7,8 +7,8 @@
 const ava = require('ava')
 const _ = require('lodash')
 const typedErrors = require('typed-errors')
-const pipeline = require('@balena/jellyfish-sync/lib/pipeline')
-const errors = require('@balena/jellyfish-sync/lib/errors')
+const pipeline = require('@balena/jellyfish-sync/build/pipeline')
+const errors = require('@balena/jellyfish-sync/build/errors')
 const {
 	syncIntegrationScenario
 } = require('@balena/jellyfish-test-harness')
