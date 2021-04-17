@@ -14,7 +14,13 @@ const ActionLibrary = require('@balena/jellyfish-action-library')
 const DefaultPlugin = require('../../../lib')
 const TOKEN = environment.integration.front
 
-syncIntegrationScenario.run(ava, {
+syncIntegrationScenario.run({
+	test: ava.serial,
+	before: ava.before,
+	beforeEach: ava.beforeEach,
+	after: ava.after.always,
+	afterEach: ava.afterEach.always
+}, {
 	basePath: __dirname,
 	plugins: [ ActionLibrary, DefaultPlugin ],
 	cards: [ 'support-thread', 'sales-thread', 'whisper', 'message' ],

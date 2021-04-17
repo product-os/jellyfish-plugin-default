@@ -46,7 +46,13 @@ const beforeEach = async (test) => {
 	}
 }
 
-syncIntegrationScenario.run(ava, {
+syncIntegrationScenario.run({
+	test: ava.serial,
+	before: ava.before,
+	beforeEach: ava.beforeEach,
+	after: ava.after.always,
+	afterEach: ava.afterEach.always
+}, {
 	basePath: __dirname,
 	plugins: [ ActionLibrary, DefaultPlugin ],
 	cards: [ 'issue', 'pull-request', 'message', 'repository', 'gh-push', 'check-run' ],

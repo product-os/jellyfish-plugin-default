@@ -25,7 +25,7 @@
     "timeout": "10m",
     "verbose": true,
     "serial": true,
-    "failWithoutAssertions": true
+    "failWithoutAssertions": false
   },
   "lint-staged": {
     "*.js": [
@@ -74,7 +74,7 @@
     "@balena/jellyfish-action-library": "^9.0.2",
     "@balena/jellyfish-core": "^2.12.20",
     "@balena/jellyfish-sync": "^6.0.16",
-    "@balena/jellyfish-test-harness": "^1.1.190",
+    "@balena/jellyfish-test-harness": "2.0.0-typescript-aacaa37abd0feb308128e54d2e2402fe422b66b3",
     "ava": "^3.15.0",
     "body-parser": "^1.19.0",
     "catch-uncommitted": "^1.6.2",
