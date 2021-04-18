@@ -18,12 +18,17 @@ const DefaultPlugin = require('../../../lib')
 ava.serial.before(async (test) => {
 	const plugins = [ ActionLibrary, DefaultPlugin ]
 	const cards = [ 'support-thread', 'message', 'whisper' ]
-	await syncIntegrationScenario.before(test, plugins, cards)
-	await syncIntegrationScenario.save(test)
+	await syncIntegrationScenario.before(test.context, plugins, cards)
+	await syncIntegrationScenario.save(test.context)
 })
 
-ava.serial.after.always(syncIntegrationScenario.after)
-ava.serial.afterEach.always(syncIntegrationScenario.afterEach)
+ava.serial.after.always(async (test) => {
+	await syncIntegrationScenario.after(test.context)
+})
+
+ava.serial.afterEach.always(async (test) => {
+	syncIntegrationScenario.afterEach(test.context)
+})
 
 ava.serial('should not change the same user email', async (test) => {
 	await test.context.jellyfish.insertCard(
