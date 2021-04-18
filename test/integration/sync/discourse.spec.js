@@ -27,7 +27,7 @@ ava.serial.after.always(async (test) => {
 })
 
 ava.serial.afterEach.always(async (test) => {
-	syncIntegrationScenario.afterEach(test.context)
+	await syncIntegrationScenario.afterEach(test.context)
 })
 
 ava.serial('should not change the same user email', async (test) => {
