@@ -1,4 +1,17 @@
 - commits:
+    - subject: Bump jellyfish-test-harness to v2
+      hash: 3f1e98a7a4be038fde52d93d6eb80dc056e9920c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 9.1.4
+  date: 2021-04-18T10:00:41.168Z
+- commits:
     - subject: Update to latest sync version to fix broken metric import
       hash: d7cc8105b5b5ce755480456f85dc172e40aac34c
       body: ''

@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.1.4 - 2021-04-18
+
+* Bump jellyfish-test-harness to v2 [Josh Bowling]
+
 ## 9.1.3 - 2021-04-16
 
 * Update to latest sync version to fix broken metric import [Lucian Buzzo]
