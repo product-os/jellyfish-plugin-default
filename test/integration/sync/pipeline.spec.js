@@ -19,12 +19,17 @@ const NoOpIntegration = require('./noop-integration')
 ava.serial.before(async (test) => {
 	const plugins = [ ActionLibrary, DefaultPlugin ]
 	const cards = []
-	await syncIntegrationScenario.before(test, plugins, cards)
-	await syncIntegrationScenario.save(test)
+	await syncIntegrationScenario.before(test.context, plugins, cards)
+	await syncIntegrationScenario.save(test.context)
 })
 
-ava.serial.after.always(syncIntegrationScenario.after)
-ava.serial.afterEach.always(syncIntegrationScenario.afterEach)
+ava.serial.after.always(async (test) => {
+	await syncIntegrationScenario.after(test.context)
+})
+
+ava.serial.afterEach.always(async (test) => {
+	await syncIntegrationScenario.afterEach(test.context)
+})
 
 ava('.importCards() should import no card', async (test) => {
 	const result = await pipeline.importCards(test.context.syncContext, [])

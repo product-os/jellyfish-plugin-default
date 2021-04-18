@@ -22,15 +22,15 @@ const OAUTH_DETAILS = {
 	scope: 'create'
 }
 
-const before = async (test) => {
-	const userCard = await test.context.jellyfish.getCardBySlug(
-		test.context.context,
-		test.context.jellyfish.sessions.admin,
+const before = async (context) => {
+	const userCard = await context.jellyfish.getCardBySlug(
+		context.context,
+		context.jellyfish.sessions.admin,
 		`user-${environment.integration.default.user}@latest`)
 
-	await test.context.jellyfish.patchCardBySlug(
-		test.context.context,
-		test.context.jellyfish.sessions.admin,
+	await context.jellyfish.patchCardBySlug(
+		context.context,
+		context.jellyfish.sessions.admin,
 		`${userCard.slug}@${userCard.version}`, [
 			{
 				op: 'add',
@@ -47,7 +47,13 @@ const before = async (test) => {
 		})
 }
 
-syncIntegrationScenario.run(ava, {
+syncIntegrationScenario.run({
+	test: ava.serial,
+	before: ava.before,
+	beforeEach: ava.beforeEach,
+	after: ava.after.always,
+	afterEach: ava.afterEach.always
+}, {
 	basePath: __dirname,
 	plugins: [ ActionLibrary, DefaultPlugin ],
 	cards: [ 'email-sequence' ],

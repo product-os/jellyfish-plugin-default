@@ -13,7 +13,13 @@ const ActionLibrary = require('@balena/jellyfish-action-library')
 const DefaultPlugin = require('../../../lib')
 const TOKEN = environment.integration.flowdock
 
-syncIntegrationScenario.run(ava, {
+syncIntegrationScenario.run({
+	test: ava.serial,
+	before: ava.before,
+	beforeEach: ava.beforeEach,
+	after: ava.after.always,
+	afterEach: ava.afterEach.always
+}, {
 	basePath: __dirname,
 	plugins: [ ActionLibrary, DefaultPlugin ],
 	cards: [ 'thread', 'whisper', 'message' ],
