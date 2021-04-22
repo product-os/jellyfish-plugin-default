@@ -26,7 +26,11 @@
       "status": "closed",
       "archived": false,
       "merged_at": null,
-      "closed_at": null
+      "closed_at": null,
+      "contract": null,
+      "$transformer": {
+        "artifactReady": "61c13a539195aece8506f4f7eb1c01765e935891"
+      }
     }
   },
   "tail": [
@@ -69,7 +73,11 @@
             "status": "open",
             "archived": false,
             "merged_at": null,
-            "closed_at": null
+            "closed_at": null,
+            "contract": null,
+            "$transformer": {
+              "artifactReady": "61c13a539195aece8506f4f7eb1c01765e935891"
+            }
           },
           "type": "pull-request@1.0.0"
         }
