@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update to latest version of test harness
+      hash: 4e7b164fd6065b2d1e15c01fcb0c6d4b9df55ebf
+      body: |
+        This latest version notably includes the typescript version of the queue
+        module.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 9.1.5
+  date: 2021-04-22T10:02:02.283Z
+- commits:
     - subject: Bump jellyfish-test-harness to v2
       hash: 3f1e98a7a4be038fde52d93d6eb80dc056e9920c
       body: ''

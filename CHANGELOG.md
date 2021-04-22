@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.1.5 - 2021-04-22
+
+* Update to latest version of test harness [Lucian Buzzo]
+
 ## 9.1.4 - 2021-04-18
 
 * Bump jellyfish-test-harness to v2 [Josh Bowling]
