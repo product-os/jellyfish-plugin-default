@@ -1,4 +1,27 @@
 - commits:
+    - subject: mark pull-requests ready for transformers when head changes
+      hash: 27f1c3495bd5a835613a3cbbf937a41141c600ae
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Martin Rauscher <martin@balena.io>
+        signed-off-by: Martin Rauscher <martin@balena.io>
+      author: Martin Rauscher
+      nested: []
+    - subject: load balena.yml contract fragment into pull-requests
+      hash: 32cf50f06471cf627b31d1bc4f001de975c531a3
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Martin Rauscher <martin@balena.io>
+        signed-off-by: Martin Rauscher <martin@balena.io>
+      author: Martin Rauscher
+      nested: []
+  version: 9.1.6
+  date: 2021-04-22T13:16:51.497Z
+- commits:
     - subject: Update to latest version of test harness
       hash: 4e7b164fd6065b2d1e15c01fcb0c6d4b9df55ebf
       body: |

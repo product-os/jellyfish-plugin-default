@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 9.1.6 - 2021-04-22
+
+* mark pull-requests ready for transformers when head changes [Martin Rauscher]
+* load balena.yml contract fragment into pull-requests [Martin Rauscher]
+
 ## 9.1.5 - 2021-04-22
 
 * Update to latest version of test harness [Lucian Buzzo]
