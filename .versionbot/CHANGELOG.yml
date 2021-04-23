@@ -1,4 +1,17 @@
 - commits:
+    - subject: fix use of GitHub content API for pr-sync
+      hash: 8a3cb1f816c240a1b0e1f28065a2135511eff41e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Martin Rauscher <martin@balena.io>
+        signed-off-by: Martin Rauscher <martin@balena.io>
+      author: Martin Rauscher
+      nested: []
+  version: 9.1.7
+  date: 2021-04-23T12:08:12.309Z
+- commits:
     - subject: mark pull-requests ready for transformers when head changes
       hash: 27f1c3495bd5a835613a3cbbf937a41141c600ae
       body: ''
