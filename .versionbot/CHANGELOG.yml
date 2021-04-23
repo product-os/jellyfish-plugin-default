@@ -1,4 +1,25 @@
 - commits:
+    - subject: Bump marked from 1.2.9 to 2.0.0
+      hash: f6bc12cbf528a41e2f7f7f30032949a559bca8b9
+      body: >
+        Bumps [marked](https://github.com/markedjs/marked) from 1.2.9 to 2.0.0.
+
+        - [Release notes](https://github.com/markedjs/marked/releases)
+
+        -
+        [Changelog](https://github.com/markedjs/marked/blob/master/release.config.js)
+
+        - [Commits](https://github.com/markedjs/marked/compare/v1.2.9...v2.0.0)
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: 'dependabot[bot] <support@github.com>'
+        signed-off-by: 'dependabot[bot] <support@github.com>'
+      author: 'dependabot[bot]'
+      nested: []
+  version: 9.1.7
+  date: 2021-04-23T00:20:11.667Z
+- commits:
     - subject: mark pull-requests ready for transformers when head changes
       hash: 27f1c3495bd5a835613a3cbbf937a41141c600ae
       body: ''
