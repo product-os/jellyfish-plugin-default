@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.1.8 - 2021-04-24
+
+* Test PR [Josh Bowling]
+
 ## 9.1.7 - 2021-04-23
 
 * fix use of GitHub content API for pr-sync [Martin Rauscher]

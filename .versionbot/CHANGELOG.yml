@@ -1,4 +1,17 @@
 - commits:
+    - subject: Test PR
+      hash: db4a7df81dd9fbf4696d72269eaa9a76f87caa36
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 9.1.8
+  date: 2021-04-24T05:28:20.154Z
+- commits:
     - subject: fix use of GitHub content API for pr-sync
       hash: 8a3cb1f816c240a1b0e1f28065a2135511eff41e
       body: ''
