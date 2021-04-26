@@ -1,4 +1,17 @@
 - commits:
+    - subject: Bump ci-task-runner
+      hash: f413c4157d63f43bc04d26f70a33df13c3a4bc0c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 9.1.9
+  date: 2021-04-26T05:40:59.688Z
+- commits:
     - subject: Remove jellyfish-uuid from repo.yml
       hash: 016e3d82ff274f384d2c95cbf96cf3318fca1083
       body: ''

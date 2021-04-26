@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.1.9 - 2021-04-26
+
+* Bump ci-task-runner [Josh Bowling]
+
 ## 9.1.8 - 2021-04-24
 
 * Remove jellyfish-uuid from repo.yml [Josh Bowling]
