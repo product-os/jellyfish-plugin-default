@@ -1,4 +1,17 @@
 - commits:
+    - subject: fix use of GH api for repo contents of pull-requests
+      hash: 698ef1f206f60baf7bfc5c783fe051cb023abbc9
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Martin Rauscher <martin@balena.io>
+        signed-off-by: Martin Rauscher <martin@balena.io>
+      author: Martin Rauscher
+      nested: []
+  version: 9.1.10
+  date: 2021-04-26T08:43:04.407Z
+- commits:
     - subject: Bump ci-task-runner
       hash: f413c4157d63f43bc04d26f70a33df13c3a4bc0c
       body: ''

@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.1.10 - 2021-04-26
+
+* fix use of GH api for repo contents of pull-requests [Martin Rauscher]
+
 ## 9.1.9 - 2021-04-26
 
 * Bump ci-task-runner [Josh Bowling]
