@@ -9,6 +9,8 @@
     "capabilities": [],
     "data": {
       "repository": "resin-io/jellyfish",
+      "git_url": "git://github.com/resin-io/jellyfish.git",
+      "ssh_url": "git@github.com:resin-io/jellyfish.git",
       "head": {
         "branch": "pr-changes-requested",
         "sha": "803d0ccc315e606fe8d00cf52138de654c3f35aa"
@@ -57,6 +59,8 @@
           "capabilities": [],
           "data": {
             "repository": "resin-io/jellyfish",
+            "git_url": "git://github.com/resin-io/jellyfish.git",
+            "ssh_url": "git@github.com:resin-io/jellyfish.git",
             "head": {
               "branch": "pr-changes-requested",
               "sha": "803d0ccc315e606fe8d00cf52138de654c3f35aa"
