@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.2.1 - 2021-04-27
+
+* patch: Update resinci/jellyfish-test Docker tag to v1.3.43 [Renovate Bot]
+
 ## 9.2.0 - 2021-04-27
 
 * Update GitHub webhooks expected to include missing urls [Josh Bowling]

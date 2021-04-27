@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update resinci/jellyfish-test Docker tag to v1.3.43'
+      hash: ecba7af466abe9621c2816dd7460a11afc35327a
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 9.2.1
+  date: 2021-04-27T05:07:22.076Z
+- commits:
     - subject: Update GitHub webhooks expected to include missing urls
       hash: 9b05b576bfd6ad854536778a21ae998623911443
       body: ''
