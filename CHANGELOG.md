@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 9.2.0 - 2021-04-27
+
+* Update GitHub webhooks expected to include missing urls [Josh Bowling]
+* Copy git url from webhook event to PR contract [Lucian Buzzo]
+
 ## 9.1.10 - 2021-04-26
 
 * fix use of GH api for repo contents of pull-requests [Martin Rauscher]

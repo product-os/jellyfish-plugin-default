@@ -1,4 +1,27 @@
 - commits:
+    - subject: Update GitHub webhooks expected to include missing urls
+      hash: 9b05b576bfd6ad854536778a21ae998623911443
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Copy git url from webhook event to PR contract
+      hash: 452439728bf1a15107e754cd513520078422ab43
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 9.2.0
+  date: 2021-04-27T02:08:19.609Z
+- commits:
     - subject: fix use of GH api for repo contents of pull-requests
       hash: 698ef1f206f60baf7bfc5c783fe051cb023abbc9
       body: ''
