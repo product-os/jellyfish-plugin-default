@@ -17,6 +17,8 @@
         "sha": "61c13a539195aece8506f4f7eb1c01765e935891"
       },
       "repository": "balena-io/vb-test",
+      "git_url": "git://github.com/balena-io/vb-test.git",
+      "ssh_url": "git@github.com:balena-io/vb-test.git",
       "mirrors": [
         "https://github.com/balena-io/vb-test/pull/47"
       ],
@@ -64,6 +66,8 @@
               "sha": "61c13a539195aece8506f4f7eb1c01765e935891"
             },
             "repository": "balena-io/vb-test",
+            "git_url": "git://github.com/balena-io/vb-test.git",
+            "ssh_url": "git@github.com:balena-io/vb-test.git",
             "mirrors": [
               "https://github.com/balena-io/vb-test/pull/47"
             ],
