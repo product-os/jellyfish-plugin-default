@@ -1,4 +1,17 @@
 - commits:
+    - subject: Bump dependencies
+      hash: 3417af962295618df1da485465ed4a8800cc4338
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 9.2.3
+  date: 2021-04-29T00:51:22.468Z
+- commits:
     - subject: Bump redis from 3.0.2 to 3.1.2
       hash: 4925661d7af985c25c77b325fd9504ba38074b3e
       body: >

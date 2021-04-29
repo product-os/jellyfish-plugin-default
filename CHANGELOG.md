@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.2.3 - 2021-04-29
+
+* Bump dependencies [Josh Bowling]
+
 ## 9.2.2 - 2021-04-28
 
 * Bump redis from 3.0.2 to 3.1.2 [dependabot[bot]]
