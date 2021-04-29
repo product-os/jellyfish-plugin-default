@@ -1,4 +1,27 @@
 - commits:
+    - subject: Bump redis from 3.0.2 to 3.1.2
+      hash: 4925661d7af985c25c77b325fd9504ba38074b3e
+      body: >
+        Bumps [redis](https://github.com/NodeRedis/node-redis) from 3.0.2 to
+        3.1.2.
+
+        - [Release notes](https://github.com/NodeRedis/node-redis/releases)
+
+        -
+        [Changelog](https://github.com/NodeRedis/node-redis/blob/master/CHANGELOG.md)
+
+        -
+        [Commits](https://github.com/NodeRedis/node-redis/compare/v3.0.2...v3.1.2)
+      footer:
+        Signed-off-by: 'dependabot[bot] <support@github.com>'
+        signed-off-by: 'dependabot[bot] <support@github.com>'
+        Change-type: patch
+        change-type: patch
+      author: 'dependabot[bot]'
+      nested: []
+  version: 9.2.2
+  date: 2021-04-28T23:30:21.330Z
+- commits:
     - subject: 'patch: Update resinci/jellyfish-test Docker tag to v1.3.43'
       hash: ecba7af466abe9621c2816dd7460a11afc35327a
       body: ''
