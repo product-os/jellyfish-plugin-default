@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.2.5 - 2021-05-03
+
+* patch: Update resinci/jellyfish-test Docker tag to v1.3.44 [Renovate Bot]
+
 ## 9.2.4 - 2021-04-30
 
 * patch: Update dependency eslint-plugin-jsdoc to v33 [Renovate Bot]
