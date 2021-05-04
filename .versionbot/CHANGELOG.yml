@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.67'
+      hash: e39d10684f2699d5d48e460312671dd945f3f50b
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 9.2.7
+  date: 2021-05-04T16:23:22.867Z
+- commits:
     - subject: Use proxyquire to stub local dependency
       hash: 41d645bd3d74c888a5e1ddb509f9fe8ad1b56c53
       body: >

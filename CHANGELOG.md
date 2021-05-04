@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.2.7 - 2021-05-04
+
+* patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.67 [Renovate Bot]
+
 ## 9.2.6 - 2021-05-04
 
 * Use proxyquire to stub local dependency [Graham McCulloch]
