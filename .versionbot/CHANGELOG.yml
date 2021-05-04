@@ -1,4 +1,28 @@
 - commits:
+    - subject: Use proxyquire to stub local dependency
+      hash: 41d645bd3d74c888a5e1ddb509f9fe8ad1b56c53
+      body: >
+        The previous method (using sinon) didn't actually work as the real
+        module was already imported by `with-relationships.js` before the test
+        file stubbed it.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+    - subject: 'patch: Update non-major'
+      hash: d5b066cb6a2db52eb4b64911ec38ddc8915a0e9a
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 9.2.6
+  date: 2021-05-04T06:11:51.011Z
+- commits:
     - subject: 'patch: Update resinci/jellyfish-test Docker tag to v1.3.44'
       hash: 460105ab030e981c838529dbcc7c3359753df128
       body: ''

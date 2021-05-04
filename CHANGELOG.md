@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 9.2.6 - 2021-05-04
+
+* Use proxyquire to stub local dependency [Graham McCulloch]
+* patch: Update non-major [Renovate Bot]
+
 ## 9.2.5 - 2021-05-03
 
 * patch: Update resinci/jellyfish-test Docker tag to v1.3.44 [Renovate Bot]
