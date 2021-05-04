@@ -14,11 +14,6 @@
           "title": "Support issues"
         },
         {
-          "link": "has attached",
-          "title": "Sales threads",
-          "type": "sales-thread"
-        },
-        {
           "link": "is attached to",
           "type": "brainstorm-topic",
           "title": "Brainstorm topics"
