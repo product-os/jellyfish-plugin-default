@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.2.17 - 2021-05-06
+
+* patch: Update dependency catch-uncommitted to v2 [Renovate Bot]
+
 ## 9.2.16 - 2021-05-06
 
 * patch: Update non-major [Renovate Bot]
