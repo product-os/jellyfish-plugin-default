@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.2.24 - 2021-05-09
+
+* patch: Update non-major [Renovate Bot]
+
 ## 9.2.23 - 2021-05-09
 
 * patch: Update dependency @balena/ci-task-runner to ^0.2.135 [Renovate Bot]
