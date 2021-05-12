@@ -70,7 +70,7 @@
     "yaml": "^1.10.2"
   },
   "devDependencies": {
-    "@balena/ci-task-runner": "^0.2.140",
+    "@balena/ci-task-runner": "^0.2.141",
     "@balena/jellycheck": "^0.1.1",
     "@balena/jellyfish-action-library": "^9.0.2",
     "@balena/jellyfish-core": "^2.12.20",
@@ -84,7 +84,7 @@
     "eslint": "^7.26.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsdoc": "^34.0.1",
+    "eslint-plugin-jsdoc": "^34.0.2",
     "eslint-plugin-lodash": "^7.2.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
