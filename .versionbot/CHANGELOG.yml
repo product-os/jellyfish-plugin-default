@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-logger to v2.1.57'
+      hash: 85a0db3245484de6713089888a15ce78d9c6da4c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 9.2.35
+  date: 2021-05-12T07:45:42.676Z
+- commits:
     - subject: 'build(deps): bump hosted-git-info from 2.8.8 to 2.8.9'
       hash: 12d57990f9939ca05c301a6de7f80dad19b00068
       body: >

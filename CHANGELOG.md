@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.2.35 - 2021-05-12
+
+* patch: Update dependency @balena/jellyfish-logger to v2.1.57 [Renovate Bot]
+
 ## 9.2.34 - 2021-05-12
 
 * build(deps): bump hosted-git-info from 2.8.8 to 2.8.9 [dependabot[bot]]
