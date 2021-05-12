@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.2.34 - 2021-05-12
+
+* build(deps): bump hosted-git-info from 2.8.8 to 2.8.9 [dependabot[bot]]
+
 ## 9.2.33 - 2021-05-12
 
 * patch: Update non-major [Renovate Bot]
