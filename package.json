@@ -41,10 +41,10 @@
   "author": "Balena.io. <hello@balena.io>",
   "license": "UNLICENSED",
   "dependencies": {
-    "@balena/jellyfish-assert": "^1.1.16",
+    "@balena/jellyfish-assert": "^1.1.17",
     "@balena/jellyfish-client-sdk": "^2.19.1",
     "@balena/jellyfish-environment": "^4.1.13",
-    "@balena/jellyfish-logger": "2.1.57",
+    "@balena/jellyfish-logger": "2.1.58",
     "@balena/jellyfish-plugin-base": "^2.1.86",
     "@octokit/auth-app": "^2.11.0",
     "@octokit/plugin-retry": "^3.0.7",
