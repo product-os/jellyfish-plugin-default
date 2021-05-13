@@ -1,4 +1,60 @@
 - commits:
+    - subject: Use mixins with milestone contract
+      hash: 997ce659fc5288fc1cdb81593d5cefd577080c5f
+      body: |
+        Added events, relationships and pipeline (status)
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+    - subject: Use withRelationships mixin for product-improvement
+      hash: d0cc39491afb1c77282588ca2881f2e97e079776
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+    - subject: Fix UI schema for product-improvement
+      hash: 5024e9ba387236520b7809cc80ed432874f46aa3
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+    - subject: Make product-improvement contract a pipeline item
+      hash: 6337ec4dda20d0e487cceab65fc97d118e7ad340
+      body: |
+        Adds status field and corresponding slice.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+    - subject: Make pattern contract a pipeline item
+      hash: ff4255dcb2e334006d69ca54bb414d0c024e3c46
+      body: |
+        Adds a status field and corresponding slice.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 9.3.0
+  date: 2021-05-13T04:41:52.998Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-action-library to v10'
       hash: 81604591903d9c5355244c32da4dec90e426ec05
       body: ''

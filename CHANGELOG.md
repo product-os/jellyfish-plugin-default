@@ -5,6 +5,14 @@
 
 # v0.0.3
 
+## 9.3.0 - 2021-05-13
+
+* Use mixins with milestone contract [Graham McCulloch]
+* Use withRelationships mixin for product-improvement [Graham McCulloch]
+* Fix UI schema for product-improvement [Graham McCulloch]
+* Make product-improvement contract a pipeline item [Graham McCulloch]
+* Make pattern contract a pipeline item [Graham McCulloch]
+
 ## 9.2.37 - 2021-05-13
 
 * patch: Update dependency @balena/jellyfish-action-library to v10 [Renovate Bot]
