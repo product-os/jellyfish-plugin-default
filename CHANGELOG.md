@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.4.2 - 2021-05-13
+
+* patch: Update dependency @balena/jellyfish-logger to v2.1.59 [Renovate Bot]
+
 ## 9.4.1 - 2021-05-13
 
 * Update link constraint imports [Lucian Buzzo]
