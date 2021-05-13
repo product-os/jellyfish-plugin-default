@@ -1,4 +1,25 @@
 - commits:
+    - subject: Update link constraint imports
+      hash: 6592354125bfe8572d694332856e944451b25dc1
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+    - subject: 'patch: Update dependency @balena/jellyfish-client-sdk to v3'
+      hash: 1ae0dd81a091589cd2970bfb0f5483a652964c52
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 9.4.1
+  date: 2021-05-13T09:51:23.832Z
+- commits:
     - subject: Add triggered action to reopen support threads when pattern closed
       hash: d7529f2be78ff571e9837f1db605d254cdf00790
       body: ''

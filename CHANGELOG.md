@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 9.4.1 - 2021-05-13
+
+* Update link constraint imports [Lucian Buzzo]
+* patch: Update dependency @balena/jellyfish-client-sdk to v3 [Renovate Bot]
+
 ## 9.4.0 - 2021-05-13
 
 * Add triggered action to reopen support threads when pattern closed [Graham McCulloch]
