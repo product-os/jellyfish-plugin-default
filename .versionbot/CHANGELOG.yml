@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.87'
+      hash: 4cdf6fa941746e2951c2096543d90c74b624986c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 9.3.1
+  date: 2021-05-13T06:03:41.459Z
+- commits:
     - subject: Use mixins with milestone contract
       hash: 997ce659fc5288fc1cdb81593d5cefd577080c5f
       body: |

@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.3.1 - 2021-05-13
+
+* patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.87 [Renovate Bot]
+
 ## 9.3.0 - 2021-05-13
 
 * Use mixins with milestone contract [Graham McCulloch]
