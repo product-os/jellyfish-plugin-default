@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add triggered action to reopen support threads when pattern closed
+      hash: d7529f2be78ff571e9837f1db605d254cdf00790
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 9.4.0
+  date: 2021-05-13T08:23:21.018Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.87'
       hash: 4cdf6fa941746e2951c2096543d90c74b624986c
       body: ''
