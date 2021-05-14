@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.4.6 - 2021-05-14
+
+* patch: Update non-major Docker tags [Renovate Bot]
+
 ## 9.4.5 - 2021-05-14
 
 * patch: Update non-major [Renovate Bot]
