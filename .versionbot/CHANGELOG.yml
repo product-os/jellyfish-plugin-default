@@ -1,5 +1,16 @@
 - commits:
     - subject: 'patch: Update non-major'
+      hash: 702d91d4bfa380afdf3a8a55fed26e20b3252917
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 9.4.5
+  date: 2021-05-14T09:22:46.558Z
+- commits:
+    - subject: 'patch: Update non-major'
       hash: 9fe191a092504ed45421b98604b31e2306d4313d
       body: ''
       footer:
