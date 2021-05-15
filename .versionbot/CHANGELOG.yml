@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency @octokit/auth-app to v3'
+      hash: c36e392b4af92174f12a762c6bc0e7fc7e4f5e20
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 9.4.11
+  date: 2021-05-15T22:11:41.977Z
+- commits:
     - subject: 'patch: Update non-major'
       hash: 016872281967f74548e6d799b046ce71ea982ebc
       body: ''
