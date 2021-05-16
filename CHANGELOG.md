@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.4.13 - 2021-05-16
+
+* patch: Update dependency eslint-plugin-jsdoc to ^34.6.3 [Renovate Bot]
+
 ## 9.4.12 - 2021-05-16
 
 * patch: Update non-major [Renovate Bot]
