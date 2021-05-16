@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.4.14 - 2021-05-16
+
+* patch: Update dependency @balena/ci-task-runner to ^0.2.151 [Renovate Bot]
+
 ## 9.4.13 - 2021-05-16
 
 * patch: Update dependency eslint-plugin-jsdoc to ^34.6.3 [Renovate Bot]
