@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update non-major'
+      hash: 5b847a00b2bfe017c04747db5c70ce165fb1d962
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 9.4.16
+  date: 2021-05-18T01:51:21.176Z
+- commits:
     - subject: Add missing nock unit tests
       hash: bf3d05294af30a7587424393980bf8e0d5409beb
       body: ''

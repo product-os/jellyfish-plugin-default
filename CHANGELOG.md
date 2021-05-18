@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.4.16 - 2021-05-18
+
+* patch: Update non-major [Renovate Bot]
+
 ## 9.4.15 - 2021-05-17
 
 * Add missing nock unit tests [Josh Bowling]
