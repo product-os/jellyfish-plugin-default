@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.4.15 - 2021-05-17
+
+* Add missing nock unit tests [Josh Bowling]
+
 ## 9.4.14 - 2021-05-16
 
 * patch: Update dependency @balena/ci-task-runner to ^0.2.151 [Renovate Bot]

@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add missing nock unit tests
+      hash: bf3d05294af30a7587424393980bf8e0d5409beb
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 9.4.15
+  date: 2021-05-17T07:21:31.222Z
+- commits:
     - subject: 'patch: Update dependency @balena/ci-task-runner to ^0.2.151'
       hash: e5b2021699a2970c57da0d48efb70c7f906a2dcf
       body: ''
