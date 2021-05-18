@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.4.17 - 2021-05-18
+
+* patch: Update dependency @balena/jellyfish-client-sdk to ^3.4.2 [Renovate Bot]
+
 ## 9.4.16 - 2021-05-18
 
 * patch: Update non-major [Renovate Bot]
