@@ -1,4 +1,18 @@
 - commits:
+    - subject: Make status field required in 'pipeline' contracts
+      hash: ebac27a4965da188e5c5560494bc798ba2199831
+      body: |
+        This makes it clear in the UI form that this field is required.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 9.5.0
+  date: 2021-05-19T02:46:00.815Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-client-sdk to ^3.4.2'
       hash: 3fb914c8f013c301b9ba72cfea9be81f5b098706
       body: ''

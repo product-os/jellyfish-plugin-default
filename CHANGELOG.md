@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.5.0 - 2021-05-19
+
+* Make status field required in 'pipeline' contracts [Graham McCulloch]
+
 ## 9.4.17 - 2021-05-18
 
 * patch: Update dependency @balena/jellyfish-client-sdk to ^3.4.2 [Renovate Bot]
