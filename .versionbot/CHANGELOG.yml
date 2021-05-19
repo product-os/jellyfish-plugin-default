@@ -1,4 +1,20 @@
 - commits:
+    - subject: Remove redundant phase field in improvement contract
+      hash: 89f8f000ad619ec93ef7ec3451cd26c481c1f19e
+      body: >
+        This field has been superceded by the status field. All current
+        product-improvement contracts have been migrated so that the status
+        field matches the phase field.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 9.6.0
+  date: 2021-05-19T08:24:23.526Z
+- commits:
     - subject: Make status field required in 'pipeline' contracts
       hash: ebac27a4965da188e5c5560494bc798ba2199831
       body: |

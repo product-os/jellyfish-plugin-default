@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.6.0 - 2021-05-19
+
+* Remove redundant phase field in improvement contract [Graham McCulloch]
+
 ## 9.5.0 - 2021-05-19
 
 * Make status field required in 'pipeline' contracts [Graham McCulloch]
