@@ -117,6 +117,10 @@ export MAILGUN_DOMAIN
 MAILGUN_BASE_URL = https://api.mailgun.net/v3
 export MAILGUN_BASE_URL
 
+# Flag for skipping tests that talk with real external service
+TEST_INTEGRATION_SKIP ?= 1
+export TEST_INTEGRATION_SKIP
+
 # GitHub
 INTEGRATION_GITHUB_APP_ID ?=
 export INTEGRATION_GITHUB_APP_ID
