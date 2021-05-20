@@ -1,4 +1,19 @@
 - commits:
+    - subject: Display milestone status in snippet view
+      hash: 45e8161866c18040313322741e44f3a69f630d50
+      body: >
+        The status field is now exposed on the snippet view of milestone cards
+        (i.e. when they are in a list).
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 9.8.0
+  date: 2021-05-20T05:45:52.707Z
+- commits:
     - subject: Specify enum names for improvement status values
       hash: cddde9c48c18557c7fb227fe9d61d29e9a53a71f
       body: >

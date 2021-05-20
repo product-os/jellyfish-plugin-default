@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.8.0 - 2021-05-20
+
+* Display milestone status in snippet view [Graham McCulloch]
+
 ## 9.7.0 - 2021-05-20
 
 * Specify enum names for improvement status values [Graham McCulloch]
