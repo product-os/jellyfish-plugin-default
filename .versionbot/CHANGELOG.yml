@@ -1,4 +1,27 @@
 - commits:
+    - subject: Replace request in balena API integration
+      hash: 0b075c2d2e8eb36faa87faefecb0ba11f576fd4d
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Replace deprecated request-promise
+      hash: 76f7ebd1ff35c65867aa5862f7ba034507977187
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 9.6.2
+  date: 2021-05-20T02:01:11.420Z
+- commits:
     - subject: Add live Front attachment download test
       hash: 319a1c9c53fc0d30ef89b0642ece5e50cb1b3afe
       body: ''

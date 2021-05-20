@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 9.6.2 - 2021-05-20
+
+* Replace request in balena API integration [Josh Bowling]
+* Replace deprecated request-promise [Josh Bowling]
+
 ## 9.6.1 - 2021-05-19
 
 * Add live Front attachment download test [Josh Bowling]
