@@ -50,6 +50,7 @@
     "@octokit/plugin-retry": "^3.0.7",
     "@octokit/plugin-throttling": "^3.4.1",
     "@octokit/rest": "^18.5.3",
+    "axios": "^0.21.1",
     "bluebird": "^3.7.2",
     "fast-json-patch": "^3.0.0-1",
     "front-sdk": "^0.8.1",
@@ -64,8 +65,6 @@
     "node-jose": "^2.0.0",
     "pluralize": "^8.0.0",
     "randomstring": "^1.2.1",
-    "request": "^2.88.2",
-    "request-promise": "^4.2.6",
     "uuid": "^8.3.2",
     "yaml": "^1.10.2"
   },
