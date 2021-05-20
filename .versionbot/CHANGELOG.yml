@@ -1,4 +1,26 @@
 - commits:
+    - subject: Specify enum names for improvement status values
+      hash: cddde9c48c18557c7fb227fe9d61d29e9a53a71f
+      body: >
+        product-improvement is the only use of `asPipelineItem` that requires
+        enumNames to be overwritten.
+
+
+        Note - as a related fix we should update jellyfish-ui-component's
+        getViewSlices helper method to make use of the `enumNames` (if defined)
+        to return the appropriate value name (label) as well. That way we can
+        make use of it when displaying the Status dropdown component in the View
+        header.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 9.7.0
+  date: 2021-05-20T05:09:02.435Z
+- commits:
     - subject: Replace request in balena API integration
       hash: 0b075c2d2e8eb36faa87faefecb0ba11f576fd4d
       body: ''

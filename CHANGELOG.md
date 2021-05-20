@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.7.0 - 2021-05-20
+
+* Specify enum names for improvement status values [Graham McCulloch]
+
 ## 9.6.2 - 2021-05-20
 
 * Replace request in balena API integration [Josh Bowling]
