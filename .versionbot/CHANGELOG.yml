@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-client-sdk to v4'
+      hash: d3cf252cc9aabff810838db656b22d59dadaa609
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 9.8.1
+  date: 2021-05-20T07:39:52.865Z
+- commits:
     - subject: Display milestone status in snippet view
       hash: 45e8161866c18040313322741e44f3a69f630d50
       body: >

@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.8.1 - 2021-05-20
+
+* patch: Update dependency @balena/jellyfish-client-sdk to v4 [Renovate Bot]
+
 ## 9.8.0 - 2021-05-20
 
 * Display milestone status in snippet view [Graham McCulloch]
