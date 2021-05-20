@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add live Front attachment download test
+      hash: 319a1c9c53fc0d30ef89b0642ece5e50cb1b3afe
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 9.6.1
+  date: 2021-05-19T09:34:54.866Z
+- commits:
     - subject: Remove redundant phase field in improvement contract
       hash: 89f8f000ad619ec93ef7ec3451cd26c481c1f19e
       body: >

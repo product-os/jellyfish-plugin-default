@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.6.1 - 2021-05-19
+
+* Add live Front attachment download test [Josh Bowling]
+
 ## 9.6.0 - 2021-05-19
 
 * Remove redundant phase field in improvement contract [Graham McCulloch]
