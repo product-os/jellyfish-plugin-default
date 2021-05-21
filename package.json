@@ -44,7 +44,7 @@
     "@balena/jellyfish-assert": "^1.1.17",
     "@balena/jellyfish-client-sdk": "^4.4.0",
     "@balena/jellyfish-environment": "^4.1.13",
-    "@balena/jellyfish-logger": "2.1.60",
+    "@balena/jellyfish-logger": "2.1.61",
     "@balena/jellyfish-plugin-base": "^2.1.89",
     "@octokit/auth-app": "^2.11.0",
     "@octokit/plugin-retry": "^3.0.7",
