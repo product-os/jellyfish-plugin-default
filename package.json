@@ -43,9 +43,9 @@
   "dependencies": {
     "@balena/jellyfish-assert": "^1.1.22",
     "@balena/jellyfish-client-sdk": "^4.4.1",
-    "@balena/jellyfish-environment": "^4.1.14",
+    "@balena/jellyfish-environment": "^4.1.15",
     "@balena/jellyfish-logger": "2.1.69",
-    "@balena/jellyfish-plugin-base": "^2.1.94",
+    "@balena/jellyfish-plugin-base": "^2.1.95",
     "@octokit/auth-app": "^2.11.0",
     "@octokit/plugin-retry": "^3.0.7",
     "@octokit/plugin-throttling": "^3.4.1",
