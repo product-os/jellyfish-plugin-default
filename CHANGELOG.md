@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.8.18 - 2021-05-24
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 9.8.17 - 2021-05-24
 
 * patch: Update internal-patch [Renovate Bot]
