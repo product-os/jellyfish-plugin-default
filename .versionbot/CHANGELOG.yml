@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update external dev deps
+      hash: 8ebd1c8a875b4ef4c7b39c47b615f9f35af2bfcf
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 9.8.20
+  date: 2021-05-25T08:49:21.770Z
+- commits:
     - subject: 'patch: Update internal-patch'
       hash: 8b500e9b1191277a771cd52c7f72f53b9eb33e92
       body: ''

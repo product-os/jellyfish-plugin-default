@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 9.8.20 - 2021-05-25
+
+* Update external dev deps [Josh Bowling]
+
 ## 9.8.19 - 2021-05-25
 
 * patch: Update internal-patch [Renovate Bot]
