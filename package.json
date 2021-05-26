@@ -45,7 +45,7 @@
     "@balena/jellyfish-client-sdk": "^4.4.6",
     "@balena/jellyfish-environment": "^4.1.20",
     "@balena/jellyfish-logger": "2.1.79",
-    "@balena/jellyfish-plugin-base": "^2.1.107",
+    "@balena/jellyfish-plugin-base": "^2.1.108",
     "@octokit/auth-app": "^2.11.0",
     "@octokit/plugin-retry": "^3.0.7",
     "@octokit/plugin-throttling": "^3.4.1",
