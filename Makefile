@@ -149,8 +149,6 @@ export INTEGRATION_OUTREACH_APP_ID
 INTEGRATION_OUTREACH_APP_SECRET ?=
 export INTEGRATION_OUTREACH_APP_SECRET
 
-TEST_INTEGRATION_GITHUB_REPO ?= product-os/jellyfish-test-github
-export TEST_INTEGRATION_GITHUB_REPO
 TEST_INTEGRATION_FRONT_INBOX_1 ?= inb_qf8q # Jellyfish Testfront
 export TEST_INTEGRATION_FRONT_INBOX_1
 TEST_INTEGRATION_FRONT_INBOX_2 ?= inb_8t8y # Jellyfish Test Inbox
@@ -218,7 +216,6 @@ test:
 	node $(NODE_DEBUG_ARGS) ./node_modules/.bin/ava --serial -v $(AVA_ARGS) $(FILES)
 
 test-translate:
-	INTEGRATION_GITHUB_APP_ID= FILES="'./test/integration/sync/github-translate.spec.js'" make test
 	FILES="'./test/integration/sync/balena-api-translate.spec.js'" make test
 	FILES="'./test/integration/sync/flowdock-translate.spec.js'" make test
 	FILES="'./test/integration/sync/outreach-translate.spec.js'" make test
