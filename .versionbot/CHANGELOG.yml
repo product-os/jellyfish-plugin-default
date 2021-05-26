@@ -1,4 +1,47 @@
 - commits:
+    - subject: Remove more GitHub-related tests
+      hash: 9a2ee4180ff9cfccfb953067de20589906db9feb
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Remove more GitHub-related cards
+      hash: b187762fcc26d22a8f1c8b2f0b58b29ac1569fe1
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Temporarily skip failing test
+      hash: 89b011c8668723d520753c8e7637cf79751ee0ca
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Remove GitHub
+      hash: 2a158d686baae6a67d733df7b2f7fd78418e4ac1
+      body: ''
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 10.0.0
+  date: 2021-05-26T05:09:11.345Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.108'
       hash: 212a62f74c79dd31bd48ea906b8f4bc21146f761
       body: ''

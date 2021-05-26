@@ -5,6 +5,13 @@
 
 # v0.0.3
 
+## 10.0.0 - 2021-05-26
+
+* Remove more GitHub-related tests [Josh Bowling]
+* Remove more GitHub-related cards [Josh Bowling]
+* Temporarily skip failing test [Josh Bowling]
+* Remove GitHub [Josh Bowling]
+
 ## 9.8.23 - 2021-05-26
 
 * patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.108 [Renovate Bot]
