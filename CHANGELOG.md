@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 11.0.1 - 2021-05-27
+
+* test worker changes via harness [Martin Rauscher]
+
 ## 11.0.0 - 2021-05-27
 
 * Update to typescript version of jellyfish-core module [Lucian Buzzo]

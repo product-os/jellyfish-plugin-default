@@ -1,4 +1,17 @@
 - commits:
+    - subject: test worker changes via harness
+      hash: aa5ee7d7f4cfdd26322faeb5d2b9170395901b63
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Martin Rauscher <martin@balena.io>
+        signed-off-by: Martin Rauscher <martin@balena.io>
+      author: Martin Rauscher
+      nested: []
+  version: 11.0.1
+  date: 2021-05-27T20:11:01.223Z
+- commits:
     - subject: Update to typescript version of jellyfish-core module
       hash: 7cad07a901b62f2ed0b54548a922afaf0dbbffbf
       body: ''
