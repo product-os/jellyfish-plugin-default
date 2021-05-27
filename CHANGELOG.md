@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 10.0.3 - 2021-05-27
+
+* patch: Update dependency @balena/jellyfish-test-harness to v3 [Renovate Bot]
+
 ## 10.0.2 - 2021-05-27
 
 * patch: Update internal-patch [Renovate Bot]
