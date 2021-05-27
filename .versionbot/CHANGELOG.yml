@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update to typescript version of jellyfish-core module
+      hash: 7cad07a901b62f2ed0b54548a922afaf0dbbffbf
+      body: ''
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 11.0.0
+  date: 2021-05-27T13:44:00.507Z
+- commits:
     - subject: 'patch: Update internal-patch'
       hash: 12cdb1d175ef8dbd76cb0e5d2854870ebca25ab5
       body: ''

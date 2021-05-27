@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 11.0.0 - 2021-05-27
+
+* Update to typescript version of jellyfish-core module [Lucian Buzzo]
+
 ## 10.0.2 - 2021-05-27
 
 * patch: Update internal-patch [Renovate Bot]
