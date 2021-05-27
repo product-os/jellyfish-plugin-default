@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 10.0.1 - 2021-05-26
+
+* patch: Update dependency @balena/jellyfish-action-library to v11 [Renovate Bot]
+
 ## 10.0.0 - 2021-05-26
 
 * Remove more GitHub-related tests [Josh Bowling]
