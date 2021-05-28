@@ -1,4 +1,15 @@
 - commits:
+    - subject: "\U0001F504 Synced file(s) with product-os/jellyfish-config"
+      hash: 2c2034977281330981ce66074e1c6410867c85e6
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: jellyfish-bot
+      nested: []
+  version: 11.0.1
+  date: 2021-05-28T01:53:41.366Z
+- commits:
     - subject: Update to typescript version of jellyfish-core module
       hash: 7cad07a901b62f2ed0b54548a922afaf0dbbffbf
       body: ''
