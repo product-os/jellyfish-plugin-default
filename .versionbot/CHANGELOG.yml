@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency eslint-plugin-import to ^2.23.4'
+      hash: 89b3855d87d49afd5c4ef6083635c6adef93142d
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 11.0.8
+  date: 2021-05-29T23:18:03.054Z
+- commits:
     - subject: 'patch: Update internal-patch'
       hash: 63b9f66177773446891a41f320eb1c20e18271c3
       body: ''

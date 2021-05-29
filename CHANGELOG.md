@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 11.0.8 - 2021-05-29
+
+* patch: Update dependency eslint-plugin-import to ^2.23.4 [Renovate Bot]
+
 ## 11.0.7 - 2021-05-29
 
 * patch: Update internal-patch [Renovate Bot]
