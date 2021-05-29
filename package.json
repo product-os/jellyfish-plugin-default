@@ -42,7 +42,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "@balena/jellyfish-assert": "^1.1.34",
-    "@balena/jellyfish-client-sdk": "^4.4.12",
+    "@balena/jellyfish-client-sdk": "^4.4.13",
     "@balena/jellyfish-environment": "^4.1.25",
     "@balena/jellyfish-logger": "2.1.86",
     "@balena/jellyfish-plugin-base": "^2.1.115",
