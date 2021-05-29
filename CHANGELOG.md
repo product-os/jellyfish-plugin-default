@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 11.0.4 - 2021-05-29
+
+* patch: Update dependency @balena/jellyfish-assert to ^1.1.35 [Renovate Bot]
+
 ## 11.0.3 - 2021-05-29
 
 * patch: Update dependency @balena/jellyfish-client-sdk to ^4.4.13 [Renovate Bot]
