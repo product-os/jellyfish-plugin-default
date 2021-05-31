@@ -43,7 +43,7 @@
   "dependencies": {
     "@balena/jellyfish-assert": "^1.1.38",
     "@balena/jellyfish-client-sdk": "^4.4.16",
-    "@balena/jellyfish-environment": "^4.1.30",
+    "@balena/jellyfish-environment": "^4.1.31",
     "@balena/jellyfish-logger": "2.1.95",
     "@balena/jellyfish-plugin-base": "^2.1.129",
     "axios": "^0.21.1",
