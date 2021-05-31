@@ -6,16 +6,24 @@
   "data": {
     "schema": {
       "type": "object",
-      "properties": {}
-    },
-    "meta": {
-      "relationships": [
-        {
-          "title": "View",
-          "link": "is attached to",
-          "type": "view"
+      "required": [ "data" ],
+      "properties": {
+        "data": {
+          "type": "object",
+          "required": [ "query", "operations" ],
+          "properties": {
+            "query": {
+              "type": "object"
+            },
+            "operations": {
+              "type": "array",
+              "items": {
+                "enum": [ "update", "insert" ]
+              }
+            }
+          }
         }
-      ]
+      }
     }
   }
 }
