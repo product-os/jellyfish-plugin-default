@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 12.0.0 - 2021-06-01
+
+* Remove Flowdock integration [Josh Bowling]
+
 ## 11.0.14 - 2021-05-31
 
 * patch: Update dependency @balena/jellyfish-logger to v3 [Renovate Bot]

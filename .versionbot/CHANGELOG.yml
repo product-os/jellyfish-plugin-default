@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove Flowdock integration
+      hash: f167c2c26d8176fd4a2d38294349a7e1cd242145
+      body: ''
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 12.0.0
+  date: 2021-06-01T04:12:21.771Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-logger to v3'
       hash: cc7353f4044141804f250e38112aeb0a51d725c1
       body: |
