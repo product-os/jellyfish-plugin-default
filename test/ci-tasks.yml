@@ -33,16 +33,6 @@ tasks:
         value: './test/integration/sync/balena-api-translate.spec.js'
     dependencies:
       - 'pipeline'
-  - name: 'flowdock-translate'
-    description: 'Flowdock Translate Tests'
-    command: 'make test'
-    cwd: '/usr/src/jellyfish'
-    required: true
-    environment:
-      - name: 'FILES'
-        value: './test/integration/sync/flowdock-translate.spec.js'
-    dependencies:
-      - 'balena-api-translate'
   - name: 'outreach-translate'
     description: 'Outreach Translate Tests'
     command: 'make test'
@@ -52,7 +42,7 @@ tasks:
       - name: 'FILES'
         value: './test/integration/sync/outreach-translate.spec.js'
     dependencies:
-      - 'flowdock-translate'
+      - 'balena-api-translate'
   - name: 'front-translate'
     description: 'Front Translate Tests'
     command: 'make test'
