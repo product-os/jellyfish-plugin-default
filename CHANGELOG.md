@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 12.0.2 - 2021-06-05
+
+* patch: Update external-non-major [Renovate Bot]
+
 ## 12.0.1 - 2021-06-05
 
 * patch: Update internal-patch [Renovate Bot]
