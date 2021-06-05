@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 12.0.1 - 2021-06-05
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 12.0.0 - 2021-06-01
 
 * Remove Flowdock integration [Josh Bowling]

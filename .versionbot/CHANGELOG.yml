@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update internal-patch'
+      hash: 8a6191c6eb6120ad7955e9a2dd0bc4dea91c74d3
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 12.0.1
+  date: 2021-06-05T11:01:57.634Z
+- commits:
     - subject: Remove Flowdock integration
       hash: f167c2c26d8176fd4a2d38294349a7e1cd242145
       body: ''
