@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 12.0.5 - 2021-06-06
+
+* patch: Update dependency @balena/jellyfish-client-sdk to ^4.4.23 [Renovate Bot]
+
 ## 12.0.4 - 2021-06-06
 
 * Bump jellyfish-test-harness to v3.0.47 [Josh Bowling]
