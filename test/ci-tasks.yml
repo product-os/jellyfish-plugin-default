@@ -55,13 +55,3 @@ tasks:
         value: 'foobar'
     dependencies:
       - 'outreach-translate'
-  - name: 'discourse-translate'
-    description: 'Discourse Translate Tests'
-    command: 'make test'
-    cwd: '/usr/src/jellyfish'
-    required: true
-    environment:
-      - name: 'FILES'
-        value: './test/integration/sync/discourse*.spec.js'
-    dependencies:
-      - 'outreach-translate'
