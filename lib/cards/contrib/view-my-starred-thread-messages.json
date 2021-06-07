@@ -1,0 +1,46 @@
+{
+  "slug": "view-my-starred-thread-messages",
+  "name": "My starred thread messages",
+  "type": "view@1.0.0",
+  "markers": [],
+  "data": {
+    "allOf": [
+      {
+        "name": "My starred thread messages",
+        "schema": {
+          "type": "object",
+          "additionalProperties": true,
+					"required": ["type"],
+					"properties": {
+						"type": {
+							"const": "message@1.0.0"
+						}
+					},
+					"$$links": {
+						"is attached to": {
+							"type": "object",
+							"required": ["type"],
+							"properties": {
+								"type": {
+									"const": "support-thread@1.0.0"
+								}
+							},
+              "$$links": {
+                "is starred by": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "const": {
+                        "$eval": "user.id"
+                      }
+                    }
+                  }
+                }
+              }
+						}
+					}
+        }
+      }
+    ]
+  }
+}
