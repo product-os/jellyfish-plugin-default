@@ -45,7 +45,7 @@
     "@balena/jellyfish-client-sdk": "^4.4.25",
     "@balena/jellyfish-environment": "^4.1.35",
     "@balena/jellyfish-logger": "3.0.7",
-    "@balena/jellyfish-plugin-base": "^2.1.141",
+    "@balena/jellyfish-plugin-base": "^2.1.142",
     "axios": "^0.21.1",
     "bluebird": "^3.7.2",
     "fast-json-patch": "^3.0.0-1",
