@@ -1,4 +1,15 @@
 - commits:
+    - subject: Add notifications support
+      hash: 996572f95ecb0782a99043d4069028a5c753f2ee
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Kakhaber
+      nested: []
+  version: 12.1.0
+  date: 2021-06-08T11:35:13.080Z
+- commits:
     - subject: 'patch: Update internal-patch'
       hash: ca3e0c5087bd2c1ba20cc5eddf995fd83937c2e8
       body: ''

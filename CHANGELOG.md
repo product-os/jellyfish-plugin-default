@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 12.1.0 - 2021-06-08
+
+* Add notifications support [Kakhaber]
+
 ## 12.0.12 - 2021-06-08
 
 * patch: Update internal-patch [Renovate Bot]
