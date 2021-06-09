@@ -1,4 +1,36 @@
 - commits:
+    - subject: 'build(deps): bump glob-parent from 5.1.1 to 5.1.2'
+      hash: c66b7d4b86d1aa5ed82bcb07f2363b87f986620c
+      body: >
+        Bumps [glob-parent](https://github.com/gulpjs/glob-parent) from 5.1.1 to
+        5.1.2.
+
+        - [Release notes](https://github.com/gulpjs/glob-parent/releases)
+
+        -
+        [Changelog](https://github.com/gulpjs/glob-parent/blob/main/CHANGELOG.md)
+
+        -
+        [Commits](https://github.com/gulpjs/glob-parent/compare/v5.1.1...v5.1.2)
+
+
+        ---
+
+        updated-dependencies:
+
+        - dependency-name: glob-parent
+          dependency-type: indirect
+        ...
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: 'dependabot[bot] <support@github.com>'
+        signed-off-by: 'dependabot[bot] <support@github.com>'
+      author: 'dependabot[bot]'
+      nested: []
+  version: 12.0.14
+  date: 2021-06-09T03:02:44.663Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-client-sdk to ^4.6.0'
       hash: b316353c1edf40237fea3987f7ce5ed33f658bc3
       body: |

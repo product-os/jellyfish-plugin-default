@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 12.0.14 - 2021-06-09
+
+* build(deps): bump glob-parent from 5.1.1 to 5.1.2 [dependabot[bot]]
+
 ## 12.0.13 - 2021-06-08
 
 * patch: Update dependency @balena/jellyfish-client-sdk to ^4.6.0 [Renovate Bot]
