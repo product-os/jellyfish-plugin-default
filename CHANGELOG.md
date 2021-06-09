@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 12.0.15 - 2021-06-09
+
+* patch: Update dependency @balena/jellyfish-environment to ^4.2.2 [Renovate Bot]
+
 ## 12.0.14 - 2021-06-09
 
 * build(deps): bump glob-parent from 5.1.1 to 5.1.2 [dependabot[bot]]
