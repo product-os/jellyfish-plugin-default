@@ -1,4 +1,33 @@
 - commits:
+    - subject: 'build(deps): bump normalize-url from 4.5.0 to 4.5.1'
+      hash: d51ba5050017ae988bf8e39214d663167718ab1b
+      body: >
+        Bumps [normalize-url](https://github.com/sindresorhus/normalize-url)
+        from 4.5.0 to 4.5.1.
+
+        - [Release
+        notes](https://github.com/sindresorhus/normalize-url/releases)
+
+        - [Commits](https://github.com/sindresorhus/normalize-url/commits)
+
+
+        ---
+
+        updated-dependencies:
+
+        - dependency-name: normalize-url
+          dependency-type: indirect
+        ...
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: 'dependabot[bot] <support@github.com>'
+        signed-off-by: 'dependabot[bot] <support@github.com>'
+      author: 'dependabot[bot]'
+      nested: []
+  version: 12.0.18
+  date: 2021-06-10T01:21:21.744Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-action-library to v12'
       hash: 688a53607fd3388c8e02d804972e25f6b642edba
       body: |

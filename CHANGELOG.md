@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 12.0.18 - 2021-06-10
+
+* build(deps): bump normalize-url from 4.5.0 to 4.5.1 [dependabot[bot]]
+
 ## 12.0.17 - 2021-06-10
 
 * patch: Update dependency @balena/jellyfish-action-library to v12 [Renovate Bot]
