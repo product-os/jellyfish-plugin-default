@@ -4,6 +4,7 @@
     "type": "support-thread@1.0.0",
     "version": "1.0.0",
     "active": true,
+    "loop": null,
     "tags": [],
     "requires": [],
     "capabilities": [],
@@ -22,6 +23,7 @@
   "tail": [
     {
       "active": true,
+      "loop": null,
       "capabilities": [],
       "data": {
         "actor": {
@@ -61,6 +63,7 @@
       "capabilities": [],
       "type": "message@1.0.0",
       "active": true,
+      "loop": null,
       "requires": [],
       "data": {
         "actor": {
