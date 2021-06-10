@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-action-library to v13'
+      hash: 2465b1df9939528b6309a430a0097c4d6f89ce5a
+      body: |
+        Update @balena/jellyfish-action-library from 12.0.1 to 13.0.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 12.0.19
+  date: 2021-06-10T03:01:12.584Z
+- commits:
     - subject: 'build(deps): bump normalize-url from 4.5.0 to 4.5.1'
       hash: d51ba5050017ae988bf8e39214d663167718ab1b
       body: >
