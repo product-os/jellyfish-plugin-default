@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 13.0.0 - 2021-06-10
+
+* Remove discourse [Josh Bowling]
+
 ## 12.0.18 - 2021-06-10
 
 * build(deps): bump normalize-url from 4.5.0 to 4.5.1 [dependabot[bot]]

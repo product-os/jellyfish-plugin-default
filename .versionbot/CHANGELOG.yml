@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove discourse
+      hash: fcfe28375fa4525874e821206617f3b4e9ee07cd
+      body: ''
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 13.0.0
+  date: 2021-06-10T03:02:44.414Z
+- commits:
     - subject: 'build(deps): bump normalize-url from 4.5.0 to 4.5.1'
       hash: d51ba5050017ae988bf8e39214d663167718ab1b
       body: >
