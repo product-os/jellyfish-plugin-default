@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 13.0.3 - 2021-06-11
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 13.0.2 - 2021-06-11
 
 * Remove invalid indexed field entry [Josh Bowling]

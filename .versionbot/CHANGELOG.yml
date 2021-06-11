@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update internal-patch'
+      hash: 8a7a490b22b0c0a60ee203b03c96fc3ea69f7576
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 13.0.3
+  date: 2021-06-11T07:51:53.554Z
+- commits:
     - subject: Remove invalid indexed field entry
       hash: 6990cc99678aef58c2bbcf2ba0875a6b675769f0
       body: ''
