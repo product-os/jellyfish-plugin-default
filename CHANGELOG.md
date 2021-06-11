@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 13.0.2 - 2021-06-11
+
+* Remove invalid indexed field entry [Josh Bowling]
+
 ## 13.0.1 - 2021-06-10
 
 * patch: Update dependency @balena/jellyfish-client-sdk to ^4.7.0 [Renovate Bot]
