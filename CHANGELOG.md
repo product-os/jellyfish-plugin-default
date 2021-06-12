@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 14.0.0 - 2021-06-12
+
+* Bump jellyfish-client-sdk dependency [Graham McCulloch]
+* Rename product-improvement to improvement [Graham McCulloch]
+
 ## 13.0.4 - 2021-06-12
 
 * patch: Update dependency @balena/jellyfish-logger to v3.0.14 [Renovate Bot]

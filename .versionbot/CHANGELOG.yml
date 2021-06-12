@@ -1,4 +1,27 @@
 - commits:
+    - subject: Bump jellyfish-client-sdk dependency
+      hash: ad3f3ecaae904aa678ff3507440966007a7a8043
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+    - subject: Rename product-improvement to improvement
+      hash: 8c3145d586e4a769b64cb5d5dca7a267dd66b07e
+      body: ''
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 14.0.0
+  date: 2021-06-12T02:15:52.572Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-logger to v3.0.14'
       hash: 84c9ee6e93c3302ad47424a203461830434a0ae5
       body: ''
