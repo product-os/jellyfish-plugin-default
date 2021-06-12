@@ -42,10 +42,10 @@
   "license": "UNLICENSED",
   "dependencies": {
     "@balena/jellyfish-assert": "^1.1.46",
-    "@balena/jellyfish-client-sdk": "^5.0.0",
+    "@balena/jellyfish-client-sdk": "^5.0.1",
     "@balena/jellyfish-environment": "^4.2.3",
     "@balena/jellyfish-logger": "3.0.14",
-    "@balena/jellyfish-plugin-base": "^2.1.150",
+    "@balena/jellyfish-plugin-base": "^2.1.151",
     "axios": "^0.21.1",
     "bluebird": "^3.7.2",
     "fast-json-patch": "^3.0.0-1",
