@@ -62,15 +62,6 @@
     },
     "indexed_fields": [
       [ "name" ]
-    ],
-    "meta": {
-      "relationships": [
-        {
-          "title": "Members",
-          "link": "has group member",
-          "type": "user"
-        }
-      ]
-    }
+    ]
   }
 }

@@ -7,15 +7,6 @@
     "schema": {
       "type": "object",
       "properties": {}
-    },
-    "meta": {
-      "relationships": [
-        {
-          "title": "View",
-          "link": "is attached to",
-          "type": "view"
-        }
-      ]
     }
   }
 }

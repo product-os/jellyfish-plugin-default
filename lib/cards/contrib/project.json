@@ -38,40 +38,6 @@
           }
         }
       }
-    },
-		"meta": {
-			"relationships": [
-				{
-					"title": "Owner",
-					"link": "is owned by",
-					"type": "user"
-				},
-				{
-					"title": "Guide",
-					"link": "is guided by",
-					"type": "user"
-				},
-				{
-					"title": "Dedicated members",
-					"link": "has member",
-					"type": "user"
-				},
-				{
-					"title": "Contributors",
-					"link": "is contributed to by",
-					"type": "user"
-				},
-				{
-					"title": "Observers",
-					"link": "is observed by",
-					"type": "user"
-				},
-        {
-					"title": "Checkins",
-					"link": "has",
-					"type": "checkin"
-				}
-      ]
     }
   }
 }
