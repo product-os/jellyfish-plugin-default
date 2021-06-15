@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 14.0.8 - 2021-06-15
+
+* Remove redundant meta relationships [Graham McCulloch]
+
 ## 14.0.7 - 2021-06-13
 
 * patch: Update dependency @balena/ci-task-runner to ^0.2.163 [Renovate Bot]

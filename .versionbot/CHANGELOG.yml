@@ -1,4 +1,19 @@
 - commits:
+    - subject: Remove redundant meta relationships
+      hash: 924fd3c9b5d27f3254f7f547c0ebad21931766c0
+      body: >
+        These are now materialized automatically on the front-end using link
+        constraints.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 14.0.8
+  date: 2021-06-15T02:10:11.598Z
+- commits:
     - subject: 'patch: Update dependency @balena/ci-task-runner to ^0.2.163'
       hash: 5f09aabe2a78924a3f45ebc8e07eb5573300f5a0
       body: ''
