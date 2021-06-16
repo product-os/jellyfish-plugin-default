@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update plugin-base dependency
+      hash: ed9956b8bd8f53fdc1eab5a11aa5b1242d6f50bc
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 14.0.12
+  date: 2021-06-16T08:14:51.652Z
+- commits:
     - subject: 'patch: Update internal-patch'
       hash: b9a6d16ce27040c25aa914d5b272297a8b0e7a61
       body: ''

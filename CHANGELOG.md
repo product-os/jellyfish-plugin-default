@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 14.0.12 - 2021-06-16
+
+* Update plugin-base dependency [Graham McCulloch]
+
 ## 14.0.11 - 2021-06-15
 
 * patch: Update internal-patch [Renovate Bot]
