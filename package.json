@@ -44,7 +44,7 @@
     "@balena/jellyfish-assert": "^1.1.48",
     "@balena/jellyfish-environment": "^4.2.5",
     "@balena/jellyfish-logger": "3.0.17",
-    "@balena/jellyfish-plugin-base": "^2.1.154",
+    "@balena/jellyfish-plugin-base": "3.0.0-integration-types-badeb7294b8ef0853790c4cc9cb9c88d8764df86",
     "axios": "^0.21.1",
     "bluebird": "^3.7.2",
     "fast-json-patch": "^3.0.0-1",
