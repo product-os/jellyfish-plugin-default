@@ -1,4 +1,18 @@
 - commits:
+    - subject: Don't mirror empty values to Outreach
+      hash: 4cfceb998b692b400431832c59eb6ac034b94848
+      body: |
+        If the mapped value is falsey, don't mirror it to Outreach
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 14.0.12
+  date: 2021-06-16T08:34:11.606Z
+- commits:
     - subject: 'patch: Update internal-patch'
       hash: b9a6d16ce27040c25aa914d5b272297a8b0e7a61
       body: ''
