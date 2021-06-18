@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 14.0.13 - 2021-06-18
+
+* Update node engine version [Josh Bowling]
+
 ## 14.0.12 - 2021-06-16
 
 * Don't mirror empty values to Outreach [Lucian Buzzo]
