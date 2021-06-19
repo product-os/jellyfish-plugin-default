@@ -44,7 +44,7 @@
     "@balena/jellyfish-assert": "^1.1.48",
     "@balena/jellyfish-environment": "^4.2.5",
     "@balena/jellyfish-logger": "3.0.17",
-    "@balena/jellyfish-plugin-base": "^2.1.154",
+    "@balena/jellyfish-plugin-base": "^2.1.155",
     "axios": "^0.21.1",
     "bluebird": "^3.7.2",
     "fast-json-patch": "^3.0.0-1",
@@ -62,7 +62,7 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@balena/ci-task-runner": "^0.2.165",
+    "@balena/ci-task-runner": "^0.2.166",
     "@balena/jellycheck": "^0.1.1",
     "@balena/jellyfish-action-library": "^13.0.0",
     "@balena/jellyfish-core": "^3.0.0",
