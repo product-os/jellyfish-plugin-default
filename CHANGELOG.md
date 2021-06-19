@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 14.0.18 - 2021-06-19
+
+* patch: Update dependency eslint-plugin-jsdoc to ^35.3.1 [Renovate Bot]
+
 ## 14.0.17 - 2021-06-19
 
 * patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.156 [Renovate Bot]
