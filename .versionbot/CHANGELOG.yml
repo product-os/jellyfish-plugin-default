@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update external-non-major'
+      hash: fe4b70368b755930088b44dbba3951a670a55c1d
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 14.0.15
+  date: 2021-06-19T00:31:42.311Z
+- commits:
     - subject: 'patch: Update dependency @balena/ci-task-runner to ^0.2.165'
       hash: 9c439a42acc42cc4e0d46a80989d02bd93d5ca51
       body: ''
