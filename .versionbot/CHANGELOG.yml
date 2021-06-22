@@ -1,4 +1,19 @@
 - commits:
+    - subject: Allow external support users to read/write create and update events
+      hash: b32d6ae274a2ebd37acceff267721f7f0b19b08c
+      body: |
+        This change has no user facing impact, but will allow us to transition
+        to a worker model that doesn't escalate privileges in the future.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 14.1.0
+  date: 2021-06-22T16:11:31.092Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.161'
       hash: 851307fdb84275c24acb08b331d6c4fa600e807c
       body: ''
