@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 14.1.1 - 2021-06-22
+
+* patch: Update dependency @balena/ci-task-runner to ^0.3.1 [Renovate Bot]
+
 ## 14.1.0 - 2021-06-22
 
 * Allow external support users to read/write create and update events [Lucian Buzzo]
