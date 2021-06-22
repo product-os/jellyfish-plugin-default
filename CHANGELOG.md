@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 14.0.24 - 2021-06-22
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 14.0.23 - 2021-06-20
 
 * patch: Update internal-patch [Renovate Bot]
