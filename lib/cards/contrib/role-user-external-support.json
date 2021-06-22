@@ -100,7 +100,9 @@
                 "card",
                 "link",
                 "message",
-                "support-thread"
+                "support-thread",
+                "create",
+                "update"
               ]
             },
             "type": {
