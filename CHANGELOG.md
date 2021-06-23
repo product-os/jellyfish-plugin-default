@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 15.0.1 - 2021-06-23
+
+* Add JF peer dependencies [Graham McCulloch]
+
 ## 15.0.0 - 2021-06-23
 
 * Bump jellyfish-action-library to v14.0.0 [Josh Bowling]

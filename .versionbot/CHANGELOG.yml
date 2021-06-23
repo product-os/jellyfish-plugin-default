@@ -1,4 +1,21 @@
 - commits:
+    - subject: Add JF peer dependencies
+      hash: b199882a371948ecd89aba4427790492b2c2c1ff
+      body: >
+        As we test against particular versions of these JF packages, it makes
+        sense to specify them as peer dependencies as well so that anyone using
+        this package is also encouraged/forced to use compatible versions of
+        those peer dependencies.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 15.0.1
+  date: 2021-06-23T08:27:52.364Z
+- commits:
     - subject: Bump jellyfish-action-library to v14.0.0
       hash: 2b9be39959a727c35568294d530998cab7b051a6
       body: ''
