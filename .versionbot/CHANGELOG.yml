@@ -1,4 +1,27 @@
 - commits:
+    - subject: Bump jellyfish-action-library to v14.0.0
+      hash: 2b9be39959a727c35568294d530998cab7b051a6
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Remove Outreach
+      hash: 420fa7fab8309c932b1c7c68331fb14f5bc1516d
+      body: ''
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 15.0.0
+  date: 2021-06-23T04:03:09.144Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-environment to ^4.2.7'
       hash: 52967f9301fda4ef4e6dd67f40f57852123d936f
       body: ''

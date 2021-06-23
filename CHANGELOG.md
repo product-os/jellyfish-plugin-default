@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 15.0.0 - 2021-06-23
+
+* Bump jellyfish-action-library to v14.0.0 [Josh Bowling]
+* Remove Outreach [Josh Bowling]
+
 ## 14.1.2 - 2021-06-23
 
 * patch: Update dependency @balena/jellyfish-environment to ^4.2.7 [Renovate Bot]
