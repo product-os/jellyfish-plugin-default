@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 14.1.2 - 2021-06-23
+
+* patch: Update dependency @balena/jellyfish-environment to ^4.2.7 [Renovate Bot]
+
 ## 14.1.1 - 2021-06-22
 
 * patch: Update dependency @balena/ci-task-runner to ^0.3.1 [Renovate Bot]
