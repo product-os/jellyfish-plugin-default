@@ -41,10 +41,10 @@
   "author": "Balena.io. <hello@balena.io>",
   "license": "UNLICENSED",
   "dependencies": {
-    "@balena/jellyfish-assert": "^1.1.50",
-    "@balena/jellyfish-environment": "^4.2.7",
-    "@balena/jellyfish-logger": "3.0.22",
-    "@balena/jellyfish-plugin-base": "^2.1.161",
+    "@balena/jellyfish-assert": "^1.1.51",
+    "@balena/jellyfish-environment": "^4.2.8",
+    "@balena/jellyfish-logger": "3.0.24",
+    "@balena/jellyfish-plugin-base": "^2.1.162",
     "axios": "^0.21.1",
     "bluebird": "^3.7.2",
     "fast-json-patch": "^3.0.0-1",
@@ -92,9 +92,9 @@
     "typed-errors": "^1.1.0"
   },
   "peerDependencies": {
-    "@balena/jellyfish-action-library": "^13.0.0",
+    "@balena/jellyfish-action-library": "^13.0.67",
     "@balena/jellyfish-core": "^3.2.14",
-    "@balena/jellyfish-sync": "^6.0.16"
+    "@balena/jellyfish-sync": "^6.0.256"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
