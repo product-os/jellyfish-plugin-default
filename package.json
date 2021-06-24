@@ -42,7 +42,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "@balena/jellyfish-assert": "^1.1.51",
-    "@balena/jellyfish-environment": "^4.2.8",
+    "@balena/jellyfish-environment": "^4.3.0",
     "@balena/jellyfish-logger": "3.0.24",
     "@balena/jellyfish-plugin-base": "^2.1.163",
     "axios": "^0.21.1",
