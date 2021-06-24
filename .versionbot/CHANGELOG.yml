@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update Renovate config
+      hash: 1da83c5ea09bc99a88c2d6469e3eb0995c49583c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 15.0.7
+  date: 2021-06-24T04:29:42.860Z
+- commits:
     - subject: Bump jellyfish-core dependency
       hash: 03999cd88385abb36398eb92ca1530ab066c1d81
       body: ''

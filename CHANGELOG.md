@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 15.0.7 - 2021-06-24
+
+* Update Renovate config [Josh Bowling]
+
 ## 15.0.6 - 2021-06-24
 
 * Bump jellyfish-core dependency [Graham McCulloch]
