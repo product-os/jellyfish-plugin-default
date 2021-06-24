@@ -1,4 +1,27 @@
 - commits:
+    - subject: Bump jellyfish-core dependency
+      hash: 03999cd88385abb36398eb92ca1530ab066c1d81
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+    - subject: Fix expected test results
+      hash: 4bf72ceebf7f99ddf39561882dad1a818e95c869
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 15.0.6
+  date: 2021-06-24T03:48:12.813Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.163'
       hash: 00ab8bd48227b11512f9c5a4d068ff5e1438c4be
       body: ''
