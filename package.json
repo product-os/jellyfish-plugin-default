@@ -93,7 +93,7 @@
   },
   "peerDependencies": {
     "@balena/jellyfish-action-library": "^14.0.6",
-    "@balena/jellyfish-core": "^3.2.14",
+    "@balena/jellyfish-core": "^3.2.15",
     "@balena/jellyfish-sync": "^6.0.256"
   },
   "simple-git-hooks": {
