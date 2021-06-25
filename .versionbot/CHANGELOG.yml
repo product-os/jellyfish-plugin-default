@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update internal-patch'
+      hash: 1c548eb618b9d70078458c51bf53bd2a366fc2ad
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 15.0.10
+  date: 2021-06-25T04:06:51.683Z
+- commits:
     - subject: Fix query for contact's support threads
       hash: eb8d50b9763b9f75193dd8018410b1a4e371564e
       body: |

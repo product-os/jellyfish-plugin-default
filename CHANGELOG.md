@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 15.0.10 - 2021-06-25
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 15.0.9 - 2021-06-25
 
 * Fix query for contact's support threads [Graham McCulloch]
