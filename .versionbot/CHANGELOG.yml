@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update internal-patch'
+      hash: d0c51549c10950d0fcb51baf176ec150c3bb5be7
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 15.1.1
+  date: 2021-06-25T23:15:53.033Z
+- commits:
     - subject: Add new saga contract and corresponding view
       hash: 3095387c03f086c6be332213c932b88d1ccf1120
       body: ''

@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 15.1.1 - 2021-06-25
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 15.1.0 - 2021-06-25
 
 * Add new saga contract and corresponding view [Graham McCulloch]
