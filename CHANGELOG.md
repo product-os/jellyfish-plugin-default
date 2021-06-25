@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 15.0.9 - 2021-06-25
+
+* Fix query for contact's support threads [Graham McCulloch]
+
 ## 15.0.8 - 2021-06-24
 
 * patch: Update dependency @balena/jellyfish-environment to ^4.3.0 [Renovate Bot]
