@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 15.1.4 - 2021-06-26
+
+* patch: Update external-non-major [Renovate Bot]
+
 ## 15.1.3 - 2021-06-26
 
 * patch: Update internal-patch [Renovate Bot]
