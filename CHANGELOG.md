@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 15.1.5 - 2021-06-26
+
+* patch: Update dependency marked to v2 [SECURITY] [Renovate Bot]
+
 ## 15.1.4 - 2021-06-26
 
 * patch: Update external-non-major [Renovate Bot]

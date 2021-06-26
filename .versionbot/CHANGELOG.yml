@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency marked to v2 [SECURITY]'
+      hash: eabc39b3995f8c70214f9bde8d9d8bcd9608fe3d
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 15.1.5
+  date: 2021-06-26T03:12:58.087Z
+- commits:
     - subject: 'patch: Update external-non-major'
       hash: ccaa65c81589e5fb3b51b72575454463e1f7615a
       body: ''
