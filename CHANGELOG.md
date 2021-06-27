@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 15.1.7 - 2021-06-27
+
+* patch: Update dependency simple-git-hooks to ^2.5.1 [Renovate Bot]
+
 ## 15.1.6 - 2021-06-27
 
 * patch: Update dependency @balena/ci-task-runner to ^0.3.3 [Renovate Bot]
