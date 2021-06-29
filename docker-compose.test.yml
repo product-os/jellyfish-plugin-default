@@ -1,3 +1,6 @@
+# This file is auto-synced from product-os/jellyfish-config/sync/docker-compose.test.yml
+# and should only be edited there!
+
 version: '2.1'
 
 services:
@@ -22,18 +25,10 @@ services:
       - REDIS_PASSWORD=
       - REDIS_PORT=6379
       - OAUTH_REDIRECT_BASE_URL=https://jel.ly.fish
-      - INTEGRATION_BALENA_API_OAUTH_BASE_URL=https://api.balena-cloud.com
-      - INTEGRATION_BALENA_API_PRIVATE_KEY
-      - INTEGRATION_BALENA_API_PUBLIC_KEY_PRODUCTION
-      - INTEGRATION_BALENA_API_PUBLIC_KEY_STAGING=foobar
-      - INTEGRATION_DEFAULT_USER
-      - INTEGRATION_FRONT_TOKEN
-      - INTEGRATION_INTERCOM_TOKEN
-      - INTEGRATION_OUTREACH_APP_ID
-      - INTEGRATION_OUTREACH_APP_SECRET
-      - INTEGRATION_OUTREACH_SIGNATURE_KEY
-      - INTEGRATION_TYPEFORM_SIGNATURE_KEY
+      - INTEGRATION_DEFAULT_USER=admin
       - CI=1
       - NPM_TOKEN
+    env_file:
+      - test.env
     networks:
       - internal
