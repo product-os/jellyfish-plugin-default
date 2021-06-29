@@ -1,4 +1,20 @@
 - commits:
+    - subject: Update project contract and add projects view
+      hash: eb7dd914a37a154737216691e2174b79e4e8e4f3
+      body: >
+        Note - although the project contract type already existed, there are no
+        active projects in production and no view of projects. So it is fairly
+        safe to modfy the schema as per this commit.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 15.3.0
+  date: 2021-06-29T08:58:02.475Z
+- commits:
     - subject: Update improvement status options
       hash: 6d5c6f8e67417a490725aa38eb3b49dddac54251
       body: >

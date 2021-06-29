@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 15.3.0 - 2021-06-29
+
+* Update project contract and add projects view [Graham McCulloch]
+
 ## 15.2.0 - 2021-06-29
 
 * Update improvement status options [Graham McCulloch]
