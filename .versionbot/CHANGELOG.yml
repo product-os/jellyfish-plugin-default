@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update internal-patch'
+      hash: b6010b48de2297829c48f785e58ad9bfd71fdd0a
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 15.3.1
+  date: 2021-06-29T10:29:02.109Z
+- commits:
     - subject: Update project contract and add projects view
       hash: eb7dd914a37a154737216691e2174b79e4e8e4f3
       body: >

@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 15.3.1 - 2021-06-29
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 15.3.0 - 2021-06-29
 
 * Update project contract and add projects view [Graham McCulloch]
