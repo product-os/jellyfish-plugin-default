@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 15.2.0 - 2021-06-29
+
+* Update improvement status options [Graham McCulloch]
+
 ## 15.1.8 - 2021-06-29
 
 * Remove typeform test webhooks [Josh Bowling]
