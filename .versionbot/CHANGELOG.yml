@@ -1,4 +1,17 @@
 - commits:
+    - subject: Upgrade to latest test-harness
+      hash: 9f409ea71d7f151fdd583c2bb3c516c03067fdbc
+      body: ''
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 16.0.0
+  date: 2021-06-30T07:52:42.607Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.175'
       hash: 9f1cac32b9734ba87c8ac353d9a8e647ad1e2404
       body: ''
