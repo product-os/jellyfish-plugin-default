@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 15.3.4 - 2021-06-30
+
+* Remove package-lock.json [Balena CI]
+
 ## 15.3.3 - 2021-06-29
 
 * patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.171 [Renovate Bot]
