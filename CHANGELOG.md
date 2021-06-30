@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 15.3.5 - 2021-06-30
+
+* patch: Update dependency @balena/jellyfish-environment to ^4.3.5 [Renovate Bot]
+
 ## 15.3.4 - 2021-06-30
 
 * Remove package-lock.json [Balena CI]

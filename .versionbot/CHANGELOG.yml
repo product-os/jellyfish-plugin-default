@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-environment to ^4.3.5'
+      hash: b183f65fd19ad0b3747c640cd73b1a261fdb5fa8
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 15.3.5
+  date: 2021-06-30T00:38:50.943Z
+- commits:
     - subject: Remove package-lock.json
       hash: 482d126017ea36da171aa5aa3d14e2e389b415f0
       body: ''
