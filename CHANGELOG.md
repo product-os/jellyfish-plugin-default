@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 15.3.9 - 2021-06-30
+
+* patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.175 [Renovate Bot]
+
 ## 15.3.8 - 2021-06-30
 
 * Add test.env [Josh Bowling]
