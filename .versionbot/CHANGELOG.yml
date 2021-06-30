@@ -1,4 +1,35 @@
 - commits:
+    - subject: Add test.env
+      hash: c2f34cdd95c22de5c69082a4f6cdd6b6746aeb8a
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Remove package lock file
+      hash: 98c75c5511e1c89aedf906f6daa9d0e760f44540
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+    - subject: "\U0001F504 Synced file(s) with product-os/jellyfish-config"
+      hash: 6ddade15251a48b0b0e2806d335f23c0f99b7e09
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: jellyfish-bot
+      nested: []
+  version: 15.3.8
+  date: 2021-06-30T03:57:41.913Z
+- commits:
     - subject: 'patch: Update internal-patch'
       hash: d2de19b620254a031b0714a00559e64d159904c5
       body: ''

@@ -5,6 +5,12 @@
 
 # v0.0.3
 
+## 15.3.8 - 2021-06-30
+
+* Add test.env [Josh Bowling]
+* Remove package lock file [Graham McCulloch]
+* 🔄 Synced file(s) with product-os/jellyfish-config [jellyfish-bot]
+
 ## 15.3.7 - 2021-06-30
 
 * patch: Update internal-patch [Renovate Bot]
