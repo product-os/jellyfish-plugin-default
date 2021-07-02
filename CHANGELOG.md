@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 16.0.2 - 2021-07-02
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 16.0.1 - 2021-07-02
 
 * Replace ci-task-runner with go-task [Josh Bowling]
