@@ -1,0 +1,12 @@
+version: '3'
+
+env:
+  AVA_OPTS: --fail-fast
+
+tasks:
+  test:
+    cmds:
+      - make test FILES=./test/integration/sync/front-mirror.spec.js
+      - make test FILES=./test/integration/sync/pipeline.spec.js
+      - make test FILES=./test/integration/sync/balena-api-translate.spec.js
+      - INTEGRATION_FRONT_TOKEN=foobar make test FILES=./test/integration/sync/front-translate.spec.js
