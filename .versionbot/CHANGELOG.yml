@@ -1,4 +1,17 @@
 - commits:
+    - subject: Replace ci-task-runner with go-task
+      hash: 8b23d82078e2008860705cc1016726c9700701c3
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 16.0.1
+  date: 2021-07-02T04:40:08.053Z
+- commits:
     - subject: Upgrade to latest test-harness
       hash: 9f409ea71d7f151fdd583c2bb3c516c03067fdbc
       body: ''

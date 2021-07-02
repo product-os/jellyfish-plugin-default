@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 16.0.1 - 2021-07-02
+
+* Replace ci-task-runner with go-task [Josh Bowling]
+
 ## 16.0.0 - 2021-06-30
 
 * Upgrade to latest test-harness [Lucian Buzzo]
