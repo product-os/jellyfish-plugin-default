@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 16.0.5 - 2021-07-03
+
+* patch: Update external-non-major [Renovate Bot]
+
 ## 16.0.4 - 2021-07-03
 
 * Remove front mirror skip [Josh Bowling]

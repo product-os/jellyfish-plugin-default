@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update external-non-major'
+      hash: f5c2b741931922cb5e6abad421d2b6b248b981d1
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 16.0.5
+  date: 2021-07-03T15:19:12.110Z
+- commits:
     - subject: Remove front mirror skip
       hash: bf179800458af710691b7d304ec9a9c9c360186e
       body: ''
