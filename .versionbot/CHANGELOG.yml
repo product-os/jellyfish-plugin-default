@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove front mirror skip
+      hash: bf179800458af710691b7d304ec9a9c9c360186e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 16.0.4
+  date: 2021-07-03T14:48:52.531Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-core to v5'
       hash: 9e434688fb06d34683a1c4ff31d63fb3f739d207
       body: |
