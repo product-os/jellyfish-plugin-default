@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 16.0.7 - 2021-07-03
+
+* 🔄 Synced file(s) with product-os/jellyfish-config [jellyfish-bot]
+
 ## 16.0.6 - 2021-07-03
 
 * patch: Update internal-patch [Renovate Bot]
