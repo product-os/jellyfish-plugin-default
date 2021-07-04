@@ -5,6 +5,12 @@
 
 # v0.0.3
 
+## 17.0.0 - 2021-07-04
+
+* Remove Front tests from Taskfile.yml [Josh Bowling]
+* Bump jellyfish-action-library to v15.0.0 [Josh Bowling]
+* Remove Front [Josh Bowling]
+
 ## 16.0.8 - 2021-07-04
 
 * patch: Update dependency nock to ^13.1.1 [Renovate Bot]
