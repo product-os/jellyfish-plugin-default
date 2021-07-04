@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 16.0.8 - 2021-07-04
+
+* patch: Update dependency nock to ^13.1.1 [Renovate Bot]
+
 ## 16.0.7 - 2021-07-03
 
 * 🔄 Synced file(s) with product-os/jellyfish-config [jellyfish-bot]

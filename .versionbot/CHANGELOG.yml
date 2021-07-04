@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency nock to ^13.1.1'
+      hash: 7c9a583ea0c5a371d3d92301f3af2ac91b5b2c74
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 16.0.8
+  date: 2021-07-04T19:07:33.730Z
+- commits:
     - subject: "\U0001F504 Synced file(s) with product-os/jellyfish-config"
       hash: a0070b4260964dc63ed1951cbe51b3d773588df2
       body: ''
