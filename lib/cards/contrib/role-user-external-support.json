@@ -23,7 +23,31 @@
           "properties": {
             "type": {
               "type": "string",
-              "const": "link@1.0.0"
+              "enum": [
+                "link@1.0.0",
+                "subscription@1.0.0"
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": true,
+          "required": [ "type", "markers" ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "notification@1.0.0"
+            },
+            "markers": {
+              "type": "array",
+              "contains": {
+                "const": {
+                  "$eval": "user.slug"
+                }
+              },
+              "maxItems": 1,
+              "minItems": 1
             }
           }
         },
@@ -101,6 +125,8 @@
                 "link",
                 "message",
                 "support-thread",
+                "notification",
+                "subscription",
                 "create",
                 "update"
               ]
@@ -238,7 +264,6 @@
         },
         {
           "type": "object",
-          "additionalProperties": false,
           "required": [ "type", "slug" ],
           "properties": {
             "type": {
