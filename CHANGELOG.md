@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 17.0.3 - 2021-07-05
+
+* Make account name optional [Lucian Buzzo]
+
 ## 17.0.2 - 2021-07-05
 
 * patch: Update internal-patch [Renovate Bot]

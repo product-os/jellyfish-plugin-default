@@ -1,4 +1,23 @@
 - commits:
+    - subject: Make account name optional
+      hash: f5b4b54aa2e7a968e66c3301969e08d2909046d9
+      body: |
+        Occasionally, there isn't an account name available and we only have the
+        machine name. To improve data capture this change removes the
+        requirements for accounts to have names and also looks for the account
+        name in more locations when syncing balena webhooks.
+
+        Fixes https://github.com/product-os/jellyfish/issues/6545
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 17.0.3
+  date: 2021-07-05T09:18:42.686Z
+- commits:
     - subject: 'patch: Update internal-patch'
       hash: 11fc70da9a4d4ed47e0d9aa9c730d3af8626194d
       body: ''
