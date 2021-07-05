@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update internal-patch'
+      hash: 5861af3e88830656656c2b7158bd912d851be45d
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 17.0.1
+  date: 2021-07-05T02:39:53.208Z
+- commits:
     - subject: Remove Front tests from Taskfile.yml
       hash: 2d0ff364b121721061d3a2040e6533e99571b7d9
       body: ''

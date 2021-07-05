@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 17.0.1 - 2021-07-05
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 17.0.0 - 2021-07-04
 
 * Remove Front tests from Taskfile.yml [Josh Bowling]
