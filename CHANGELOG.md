@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 17.0.4 - 2021-07-05
+
+* Fix external suppor role for notifications [Kakhaber]
+
 ## 17.0.3 - 2021-07-05
 
 * Make account name optional [Lucian Buzzo]

@@ -1,4 +1,15 @@
 - commits:
+    - subject: Fix external suppor role for notifications
+      hash: 0dd044a385b884a0d5f8224e91f5856b584c1c58
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kakhaber
+      nested: []
+  version: 17.0.4
+  date: 2021-07-05T11:13:41.616Z
+- commits:
     - subject: Make account name optional
       hash: f5b4b54aa2e7a968e66c3301969e08d2909046d9
       body: |
