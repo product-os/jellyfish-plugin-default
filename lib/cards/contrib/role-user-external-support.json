@@ -177,7 +177,9 @@
               "type": "string",
               "enum": [
                 "execute@1.0.0",
-                "session@1.0.0"
+                "session@1.0.0",
+                "create@1.0.0",
+                "update@1.0.0"
               ]
             },
             "data": {
