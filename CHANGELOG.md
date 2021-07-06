@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 17.1.0 - 2021-07-06
+
+* Allow support user to read own create/update [Kakhaber]
+
 ## 17.0.4 - 2021-07-05
 
 * Fix external suppor role for notifications [Kakhaber]

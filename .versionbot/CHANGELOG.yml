@@ -1,4 +1,15 @@
 - commits:
+    - subject: Allow support user to read own create/update
+      hash: e6258deddbef18b29898489a507a6bb5ce6d3995
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Kakhaber
+      nested: []
+  version: 17.1.0
+  date: 2021-07-06T07:57:53.164Z
+- commits:
     - subject: Fix external suppor role for notifications
       hash: 0dd044a385b884a0d5f8224e91f5856b584c1c58
       body: ''
