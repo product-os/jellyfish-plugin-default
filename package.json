@@ -62,7 +62,7 @@
     "@balena/jellyfish-action-library": "^15.0.0",
     "@balena/jellyfish-core": "^5.0.1",
     "@balena/jellyfish-sync": "^6.0.256",
-    "@balena/jellyfish-test-harness": "^5.0.1",
+    "@balena/jellyfish-test-harness": "^6.0.5",
     "ava": "^3.15.0",
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",
