@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update internal-patch'
+      hash: b9d69a4cf1f5bc7879f2489969359eb715c345f6
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 17.1.1
+  date: 2021-07-07T00:46:12.909Z
+- commits:
     - subject: Allow support user to read own create/update
       hash: e6258deddbef18b29898489a507a6bb5ce6d3995
       body: ''

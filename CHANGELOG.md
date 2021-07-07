@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 17.1.1 - 2021-07-07
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 17.1.0 - 2021-07-06
 
 * Allow support user to read own create/update [Kakhaber]
