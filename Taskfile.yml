@@ -7,4 +7,3 @@ tasks:
   test:
     cmds:
       - make test FILES=./test/integration/sync/pipeline.spec.js
-      - make test FILES=./test/integration/sync/balena-api-translate.spec.js
