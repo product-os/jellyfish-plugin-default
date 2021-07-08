@@ -66,9 +66,11 @@
             "markers": {
               "type": "array",
               "contains": {
-                "const": {
+                "enum": [{
                   "$eval": "user.slug + '+org-balena'"
-                }
+                }, {
+                  "$eval": "user.slug"
+                }]
               },
               "maxItems": 1,
               "minItems": 1
