@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 18.0.1 - 2021-07-09
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 18.0.0 - 2021-07-09
 
 * Remove Balena API [Josh Bowling]

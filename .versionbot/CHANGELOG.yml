@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update internal-patch'
+      hash: 7e805bbfb184451035a5c23d03ce43917798c4e5
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 18.0.1
+  date: 2021-07-09T03:10:57.819Z
+- commits:
     - subject: Remove Balena API
       hash: 42ca6228ddf053bdb5b88d3cfe40699ab4ca557f
       body: ''
