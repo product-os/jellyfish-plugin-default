@@ -33,7 +33,7 @@
             }
           },
           "type": "object",
-          "required": [ "active", "type", "data" ],
+          "required": [ "active", "type" ],
           "properties": {
             "active": {
               "type": "boolean",
@@ -42,16 +42,6 @@
             "type": {
               "type": "string",
               "const": "pattern@1.0.0"
-            },
-            "data": {
-              "type": "object",
-              "required": [ "status" ],
-              "properties": {
-                "status": {
-                  "type": "string",
-                  "const": "closed"
-                }
-              }
             }
           }
         }
@@ -87,7 +77,7 @@
                   },
                   "value": {
                     "type": "string",
-                    "const": "closed"
+                    "const": "closed-resolved"
                   }
                 }
               }
@@ -106,7 +96,7 @@
       }
     },
     "arguments": {
-      "reason": "Support Thread re-opened because linked Pattern was closed",
+      "reason": "Support Thread re-opened because linked Pattern was resolved",
       "patch": [
         {
           "op": "replace",
