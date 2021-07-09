@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 18.0.0 - 2021-07-09
+
+* Remove Balena API [Josh Bowling]
+
 ## 17.1.3 - 2021-07-07
 
 * patch: Update dependency @balena/jellyfish-test-harness to v6 [Renovate Bot]

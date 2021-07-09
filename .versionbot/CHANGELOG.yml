@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove Balena API
+      hash: 42ca6228ddf053bdb5b88d3cfe40699ab4ca557f
+      body: ''
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 18.0.0
+  date: 2021-07-09T00:35:21.575Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-test-harness to v6'
       hash: ecabb899dd5e76743e7c38503c0d0f8c2968f26f
       body: |
