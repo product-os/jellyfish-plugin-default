@@ -1,4 +1,30 @@
 - commits:
+    - subject: Add triggered action to update pattern status
+      hash: 80aa5be12f7cd8ecdff47245a87625f17658153d
+      body: |
+        Updates pattern status when a linked improvement is released.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+    - subject: Update pattern status options
+      hash: 5a6eaf3d4b94a810b5d176863d1ec37bccf6752f
+      body: >
+        We will need to remove the closed and archived status options once we
+        have manually migrated away from them.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 18.1.0
+  date: 2021-07-09T02:50:12.502Z
+- commits:
     - subject: Remove Balena API
       hash: 42ca6228ddf053bdb5b88d3cfe40699ab4ca557f
       body: ''

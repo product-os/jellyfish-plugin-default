@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 18.1.0 - 2021-07-09
+
+* Add triggered action to update pattern status [Graham McCulloch]
+* Update pattern status options [Graham McCulloch]
+
 ## 18.0.0 - 2021-07-09
 
 * Remove Balena API [Josh Bowling]
