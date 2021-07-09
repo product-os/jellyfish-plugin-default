@@ -1,0 +1,107 @@
+{
+  "slug": "triggered-action-pattern-closed-improvement-resolve",
+  "type": "triggered-action@1.0.0",
+  "name": "Triggered action for updating pattern statuses when improvements are closed",
+  "markers": [],
+  "data": {
+    "schedule": "sync",
+    "filter": {
+      "$$links": {
+        "is attached to": {
+          "$$links": {
+            "is attached to": {
+              "type": "object",
+              "required": [ "type", "data" ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "const": "pattern@1.0.0"
+                },
+                "data": {
+                  "type": "object",
+                  "required": [ "status" ],
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "const": "improvement-in-progress"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "type": "object",
+          "required": [ "active", "type", "data" ],
+          "properties": {
+            "active": {
+              "type": "boolean",
+              "const": true
+            },
+            "type": {
+              "type": "string",
+              "const": "improvement@1.0.0"
+            }
+          }
+        }
+      },
+      "type": "object",
+      "required": [ "active", "type", "data" ],
+      "properties": {
+        "active": {
+          "type": "boolean",
+          "const": true
+        },
+        "type": {
+          "type": "string",
+          "const": "update@1.0.0"
+        },
+        "data": {
+          "type": "object",
+          "required": [ "payload" ],
+          "properties": {
+            "payload": {
+              "type": "array",
+              "contains": {
+                "type": "object",
+                "required": [ "op", "path", "value" ],
+                "properties": {
+                  "op": {
+                    "type": "string",
+                    "const": "replace"
+                  },
+                  "path": {
+                    "type": "string",
+                    "const": "/data/status"
+                  },
+                  "value": {
+                    "type": "string",
+                    "const": "released"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "action": "action-update-card@1.0.0",
+    "target": {
+      "$map": {
+        "$eval": "source.links['is attached to'][0].links['is attached to'][0:]"
+      },
+      "each(link)": {
+        "$eval": "link.id"
+      }
+    },
+    "arguments": {
+      "reason": "Pattern status updated because linked Improvement was released",
+      "patch": [
+        {
+          "op": "replace",
+          "path": "/data/status",
+          "value": "partially-resolved"
+        }
+      ]
+    }
+  }
+}
