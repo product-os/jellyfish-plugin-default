@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove improvement status options covered by project statuses
+      hash: 1081ab7a22eb9c905e07fc3778334f5808a12373
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 18.0.3
+  date: 2021-07-13T02:16:55.754Z
+- commits:
     - subject: 'patch: Update dependency eslint-plugin-jsdoc to ^35.4.3'
       hash: 42323fc741296f754ab8266abf94ba28cafd1f39
       body: ''

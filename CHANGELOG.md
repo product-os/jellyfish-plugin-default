@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 18.0.3 - 2021-07-13
+
+* Remove improvement status options covered by project statuses [Graham McCulloch]
+
 ## 18.0.2 - 2021-07-10
 
 * patch: Update dependency eslint-plugin-jsdoc to ^35.4.3 [Renovate Bot]
