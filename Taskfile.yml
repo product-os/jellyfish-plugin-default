@@ -6,4 +6,4 @@ env:
 tasks:
   test:
     cmds:
-      - make test FILES=./test/integration/sync/pipeline.spec.js
+      - npm run integration
