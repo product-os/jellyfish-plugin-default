@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 18.1.0 - 2021-07-14
+
+* Update pattern status options [Graham McCulloch]
+
 ## 18.0.3 - 2021-07-13
 
 * Remove improvement status options covered by project statuses [Graham McCulloch]

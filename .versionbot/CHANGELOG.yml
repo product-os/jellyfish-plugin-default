@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update pattern status options
+      hash: b40e73aa2988f5c3a81aa6df0d4aa4fe4b8f8873
+      body: >
+        We'll need to remove the deprecated status options once we have migrated
+        any patterns from those statuses into their equivalent new statuses.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 18.1.0
+  date: 2021-07-14T04:23:33.256Z
+- commits:
     - subject: Remove improvement status options covered by project statuses
       hash: 1081ab7a22eb9c905e07fc3778334f5808a12373
       body: ''
