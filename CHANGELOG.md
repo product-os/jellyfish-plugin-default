@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.0.0 - 2021-07-15
+
+* Convert to TypeScript [Josh Bowling]
+
 ## 18.2.0 - 2021-07-15
 
 * Allow external support to read own create card [Kakhaber]
