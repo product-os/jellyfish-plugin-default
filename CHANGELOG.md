@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 18.2.0 - 2021-07-15
+
+* Allow external support to read own create card [Kakhaber]
+
 ## 18.1.0 - 2021-07-14
 
 * Update pattern status options [Graham McCulloch]

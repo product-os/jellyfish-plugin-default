@@ -1,4 +1,15 @@
 - commits:
+    - subject: Allow external support to read own create card
+      hash: f5f50340e7828df54f9e8046b6cd677fe7add9bc
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Kakhaber
+      nested: []
+  version: 18.2.0
+  date: 2021-07-15T15:08:52.297Z
+- commits:
     - subject: Update pattern status options
       hash: b40e73aa2988f5c3a81aa6df0d4aa4fe4b8f8873
       body: >
