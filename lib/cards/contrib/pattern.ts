@@ -20,12 +20,6 @@ const statusOptions = [
 	// A pattern may be closed without resolution if it is no longer deemed relevant
 	// or, for whatever reason, cannot or will not be resolved.
 	'closed-unresolved',
-
-	// TODO: remove after migrating to closed-resolved/closed-unresolved
-	'closed',
-
-	// TODO: remove after migrating to closed-resolved/closed-unresolved
-	'archived',
 ];
 
 const statusNames = [
@@ -36,10 +30,6 @@ const statusNames = [
 	'Pending validation',
 	'Closed - resolved',
 	'Closed - unresolved',
-
-	// TODO: remove these names when their corresponding statuses are removed
-	'Closed (deprecated)',
-	'Archived (deprecated)',
 ];
 
 export function pattern({
