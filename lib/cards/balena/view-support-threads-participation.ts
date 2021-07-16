@@ -78,7 +78,7 @@ export const viewSupportThreadsParticipation: ViewContractDefinition = {
 							},
 						},
 					},
-					required: ['active', 'type'],
+					required: ['active', 'type', 'data'],
 					description: "View all support threads I've participated in",
 					additionalProperties: true,
 				},
