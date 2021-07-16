@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.0.1 - 2021-07-16
+
+* Fix schema for view-support-threads-participation [Graham McCulloch]
+
 ## 19.0.0 - 2021-07-15
 
 * Convert to TypeScript [Josh Bowling]

@@ -1,4 +1,18 @@
 - commits:
+    - subject: Fix schema for view-support-threads-participation
+      hash: 2338d20d78a3fc3faa2ee0ad71e29333d8d7b4a0
+      body: |
+        Need to specify required fields (data)
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 19.0.1
+  date: 2021-07-16T01:49:21.655Z
+- commits:
     - subject: Convert to TypeScript
       hash: 7c4da1352490c5f3c406dc2c76ed00f24995e2ef
       body: ''
