@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.1.1 - 2021-07-17
+
+* Remove whitesource config [Josh Bowling]
+
 ## 19.1.0 - 2021-07-16
 
 * Remove deprecated pattern statuses [Graham McCulloch]

@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove whitesource config
+      hash: 3d368dfcde6c98696b286ca1a4d69d9ef92fef22
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 19.1.1
+  date: 2021-07-17T00:12:52.865Z
+- commits:
     - subject: Remove deprecated pattern statuses
       hash: 9188acce5df84c72bf33452f0a40276a26ee4ec3
       body: ''
