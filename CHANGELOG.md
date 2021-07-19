@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.2.0 - 2021-07-19
+
+* Use mixins in the opportunity contract [Graham McCulloch]
+
 ## 19.1.1 - 2021-07-17
 
 * Remove whitesource config [Josh Bowling]

@@ -1,4 +1,19 @@
 - commits:
+    - subject: Use mixins in the opportunity contract
+      hash: dcca2b6e8b5c67e686599554e4ed5c9867609243
+      body: >
+        Main change is adding evaluated fields from the `withEvents` mixin. This
+        should be added to almost every contract type really!
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 19.2.0
+  date: 2021-07-19T01:17:36.829Z
+- commits:
     - subject: Remove whitesource config
       hash: 3d368dfcde6c98696b286ca1a4d69d9ef92fef22
       body: ''
