@@ -52,6 +52,8 @@ import { triggeredActionHangoutsLink } from './contrib/triggered-action-hangouts
 import { triggeredActionIncrementTag } from './contrib/triggered-action-increment-tag';
 import { triggeredActionUserContact } from './contrib/triggered-action-user-contact';
 import { triggeredActionIntegrationImportEvent } from './contrib/triggered-action-integration-import-event';
+import { triggeredActionPatternAllImprovementsCompleted } from './contrib/triggered-action-pattern-all-improvements-completed';
+import { triggeredActionPatternSomeImprovementsCompleted } from './contrib/triggered-action-pattern-some-improvements-completed';
 import { triggeredActionSetUserAvatar } from './contrib/triggered-action-set-user-avatar';
 import { triggeredActionSupportSummary } from './contrib/triggered-action-support-summary';
 import { triggeredActionSupportReopen } from './contrib/triggered-action-support-reopen';
@@ -145,6 +147,8 @@ export const cards = [
 	triggeredActionIncrementTag,
 	triggeredActionUserContact,
 	triggeredActionIntegrationImportEvent,
+	triggeredActionPatternAllImprovementsCompleted,
+	triggeredActionPatternSomeImprovementsCompleted,
 	triggeredActionSetUserAvatar,
 	triggeredActionSupportSummary,
 	triggeredActionSupportReopen,
