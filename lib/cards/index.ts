@@ -49,6 +49,7 @@ import { webPushSubscription } from './contrib/web-push-subscription';
 import { group } from './contrib/group';
 import { summary } from './contrib/summary';
 import { triggeredActionHangoutsLink } from './contrib/triggered-action-hangouts-link';
+import { triggeredActionImprovementAllMilestonesCompleted } from './contrib/triggered-action-improvement-all-milestones-completed';
 import { triggeredActionIncrementTag } from './contrib/triggered-action-increment-tag';
 import { triggeredActionUserContact } from './contrib/triggered-action-user-contact';
 import { triggeredActionIntegrationImportEvent } from './contrib/triggered-action-integration-import-event';
@@ -142,6 +143,7 @@ export const cards = [
 
 	// Triggered actions
 	triggeredActionHangoutsLink,
+	triggeredActionImprovementAllMilestonesCompleted,
 	triggeredActionIncrementTag,
 	triggeredActionUserContact,
 	triggeredActionIntegrationImportEvent,
