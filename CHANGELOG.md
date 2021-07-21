@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.2.4 - 2021-07-21
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 19.2.3 - 2021-07-21
 
 * Fix Renovate config extends [Josh Bowling]
