@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.2.1 - 2021-07-21
+
+* brainstorm-topic reporter is not required [Graham McCulloch]
+
 ## 19.2.0 - 2021-07-19
 
 * Use mixins in the opportunity contract [Graham McCulloch]

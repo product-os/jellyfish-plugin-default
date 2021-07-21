@@ -1,4 +1,18 @@
 - commits:
+    - subject: brainstorm-topic reporter is not required
+      hash: 058d7be934753a2cf6e9f876b027e9dbe8eab5d6
+      body: |
+        This will make it easier to import legacy brainstorm topics from Front.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 19.2.1
+  date: 2021-07-21T02:55:36.421Z
+- commits:
     - subject: Use mixins in the opportunity contract
       hash: dcca2b6e8b5c67e686599554e4ed5c9867609243
       body: >
