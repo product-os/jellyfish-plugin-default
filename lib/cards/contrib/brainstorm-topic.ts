@@ -34,7 +34,7 @@ export function brainstormTopic({
 					},
 					data: {
 						type: 'object',
-						required: ['reporter', 'category', 'description'],
+						required: ['category', 'description'],
 						properties: {
 							reporter: {
 								type: 'string',
