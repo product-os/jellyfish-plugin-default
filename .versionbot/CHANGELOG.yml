@@ -1,4 +1,17 @@
 - commits:
+    - subject: Fix Renovate config extends
+      hash: 4f272f53fd4838a9641a4702ee413be046867b85
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 19.2.3
+  date: 2021-07-21T06:05:12.165Z
+- commits:
     - subject: Bring back data.product for support threads
       hash: 877746e9d9a1e182624f7ef4162eb5fca5d40099
       body: ''
