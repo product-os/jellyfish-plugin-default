@@ -1,4 +1,17 @@
 - commits:
+    - subject: Bring back data.product for support threads
+      hash: 877746e9d9a1e182624f7ef4162eb5fca5d40099
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 19.2.2
+  date: 2021-07-21T05:28:07.523Z
+- commits:
     - subject: brainstorm-topic reporter is not required
       hash: 058d7be934753a2cf6e9f876b027e9dbe8eab5d6
       body: |

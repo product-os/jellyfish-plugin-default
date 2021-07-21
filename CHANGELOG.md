@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.2.2 - 2021-07-21
+
+* Bring back data.product for support threads [Josh Bowling]
+
 ## 19.2.1 - 2021-07-21
 
 * brainstorm-topic reporter is not required [Graham McCulloch]
