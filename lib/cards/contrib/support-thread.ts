@@ -76,6 +76,10 @@ export function supportThread({
 								type: 'string',
 								fullTextSearch: true,
 							},
+							product: {
+								title: 'Product',
+								type: 'string',
+							},
 						},
 					},
 				},
@@ -99,7 +103,7 @@ export function supportThread({
 					},
 				},
 			},
-			indexed_fields: [['data.status', 'data.category']],
+			indexed_fields: [['data.status', 'data.category', 'data.product']],
 		},
 	});
 }
