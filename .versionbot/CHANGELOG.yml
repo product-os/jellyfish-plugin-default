@@ -1,4 +1,23 @@
 - commits:
+    - subject: Add triggered actions for auto-updating pattern status
+      hash: b62c06b2fc780ac9baa9942ad073492c6aa60cfc
+      body: >
+        When some but not all linked improvments are completed, pattern status
+        is updated to 'partially-resolved'.
+
+
+        When all linked improvements are completed, pattern status is updated to
+        'resolved-pending-review'.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 19.4.0
+  date: 2021-07-23T06:36:21.864Z
+- commits:
     - subject: Use mixins in workflow contract definition
       hash: 17d8f903d4e1ea4dc5feb7decf445cd76727652c
       body: >
