@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.3.1 - 2021-07-23
+
+* Use mixins in workflow contract definition [Graham McCulloch]
+
 ## 19.3.0 - 2021-07-23
 
 * Add evaulated milestones progress field to improvment schema [Graham McCulloch]

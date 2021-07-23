@@ -1,4 +1,19 @@
 - commits:
+    - subject: Use mixins in workflow contract definition
+      hash: 17d8f903d4e1ea4dc5feb7decf445cd76727652c
+      body: >
+        Remove redundant data.loop field (all values have already been migrated
+        to the top-level loop field).
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 19.3.1
+  date: 2021-07-23T06:23:36.184Z
+- commits:
     - subject: Add evaulated milestones progress field to improvment schema
       hash: 4890aff962e64def0a4f619b045d968b0ca435af
       body: >
