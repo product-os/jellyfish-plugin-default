@@ -5,6 +5,13 @@
 
 # v0.0.3
 
+## 19.3.0 - 2021-07-23
+
+* Add evaulated milestones progress field to improvment schema [Graham McCulloch]
+* Update milestone status options [Graham McCulloch]
+* Add evaulated improvements progress to pattern schema [Graham McCulloch]
+* Update pattern status options [Graham McCulloch]
+
 ## 19.2.6 - 2021-07-22
 
 * 🔄 Synced file(s) with product-os/jellyfish-config [jellyfish-bot]

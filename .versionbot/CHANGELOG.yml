@@ -1,4 +1,51 @@
 - commits:
+    - subject: Add evaulated milestones progress field to improvment schema
+      hash: 4890aff962e64def0a4f619b045d968b0ca435af
+      body: >
+        The milestonesPercentComplete field is displayed using the ProgressBar
+        widget.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+    - subject: Update milestone status options
+      hash: e9b055ccfb955796080796e6fd29f9176260068e
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+    - subject: Add evaulated improvements progress to pattern schema
+      hash: bab1836c9944e24ac0896d1c9b85a227327de3ff
+      body: >
+        The improvementsPercentComplete field is displayed using the ProgressBar
+        widget.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+    - subject: Update pattern status options
+      hash: 45aa368bd126c29e5470bb068131385b3dbdb9fc
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 19.3.0
+  date: 2021-07-23T03:33:32.044Z
+- commits:
     - subject: "\U0001F504 Synced file(s) with product-os/jellyfish-config"
       hash: b0ecfe434fbe167d0a9484df5c9fd6150aba0991
       body: ''
