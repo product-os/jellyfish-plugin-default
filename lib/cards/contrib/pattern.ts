@@ -60,10 +60,33 @@ export function pattern({
 								format: 'markdown',
 								fullTextSearch: true,
 							},
+							improvementsPercentComplete: {
+								title: 'Improvements progress',
+								default: 0,
+								type: 'number',
+								readOnly: true,
+								// eslint-disable-next-line max-len
+								$$formula:
+									'this.links["has attached"] && this.links["has attached"].length ? (FILTER(this.links["has attached"], { type: "improvement@1.0.0", data: { status: "completed" } }).length / REJECT(FILTER(this.links["has attached"], { type: "improvement@1.0.0" }), { data: { status: "denied-or-failed" } }).length) * 100 : 0',
+							},
 						},
 					},
 				},
 				required: ['name'],
+			},
+			uiSchema: {
+				fields: {
+					data: {
+						improvementsPercentComplete: {
+							'ui:widget': 'ProgressBar',
+							'ui:options': {
+								success: true,
+								alignSelf: 'stretch',
+								alignItems: 'stretch',
+							},
+						},
+					},
+				},
 			},
 		},
 	});
