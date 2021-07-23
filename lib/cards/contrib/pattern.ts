@@ -10,9 +10,9 @@ import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
 const statusOptions = [
 	'open',
 	'brainstorming',
-	'solution-agreed',
+	'improvement-in-progress',
 	'partially-resolved',
-	'pending-validation',
+	'resolved-pending-review',
 
 	// A pattern is resolved when the problem it describes has been verified as fixed
 	'closed-resolved',
@@ -25,11 +25,11 @@ const statusOptions = [
 const statusNames = [
 	'Open',
 	'Brainstorming',
-	'Solution agreed',
+	'Improvement in progress',
 	'Partially resolved',
-	'Pending validation',
-	'Closed - resolved',
-	'Closed - unresolved',
+	'Resolved (pending review)',
+	'Closed (resolved)',
+	'Closed (unresolved)',
 ];
 
 export function pattern({
