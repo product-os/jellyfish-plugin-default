@@ -7,6 +7,10 @@
 import type { Mixins } from '@balena/jellyfish-plugin-base';
 import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
 
+const statusOptions = ['open', 'in-progress', 'denied-or-failed', 'completed'];
+
+const statusNames = ['Open', 'In progress', 'Denied or Failed', 'Completed'];
+
 export function milestone({
 	mixin,
 	withEvents,
@@ -14,7 +18,7 @@ export function milestone({
 }: Mixins): ContractDefinition {
 	return mixin(
 		withEvents,
-		asPipelineItem(),
+		asPipelineItem(statusOptions, statusOptions[0], statusNames),
 	)({
 		slug: 'milestone',
 		name: 'Milestone',

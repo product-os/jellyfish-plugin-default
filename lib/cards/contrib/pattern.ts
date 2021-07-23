@@ -10,9 +10,9 @@ import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
 const statusOptions = [
 	'open',
 	'brainstorming',
-	'solution-agreed',
+	'improvement-in-progress',
 	'partially-resolved',
-	'pending-validation',
+	'resolved-pending-review',
 
 	// A pattern is resolved when the problem it describes has been verified as fixed
 	'closed-resolved',
@@ -25,11 +25,11 @@ const statusOptions = [
 const statusNames = [
 	'Open',
 	'Brainstorming',
-	'Solution agreed',
+	'Improvement in progress',
 	'Partially resolved',
-	'Pending validation',
-	'Closed - resolved',
-	'Closed - unresolved',
+	'Resolved (pending review)',
+	'Closed (resolved)',
+	'Closed (unresolved)',
 ];
 
 export function pattern({
@@ -60,10 +60,33 @@ export function pattern({
 								format: 'markdown',
 								fullTextSearch: true,
 							},
+							improvementsPercentComplete: {
+								title: 'Improvements progress',
+								default: 0,
+								type: 'number',
+								readOnly: true,
+								// eslint-disable-next-line max-len
+								$$formula:
+									'this.links["has attached"] && this.links["has attached"].length ? (FILTER(this.links["has attached"], { type: "improvement@1.0.0", data: { status: "completed" } }).length / REJECT(FILTER(this.links["has attached"], { type: "improvement@1.0.0" }), { data: { status: "denied-or-failed" } }).length) * 100 : 0',
+							},
 						},
 					},
 				},
 				required: ['name'],
+			},
+			uiSchema: {
+				fields: {
+					data: {
+						improvementsPercentComplete: {
+							'ui:widget': 'ProgressBar',
+							'ui:options': {
+								success: true,
+								alignSelf: 'stretch',
+								alignItems: 'stretch',
+							},
+						},
+					},
+				},
 			},
 		},
 	});

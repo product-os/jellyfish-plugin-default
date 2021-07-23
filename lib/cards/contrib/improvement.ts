@@ -68,6 +68,15 @@ export function improvement({
 								format: 'markdown',
 								default: DEFAULT_CONTENT,
 							},
+							milestonesPercentComplete: {
+								title: 'Milestones progress',
+								default: 0,
+								type: 'number',
+								readOnly: true,
+								// eslint-disable-next-line max-len
+								$$formula:
+									'this.links["has attached"] && this.links["has attached"].length ? (FILTER(this.links["has attached"], { type: "milestone@1.0.0", data: { status: "completed" } }).length / REJECT(FILTER(this.links["has attached"], { type: "milestone@1.0.0" }), { data: { status: "denied-or-failed" } }).length) * 100 : 0',
+							},
 						},
 					},
 				},
@@ -76,7 +85,28 @@ export function improvement({
 			uiSchema: {
 				fields: {
 					data: {
-						'ui:order': ['status', 'specification', 'description'],
+						'ui:order': [
+							'status',
+							'milestonesPercentComplete',
+							'specification',
+							'description',
+						],
+						milestonesPercentComplete: {
+							'ui:widget': 'ProgressBar',
+							'ui:options': {
+								success: true,
+								alignSelf: 'stretch',
+								alignItems: 'stretch',
+							},
+						},
+					},
+				},
+				snippet: {
+					data: {
+						status: {
+							'ui:title': null,
+							'ui:widget': 'Badge',
+						},
 					},
 				},
 			},
