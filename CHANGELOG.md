@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.3.2 - 2021-07-24
+
+* patch: Update external-non-major [Renovate Bot]
+
 ## 19.3.1 - 2021-07-23
 
 * Use mixins in workflow contract definition [Graham McCulloch]

@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update external-non-major'
+      hash: baba5d2398c7be5a870690df96059eaf81ca20df
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 19.3.2
+  date: 2021-07-24T01:05:32.316Z
+- commits:
     - subject: Use mixins in workflow contract definition
       hash: 17d8f903d4e1ea4dc5feb7decf445cd76727652c
       body: >
