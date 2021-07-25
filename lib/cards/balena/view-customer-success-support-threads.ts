@@ -11,6 +11,7 @@ export const viewCustomerSuccessSupportThreads: ViewContractDefinition = {
 	name: 'Customer success',
 	type: 'view@1.0.0',
 	markers: ['org-balena'],
+	loop: 'loop-balena-io@1.0.0',
 	data: {
 		namespace: 'Support',
 		allOf: [

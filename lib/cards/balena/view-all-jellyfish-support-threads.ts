@@ -11,6 +11,7 @@ export const viewAllJellyfishSupportThreads: ViewContractDefinition = {
 	name: 'Jellyfish threads',
 	type: 'view@1.0.0',
 	markers: ['org-balena'],
+	loop: 'loop-product-os@1.0.0',
 	data: {
 		namespace: 'Support',
 		allOf: [
