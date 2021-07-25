@@ -1,4 +1,17 @@
 - commits:
+    - subject: Assign support thread views to loops
+      hash: 4b78b0cb682d9ea916f0facfbb0baef25d310f8b
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 19.4.0
+  date: 2021-07-25T00:49:08.115Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.206'
       hash: b40860714a89f8b8ec255dade2b27b670de51f1a
       body: ''

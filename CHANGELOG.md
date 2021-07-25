@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.4.0 - 2021-07-25
+
+* Assign support thread views to loops [Graham McCulloch]
+
 ## 19.3.5 - 2021-07-24
 
 * patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.206 [Renovate Bot]
