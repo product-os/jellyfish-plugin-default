@@ -122,7 +122,7 @@ export function account({ uiSchemaDef }: Mixins): ContractDefinition {
 									'Calculated with the formula: monthlyPrice * (1 - discountPercentage). This number is excluding plan addons',
 								type: 'number',
 								$$formula:
-									'SUM(this.data.monthlyPrice * (1-this.data.discountPercentage))',
+									'SUM(contract.data.monthlyPrice * (1 - contract.data.discountPercentage))',
 								readOnly: true,
 							},
 							SumAnnualPrice: {
@@ -131,7 +131,7 @@ export function account({ uiSchemaDef }: Mixins): ContractDefinition {
 									'Calculated with the formula: annualPrice * (1 - discountPercentage). This number is excluding plan addons',
 								type: 'number',
 								$$formula:
-									'SUM(this.data.annualPrice * (1 - this.data.discountPercentage))',
+									'SUM(contract.data.annualPrice * (1 - contract.data.discountPercentage))',
 								readOnly: true,
 							},
 						},
