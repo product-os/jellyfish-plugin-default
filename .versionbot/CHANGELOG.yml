@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update evaluated fields to reference 'contract' instead of 'this'
+      hash: 720c244a68d6aa7ac2253dc478204f5ed5f51e9d
+      body: >
+        Update jellyfish-test-harness dev dependency - pulls in latest
+        jellyscript.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 19.4.1
+  date: 2021-07-27T03:46:32.679Z
+- commits:
     - subject: Assign support thread views to loops
       hash: 4b78b0cb682d9ea916f0facfbb0baef25d310f8b
       body: ''

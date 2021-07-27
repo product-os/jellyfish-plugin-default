@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.4.1 - 2021-07-27
+
+* Update evaluated fields to reference 'contract' instead of 'this' [Graham McCulloch]
+
 ## 19.4.0 - 2021-07-25
 
 * Assign support thread views to loops [Graham McCulloch]
