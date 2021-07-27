@@ -76,7 +76,7 @@ export function opportunity({
 								type: 'number',
 								format: 'currency',
 								$$formula:
-									'SUM([this.data.recurringValue, this.data.nonRecurringValue])',
+									'SUM([contract.data.recurringValue, contract.data.nonRecurringValue])',
 								minimum: 0,
 							},
 							device: {

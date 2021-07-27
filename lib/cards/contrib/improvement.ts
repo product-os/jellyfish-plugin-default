@@ -75,7 +75,7 @@ export function improvement({
 								readOnly: true,
 								// eslint-disable-next-line max-len
 								$$formula:
-									'this.links["has attached"] && this.links["has attached"].length ? (FILTER(this.links["has attached"], { type: "milestone@1.0.0", data: { status: "completed" } }).length / REJECT(FILTER(this.links["has attached"], { type: "milestone@1.0.0" }), { data: { status: "denied-or-failed" } }).length) * 100 : 0',
+									'contract.links["has attached"] && contract.links["has attached"].length ? (FILTER(contract.links["has attached"], { type: "milestone@1.0.0", data: { status: "completed" } }).length / REJECT(FILTER(contract.links["has attached"], { type: "milestone@1.0.0" }), { data: { status: "denied-or-failed" } }).length) * 100 : 0',
 							},
 						},
 					},

@@ -69,9 +69,9 @@ export function rating({ uiSchemaDef }: Mixins): ContractDefinition {
 										type: 'string',
 										$$formula:
 											// eslint-disable-next-line max-len
-											'(this.data.payload.score ? "Review score: " + this.data.payload.score + "/5" : "") +' +
+											'(contract.data.payload.score ? "Review score: " + contract.data.payload.score + "/5" : "") +' +
 											// eslint-disable-next-line max-len
-											'(this.data.payload.comment ? "\\n\\nReview comment:\\n" + this.data.payload.comment : "")',
+											'(contract.data.payload.comment ? "\\n\\nReview comment:\\n" + contract.data.payload.comment : "")',
 										readOnly: true,
 									},
 									comment: {
