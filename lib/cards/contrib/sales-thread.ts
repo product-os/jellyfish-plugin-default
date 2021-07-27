@@ -91,6 +91,7 @@ export function salesThread({
 					},
 				},
 			},
+			indexed_fields: [['data.mirrors']],
 		},
 	});
 }

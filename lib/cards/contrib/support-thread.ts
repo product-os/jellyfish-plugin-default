@@ -123,6 +123,7 @@ export function supportThread({
 			indexed_fields: [
 				['data.status', 'data.category', 'data.product'],
 				['data.lastMessage.data.timestamp'],
+				['data.mirrors'],
 			],
 		},
 	});
