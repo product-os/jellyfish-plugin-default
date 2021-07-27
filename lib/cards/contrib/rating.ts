@@ -171,6 +171,7 @@ export function rating({ uiSchemaDef }: Mixins): ContractDefinition {
 				['data.payload.alertsUser'],
 				['data.payload.mentionsGroup'],
 				['data.payload.alertsGroup'],
+				['data.actor'],
 			],
 		},
 	};
