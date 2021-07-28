@@ -80,6 +80,22 @@ export function supportThread({
 								title: 'Product',
 								type: 'string',
 							},
+							lastMessage: {
+								type: 'object',
+								$$formula: `
+									PROPERTY(contract, [ "links", "has attached element", "length" ])
+									? LAST(
+											ORDER_BY(
+												FILTER(
+													contract.links["has attached element"],
+													function (c) { return c && (c.type === "message@1.0.0" || c.type === "whisper@1.0.0"); }
+												),
+												"data.timestamp"
+											)
+										)
+									: null
+								`,
+							},
 						},
 					},
 				},
@@ -100,10 +116,14 @@ export function supportThread({
 						inbox: null,
 						origin: null,
 						environment: null,
+						lastMessage: null,
 					},
 				},
 			},
-			indexed_fields: [['data.status', 'data.category', 'data.product']],
+			indexed_fields: [
+				['data.status', 'data.category', 'data.product'],
+				['data.lastMessage.data.timestamp'],
+			],
 		},
 	});
 }
