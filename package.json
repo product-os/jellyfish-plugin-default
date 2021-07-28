@@ -57,7 +57,7 @@
     "@balena/jellyfish-config": "^1.4.4",
     "@balena/jellyfish-core": "^5.0.1",
     "@balena/jellyfish-sync": "^6.0.287",
-    "@balena/jellyfish-test-harness": "^6.0.45",
+    "@balena/jellyfish-test-harness": "^6.0.46",
     "@balena/jellyfish-types": "^0.8.6",
     "@balena/lint": "^6.1.1",
     "@types/is-uuid": "^1.0.0",
