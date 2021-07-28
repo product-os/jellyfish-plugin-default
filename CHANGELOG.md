@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 19.5.0 - 2021-07-28
+
+* Update jellyfish-test-harness dev dependency [Graham McCulloch]
+* Add evaluated 'lastMessage' field to the support-thread schema [Graham McCulloch]
+
 ## 19.4.1 - 2021-07-27
 
 * Update evaluated fields to reference 'contract' instead of 'this' [Graham McCulloch]

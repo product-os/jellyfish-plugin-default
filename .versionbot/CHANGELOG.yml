@@ -1,4 +1,35 @@
 - commits:
+    - subject: Update jellyfish-test-harness dev dependency
+      hash: 64bb0edd63a94134302e0dc914ffe385f14afb9e
+      body: |
+        Makes sure we use the updated jellyscript when testing this package.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+    - subject: Add evaluated 'lastMessage' field to the support-thread schema
+      hash: b238f4fda8d931a7d3a96fe8ee2af051ff220fb2
+      body: >
+        This field will be populated by the latest message/whisper on the
+        support-threads's timeline.
+
+
+        If all goes well, we might move this field definition to the
+        `withEvents` mixin so it is available for any contract that has a
+        timeline.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 19.5.0
+  date: 2021-07-28T09:57:21.241Z
+- commits:
     - subject: Update evaluated fields to reference 'contract' instead of 'this'
       hash: 720c244a68d6aa7ac2253dc478204f5ed5f51e9d
       body: >
