@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.5.1 - 2021-07-29
+
+* patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.207 [Renovate Bot]
+
 ## 19.5.0 - 2021-07-28
 
 * Update jellyfish-test-harness dev dependency [Graham McCulloch]
