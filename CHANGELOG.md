@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.5.9 - 2021-08-01
+
+* 🔄 Synced file(s) with product-os/jellyfish-config [jellyfish-bot]
+
 ## 19.5.8 - 2021-07-31
 
 * patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.211 [Renovate Bot]
