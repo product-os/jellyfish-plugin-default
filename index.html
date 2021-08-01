@@ -1,0 +1,394 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@balena/jellyfish-plugin-default</title>
+	<meta name="description" content="Documentation for @balena/jellyfish-plugin-default">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@balena/jellyfish-plugin-default</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>@balena/jellyfish-plugin-default</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#jellyfish-default-plugin" id="jellyfish-default-plugin" style="color: inherit; text-decoration: none;">
+					<h1>Jellyfish Default Plugin</h1>
+				</a>
+				<p>Default plugin that currently only provides the default set of cards necessary for normal operations.</p>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h1>Usage</h1>
+				</a>
+				<p>Below is an example how to use this library:</p>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">cardMixins</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@balena/jellyfish-core&#039;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">DefaultPlugin</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@balena/jellyfish-plugin-default&#039;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">plugin</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">DefaultPlugin</span><span style="color: #000000">();</span>
+
+<span style="color: #008000">// Load cards from this plugin, can use custom mixins</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">cards</span><span style="color: #000000"> = </span><span style="color: #001080">plugin</span><span style="color: #000000">.</span><span style="color: #795E26">getCards</span><span style="color: #000000">(</span><span style="color: #001080">context</span><span style="color: #000000">, </span><span style="color: #001080">cardMixins</span><span style="color: #000000">);</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">dir</span><span style="color: #000000">(</span><span style="color: #001080">cards</span><span style="color: #000000">);</span>
+</code></pre>
+				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+					<h1>Documentation</h1>
+				</a>
+				<p><a href="https://github.com/product-os/jellyfish-plugin-default/actions/workflows/publish-docs.yml"><img src="https://github.com/product-os/jellyfish-plugin-default/actions/workflows/publish-docs.yml/badge.svg" alt="Publish Documentation"></a></p>
+				<p>Visit the website for complete documentation: <a href="https://product-os.github.io/jellyfish-plugin-default">https://product-os.github.io/jellyfish-plugin-default</a></p>
+				<a href="#testing" id="testing" style="color: inherit; text-decoration: none;">
+					<h1>Testing</h1>
+				</a>
+				<p>Unit tests can be easily run with the command <code>npm test</code>.</p>
+				<p>The integration tests require a postgres DB and redis server. The simplest way to run the tests locally is with docker-compose.</p>
+				<pre><code><span style="color: #001080">docker</span><span style="color: #000000">-</span><span style="color: #001080">compose</span><span style="color: #000000"> -</span><span style="color: #001080">f</span><span style="color: #000000"> </span><span style="color: #001080">docker</span><span style="color: #000000">-</span><span style="color: #001080">compose</span><span style="color: #000000">.</span><span style="color: #001080">test</span><span style="color: #000000">.</span><span style="color: #001080">yml</span><span style="color: #000000"> -</span><span style="color: #001080">f</span><span style="color: #000000"> </span><span style="color: #001080">docker</span><span style="color: #000000">-</span><span style="color: #001080">compose</span><span style="color: #000000">.</span><span style="color: #001080">yml</span><span style="color: #000000"> </span><span style="color: #001080">up</span><span style="color: #000000"> --</span><span style="color: #001080">build</span><span style="color: #000000"> --</span><span style="color: #001080">exit</span><span style="color: #000000">-</span><span style="color: #001080">code</span><span style="color: #000000">-</span><span style="color: #001080">from</span><span style="color: #000000">=</span><span style="color: #001080">sut</span>
+</code></pre>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Modules</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/actions.html">actions</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/actions_action_maintain_contact.html">actions/action-<wbr>maintain-<wbr>contact</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards.html">cards</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_org_balena.html">cards/balena/org-<wbr>balena</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_product_balena_cloud.html">cards/balena/product-<wbr>balena-<wbr>cloud</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_product_jellyfish.html">cards/balena/product-<wbr>jellyfish</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_all_blog_posts.html">cards/balena/view-<wbr>all-<wbr>blog-<wbr>posts</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_all_brainstorm_calls.html">cards/balena/view-<wbr>all-<wbr>brainstorm-<wbr>calls</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_all_brainstorm_topics.html">cards/balena/view-<wbr>all-<wbr>brainstorm-<wbr>topics</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_all_contacts.html">cards/balena/view-<wbr>all-<wbr>contacts</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_all_customers.html">cards/balena/view-<wbr>all-<wbr>customers</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_all_faqs.html">cards/balena/view-<wbr>all-<wbr>faqs</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_all_forum_threads.html">cards/balena/view-<wbr>all-<wbr>forum-<wbr>threads</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_all_groups.html">cards/balena/view-<wbr>all-<wbr>groups</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_all_improvements.html">cards/balena/view-<wbr>all-<wbr>improvements</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_all_jellyfish_support_threads.html">cards/balena/view-<wbr>all-<wbr>jellyfish-<wbr>support-<wbr>threads</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_all_opportunities.html">cards/balena/view-<wbr>all-<wbr>opportunities</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_all_patterns.html">cards/balena/view-<wbr>all-<wbr>patterns</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_all_projects.html">cards/balena/view-<wbr>all-<wbr>projects</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_all_sagas.html">cards/balena/view-<wbr>all-<wbr>sagas</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_all_sales_threads.html">cards/balena/view-<wbr>all-<wbr>sales-<wbr>threads</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_all_support_issues.html">cards/balena/view-<wbr>all-<wbr>support-<wbr>issues</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_customer_success_support_threads.html">cards/balena/view-<wbr>customer-<wbr>success-<wbr>support-<wbr>threads</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_my_opportunities.html">cards/balena/view-<wbr>my-<wbr>opportunities</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_paid_support_threads.html">cards/balena/view-<wbr>paid-<wbr>support-<wbr>threads</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_security_support_threads.html">cards/balena/view-<wbr>security-<wbr>support-<wbr>threads</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_support_threads_participation.html">cards/balena/view-<wbr>support-<wbr>threads-<wbr>participation</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_balena_view_workflows.html">cards/balena/view-<wbr>workflows</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_account.html">cards/contrib/account</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_blog_post.html">cards/contrib/blog-<wbr>post</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_brainstorm_call.html">cards/contrib/brainstorm-<wbr>call</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_brainstorm_topic.html">cards/contrib/brainstorm-<wbr>topic</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_chart_configuration.html">cards/contrib/chart-<wbr>configuration</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_checkin.html">cards/contrib/checkin</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_contact.html">cards/contrib/contact</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_external_event.html">cards/contrib/external-<wbr>event</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_faq.html">cards/contrib/faq</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_feedback_item.html">cards/contrib/feedback-<wbr>item</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_first_time_login.html">cards/contrib/first-<wbr>time-<wbr>login</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_group.html">cards/contrib/group</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_improvement.html">cards/contrib/improvement</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_message.html">cards/contrib/message</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_milestone.html">cards/contrib/milestone</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_notification.html">cards/contrib/notification</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_opportunity.html">cards/contrib/opportunity</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_password_reset.html">cards/contrib/password-<wbr>reset</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_pattern.html">cards/contrib/pattern</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_ping.html">cards/contrib/ping</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_pipeline.html">cards/contrib/pipeline</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_product.html">cards/contrib/product</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_project.html">cards/contrib/project</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_rating.html">cards/contrib/rating</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_role_user_community.html">cards/contrib/role-<wbr>user-<wbr>community</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_role_user_external_support.html">cards/contrib/role-<wbr>user-<wbr>external-<wbr>support</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_role_user_guest.html">cards/contrib/role-<wbr>user-<wbr>guest</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_role_user_operator.html">cards/contrib/role-<wbr>user-<wbr>operator</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_role_user_test.html">cards/contrib/role-<wbr>user-<wbr>test</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_saga.html">cards/contrib/saga</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_sales_thread.html">cards/contrib/sales-<wbr>thread</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_subscription.html">cards/contrib/subscription</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_summary.html">cards/contrib/summary</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_support_issue.html">cards/contrib/support-<wbr>issue</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_support_thread.html">cards/contrib/support-<wbr>thread</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_tag.html">cards/contrib/tag</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_thread.html">cards/contrib/thread</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_triggered_action_hangouts_link.html">cards/contrib/triggered-<wbr>action-<wbr>hangouts-<wbr>link</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_triggered_action_increment_tag.html">cards/contrib/triggered-<wbr>action-<wbr>increment-<wbr>tag</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_triggered_action_integration_import_event.html">cards/contrib/triggered-<wbr>action-<wbr>integration-<wbr>import-<wbr>event</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_triggered_action_set_user_avatar.html">cards/contrib/triggered-<wbr>action-<wbr>set-<wbr>user-<wbr>avatar</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_triggered_action_support_closed_pattern_reopen.html">cards/contrib/triggered-<wbr>action-<wbr>support-<wbr>closed-<wbr>pattern-<wbr>reopen</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_triggered_action_support_reopen.html">cards/contrib/triggered-<wbr>action-<wbr>support-<wbr>reopen</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_triggered_action_support_summary.html">cards/contrib/triggered-<wbr>action-<wbr>support-<wbr>summary</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_triggered_action_sync_thread_post_link_whisper.html">cards/contrib/triggered-<wbr>action-<wbr>sync-<wbr>thread-<wbr>post-<wbr>link-<wbr>whisper</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_triggered_action_update_event_edited_at.html">cards/contrib/triggered-<wbr>action-<wbr>update-<wbr>event-<wbr>edited-<wbr>at</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_triggered_action_user_contact.html">cards/contrib/triggered-<wbr>action-<wbr>user-<wbr>contact</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_user_guest.html">cards/contrib/user-<wbr>guest</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_view_active.html">cards/contrib/view-<wbr>active</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_view_active_triggered_actions.html">cards/contrib/view-<wbr>active-<wbr>triggered-<wbr>actions</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_view_all_views.html">cards/contrib/view-<wbr>all-<wbr>views</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_view_my_conversations.html">cards/contrib/view-<wbr>my-<wbr>conversations</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_view_my_orgs.html">cards/contrib/view-<wbr>my-<wbr>orgs</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_view_non_executed_action_requests.html">cards/contrib/view-<wbr>non-<wbr>executed-<wbr>action-<wbr>requests</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_web_push_subscription.html">cards/contrib/web-<wbr>push-<wbr>subscription</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_whisper.html">cards/contrib/whisper</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_contrib_workflow.html">cards/contrib/workflow</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_mixins.html">cards/mixins</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_mixins_as_pipeline_item.html">cards/mixins/as-<wbr>pipeline-<wbr>item</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/cards_mixins_with_events.html">cards/mixins/with-<wbr>events</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/index.html">index</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
