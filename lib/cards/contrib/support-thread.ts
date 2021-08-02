@@ -28,6 +28,9 @@ export function supportThread({
 						type: ['string', 'null'],
 						fullTextSearch: true,
 					},
+					loop: {
+						type: 'string',
+					},
 					data: {
 						type: 'object',
 						properties: {
@@ -99,7 +102,7 @@ export function supportThread({
 						},
 					},
 				},
-				required: ['data'],
+				required: ['loop', 'data'],
 			},
 			uiSchema: {
 				fields: {

@@ -20,10 +20,14 @@ export function brainstormCall({
 		data: {
 			schema: {
 				type: 'object',
+				required: ['name', 'loop', 'data'],
 				properties: {
 					name: {
 						type: 'string',
 						fullTextSearch: true,
+					},
+					loop: {
+						type: 'string',
 					},
 					data: {
 						type: 'object',

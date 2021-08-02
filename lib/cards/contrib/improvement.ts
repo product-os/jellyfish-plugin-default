@@ -56,6 +56,9 @@ export function improvement({
 						pattern: '^.*\\S.*$',
 						fullTextSearch: true,
 					},
+					loop: {
+						type: 'string',
+					},
 					data: {
 						type: 'object',
 						properties: {
@@ -80,7 +83,7 @@ export function improvement({
 						},
 					},
 				},
-				required: ['name', 'data'],
+				required: ['name', 'loop', 'data'],
 			},
 			uiSchema: {
 				fields: {

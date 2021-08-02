@@ -52,6 +52,9 @@ export function pattern({
 						type: 'string',
 						fullTextSearch: true,
 					},
+					loop: {
+						type: 'string',
+					},
 					data: {
 						type: 'object',
 						properties: {
@@ -72,7 +75,7 @@ export function pattern({
 						},
 					},
 				},
-				required: ['name'],
+				required: ['name', 'loop'],
 			},
 			uiSchema: {
 				fields: {
