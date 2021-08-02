@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.6.0 - 2021-08-02
+
+* Mark loop field as required on several contract types [Graham McCulloch]
+
 ## 19.5.9 - 2021-08-01
 
 * 🔄 Synced file(s) with product-os/jellyfish-config [jellyfish-bot]

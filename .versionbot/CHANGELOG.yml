@@ -1,4 +1,17 @@
 - commits:
+    - subject: Mark loop field as required on several contract types
+      hash: c4a83aefe3143059fbbc964bb81c38fb2abbe192
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 19.6.0
+  date: 2021-08-02T03:16:41.526Z
+- commits:
     - subject: "\U0001F504 Synced file(s) with product-os/jellyfish-config"
       hash: 5755c6225f09981f1ff9600040a0861f0f8f66b3
       body: ''
