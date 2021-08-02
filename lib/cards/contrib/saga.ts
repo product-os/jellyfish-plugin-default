@@ -28,6 +28,9 @@ export function saga({
 						pattern: '^.*\\S.*$',
 						fullTextSearch: true,
 					},
+					loop: {
+						type: 'string',
+					},
 					data: {
 						type: 'object',
 						properties: {
@@ -39,7 +42,7 @@ export function saga({
 						required: ['description'],
 					},
 				},
-				required: ['name', 'data'],
+				required: ['name', 'loop', 'data'],
 			},
 			uiSchema: {
 				fields: {

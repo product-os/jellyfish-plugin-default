@@ -32,8 +32,11 @@ export function milestone({
 						type: 'string',
 						fullTextSearch: true,
 					},
+					loop: {
+						type: 'string',
+					},
 				},
-				required: ['name'],
+				required: ['name', 'loop'],
 			},
 			uiSchema: {
 				snippet: {

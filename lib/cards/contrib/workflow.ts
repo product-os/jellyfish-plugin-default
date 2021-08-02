@@ -26,10 +26,14 @@ export function workflow({
 		data: {
 			schema: {
 				type: 'object',
+				required: ['name', 'loop'],
 				properties: {
 					name: {
 						type: ['string', 'null'],
 						fullTextSearch: true,
+					},
+					loop: {
+						type: 'string',
 					},
 					data: {
 						type: 'object',
