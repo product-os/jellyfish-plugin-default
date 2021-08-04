@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.5.10 - 2021-08-04
+
+* use balena convention for npm script names [Martin Rauscher]
+
 ## 19.5.9 - 2021-08-01
 
 * 🔄 Synced file(s) with product-os/jellyfish-config [jellyfish-bot]
