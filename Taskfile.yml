@@ -6,4 +6,4 @@ env:
 tasks:
   test:
     cmds:
-      - npm run integration
+      - npm run test:integration
