@@ -17,6 +17,27 @@ export const viewAllViews: ViewContractDefinition = {
 				name: 'Card type view',
 				schema: {
 					type: 'object',
+					anyOf: [
+						{
+							$$links: {
+								'is bookmarked by': {
+									type: 'object',
+									required: ['type', 'id'],
+									properties: {
+										type: {
+											const: 'user@1.0.0',
+										},
+										id: {
+											const: {
+												$eval: 'user.id',
+											},
+										},
+									},
+								},
+							},
+						},
+						true,
+					],
 					properties: {
 						type: {
 							type: 'string',
