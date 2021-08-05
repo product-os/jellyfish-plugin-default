@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update test command in README
+      hash: 27d1a00eb448b00e1ce3ca88fec3e183273edc9d
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 19.5.13
+  date: 2021-08-05T03:22:13.508Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.213'
       hash: 941319c4406440c4d482363f19bacfb5f11116d4
       body: ''

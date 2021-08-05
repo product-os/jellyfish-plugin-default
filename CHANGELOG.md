@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.5.13 - 2021-08-05
+
+* Update test command in README [Josh Bowling]
+
 ## 19.5.12 - 2021-08-05
 
 * patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.213 [Renovate Bot]
