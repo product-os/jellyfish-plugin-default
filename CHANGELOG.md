@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.5.11 - 2021-08-05
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 19.5.10 - 2021-08-04
 
 * use balena convention for npm script names [Martin Rauscher]
