@@ -1,4 +1,19 @@
 - commits:
+    - subject: Fetch bookmark links with views in view-all-views
+      hash: 8e1e76c1afea2c339a04a66c9ca493e640a67fa6
+      body: >
+        This ensures we know if a view is bookmarked by the current user without
+        having to execute a secondary query.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 19.6.0
+  date: 2021-08-05T08:21:57.852Z
+- commits:
     - subject: Update test command in README
       hash: 27d1a00eb448b00e1ce3ca88fec3e183273edc9d
       body: ''

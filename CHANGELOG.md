@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.6.0 - 2021-08-05
+
+* Fetch bookmark links with views in view-all-views [Graham McCulloch]
+
 ## 19.5.13 - 2021-08-05
 
 * Update test command in README [Josh Bowling]
