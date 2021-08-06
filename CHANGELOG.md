@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.6.1 - 2021-08-06
+
+* Add compose up command, more test docs [Josh Bowling]
+
 ## 19.6.0 - 2021-08-05
 
 * Fetch bookmark links with views in view-all-views [Graham McCulloch]
