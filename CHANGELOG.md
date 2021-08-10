@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.6.2 - 2021-08-10
+
+* Add data.schedule to brainstorm calls [Josh Bowling]
+
 ## 19.6.1 - 2021-08-06
 
 * Add compose up command, more test docs [Josh Bowling]
