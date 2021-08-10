@@ -61,6 +61,7 @@ import { triggeredActionUpdateEventEditedAt } from './contrib/triggered-action-u
 import { viewAllViews } from './contrib/view-all-views';
 import { viewMyOrgs } from './contrib/view-my-orgs';
 import { viewMyConversations } from './contrib/view-my-conversations';
+import { scheduledAction } from './contrib/scheduled-action';
 import { orgBalena } from './balena/org-balena';
 import { productBalenaCloud } from './balena/product-balena-cloud';
 import { productJellyfish } from './balena/product-jellyfish';
@@ -139,6 +140,7 @@ export const cards = [
 	webPushSubscription,
 	group,
 	summary,
+	scheduledAction,
 
 	// Triggered actions
 	triggeredActionHangoutsLink,
