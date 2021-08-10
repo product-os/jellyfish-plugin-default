@@ -33,6 +33,26 @@ export function brainstormCall({
 								type: 'string',
 								format: 'date-time',
 							},
+							schedule: {
+								title: 'Meeting schedule',
+								type: 'object',
+								properties: {
+									start: {
+										title: 'Start date/time',
+										type: 'string',
+										format: 'date-time',
+									},
+									end: {
+										title: 'End date/time',
+										type: 'string',
+										format: 'date-time',
+									},
+									interval: {
+										title: 'Interval',
+										type: 'string',
+									},
+								},
+							},
 						},
 						required: ['datetime'],
 					},
