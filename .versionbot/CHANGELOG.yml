@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add scheduled-action contract
+      hash: cfcf7f879e70415a6b096f4e11f1cb7cf6743fbb
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 19.6.2
+  date: 2021-08-10T13:08:07.682Z
+- commits:
     - subject: 'Add compose up command, more test docs'
       hash: 2ba49056260fa5ed62af05bcc7526976a244a18d
       body: ''
