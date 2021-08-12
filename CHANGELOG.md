@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 19.7.0 - 2021-08-12
+
+* fix/workaround type issues [Martin Rauscher]
+* don't expose whispers on threads [Martin Rauscher]
+
 ## 19.6.1 - 2021-08-06
 
 * Add compose up command, more test docs [Josh Bowling]
