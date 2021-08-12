@@ -7,7 +7,8 @@
 import * as assert from '@balena/jellyfish-assert';
 import { getLogger } from '@balena/jellyfish-logger';
 import type { ActionFile } from '@balena/jellyfish-plugin-base';
-import { core } from '@balena/jellyfish-types';
+import { TypeContract } from '@balena/jellyfish-types/build/core';
+import { WorkerContext } from '@balena/jellyfish-types/build/worker';
 import { v4 as isUUID } from 'is-uuid';
 import _ from 'lodash';
 
@@ -15,7 +16,7 @@ const logger = getLogger(__filename);
 
 const handler: ActionFile['handler'] = async (
 	session: string,
-	context: core.Context,
+	context: WorkerContext,
 	card: any,
 	request: any,
 ) => {
@@ -32,11 +33,14 @@ const handler: ActionFile['handler'] = async (
 	const LINK_NAME_CONTACT_USER = 'is attached to user';
 	const LINK_NAME_USER_CONTACT = 'has contact';
 
-	const typeCard = await context.getCardBySlug(session, 'contact@1.0.0');
+	const typeCard = (await context.getCardBySlug(
+		session,
+		'contact@1.0.0',
+	)) as TypeContract;
 	assert.INTERNAL(
 		request.context,
 		typeCard,
-		context.errors.WorkerNoElement,
+		context.errors.WorkerNoElement as any, // TS-TODO fix this
 		'No such type: contact',
 	);
 
@@ -211,11 +215,14 @@ const handler: ActionFile['handler'] = async (
 		_.set(contact, property.path, property.value);
 	}
 
-	const linkTypeCard = await context.getCardBySlug(session, 'link@1.0.0');
+	const linkTypeCard = (await context.getCardBySlug(
+		session,
+		'link@1.0.0',
+	)) as TypeContract;
 	assert.INTERNAL(
 		request.context,
 		linkTypeCard,
-		context.errors.WorkerNoElement,
+		context.errors.WorkerNoElement as any, // TS-TODO fix this
 		'No such type: link',
 	);
 
@@ -237,7 +244,7 @@ const handler: ActionFile['handler'] = async (
 				attachEvents: true,
 			},
 			contact,
-		));
+		))!;
 
 	await context.insertCard(
 		session,
@@ -247,6 +254,7 @@ const handler: ActionFile['handler'] = async (
 			actor: request.actor,
 			originator: request.originator,
 			attachEvents: false,
+			reason: 'Created user contact',
 		},
 		{
 			slug: await context.getEventSlug('link'),

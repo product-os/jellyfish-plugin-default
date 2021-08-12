@@ -88,7 +88,7 @@ export function supportThread({
 											ORDER_BY(
 												FILTER(
 													contract.links["has attached element"],
-													function (c) { return c && (c.type === "message@1.0.0" || c.type === "whisper@1.0.0"); }
+													function (c) { return c && (c.type === "message@1.0.0"); }
 												),
 												"data.timestamp"
 											)

@@ -49,7 +49,7 @@
   "dependencies": {
     "@balena/jellyfish-assert": "^1.1.67",
     "@balena/jellyfish-logger": "3.0.54",
-    "@balena/jellyfish-plugin-base": "^2.1.213",
+    "@balena/jellyfish-plugin-base": "^2.1.222",
     "is-uuid": "^1.0.2",
     "lodash": "^4.17.21"
   },
@@ -60,7 +60,7 @@
     "@balena/jellyfish-core": "^5.0.1",
     "@balena/jellyfish-sync": "^6.0.287",
     "@balena/jellyfish-test-harness": "^6.0.46",
-    "@balena/jellyfish-types": "^0.8.6",
+    "@balena/jellyfish-types": "^0.9.2",
     "@balena/lint": "^6.1.1",
     "@types/is-uuid": "^1.0.0",
     "@types/jest": "^26.0.24",
