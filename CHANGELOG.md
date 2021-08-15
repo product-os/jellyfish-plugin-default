@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.7.3 - 2021-08-15
+
+* patch: Update dependency @types/jest to v27 [Renovate Bot]
+
 ## 19.7.2 - 2021-08-15
 
 * patch: Update external-non-major [Renovate Bot]
