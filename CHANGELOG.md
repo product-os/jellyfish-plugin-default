@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.7.12 - 2021-08-19
+
+* patch: Update dependency @balena/jellyfish-core to ^5.1.19 [Renovate Bot]
+
 ## 19.7.11 - 2021-08-19
 
 * patch: Update dependency @balena/jellyfish-action-library to ^15.1.8 [Renovate Bot]
