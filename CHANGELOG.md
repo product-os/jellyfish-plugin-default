@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.7.11 - 2021-08-19
+
+* patch: Update dependency @balena/jellyfish-action-library to ^15.1.8 [Renovate Bot]
+
 ## 19.7.10 - 2021-08-19
 
 * Only disable internal patch bumps [Josh Bowling]
