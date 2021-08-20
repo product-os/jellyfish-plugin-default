@@ -47,9 +47,22 @@ export const viewAllViews: ViewContractDefinition = {
 							type: 'boolean',
 							const: true,
 						},
+						data: {
+							type: 'object',
+							properties: {
+								actor: {
+									type: 'string',
+									description:
+										'The actor field is not required, but if it is present it should only match the ID of the current user',
+									const: {
+										$eval: 'user.id',
+									},
+								},
+							},
+						},
 					},
 					additionalProperties: true,
-					required: ['type'],
+					required: ['type', 'data'],
 				},
 			},
 		],
