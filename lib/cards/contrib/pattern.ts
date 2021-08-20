@@ -60,6 +60,14 @@ export function pattern({
 								format: 'markdown',
 								fullTextSearch: true,
 							},
+							temporarySolution: {
+								title: 'Temporary Solution',
+								description:
+									'Known workaround that can be used while a definitive solution does not yet exist',
+								type: 'string',
+								format: 'markdown',
+								fullTextSearch: true,
+							},
 							improvementsPercentComplete: {
 								title: 'Improvements progress',
 								default: 0,
