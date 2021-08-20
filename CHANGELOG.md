@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.7.15 - 2021-08-20
+
+* Modify view-all-views to exclude custom views created by other users [Lucian Buzzo]
+
 ## 19.7.14 - 2021-08-20
 
 * patch: Update internal-patch [Renovate Bot]

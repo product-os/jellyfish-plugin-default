@@ -1,4 +1,20 @@
 - commits:
+    - subject: Modify view-all-views to exclude custom views created by other users
+      hash: f3e3445229168370268d37ea9c767b6778805163
+      body: |
+        This change modifies the "All views" view to exclude any custom views
+        created by other users. This is indicated by the presence of an `actor`
+        field on the view contract.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 19.7.15
+  date: 2021-08-20T11:49:51.247Z
+- commits:
     - subject: 'patch: Update internal-patch'
       hash: ff1dbf75eeb4b823ed23e17a231bb2e1e030dc78
       body: ''
