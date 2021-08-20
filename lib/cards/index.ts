@@ -39,7 +39,6 @@ import { rating } from './contrib/rating';
 import { saga } from './contrib/saga';
 import { subscription } from './contrib/subscription';
 import { salesThread } from './contrib/sales-thread';
-import { supportIssue } from './contrib/support-issue';
 import { supportThread } from './contrib/support-thread';
 import { tag } from './contrib/tag';
 import { thread } from './contrib/thread';
@@ -79,7 +78,6 @@ import { viewAllPatterns } from './balena/view-all-patterns';
 import { viewAllProjects } from './balena/view-all-projects';
 import { viewAllSagas } from './balena/view-all-sagas';
 import { viewAllSalesThreads } from './balena/view-all-sales-threads';
-import { viewAllSupportIssues } from './balena/view-all-support-issues';
 import { viewSupportThreadsParticipation } from './balena/view-support-threads-participation';
 import { viewAllForumThreads } from './balena/view-all-forum-threads';
 import { viewPaidSupportThreads } from './balena/view-paid-support-threads';
@@ -130,7 +128,6 @@ export const cards = [
 	saga,
 	subscription,
 	salesThread,
-	supportIssue,
 	supportThread,
 	tag,
 	thread,
@@ -176,7 +173,6 @@ export const cards = [
 	viewAllProjects,
 	viewAllSagas,
 	viewAllSalesThreads,
-	viewAllSupportIssues,
 	viewSupportThreadsParticipation,
 	viewAllForumThreads,
 	viewPaidSupportThreads,
