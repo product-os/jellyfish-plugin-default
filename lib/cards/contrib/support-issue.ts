@@ -72,6 +72,14 @@ export function supportIssue({
 								format: 'markdown',
 								fullTextSearch: true,
 							},
+							temporarySolution: {
+								title: 'Temporary Solution',
+								description:
+									'Known workaround that can be used while a definitive solution does not yet exist',
+								type: 'string',
+								format: 'markdown',
+								fullTextSearch: true,
+							},
 							Solution: {
 								type: 'string',
 								format: 'markdown',
@@ -85,7 +93,14 @@ export function supportIssue({
 			uiSchema: {
 				fields: {
 					data: {
-						'ui:order': ['severity', 'shareable', 'Problem', 'Solution', '*'],
+						'ui:order': [
+							'severity',
+							'shareable',
+							'Problem',
+							'temporarySolution',
+							'Solution',
+							'*',
+						],
 						severity: {
 							'ui:widget': 'Badge',
 						},
