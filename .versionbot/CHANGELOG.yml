@@ -1,4 +1,19 @@
 - commits:
+    - subject: Add a `Temporary Solution` field to the `pattern` contract type.
+      hash: 5dd778774b3e3e119c38d7ea71cfab9700514f00
+      body: ''
+      footer:
+        JIP: 'https://jel.ly.fish/4ddc0b6a-414e-40c2-8479-c541b80968e8'
+        jip: 'https://jel.ly.fish/4ddc0b6a-414e-40c2-8479-c541b80968e8'
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Carol Schulze <carol@balena.io>
+        signed-off-by: Carol Schulze <carol@balena.io>
+      author: Carol Schulze
+      nested: []
+  version: 19.8.0
+  date: 2021-08-20T15:19:40.594Z
+- commits:
     - subject: Modify view-all-views to exclude custom views created by other users
       hash: f3e3445229168370268d37ea9c767b6778805163
       body: |

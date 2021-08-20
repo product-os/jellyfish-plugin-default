@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.8.0 - 2021-08-20
+
+* Add a `Temporary Solution` field to the `pattern` contract type. [Carol Schulze]
+
 ## 19.7.15 - 2021-08-20
 
 * Modify view-all-views to exclude custom views created by other users [Lucian Buzzo]
