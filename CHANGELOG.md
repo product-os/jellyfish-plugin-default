@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 20.0.0 - 2021-08-20
+
+* Remove the knowledge base. [Carol Schulze]
+
 ## 19.9.0 - 2021-08-20
 
 * Add a `Temporary Solution` field to the `pattern` contract type. [Carol Schulze]

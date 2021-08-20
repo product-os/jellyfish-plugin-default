@@ -1,4 +1,21 @@
 - commits:
+    - subject: Remove the knowledge base.
+      hash: bcf13d2eb30df1edfe875b42f3d1ddde4f876be8
+      body: |
+        - Remove the `support-issue` type.
+        - Remove the `view-all-support-issues` view.
+      footer:
+        JIP: 'https://jel.ly.fish/4ddc0b6a-414e-40c2-8479-c541b80968e8'
+        jip: 'https://jel.ly.fish/4ddc0b6a-414e-40c2-8479-c541b80968e8'
+        Change-type: major
+        change-type: major
+        Signed-off-by: Carol Schulze <carol@balena.io>
+        signed-off-by: Carol Schulze <carol@balena.io>
+      author: Carol Schulze
+      nested: []
+  version: 20.0.0
+  date: 2021-08-20T17:24:11.360Z
+- commits:
     - subject: Add a `Temporary Solution` field to the `pattern` contract type.
       hash: ccacb6774876bd674230f0c29e514d53c16d3aa2
       body: ''
