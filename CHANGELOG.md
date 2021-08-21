@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 20.0.1 - 2021-08-21
+
+* patch: Update external-non-major [Renovate Bot]
+
 ## 20.0.0 - 2021-08-20
 
 * Remove the knowledge base. [Carol Schulze]

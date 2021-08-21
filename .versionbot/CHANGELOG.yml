@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update external-non-major'
+      hash: dae461d9b184378d08d0f52809ef84054ffbee0a
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 20.0.1
+  date: 2021-08-21T00:28:16.982Z
+- commits:
     - subject: Remove the knowledge base.
       hash: bcf13d2eb30df1edfe875b42f3d1ddde4f876be8
       body: |
