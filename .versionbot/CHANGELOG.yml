@@ -1,4 +1,15 @@
 - commits:
+    - subject: Send email notifications
+      hash: 5f45778bf92fb8cc95763698cbf99957c298376c
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: karaxuna
+      nested: []
+  version: 20.1.0
+  date: 2021-08-25T12:29:21.251Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.229'
       hash: 9dd2f11f8be15ed22dff47e146ef00af6cd08d97
       body: ''
