@@ -57,6 +57,7 @@ import { triggeredActionSupportReopen } from './contrib/triggered-action-support
 import { triggeredActionSupportClosedPatternReopen } from './contrib/triggered-action-support-closed-pattern-reopen';
 import { triggeredActionSyncThreadPostLinkWhisper } from './contrib/triggered-action-sync-thread-post-link-whisper';
 import { triggeredActionUpdateEventEditedAt } from './contrib/triggered-action-update-event-edited-at';
+import { triggeredActionScheduleAction } from './contrib/triggered-action-schedule-action';
 import { viewAllViews } from './contrib/view-all-views';
 import { viewMyOrgs } from './contrib/view-my-orgs';
 import { viewMyConversations } from './contrib/view-my-conversations';
@@ -148,6 +149,7 @@ export const cards = [
 	triggeredActionSupportClosedPatternReopen,
 	triggeredActionSyncThreadPostLinkWhisper,
 	triggeredActionUpdateEventEditedAt,
+	triggeredActionScheduleAction,
 
 	// User facing views
 	viewAllViews,
