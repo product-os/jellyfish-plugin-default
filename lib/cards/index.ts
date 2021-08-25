@@ -37,6 +37,7 @@ import { product } from './contrib/product';
 import { project } from './contrib/project';
 import { rating } from './contrib/rating';
 import { saga } from './contrib/saga';
+import { scheduledActionSendNotifications } from './contrib/scheduled-action-send-notifications';
 import { subscription } from './contrib/subscription';
 import { salesThread } from './contrib/sales-thread';
 import { supportThread } from './contrib/support-thread';
@@ -126,6 +127,7 @@ export const cards = [
 	project,
 	rating,
 	saga,
+	scheduledActionSendNotifications,
 	subscription,
 	salesThread,
 	supportThread,
