@@ -6,15 +6,17 @@
 
 import { getLogger } from '@balena/jellyfish-logger';
 import type { ActionFile } from '@balena/jellyfish-plugin-base';
+import { core } from '@balena/jellyfish-types';
 import { WorkerContext } from '@balena/jellyfish-types/build/worker';
 import _ from 'lodash';
 
+const NOTIFICATION_TIMEOUT = 1000 * 60 * 10; // 10 minutes
 const logger = getLogger(__filename);
 
 const handler: ActionFile['handler'] = async (
 	session: string,
 	context: WorkerContext,
-	card: any,
+	card: core.Contract<any>,
 	request: any,
 ) => {
 	logger.info(request.context, 'Send notifications');
@@ -24,11 +26,16 @@ const handler: ActionFile['handler'] = async (
 	 */
 	const notifications = await context.query(session, {
 		type: 'object',
-		required: ['type'],
+		required: ['type', 'created_at'],
 		properties: {
 			type: {
 				const: 'notification@1.0.0',
 			},
+			created_at: {
+				format: 'date-time',
+				formatMaximum: card.data.next - NOTIFICATION_TIMEOUT,
+				formatMinimum: card.data.last - NOTIFICATION_TIMEOUT,
+			} as any,
 		},
 		$$links: {
 			'is attached to': {
@@ -77,10 +84,39 @@ const handler: ActionFile['handler'] = async (
 		},
 	);
 
-	await Promise.all(
+	return Promise.all<any>(
 		Object.entries(notificationsGroupedByActors).map(
-			([actor, notification]) => {
-				// Send email
+			async ([actorId, notificationsGroupedByActor]) => {
+				const actor = (await context.getCardById(
+					session,
+					actorId,
+				)) as any as core.UserContract | null;
+
+				if (!actor) {
+					return;
+				}
+
+				const email =
+					actor.data.email instanceof Array
+						? actor.data.email[0]
+						: actor.data.email;
+
+				if (!email) {
+					return;
+				}
+
+				return context.executeAction({
+					toAddress: email,
+					fromAddress: null,
+					subject: `Unread notifications (${notificationsGroupedByActor.length})`,
+					html: notificationsGroupedByActor
+						.map((notification: any) => {
+							return `- ${
+								notification.links!['is attached to'][0]!.data.payload.message
+							}`;
+						})
+						.join('\n'),
+				});
 			},
 		),
 	);
