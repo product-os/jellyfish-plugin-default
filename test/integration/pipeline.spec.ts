@@ -732,7 +732,7 @@ describe('translateExternalEvent()', () => {
 					token: 'foobar',
 				},
 			);
-		} catch (error) {
+		} catch (error: any) {
 			expect(error.name).toEqual('TranslateError');
 		}
 
