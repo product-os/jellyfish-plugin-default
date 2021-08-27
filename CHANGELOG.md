@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 20.0.7 - 2021-08-27
+
+* Bump typescript to v4.4.2 [Josh Bowling]
+
 ## 20.0.6 - 2021-08-25
 
 * patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.230 [Renovate Bot]
