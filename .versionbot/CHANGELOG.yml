@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update external-non-major'
+      hash: 33ee2fef9075f36a8f2db4e814372d3cd393ec4b
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 20.0.8
+  date: 2021-08-28T01:41:35.173Z
+- commits:
     - subject: Bump typescript to v4.4.2
       hash: 7b1e09f57d457e2786c17b4b7c8097d801e575ce
       body: ''

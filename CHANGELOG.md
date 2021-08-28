@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 20.0.8 - 2021-08-28
+
+* patch: Update external-non-major [Renovate Bot]
+
 ## 20.0.7 - 2021-08-27
 
 * Bump typescript to v4.4.2 [Josh Bowling]
