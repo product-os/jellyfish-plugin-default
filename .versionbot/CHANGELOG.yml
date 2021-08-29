@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add data.actor indexes
+      hash: 7a6809d19449574d60ce86f806daed817fdc46e1
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 20.0.10
+  date: 2021-08-29T08:03:01.448Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-logger to v3.0.65'
       hash: b71ce074551323b8bb0176556627317028866ecb
       body: ''
