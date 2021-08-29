@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-core to ^5.2.0'
+      hash: 48dc046cdf8793879b0d9297c11f21014f6a731c
+      body: |
+        Update @balena/jellyfish-core from 5.1.19 to 5.2.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 20.0.13
+  date: 2021-08-29T16:36:21.804Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.232'
       hash: ec8bff66f2987c0b6e90ca0112818c9eabf52e52
       body: ''
