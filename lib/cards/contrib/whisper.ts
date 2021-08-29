@@ -152,6 +152,7 @@ export function whisper({ uiSchemaDef }: Mixins): ContractDefinition {
 				['data.payload.alertsUser'],
 				['data.payload.mentionsGroup'],
 				['data.payload.alertsGroup'],
+				['data.actor'],
 			],
 		},
 	};
