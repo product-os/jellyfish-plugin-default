@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add data.mirrors indexes
+      hash: d76650286a827fffb0797d4d04c5ecc19a66bfb5
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 20.0.11
+  date: 2021-08-29T08:55:46.175Z
+- commits:
     - subject: Add data.actor indexes
       hash: 7a6809d19449574d60ce86f806daed817fdc46e1
       body: ''

@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 20.0.11 - 2021-08-29
+
+* Add data.mirrors indexes [Josh Bowling]
+
 ## 20.0.10 - 2021-08-29
 
 * Add data.actor indexes [Josh Bowling]
