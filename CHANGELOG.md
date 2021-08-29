@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 20.0.12 - 2021-08-29
+
+* patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.232 [Renovate Bot]
+
 ## 20.0.11 - 2021-08-29
 
 * Add data.mirrors indexes [Josh Bowling]

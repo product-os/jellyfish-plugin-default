@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.232'
+      hash: ec8bff66f2987c0b6e90ca0112818c9eabf52e52
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 20.0.12
+  date: 2021-08-29T16:21:48.244Z
+- commits:
     - subject: Add data.mirrors indexes
       hash: d76650286a827fffb0797d4d04c5ecc19a66bfb5
       body: ''
