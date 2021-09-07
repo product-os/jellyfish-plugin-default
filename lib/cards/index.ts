@@ -71,7 +71,6 @@ import { viewAllCustomers } from './balena/view-all-customers';
 import { viewAllFaqs } from './balena/view-all-faqs';
 import { viewAllGroups } from './balena/view-all-groups';
 import { viewAllImprovements } from './balena/view-all-improvements';
-import { viewAllJellyfishSupportThreads } from './balena/view-all-jellyfish-support-threads';
 import { viewAllOpportunities } from './balena/view-all-opportunities';
 import { viewMyOpportunities } from './balena/view-my-opportunities';
 import { viewAllPatterns } from './balena/view-all-patterns';
@@ -166,7 +165,6 @@ export const cards = [
 	viewAllFaqs,
 	viewAllGroups,
 	viewAllImprovements,
-	viewAllJellyfishSupportThreads,
 	viewAllOpportunities,
 	viewMyOpportunities,
 	viewAllPatterns,
