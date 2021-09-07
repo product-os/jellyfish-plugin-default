@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.0.2 - 2021-09-07
+
+* patch: Update dependency @balena/jellyfish-plugin-product-os to ^2.7.0 [Renovate Bot]
+
 ## 21.0.1 - 2021-09-07
 
 * Add integration tests for action-maintain-contact [Lucian Buzzo]

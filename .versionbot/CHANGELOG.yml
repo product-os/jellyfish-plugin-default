@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-plugin-product-os to ^2.7.0'
+      hash: f328366a5cda0a425d0ac2df8d3f64550d11f625
+      body: |
+        Update @balena/jellyfish-plugin-product-os from 2.6.1 to 2.7.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 21.0.2
+  date: 2021-09-07T16:57:29.164Z
+- commits:
     - subject: Add integration tests for action-maintain-contact
       hash: a12751de257f0e4408699461748cfc0c229bbed2
       body: >
