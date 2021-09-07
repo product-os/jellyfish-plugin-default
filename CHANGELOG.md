@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 20.0.27 - 2021-09-07
+
+* Update files to use secrets [Josh Bowling]
+* 🔄 Synced file(s) with product-os/secrets [joshbwlng]
+
 ## 20.0.26 - 2021-09-06
 
 * patch: Update dependency @balena/jellyfish-core to ^5.7.0 [Renovate Bot]
