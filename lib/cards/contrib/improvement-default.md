@@ -1,7 +1,3 @@
-## TL;DR
-
-> *A quick summary of the proposed change or addition, who it affects and what it will enable them to do. This summary should be easy to just copy and paste into release notes, product release announces or team PSAs when the project ships.*
-
 ## Intro
 
 

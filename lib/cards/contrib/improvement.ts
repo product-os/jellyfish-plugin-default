@@ -62,6 +62,7 @@ export function improvement({
 							description: {
 								type: 'string',
 								format: 'markdown',
+								title: 'TLDR',
 							},
 							specification: {
 								type: 'string',
@@ -88,8 +89,8 @@ export function improvement({
 						'ui:order': [
 							'status',
 							'milestonesPercentComplete',
-							'specification',
 							'description',
+							'specification',
 						],
 						milestonesPercentComplete: {
 							'ui:widget': 'ProgressBar',
