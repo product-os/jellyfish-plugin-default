@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.0.0 - 2021-09-07
+
+* Move jellyfish threads view to the product-os plugin [Lucian Buzzo]
+
 ## 20.1.0 - 2021-09-07
 
 * Move improvement TLDR to description [karaxuna]

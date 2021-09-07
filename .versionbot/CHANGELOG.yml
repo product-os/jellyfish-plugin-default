@@ -1,4 +1,29 @@
 - commits:
+    - subject: Move jellyfish threads view to the product-os plugin
+      hash: 3d82e4c02ac8c543ff1c01a1f658e18d81717435
+      body: >
+        The jellyfish threads view is distinctly a product-os specific contract
+
+        as it displays support threads *about* product-os.
+
+        It was moved into the product-os plugin as part of this PR
+        https://github.com/product-os/jellyfish-plugin-product-os/pull/472
+
+        Long term, there is still an open question about wether or not
+
+        product-os features are part of the core Jellyfish offering, or just
+
+        a use case, but I will defer that discussion to a later time.
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 21.0.0
+  date: 2021-09-07T15:47:12.944Z
+- commits:
     - subject: Move improvement TLDR to description
       hash: 0c16257314e2f9c7e837bdc6d81b82c86ebc24f8
       body: ''
