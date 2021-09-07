@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.0.1 - 2021-09-07
+
+* Add integration tests for action-maintain-contact [Lucian Buzzo]
+
 ## 21.0.0 - 2021-09-07
 
 * Move jellyfish threads view to the product-os plugin [Lucian Buzzo]
