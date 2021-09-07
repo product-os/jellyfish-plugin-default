@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 20.1.0 - 2021-09-07
+
+* Move improvement TLDR to description [karaxuna]
+
 ## 20.0.27 - 2021-09-07
 
 * Update files to use secrets [Josh Bowling]
