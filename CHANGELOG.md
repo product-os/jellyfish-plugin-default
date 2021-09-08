@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 20.1.0 - 2021-09-08
+
+* Experiment with triggered action [Josh Bowling]
+* Add scheduled actions [Josh Bowling]
+
 ## 20.0.25 - 2021-09-06
 
 * patch: Update dependency @balena/jellyfish-test-harness to ^6.2.0 [Renovate Bot]

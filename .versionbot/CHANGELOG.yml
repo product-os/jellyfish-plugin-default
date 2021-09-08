@@ -1,4 +1,27 @@
 - commits:
+    - subject: Experiment with triggered action
+      hash: 09fdb152c8f9815268f2822b0e4efa376d525a77
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Add scheduled actions
+      hash: e659e2b1f2306faf6e46d1b818be55505c6c4add
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 20.1.0
+  date: 2021-09-08T02:05:01.090Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-test-harness to ^6.2.0'
       hash: 07ca7b02b75a6cef364301f1ffb4fb5e2e55c40e
       body: |
