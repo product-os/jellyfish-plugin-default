@@ -44,8 +44,6 @@ export const triggeredActionScheduleAction: TriggeredActionContractDefinition =
 			target: {
 				$eval: "source.links['is attached to'][0].id",
 			},
-			arguments: {
-				$eval: "source.links['is attached to'][0].data.options.arguments",
-			},
+			arguments: {},
 		},
 	};
