@@ -1,4 +1,25 @@
 - commits:
+    - subject: Add typedoc to depcheck ignore list
+      hash: 37f7ec352dcaea4b018f672700ed63726d29caf2
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: 'patch: Update external-non-major'
+      hash: 880e3b788eb457e98821a28908389a5c69c557a3
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 21.0.11
+  date: 2021-09-14T03:57:41.025Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.239'
       hash: 0ac7203c0ec16555131211365fcaa9f028ec5976
       body: ''
