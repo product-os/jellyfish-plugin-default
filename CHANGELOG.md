@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.0.12 - 2021-09-14
+
+* patch: Update dependency @balena/jellyfish-test-harness to ^7.2.1 [Renovate Bot]
+
 ## 21.0.11 - 2021-09-14
 
 * Add typedoc to depcheck ignore list [Josh Bowling]
