@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.0 - 2021-09-15
+
+* Add a simple weight formula to patterns [Lucian Buzzo]
+
 ## 21.0.15 - 2021-09-15
 
 * patch: Update dependency @balena/jellyfish-test-harness to ^7.3.1 [Renovate Bot]

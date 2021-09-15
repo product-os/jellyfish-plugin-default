@@ -1,4 +1,20 @@
 - commits:
+    - subject: Add a simple weight formula to patterns
+      hash: 2ad2e89ffcc4c3455dd4c3850b132aacb33dca44
+      body: |
+        This is a simple way to represent how many contracts a pattern is linked
+        to. Long term I'd like to introduce a time element here, so that the
+        weight decays over time.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 21.1.0
+  date: 2021-09-15T12:02:13.204Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-test-harness to ^7.3.1'
       hash: 25b09d8017269965cc29f2eac2db7ae6eef2c558
       body: |
