@@ -77,6 +77,13 @@ export function pattern({
 								$$formula:
 									'contract.links["has attached"] && contract.links["has attached"].length ? (FILTER(contract.links["has attached"], { type: "improvement@1.0.0", data: { status: "completed" } }).length / REJECT(FILTER(contract.links["has attached"], { type: "improvement@1.0.0" }), { data: { status: "denied-or-failed" } }).length) * 100 : 0',
 							},
+							weight: {
+								description: 'How active the pattern is',
+								default: 0,
+								type: 'number',
+								$$formula:
+									'contract.links["has attached"].length + contract.links["is attached to"].length + contract.links["relates to"].length',
+							},
 						},
 					},
 				},
