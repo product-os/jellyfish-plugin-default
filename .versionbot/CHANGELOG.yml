@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add support-thread triggered action tests
+      hash: 678dd03f59e5eb9e6db956884f287202892fd8e0
+      body: |
+        Moving these tests from the main repo.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 21.1.1
+  date: 2021-09-16T03:45:20.949Z
+- commits:
     - subject: Add a simple weight formula to patterns
       hash: 2ad2e89ffcc4c3455dd4c3850b132aacb33dca44
       body: |
