@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.2 - 2021-09-16
+
+* Add triggered-action-increment-tag tests [Josh Bowling]
+
 ## 21.1.1 - 2021-09-16
 
 * Add support-thread triggered action tests [Josh Bowling]

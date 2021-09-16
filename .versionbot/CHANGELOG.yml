@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add triggered-action-increment-tag tests
+      hash: a550f5f5900c872ddc0cebf0394974812a640af6
+      body: |
+        Moving from main repo
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 21.1.2
+  date: 2021-09-16T08:36:21.486Z
+- commits:
     - subject: Add support-thread triggered action tests
       hash: 678dd03f59e5eb9e6db956884f287202892fd8e0
       body: |
