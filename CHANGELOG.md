@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.3 - 2021-09-16
+
+* patch: Update dependency @balena/jellyfish-test-harness to ^7.4.0 [Renovate Bot]
+
 ## 21.1.2 - 2021-09-16
 
 * Add triggered-action-increment-tag tests [Josh Bowling]
