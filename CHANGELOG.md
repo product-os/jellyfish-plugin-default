@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.5 - 2021-09-18
+
+* patch: Update dependency @balena/jellyfish-logger to v3.0.70 [Renovate Bot]
+
 ## 21.1.4 - 2021-09-18
 
 * patch: Update dependency @types/lodash to ^4.14.173 [Renovate Bot]
