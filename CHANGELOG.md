@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.12 - 2021-09-21
+
+* Test test-harness v7.5.0 [Josh Bowling]
+
 ## 21.1.11 - 2021-09-21
 
 * Add event edited_at test [Josh Bowling]
