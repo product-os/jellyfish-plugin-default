@@ -1,4 +1,20 @@
 - commits:
+    - subject: Add event edited_at test
+      hash: 5977f6eb550c7aef83bde13b7f8b44c55d685d2c
+      body: >
+        Moving from product-os/jellyfish repo:
+
+        https://github.com/product-os/jellyfish/blob/445da11bd70fd64e1723432b91c95acedef3e62c/test/e2e/sdk/event.spec.js
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 21.1.11
+  date: 2021-09-21T01:47:21.625Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.242'
       hash: 4210a91c9110dc14089b7af00baf569e9b0d3215
       body: ''
