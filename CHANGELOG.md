@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.12 - 2021-09-22
+
+* patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.243 [Renovate Bot]
+
 ## 21.1.11 - 2021-09-21
 
 * Add event edited_at test [Josh Bowling]
