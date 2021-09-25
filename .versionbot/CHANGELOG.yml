@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-test-harness to v8'
+      hash: 3569852782f47f3a7872437a170a9eeb02f0add4
+      body: |
+        Update @balena/jellyfish-test-harness from 7.4.0 to 8.1.4
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 21.1.16
+  date: 2021-09-25T05:15:46.757Z
+- commits:
     - subject: 'patch: Update dependency @types/lodash to ^4.14.174'
       hash: e0df62e36b52594741415badcd73fa5a88b8e7ec
       body: ''
