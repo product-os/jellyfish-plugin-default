@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update external-non-major'
+      hash: 3132b7faf47a9c4f0cbf530f050c10fa70a27daf
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 21.1.13
+  date: 2021-09-25T01:02:51.784Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.243'
       hash: 9ddd1cb027b12704896f8c98b67a2caac21f40b5
       body: ''
