@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 21.1.20 - 2021-09-27
+
+* Ignore decrypted mailgun and meet secrets [Josh Bowling]
+* 🔄 Synced file(s) with product-os/secrets [joshbwlng]
+
 ## 21.1.19 - 2021-09-25
 
 * patch: Update dependency @balena/jellyfish-logger to v3.0.74 [Renovate Bot]
