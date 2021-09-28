@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.21 - 2021-09-28
+
+* Add role-user-community tests [Josh Bowling]
+
 ## 21.1.20 - 2021-09-27
 
 * Ignore decrypted mailgun and meet secrets [Josh Bowling]

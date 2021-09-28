@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add role-user-community tests
+      hash: 5ff5a0e0ec2b7ce35d8ecadf03f232b8d2b50a21
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 21.1.21
+  date: 2021-09-28T02:14:10.102Z
+- commits:
     - subject: Ignore decrypted mailgun and meet secrets
       hash: 726d931c5a0f22d6748ac3d89f86bc9c06f836a1
       body: ''
