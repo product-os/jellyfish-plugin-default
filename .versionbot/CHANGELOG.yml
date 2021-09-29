@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove unnecessary only from test case
+      hash: a1ae70ed095032b16bd336147c1d16f0ffc0d0cb
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 21.1.23
+  date: 2021-09-29T08:58:59.645Z
+- commits:
     - subject: Add user-guest query test
       hash: cc23356fc181af2ae8a80bcc96fd9f059c668278
       body: ''

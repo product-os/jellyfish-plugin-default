@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.23 - 2021-09-29
+
+* Remove unnecessary only from test case [Josh Bowling]
+
 ## 21.1.22 - 2021-09-29
 
 * Add user-guest query test [Josh Bowling]
