@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add user-guest query test
+      hash: cc23356fc181af2ae8a80bcc96fd9f059c668278
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 21.1.22
+  date: 2021-09-29T08:07:00.263Z
+- commits:
     - subject: Add role-user-community tests
       hash: 5ff5a0e0ec2b7ce35d8ecadf03f232b8d2b50a21
       body: ''

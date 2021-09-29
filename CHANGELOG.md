@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.22 - 2021-09-29
+
+* Add user-guest query test [Josh Bowling]
+
 ## 21.1.21 - 2021-09-28
 
 * Add role-user-community tests [Josh Bowling]
