@@ -25,7 +25,7 @@ afterAll(() => {
 });
 
 describe('user-guest', () => {
-	it.only('query: the guest user should only see its own private fields', async () => {
+	it('query: the guest user should only see its own private fields', async () => {
 		const guestUser = await ctx.jellyfish.getCardBySlug(
 			ctx.context,
 			ctx.session,
