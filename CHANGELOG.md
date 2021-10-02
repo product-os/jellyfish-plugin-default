@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.24 - 2021-10-02
+
+* patch: Update external-non-major [Renovate Bot]
+
 ## 21.1.23 - 2021-09-29
 
 * Remove unnecessary only from test case [Josh Bowling]

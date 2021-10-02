@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update external-non-major'
+      hash: 140c459318dc85601d9981a01a96b7de133f1abc
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 21.1.24
+  date: 2021-10-02T00:33:10.173Z
+- commits:
     - subject: Remove unnecessary only from test case
       hash: a1ae70ed095032b16bd336147c1d16f0ffc0d0cb
       body: ''
