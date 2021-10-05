@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.32 - 2021-10-05
+
+* patch: Update dependency @balena/jellyfish-logger to v3.0.78 [Renovate Bot]
+
 ## 21.1.31 - 2021-10-05
 
 * Add external support user marker test [Josh Bowling]
