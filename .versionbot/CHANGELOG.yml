@@ -1,4 +1,19 @@
 - commits:
+    - subject: Add role-user-external-support tests
+      hash: 9f5e99f0849a59f6d0969c909dcef611970aa162
+      body: >
+        Move from
+        https://github.com/product-os/jellyfish/blob/55f8c814257a0ba0fc92ae470fd1e23fff2e9075/test/e2e/server/external-support-user-security.spec.js
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 21.1.30
+  date: 2021-10-05T02:38:56.955Z
+- commits:
     - subject: 'Update test:compose to match image name'
       hash: d488b63ce6e77b86b912da39f44bb133728a7202
       body: ''

@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.30 - 2021-10-05
+
+* Add role-user-external-support tests [Josh Bowling]
+
 ## 21.1.29 - 2021-10-04
 
 * Update test:compose to match image name [Josh Bowling]
