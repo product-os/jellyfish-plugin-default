@@ -140,6 +140,38 @@ describe('role-user-community', () => {
 		expect(message2.id).toEqual(message.id);
 	});
 
+	it('external support user should not be able to create a thread with markers other than <user.slug>+org-balena', async () => {
+		const user = await createUser(['user-external-support'], testOrg);
+
+		await expect(
+			ctx.createSupportThread(
+				user.contract.id,
+				user.session,
+				ctx.generateRandomWords(3),
+				{
+					product: 'balenaCloud',
+					inbox: 'S/Paid_Support',
+					status: 'open',
+				},
+				[`${user.contract.slug}+org-other`],
+			),
+		).rejects.toThrow(ctx.jellyfish.errors.JellyfishPermissionsError);
+
+		await expect(
+			ctx.createSupportThread(
+				user.contract.id,
+				user.session,
+				ctx.generateRandomWords(3),
+				{
+					product: 'balenaCloud',
+					inbox: 'S/Paid_Support',
+					status: 'open',
+				},
+				[],
+			),
+		).rejects.toThrow(ctx.jellyfish.errors.JellyfishPermissionsError);
+	});
+
 	it('external support user should not be able to view other card types', async () => {
 		const user = await createUser(['user-external-support'], testOrg);
 
