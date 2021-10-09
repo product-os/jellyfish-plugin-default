@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency lint-staged to ^11.2.1'
+      hash: 4fec2f786bdc5fa4fd164e8a83563355bc219cf1
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 21.1.38
+  date: 2021-10-09T04:43:41.086Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-logger to v3.0.82'
       hash: 2b14823464aab8e1daf2fcec18a323c34d1fb5f0
       body: ''
