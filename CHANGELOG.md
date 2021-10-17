@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.44 - 2021-10-17
+
+* patch: Update dependency @balena/jellyfish-logger to v3.0.86 [Renovate Bot]
+
 ## 21.1.43 - 2021-10-15
 
 * 🔄 Synced file(s) with product-os/secrets [joshbwlng]
