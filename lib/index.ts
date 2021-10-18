@@ -5,9 +5,9 @@
  */
 
 import { JellyfishPluginBase } from '@balena/jellyfish-plugin-base';
+import { actions } from './actions';
 import { cards } from './cards';
 import { mixins } from './cards/mixins';
-import { actions } from './actions';
 export const cardMixins = mixins;
 
 // tslint:disable-next-line: no-var-requires
