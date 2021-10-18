@@ -1,4 +1,17 @@
 - commits:
+    - subject: Test removing secrets from AWS
+      hash: f7f37e6439aeebb4ec35e11aa070e699eaa9b991
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 21.1.48
+  date: 2021-10-18T08:50:17.036Z
+- commits:
     - subject: 'patch: Update dependency jest to ^27.3.0'
       hash: 35e3d873c933b9e8c2b9eeb7e474d877e4bdab9a
       body: ''
