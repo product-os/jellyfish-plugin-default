@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.56 - 2021-10-23
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 21.1.55 - 2021-10-23
 
 * 🔄 Synced file(s) with product-os/jellyfish-config [joshbwlng]
