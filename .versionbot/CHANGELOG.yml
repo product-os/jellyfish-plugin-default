@@ -1,4 +1,19 @@
 - commits:
+    - subject: Add triggered action for auto-updating improvement status
+      hash: c7d7b962897c69efb299571b0ba5193aa2a85bc8
+      body: >
+        When all linked milestones are completed, improvement status is updated
+        to 'completed'.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 19.4.0
+  date: 2021-10-28T14:07:58.960Z
+- commits:
     - subject: Use mixins in workflow contract definition
       hash: 17d8f903d4e1ea4dc5feb7decf445cd76727652c
       body: >

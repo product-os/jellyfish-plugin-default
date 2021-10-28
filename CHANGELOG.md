@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 19.4.0 - 2021-10-28
+
+* Add triggered action for auto-updating improvement status [Graham McCulloch]
+
 ## 19.3.1 - 2021-07-23
 
 * Use mixins in workflow contract definition [Graham McCulloch]
