@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.69 - 2021-10-30
+
+* 🔄 Synced file(s) with product-os/secrets [joshbwlng]
+
 ## 21.1.68 - 2021-10-30
 
 * patch: Update internal-patch [Renovate Bot]
