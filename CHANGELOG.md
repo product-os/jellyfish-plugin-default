@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.74 - 2021-11-09
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 21.1.73 - 2021-11-07
 
 * patch: Update external-non-major Docker tags [Renovate Bot]
