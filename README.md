@@ -1,12 +1,12 @@
 # Jellyfish Default Plugin
 
-Default plugin that currently only provides the default set of cards necessary for normal operations.
+This plugin currently only provides the default set of cards necessary for normal operations.
 
 # Usage
 
 Below is an example how to use this library:
 
-```js
+```typescript
 import { cardMixins } from '@balena/jellyfish-core';
 import { DefaultPlugin } from '@balena/jellyfish-plugin-default';
 
