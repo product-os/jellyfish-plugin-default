@@ -1,4 +1,25 @@
 - commits:
+    - subject: Update secrets
+      hash: 5f24866479bc63d875efe78085a859769501be73
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: "\U0001F504 Synced file(s) with product-os/secrets"
+      hash: a72453ef4863bd22694da4edc65a46a360416b72
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: joshbwlng
+      nested: []
+  version: 21.1.82
+  date: 2021-11-13T06:51:09.477Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-assert to ^1.1.73'
       hash: 3b8c12831af870e5d796afea493eb08712ebd83f
       body: ''

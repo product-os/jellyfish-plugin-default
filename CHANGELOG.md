@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 21.1.82 - 2021-11-13
+
+* Update secrets [Josh Bowling]
+* 🔄 Synced file(s) with product-os/secrets [joshbwlng]
+
 ## 21.1.81 - 2021-11-13
 
 * patch: Update dependency @balena/jellyfish-assert to ^1.1.73 [Renovate Bot]
