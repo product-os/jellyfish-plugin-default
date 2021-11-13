@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.80 - 2021-11-13
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 21.1.79 - 2021-11-13
 
 * Update example usage in readme [Josh Bowling]
