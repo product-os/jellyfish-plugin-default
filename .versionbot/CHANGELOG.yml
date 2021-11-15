@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'Remove secret from test:compose script'
+      hash: b7ac9031e5abfd7f86b501097c4d470c612554a1
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 21.1.85
+  date: 2021-11-15T04:48:18.847Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.272'
       hash: 5b873ebfa8a2917721bec3968dd48fad2f541ac4
       body: ''
