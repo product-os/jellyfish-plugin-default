@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.87 - 2021-11-16
+
+* Set license [Josh Bowling]
+
 ## 21.1.86 - 2021-11-15
 
 * patch: Update dependency typedoc to ^0.22.9 [Renovate Bot]
