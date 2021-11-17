@@ -1,4 +1,23 @@
 - commits:
+    - subject: 'patch: Update internal-patch'
+      hash: 57fccf07c185a077dd3c4741a60611d5822dbe28
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+    - subject: 'patch: Update dependency lint-staged to v12'
+      hash: e5e9d2aed4c807a535d9eb13a6d32f42baa773f3
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 21.1.88
+  date: 2021-11-17T08:40:24.232Z
+- commits:
     - subject: Set license
       hash: ee3404703070e267988f2abb1deb252567aa10d0
       body: ''

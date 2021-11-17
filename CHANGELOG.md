@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 21.1.88 - 2021-11-17
+
+* patch: Update internal-patch [Renovate Bot]
+* patch: Update dependency lint-staged to v12 [Renovate Bot]
+
 ## 21.1.87 - 2021-11-16
 
 * Set license [Josh Bowling]
