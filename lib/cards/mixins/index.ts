@@ -1,9 +1,3 @@
-/*
- * Copyright (C) Balena.io - All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited.
- * Proprietary and confidential.
- */
-
 import type { ExtraMixins } from '@balena/jellyfish-plugin-base';
 import { asPipelineItem } from './as-pipeline-item';
 import { withEvents } from './with-events';

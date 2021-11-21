@@ -1,9 +1,3 @@
-/*
- * Copyright (C) Balena.io - All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited.
- * Proprietary and confidential.
- */
-
 import ActionLibrary from '@balena/jellyfish-action-library';
 import * as errors from '@balena/jellyfish-sync/build/errors';
 import * as pipeline from '@balena/jellyfish-sync/build/pipeline';

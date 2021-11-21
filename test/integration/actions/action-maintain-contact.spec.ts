@@ -1,9 +1,3 @@
-/*
- * Copyright (C) Balena.io - All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited.
- * Proprietary and confidential.
- */
-
 import { integrationHelpers } from '@balena/jellyfish-test-harness';
 import { strict as assert } from 'assert';
 import { ProductOsPlugin } from '@balena/jellyfish-plugin-product-os';

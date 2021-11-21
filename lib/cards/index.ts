@@ -1,9 +1,3 @@
-/*
- * Copyright (C) Balena.io - All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited.
- * Proprietary and confidential.
- */
-
 import { userGuest } from './contrib/user-guest';
 import { roleUserCommunity } from './contrib/role-user-community';
 import { roleUserOperator } from './contrib/role-user-operator';

@@ -1,9 +1,3 @@
-/*
- * Copyright (C) Balena.io - All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited.
- * Proprietary and confidential.
- */
-
 // TS-TODO: Use proper type for uiSchemaDef
 // This mixin defines all common fields in cards that support
 // attached events (i.e. 'timelines')
