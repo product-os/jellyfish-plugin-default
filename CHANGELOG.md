@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 21.1.97 - 2021-11-22
+
+* Update permissions for the `authentication` and `user-settings` contracts [Carol Schulze]
+* patch: Update internal-patch [Renovate Bot]
+
 ## 21.1.96 - 2021-11-21
 
 * patch: Update internal-patch [Renovate Bot]

@@ -1,4 +1,27 @@
 - commits:
+    - subject: >-
+        Update permissions for the `authentication` and `user-settings`
+        contracts
+      hash: 4164f4883f7763fbd5713e9c2bbbb5ae3b423bf3
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Carol Schulze <carol@balena.io>
+        signed-off-by: Carol Schulze <carol@balena.io>
+      author: Carol Schulze
+      nested: []
+    - subject: 'patch: Update internal-patch'
+      hash: 1618e7e69c0e3fabc665dcf75cdb93b790c39289
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 21.1.97
+  date: 2021-11-22T12:00:27.315Z
+- commits:
     - subject: 'patch: Update internal-patch'
       hash: a75d8176e9652b7f8d4837a964d91e7d307e5084
       body: ''
