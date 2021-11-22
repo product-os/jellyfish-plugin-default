@@ -14,6 +14,11 @@ export const roleUserGuest: RoleContractDefinition = {
 					type: 'boolean',
 					const: true,
 				},
+				type: {
+					not: {
+						enum: ['authentication@1.0.0', 'user-settings@1.0.0'],
+					},
+				},
 			},
 			anyOf: [
 				{

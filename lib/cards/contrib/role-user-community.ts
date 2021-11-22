@@ -146,6 +146,18 @@ export const roleUserCommunity: RoleContractDefinition = {
 					},
 				},
 				{
+					properties: {
+						id: {
+							const: {
+								$eval: 'user.id',
+							},
+						},
+						type: {
+							enum: ['authentication@1.0.0', 'user-settings@1.0.0'],
+						},
+					},
+				},
+				{
 					type: 'object',
 					description: "User can view create cards that don't create users",
 					additionalProperties: true,
