@@ -260,6 +260,18 @@ export const roleUserExternalSupport: RoleContractDefinition = {
 					},
 				},
 				{
+					properties: {
+						id: {
+							const: {
+								$eval: 'user.id',
+							},
+						},
+						type: {
+							const: 'authentication@1.0.0',
+						},
+					},
+				},
+				{
 					type: 'object',
 					required: ['type', 'slug'],
 					properties: {
