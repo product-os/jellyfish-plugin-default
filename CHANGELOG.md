@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.99 - 2021-11-23
+
+* Bump external deps [Josh Bowling]
+
 ## 21.1.98 - 2021-11-22
 
 * patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.291 [Renovate Bot]
