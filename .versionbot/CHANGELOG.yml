@@ -1,4 +1,15 @@
 - commits:
+    - subject: "\U0001F504 Synced file(s) with product-os/jellyfish-config"
+      hash: 40101df9013ea37740e4362c9d07d841d96a5a1d
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: joshbwlng
+      nested: []
+  version: 21.1.104
+  date: 2021-11-25T00:59:00.010Z
+- commits:
     - subject: 'patch: Update resinci/jellyfish-test Docker tag to v1.4.13'
       hash: 19abaed5ba7cbe452f30a60051049487f18fada4
       body: ''

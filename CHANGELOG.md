@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.104 - 2021-11-25
+
+* 🔄 Synced file(s) with product-os/jellyfish-config [joshbwlng]
+
 ## 21.1.103 - 2021-11-24
 
 * patch: Update resinci/jellyfish-test Docker tag to v1.4.13 [Renovate Bot]
