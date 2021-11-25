@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove jellycheck
+      hash: 6086378b53de14a10a66fd491a4a0ebca7887e30
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 21.1.105
+  date: 2021-11-25T02:21:34.791Z
+- commits:
     - subject: "\U0001F504 Synced file(s) with product-os/jellyfish-config"
       hash: 40101df9013ea37740e4362c9d07d841d96a5a1d
       body: ''
