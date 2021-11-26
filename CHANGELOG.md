@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 21.1.108 - 2021-11-26
+
+* Use product-os/renovate-config [Josh Bowling]
+* patch: Update dependency typescript to ^4.5.2 [Renovate Bot]
+
 ## 21.1.107 - 2021-11-25
 
 * patch: Update dependency @balena/jellyfish-plugin-product-os to ^2.8.0 [Renovate Bot]

@@ -1,4 +1,26 @@
 - commits:
+    - subject: Use product-os/renovate-config
+      hash: 1d4c3c99c33e6adc3b3de8fca2644bd21cfc6f9d
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: 'patch: Update dependency typescript to ^4.5.2'
+      hash: fd88289fe35739ce4bc3899bb5af242b4d93fe26
+      body: |
+        Update typescript from 4.4.4 to 4.5.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 21.1.108
+  date: 2021-11-26T04:51:53.690Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-plugin-product-os to ^2.8.0'
       hash: fd393b4f486cf91af56422bd63267aceba7d58f4
       body: |
