@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.117 - 2021-11-28
+
+* Remove old sync comments [Josh Bowling]
+
 ## 21.1.116 - 2021-11-27
 
 * patch: Update dependency @balena/jellyfish-logger to v3.0.154 [Renovate Bot]

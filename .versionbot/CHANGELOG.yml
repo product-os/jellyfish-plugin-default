@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove old sync comments
+      hash: e2e35f45021f324dc7af7ca28957f0037d9592c3
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 21.1.117
+  date: 2021-11-28T06:12:58.857Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-logger to v3.0.154'
       hash: 96d7de982d692ed2739e51112acb921986b96f19
       body: ''
