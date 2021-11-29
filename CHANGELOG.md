@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.118 - 2021-11-29
+
+* patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.309 [Renovate Bot]
+
 ## 21.1.117 - 2021-11-28
 
 * Remove old sync comments [Josh Bowling]

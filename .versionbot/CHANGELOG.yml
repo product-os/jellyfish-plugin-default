@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.309'
+      hash: 786731c86d42feb0efeafe6c620e5729f056fc0a
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 21.1.118
+  date: 2021-11-29T04:43:06.749Z
+- commits:
     - subject: Remove old sync comments
       hash: e2e35f45021f324dc7af7ca28957f0037d9592c3
       body: ''
