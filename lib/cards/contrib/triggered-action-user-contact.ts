@@ -6,11 +6,13 @@ export const triggeredActionUserContact: TriggeredActionContractDefinition = {
 	name: 'Triggered action for maintaining user contact information',
 	markers: [],
 	data: {
-		schedule: 'sync',
 		filter: {
 			type: 'object',
 			required: ['type'],
 			properties: {
+				updated_at: {
+					title: 'This should trigger on any update to the user',
+				},
 				type: {
 					type: 'string',
 					const: 'user@1.0.0',
