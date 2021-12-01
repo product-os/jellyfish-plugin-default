@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 21.1.123 - 2021-12-01
+
+* Remove old secrets from gitignore [Josh Bowling]
+* 🔄 Synced file(s) with product-os/secrets [joshbwlng]
+
 ## 21.1.122 - 2021-12-01
 
 * 🔄 Synced file(s) with product-os/secrets [joshbwlng]
