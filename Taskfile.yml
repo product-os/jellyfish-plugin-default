@@ -1,8 +1,5 @@
 version: '3'
 
-env:
-  AVA_OPTS: --fail-fast
-
 tasks:
   test:
     cmds:
