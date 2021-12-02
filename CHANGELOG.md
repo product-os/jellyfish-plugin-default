@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.126 - 2021-12-01
+
+* Remove old env from Taskfile [Josh Bowling]
+
 ## 21.1.125 - 2021-12-01
 
 * patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.311 [Renovate Bot]
