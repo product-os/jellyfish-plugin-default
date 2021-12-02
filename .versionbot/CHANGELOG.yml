@@ -1,4 +1,23 @@
 - commits:
+    - subject: Ensure contact triggered action always fires on a user update
+      hash: b64f3802fd3c38ed91f57232298e64b6c261485c
+      body: |
+        This fixes a bug where only the initial user creation would cause
+        a contact to be updated and subsequent updates to the user were
+        ignored. This regression bug was caused by the change to
+        triggered-action evaluation where the trigger only matches if the
+        filtered fields have changed.
+        See https://github.com/product-os/jellyfish-worker/pull/1037
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 21.1.130
+  date: 2021-12-02T07:46:16.099Z
+- commits:
     - subject: Remove .gitsecret directory
       hash: bfcb89ff4c608af50b4e2cb4c45ed93c1212a289
       body: ''
