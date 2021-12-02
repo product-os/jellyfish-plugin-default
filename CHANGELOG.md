@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.127 - 2021-12-02
+
+* Update readme [Josh Bowling]
+
 ## 21.1.126 - 2021-12-01
 
 * Remove old env from Taskfile [Josh Bowling]
