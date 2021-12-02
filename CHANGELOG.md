@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.129 - 2021-12-02
+
+* Remove .gitsecret directory [Josh Bowling]
+
 ## 21.1.128 - 2021-12-02
 
 * Remove unused secrets [Josh Bowling]
