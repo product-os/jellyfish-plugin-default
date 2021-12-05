@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.137 - 2021-12-05
+
+* patch: Update dependency ts-jest to ^27.1.0 [Renovate Bot]
+
 ## 21.1.136 - 2021-12-04
 
 * patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.314 [Renovate Bot]
