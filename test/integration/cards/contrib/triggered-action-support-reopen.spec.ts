@@ -2,7 +2,6 @@ import ActionLibrary from '@balena/jellyfish-action-library';
 import { ProductOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { integrationHelpers } from '@balena/jellyfish-test-harness';
 import { strict as assert } from 'assert';
-import Bluebird from 'bluebird';
 import { DefaultPlugin } from '../../../../lib';
 
 let ctx: integrationHelpers.IntegrationTestContext;
@@ -122,7 +121,9 @@ test('should not re-open a closed thread by marking a message as read', async ()
 	await ctx.flushAll(userSession);
 
 	// Wait a while to verify no triggered actions run
-	await Bluebird.delay(5000);
+	await new Promise((resolve) => {
+		setTimeout(resolve, 5000);
+	});
 
 	// Check that the thread is still closed
 	const thread = await ctx.jellyfish.getCardById(
@@ -152,7 +153,9 @@ test('should not re-open a closed thread with a whisper', async () => {
 	);
 
 	// Wait a while to verify no triggered actions run
-	await Bluebird.delay(5000);
+	await new Promise((resolve) => {
+		setTimeout(resolve, 5000);
+	});
 
 	// Check that the thread is still closed
 	const thread = await ctx.jellyfish.getCardById(
@@ -220,7 +223,9 @@ test('should not re-open an archived thread with a whisper', async () => {
 	);
 
 	// Wait a while to verify no triggered actions run
-	await Bluebird.delay(5000);
+	await new Promise((resolve) => {
+		setTimeout(resolve, 5000);
+	});
 
 	// Check that the thread is still archived
 	const thread = await ctx.jellyfish.getCardById(
