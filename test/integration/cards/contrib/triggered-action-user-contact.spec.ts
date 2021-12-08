@@ -2,7 +2,6 @@ import ActionLibrary from '@balena/jellyfish-action-library';
 import { ProductOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { integrationHelpers } from '@balena/jellyfish-test-harness';
 import { DefaultPlugin } from '../../../../lib';
-import Bluebird from 'bluebird';
 import { strict as assert } from 'assert';
 
 let ctx: integrationHelpers.IntegrationTestContext;
@@ -20,7 +19,9 @@ afterAll(() => {
 });
 
 test('The contact is updated when the user is updated', async () => {
-	await Bluebird.delay(5000);
+	await new Promise((resolve) => {
+		setTimeout(resolve, 5000);
+	});
 
 	const username = ctx.generateRandomID();
 
