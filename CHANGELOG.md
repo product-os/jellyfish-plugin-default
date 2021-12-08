@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.143 - 2021-12-08
+
+* Remove Bluebird [Josh Bowling]
+
 ## 21.1.142 - 2021-12-08
 
 * patch: Update internal-patch [Renovate Bot]
