@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 21.1.144 - 2021-12-10
+
+* patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.321 [Renovate Bot]
+* patch: Update dependency typescript to ^4.5.3 [Renovate Bot]
+
 ## 21.1.143 - 2021-12-08
 
 * Remove Bluebird [Josh Bowling]
