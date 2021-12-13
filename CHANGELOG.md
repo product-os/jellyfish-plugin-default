@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.148 - 2021-12-13
+
+* patch: Update external-non-major [Renovate Bot]
+
 ## 21.1.147 - 2021-12-11
 
 * Bump internal dependencies [Josh Bowling]
