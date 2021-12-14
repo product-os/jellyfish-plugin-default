@@ -1,4 +1,25 @@
 - commits:
+    - subject: Drop depcheck
+      hash: 257195da4b2bd5df3d36e044362fc7ae1db1d9e4
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: 'patch: Update internal-patch'
+      hash: 7a11d36778c9fde612c77e31f254a77c3b9ec990
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 21.1.149
+  date: 2021-12-14T01:17:16.521Z
+- commits:
     - subject: 'patch: Update external-non-major'
       hash: bee2c57ddea572e041b5ea182fad544f2b737a4f
       body: ''

@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 21.1.149 - 2021-12-14
+
+* Drop depcheck [Josh Bowling]
+* patch: Update internal-patch [Renovate Bot]
+
 ## 21.1.148 - 2021-12-13
 
 * patch: Update external-non-major [Renovate Bot]
