@@ -1,6 +1,31 @@
 import type { Mixins } from '@balena/jellyfish-plugin-base';
 import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
 
+const getFormUiSchema = () => ({
+	data: {
+		unnecessary_attendees: {
+			items: {
+				'ui:widget': 'AutoCompleteWidget',
+				'ui:options': {
+					resource: 'user',
+					keyPath: 'slug',
+				},
+			},
+		},
+		extra_attendees_needed: {
+			items: {
+				user: {
+					'ui:widget': 'AutoCompleteWidget',
+					'ui:options': {
+						resource: 'user',
+						keyPath: 'slug',
+					},
+				},
+			},
+		},
+	},
+});
+
 export function checkin({ uiSchemaDef }: Mixins): ContractDefinition {
 	return {
 		slug: 'checkin',
@@ -125,9 +150,7 @@ export function checkin({ uiSchemaDef }: Mixins): ContractDefinition {
 				fields: {
 					data: {
 						'ui:order': ['minutes', 'datetime', '*'],
-						datetime: {
-							$ref: uiSchemaDef('dateTime'),
-						},
+						datetime: uiSchemaDef('dateTime'),
 						unnecessary_attendees: {
 							items: {
 								'ui:widget': 'Link',
@@ -161,38 +184,8 @@ export function checkin({ uiSchemaDef }: Mixins): ContractDefinition {
 						},
 					},
 				},
-				edit: {
-					$ref: '#/data/uiSchema/definitions/form',
-				},
-				create: {
-					$ref: '#/data/uiSchema/edit',
-				},
-				definitions: {
-					form: {
-						data: {
-							unnecessary_attendees: {
-								items: {
-									'ui:widget': 'AutoCompleteWidget',
-									'ui:options': {
-										resource: 'user',
-										keyPath: 'slug',
-									},
-								},
-							},
-							extra_attendees_needed: {
-								items: {
-									user: {
-										'ui:widget': 'AutoCompleteWidget',
-										'ui:options': {
-											resource: 'user',
-											keyPath: 'slug',
-										},
-									},
-								},
-							},
-						},
-					},
-				},
+				edit: getFormUiSchema(),
+				create: getFormUiSchema(),
 			},
 		},
 	};

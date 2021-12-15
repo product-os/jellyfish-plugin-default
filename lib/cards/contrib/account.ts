@@ -139,15 +139,9 @@ export function account({ uiSchemaDef }: Mixins): ContractDefinition {
 						type: {
 							'ui:widget': 'HighlightedName',
 						},
-						email: {
-							$ref: uiSchemaDef('email'),
-						},
-						startsOnDate: {
-							$ref: uiSchemaDef('date'),
-						},
-						endsOnDate: {
-							$ref: uiSchemaDef('date'),
-						},
+						email: uiSchemaDef('email'),
+						startsOnDate: uiSchemaDef('date'),
+						endsOnDate: uiSchemaDef('date'),
 					},
 				},
 			},

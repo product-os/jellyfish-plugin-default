@@ -98,9 +98,7 @@ export function opportunity({
 						status: {
 							'ui:Widget': 'Badge',
 						},
-						dueDate: {
-							$ref: uiSchemaDef('date'),
-						},
+						dueDate: uiSchemaDef('date'),
 					},
 				},
 			},

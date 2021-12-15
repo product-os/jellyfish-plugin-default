@@ -246,9 +246,7 @@ export function blogPost({ uiSchemaDef }: Mixins): ContractDefinition {
 							},
 						},
 						post_header_meta: {
-							date: {
-								$ref: uiSchemaDef('date'),
-							},
+							date: uiSchemaDef('date'),
 							featured_img: null,
 							og_img: null,
 						},

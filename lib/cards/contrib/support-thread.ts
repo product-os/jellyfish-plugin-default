@@ -98,12 +98,8 @@ export function supportThread({
 			uiSchema: {
 				fields: {
 					data: {
-						tags: {
-							$ref: uiSchemaDef('badgeList'),
-						},
-						mirrors: {
-							$ref: uiSchemaDef('mirrors'),
-						},
+						tags: uiSchemaDef('badgeList'),
+						mirrors: uiSchemaDef('mirrors'),
 						statusDescription: null,
 						category: null,
 						status: null,
