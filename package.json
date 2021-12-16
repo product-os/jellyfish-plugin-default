@@ -48,7 +48,7 @@
   "dependencies": {
     "@balena/jellyfish-assert": "^1.2.0",
     "@balena/jellyfish-logger": "3.1.0",
-    "@balena/jellyfish-plugin-base": "^2.1.324",
+    "@balena/jellyfish-plugin-base": "^2.2.2",
     "is-uuid": "^1.0.2",
     "lodash": "^4.17.21"
   },
