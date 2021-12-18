@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.155 - 2021-12-18
+
+* Bump jellyfish-test-harness to v8.1.203 [Josh Bowling]
+
 ## 21.1.154 - 2021-12-17
 
 * patch: Update dependency @balena/jellyfish-core to ^8.2.0 [Renovate Bot]
