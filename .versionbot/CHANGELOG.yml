@@ -1,4 +1,17 @@
 - commits:
+    - subject: Test test-harness
+      hash: cc9e8dd477d911e7e9dab10f314d9e1f54d1ccb8
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 21.1.159
+  date: 2021-12-18T11:33:39.565Z
+- commits:
     - subject: 'patch: Update internal-patch'
       hash: 56de55ba577a165c3961c3bbe6c918a7551e5d89
       body: ''
