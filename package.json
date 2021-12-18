@@ -58,7 +58,7 @@
     "@balena/jellyfish-core": "^8.2.0",
     "@balena/jellyfish-plugin-product-os": "^2.9.4",
     "@balena/jellyfish-sync": "^6.1.129",
-    "@balena/jellyfish-test-harness": "^8.1.188",
+    "@balena/jellyfish-test-harness": "8.1.203-renovate-balena-jellyfish-core-8-x-09977d39231ddbc5366731abc3d242a089643a4d",
     "@balena/jellyfish-types": "^1.2.39",
     "@balena/lint": "^6.2.0",
     "@types/is-uuid": "^1.0.0",
