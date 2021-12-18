@@ -114,3 +114,95 @@ test('The contact is updated when the user is updated', async () => {
 
 	expect(updated.data.profile.name.first).toBe(name);
 });
+
+test('The contact is updated when user tags are updated', async () => {
+	await new Promise((resolve) => {
+		setTimeout(resolve, 5000);
+	});
+
+	const username = ctx.generateRandomID();
+
+	const inserted = await ctx.worker.insertCard(
+		ctx.context,
+		ctx.session,
+		ctx.worker.typeContracts['user@1.0.0'],
+		{
+			attachEvents: true,
+			actor: ctx.actor.id,
+		},
+		{
+			name: username,
+			slug: ctx.generateRandomSlug({
+				prefix: 'user',
+			}),
+			version: '1.0.0',
+			markers: [],
+			data: {
+				email: `${username}@example.com`,
+				hash: 'foobar',
+				roles: ['user-community'],
+			},
+		},
+	);
+	assert(inserted);
+	await ctx.flushAll(ctx.session);
+	const user = await ctx.jellyfish.getCardById(
+		ctx.context,
+		ctx.session,
+		inserted.id,
+	);
+
+	assert(user);
+
+	await ctx.flushAll(ctx.session);
+
+	const contact: any = await ctx.waitForMatch({
+		$$links: {
+			'is attached to user': {
+				type: 'object',
+				properties: {
+					id: {
+						type: 'string',
+						const: user.id,
+					},
+				},
+			},
+		},
+		type: 'object',
+		properties: {
+			type: {
+				type: 'string',
+				const: 'contact@1.0.0',
+			},
+		},
+	});
+
+	const tag = 'buzbaz';
+	await ctx.worker.patchCard(
+		ctx.context,
+		ctx.session,
+		ctx.worker.typeContracts['user@1.0.0'],
+		{
+			attachEvents: true,
+			actor: ctx.actor.id,
+		},
+		user,
+		[
+			{
+				op: 'add',
+				path: '/tags/0',
+				value: tag,
+			},
+		],
+	);
+
+	await ctx.flushAll(ctx.session);
+
+	const updated: any = await ctx.jellyfish.getCardById(
+		ctx.context,
+		ctx.session,
+		contact.id,
+	);
+
+	expect(updated.tags).toStrictEqual([tag]);
+});
