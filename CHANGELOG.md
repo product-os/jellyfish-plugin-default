@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.157 - 2021-12-18
+
+* patch: Update dependency ts-jest to ^27.1.2 [Renovate Bot]
+
 ## 21.1.156 - 2021-12-18
 
 * patch: Update dependency @balena/jellyfish-logger to v4 [Renovate Bot]
