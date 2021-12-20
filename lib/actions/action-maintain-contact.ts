@@ -54,6 +54,10 @@ const handler: ActionFile['handler'] = async (
 			value: card.name,
 		},
 		{
+			path: ['tags'],
+			value: card.tags,
+		},
+		{
 			path: ['data', 'origin'],
 			value: card.data.origin,
 		},
