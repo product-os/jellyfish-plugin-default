@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.163 - 2021-12-20
+
+* Sync tags between user and contact [Josh Bowling]
+
 ## 21.1.162 - 2021-12-19
 
 * patch: Update dependency @balena/jellyfish-plugin-base to ^2.2.7 [Renovate Bot]
