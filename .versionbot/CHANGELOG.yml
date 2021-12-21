@@ -1,4 +1,30 @@
 - commits:
+    - subject: Decay pattern weight over time
+      hash: ef2fde2c45364b60bddce01002a45373a6eaec3e
+      body: |
+        This change uses the same decay algorithm as Hackernews:
+        ```
+        Score = (P) / (T+2)^G
+
+        where,
+        P = points of an item (number of times contract is linked to)
+        T = time since creation (in hours)
+        G = Gravity, defaults to 1.8 in news.arc
+        ```
+
+        This is re-calculated whenever the pattern is updated, essentially
+        a "poor mans cron". Once scheduled actions are implemented, we should be
+        able to recalculate the weight at explicit intervals.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 21.3.0
+  date: 2021-12-21T12:44:07.037Z
+- commits:
     - subject: Add a triggered-action to snapback from improvements to support threads
       hash: 9c3bd6854a5a08a3efb28259eae71f360f470bb4
       body: |
