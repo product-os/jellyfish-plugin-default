@@ -23,7 +23,15 @@ afterAll(() => {
 	return integrationHelpers.after(ctx);
 });
 
-test('should re-open a closed support thread if an attached pattern is closed', async () => {
+test('should re-open a closed support thread if an improvement attached to an attached pattern is completed', async () => {
+	const supportThread = await ctx.createSupportThread(
+		user.id,
+		userSession,
+		ctx.generateRandomWords(3),
+		{
+			status: 'closed',
+		},
+	);
 	const pattern = await ctx.createContract(
 		user.id,
 		userSession,
@@ -31,14 +39,6 @@ test('should re-open a closed support thread if an attached pattern is closed', 
 		'My pattern',
 		{
 			status: 'open',
-		},
-	);
-	const supportThread = await ctx.createSupportThread(
-		user.id,
-		userSession,
-		ctx.generateRandomWords(3),
-		{
-			status: 'closed',
 		},
 	);
 	await ctx.createLink(
@@ -49,22 +49,39 @@ test('should re-open a closed support thread if an attached pattern is closed', 
 		'has attached',
 		'is attached to',
 	);
+	const improvement = await ctx.createContract(
+		user.id,
+		userSession,
+		'improvement@1.0.0',
+		'My improvement',
+		{
+			status: 'proposed',
+		},
+	);
+	await ctx.createLink(
+		user.id,
+		userSession,
+		pattern,
+		improvement,
+		'has attached',
+		'is attached to',
+	);
 
-	// Close the pattern, and then wait for the support thread to be re-opened
+	// Complete the improvement, and then wait for the support thread to be re-opened
 	await ctx.worker.patchCard(
 		ctx.context,
 		userSession,
-		ctx.worker.typeContracts[pattern.type],
+		ctx.worker.typeContracts[improvement.type],
 		{
 			attachEvents: true,
 			actor: user.id,
 		},
-		pattern,
+		improvement,
 		[
 			{
 				op: 'replace',
 				path: '/data/status',
-				value: 'closed-resolved',
+				value: 'completed',
 			},
 		],
 	);

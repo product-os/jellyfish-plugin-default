@@ -48,7 +48,7 @@ import { triggeredActionIntegrationImportEvent } from './contrib/triggered-actio
 import { triggeredActionSetUserAvatar } from './contrib/triggered-action-set-user-avatar';
 import { triggeredActionSupportSummary } from './contrib/triggered-action-support-summary';
 import { triggeredActionSupportReopen } from './contrib/triggered-action-support-reopen';
-import { triggeredActionSupportClosedPatternReopen } from './contrib/triggered-action-support-closed-pattern-reopen';
+import { triggeredActionSupportCompletedImprovementReopen } from './contrib/triggered-action-support-completed-improvement-reopen';
 import { triggeredActionSyncThreadPostLinkWhisper } from './contrib/triggered-action-sync-thread-post-link-whisper';
 import { triggeredActionUpdateEventEditedAt } from './contrib/triggered-action-update-event-edited-at';
 import { viewAllViews } from './contrib/view-all-views';
@@ -138,7 +138,7 @@ export const cards = [
 	triggeredActionSetUserAvatar,
 	triggeredActionSupportSummary,
 	triggeredActionSupportReopen,
-	triggeredActionSupportClosedPatternReopen,
+	triggeredActionSupportCompletedImprovementReopen,
 	triggeredActionSyncThreadPostLinkWhisper,
 	triggeredActionUpdateEventEditedAt,
 

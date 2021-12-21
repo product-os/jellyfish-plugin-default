@@ -1,13 +1,14 @@
 import type { TriggeredActionContractDefinition } from '@balena/jellyfish-types/build/worker';
 
-export const triggeredActionSupportClosedPatternReopen: TriggeredActionContractDefinition =
+const IMPROVEMENT_COMPLETE_STATUS = 'completed';
+
+export const triggeredActionSupportCompletedImprovementReopen: TriggeredActionContractDefinition =
 	{
-		slug: 'triggered-action-support-closed-pattern-reopen',
+		slug: 'triggered-action-support-completed-improvement-reopen',
 		type: 'triggered-action@1.0.0',
-		name: 'Triggered action for reopening support threads when patterns are closed',
+		name: 'Triggered action for reopening support threads when improvements are completed',
 		markers: [],
 		data: {
-			schedule: 'sync',
 			filter: {
 				$$links: {
 					'is attached to': {
@@ -58,32 +59,15 @@ export const triggeredActionSupportClosedPatternReopen: TriggeredActionContractD
 					},
 					type: {
 						type: 'string',
-						const: 'update@1.0.0',
+						const: 'improvement@1.0.0',
 					},
 					data: {
 						type: 'object',
-						required: ['payload'],
+						required: ['status'],
 						properties: {
-							payload: {
-								type: 'array',
-								contains: {
-									type: 'object',
-									required: ['op', 'path', 'value'],
-									properties: {
-										op: {
-											type: 'string',
-											const: 'replace',
-										},
-										path: {
-											type: 'string',
-											const: '/data/status',
-										},
-										value: {
-											type: 'string',
-											const: 'closed-resolved',
-										},
-									},
-								},
+							status: {
+								type: 'string',
+								const: IMPROVEMENT_COMPLETE_STATUS,
 							},
 						},
 					},
@@ -100,7 +84,8 @@ export const triggeredActionSupportClosedPatternReopen: TriggeredActionContractD
 				},
 			},
 			arguments: {
-				reason: 'Support Thread re-opened because linked Pattern was closed',
+				reason:
+					'Support Thread re-opened because linked Pattern was potentially resolved',
 				patch: [
 					{
 						op: 'replace',

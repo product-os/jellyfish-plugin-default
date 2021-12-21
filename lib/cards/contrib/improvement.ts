@@ -1,8 +1,8 @@
 import type { Mixins } from '@balena/jellyfish-plugin-base';
 import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
 
-import fs from 'fs';
-import path from 'path';
+import * as fs from 'fs';
+import * as path from 'path';
 
 const DEFAULT_CONTENT = fs.readFileSync(
 	path.join(__dirname, 'improvement-default.md'),
