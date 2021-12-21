@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.3.0 - 2021-12-21
+
+* Decay pattern weight over time [Lucian Buzzo]
+
 ## 21.2.0 - 2021-12-21
 
 * Add a triggered-action to snapback from improvements to support threads [Lucian Buzzo]
