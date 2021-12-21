@@ -1,9 +1,9 @@
-import * as typedErrors from 'typed-errors';
+import { TypedError } from 'typed-error';
 
 // tslint:disable-next-line: no-var-requires
 const NoOpIntegration = require('./noop-integration');
 
-const TranslateError = typedErrors.makeTypedError('TranslateError');
+class TranslateError extends TypedError {}
 
 module.exports = class BrokenIntegration extends NoOpIntegration {
 	constructor(options: any) {
