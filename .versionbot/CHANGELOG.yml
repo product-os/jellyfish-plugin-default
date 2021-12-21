@@ -1,4 +1,19 @@
 - commits:
+    - subject: Add a triggered-action to snapback from improvements to support threads
+      hash: 9c3bd6854a5a08a3efb28259eae71f360f470bb4
+      body: |
+        When a improvement is completed, iterate through the patterns attached
+        to it and re-open any support threads attached to those patterns.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 21.2.0
+  date: 2021-12-21T11:48:54.331Z
+- commits:
     - subject: Use correct typed error package
       hash: 5ddabe0ae3eda9b66541bf3029a11c76f3a84ae5
       body: |
