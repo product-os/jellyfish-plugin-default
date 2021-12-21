@@ -116,10 +116,10 @@ test('The contact is updated when the user is updated', async () => {
 });
 
 test('The contact is updated when user tags are updated', async () => {
+	// Insert a new user and check that a contact is created.
 	const username = ctx.generateRandomID();
-
-	// Insert a new user.
-	const inserted = await ctx.worker.insertCard(
+	const firstTag = 'foo';
+	let user = await ctx.worker.insertCard(
 		ctx.context,
 		ctx.session,
 		ctx.worker.typeContracts['user@1.0.0'],
@@ -139,20 +139,12 @@ test('The contact is updated when user tags are updated', async () => {
 				hash: 'foobar',
 				roles: ['user-community'],
 			},
+			tags: [firstTag],
 		},
-	);
-	assert(inserted);
-	await ctx.flushAll(ctx.session);
-	const user = await ctx.jellyfish.getCardById(
-		ctx.context,
-		ctx.session,
-		inserted.id,
 	);
 	assert(user);
 	await ctx.flushAll(ctx.session);
-
-	// Wait for the contact contract to be generated.
-	const contact: any = await ctx.waitForMatch({
+	let contact: any = await ctx.waitForMatch({
 		$$links: {
 			'is attached to user': {
 				type: 'object',
@@ -172,33 +164,11 @@ test('The contact is updated when user tags are updated', async () => {
 			},
 		},
 	});
+	expect(contact.tags).toStrictEqual([firstTag]);
 
-	// Add an unrelated tag to the contact.
-	// This represents the tag added to contacts that denotes
-	// where the user originated from (balena-api etc).
-	const originTag = 'balena-api';
-	await ctx.worker.patchCard(
-		ctx.context,
-		ctx.session,
-		ctx.worker.typeContracts['contact@1.0.0'],
-		{
-			attachEvents: true,
-			actor: ctx.actor.id,
-		},
-		contact,
-		[
-			{
-				op: 'add',
-				path: '/tags/0',
-				value: originTag,
-			},
-		],
-	);
-	await ctx.flushAll(ctx.session);
-
-	// Now add a separate tag to the user.
-	const otherTag = 'buzbaz';
-	await ctx.worker.patchCard(
+	// Add another tag to the user and wait for the contact to be updated.
+	const secondTag = 'bar';
+	user = await ctx.worker.patchCard(
 		ctx.context,
 		ctx.session,
 		ctx.worker.typeContracts['user@1.0.0'],
@@ -210,18 +180,90 @@ test('The contact is updated when user tags are updated', async () => {
 		[
 			{
 				op: 'add',
-				path: '/tags/0',
-				value: otherTag,
+				path: '/tags/1',
+				value: secondTag,
 			},
 		],
 	);
+	assert(user);
 	await ctx.flushAll(ctx.session);
+	contact = await ctx.waitForMatch({
+		$$links: {
+			'is attached to user': {
+				type: 'object',
+				properties: {
+					id: {
+						type: 'string',
+						const: user.id,
+					},
+				},
+			},
+		},
+		type: 'object',
+		properties: {
+			type: {
+				type: 'string',
+				const: 'contact@1.0.0',
+			},
+			tags: {
+				type: 'array',
+				contains: {
+					type: 'string',
+					const: secondTag,
+				},
+			},
+		},
+	});
+	expect(contact.tags).toStrictEqual([firstTag, secondTag]);
 
-	const updated: any = await ctx.jellyfish.getCardById(
+	// Now remove a tag from the user and check that
+	// this change is reflected in the contact.
+	user = await ctx.worker.patchCard(
 		ctx.context,
 		ctx.session,
-		contact.id,
+		ctx.worker.typeContracts['user@1.0.0'],
+		{
+			attachEvents: true,
+			actor: ctx.actor.id,
+		},
+		user,
+		[
+			{
+				op: 'remove',
+				path: '/tags/1',
+			},
+		],
 	);
-
-	expect(updated.tags).toStrictEqual([originTag, otherTag]);
+	assert(user);
+	await ctx.flushAll(ctx.session);
+	contact = await ctx.waitForMatch({
+		$$links: {
+			'is attached to user': {
+				type: 'object',
+				properties: {
+					id: {
+						type: 'string',
+						const: user.id,
+					},
+				},
+			},
+		},
+		type: 'object',
+		properties: {
+			type: {
+				type: 'string',
+				const: 'contact@1.0.0',
+			},
+			tags: {
+				type: 'array',
+				not: {
+					contains: {
+						type: 'string',
+						const: secondTag,
+					},
+				},
+			},
+		},
+	});
+	expect(contact.tags).toStrictEqual([firstTag]);
 });
