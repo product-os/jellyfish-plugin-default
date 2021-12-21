@@ -1,4 +1,3 @@
-import ActionLibrary from '@balena/jellyfish-action-library';
 import { ProductOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { integrationHelpers } from '@balena/jellyfish-test-harness';
 import { strict as assert } from 'assert';
@@ -7,11 +6,7 @@ import { DefaultPlugin } from '../../../../lib';
 let ctx: integrationHelpers.IntegrationTestContext;
 
 beforeAll(async () => {
-	ctx = await integrationHelpers.before([
-		ActionLibrary,
-		ProductOsPlugin,
-		DefaultPlugin,
-	]);
+	ctx = await integrationHelpers.before([ProductOsPlugin, DefaultPlugin]);
 });
 
 afterAll(() => {

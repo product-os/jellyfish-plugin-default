@@ -1,4 +1,3 @@
-import ActionLibrary from '@balena/jellyfish-action-library';
 import * as errors from '@balena/jellyfish-sync/build/errors';
 import * as pipeline from '@balena/jellyfish-sync/build/pipeline';
 import { syncIntegrationScenario } from '@balena/jellyfish-test-harness';
@@ -15,7 +14,7 @@ const context: core.Context = {
 };
 
 beforeAll(async () => {
-	const plugins = [ActionLibrary, DefaultPlugin];
+	const plugins = [DefaultPlugin];
 	const cards = [];
 	await syncIntegrationScenario.before(context, plugins, cards);
 	await syncIntegrationScenario.save(context);

@@ -1,4 +1,3 @@
-import ActionLibrary from '@balena/jellyfish-action-library';
 import { ProductOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { integrationHelpers } from '@balena/jellyfish-test-harness';
 import { Contract } from '@balena/jellyfish-types/build/core';
@@ -10,11 +9,7 @@ let user: any = {};
 let userSession: string = '';
 
 beforeAll(async () => {
-	ctx = await integrationHelpers.before([
-		ActionLibrary,
-		ProductOsPlugin,
-		DefaultPlugin,
-	]);
+	ctx = await integrationHelpers.before([ProductOsPlugin, DefaultPlugin]);
 
 	const createdUser = await ctx.createUser(ctx.generateRandomID());
 	user = createdUser.contract;

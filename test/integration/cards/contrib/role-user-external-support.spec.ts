@@ -1,4 +1,3 @@
-import ActionLibrary from '@balena/jellyfish-action-library';
 import { ProductOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { integrationHelpers } from '@balena/jellyfish-test-harness';
 import { strict as assert } from 'assert';
@@ -31,11 +30,7 @@ async function createUser(roles: string[], org: any): Promise<any> {
 }
 
 beforeAll(async () => {
-	ctx = await integrationHelpers.before([
-		ActionLibrary,
-		ProductOsPlugin,
-		DefaultPlugin,
-	]);
+	ctx = await integrationHelpers.before([ProductOsPlugin, DefaultPlugin]);
 
 	// Set balena org
 	balenaOrg = await ctx.jellyfish.getCardBySlug(
