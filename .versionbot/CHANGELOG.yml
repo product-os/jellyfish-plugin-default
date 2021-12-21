@@ -1,4 +1,19 @@
 - commits:
+    - subject: Use correct typed error package
+      hash: 5ddabe0ae3eda9b66541bf3029a11c76f3a84ae5
+      body: |
+        The decprecated `typed-errors` package was used by mistake instead of
+        the `typed-error` package.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 21.1.166
+  date: 2021-12-21T10:40:25.647Z
+- commits:
     - subject: 'Sync contact tags with user, add tests'
       hash: 18a173d2e587d982090970c03010b605b31c5e5e
       body: ''

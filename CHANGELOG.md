@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.166 - 2021-12-21
+
+* Use correct typed error package [Lucian Buzzo]
+
 ## 21.1.165 - 2021-12-21
 
 * Sync contact tags with user, add tests [Josh Bowling]
