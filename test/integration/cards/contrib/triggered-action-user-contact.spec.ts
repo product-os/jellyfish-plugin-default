@@ -116,12 +116,9 @@ test('The contact is updated when the user is updated', async () => {
 });
 
 test('The contact is updated when user tags are updated', async () => {
-	await new Promise((resolve) => {
-		setTimeout(resolve, 5000);
-	});
-
 	const username = ctx.generateRandomID();
 
+	// Insert a new user.
 	const inserted = await ctx.worker.insertCard(
 		ctx.context,
 		ctx.session,
@@ -151,11 +148,10 @@ test('The contact is updated when user tags are updated', async () => {
 		ctx.session,
 		inserted.id,
 	);
-
 	assert(user);
-
 	await ctx.flushAll(ctx.session);
 
+	// Wait for the contact contract to be generated.
 	const contact: any = await ctx.waitForMatch({
 		$$links: {
 			'is attached to user': {
@@ -177,7 +173,31 @@ test('The contact is updated when user tags are updated', async () => {
 		},
 	});
 
-	const tag = 'buzbaz';
+	// Add an unrelated tag to the contact.
+	// This represents the tag added to contacts that denotes
+	// where the user originated from (balena-api etc).
+	const originTag = 'balena-api';
+	await ctx.worker.patchCard(
+		ctx.context,
+		ctx.session,
+		ctx.worker.typeContracts['contact@1.0.0'],
+		{
+			attachEvents: true,
+			actor: ctx.actor.id,
+		},
+		contact,
+		[
+			{
+				op: 'add',
+				path: '/tags/0',
+				value: originTag,
+			},
+		],
+	);
+	await ctx.flushAll(ctx.session);
+
+	// Now add a separate tag to the user.
+	const otherTag = 'buzbaz';
 	await ctx.worker.patchCard(
 		ctx.context,
 		ctx.session,
@@ -191,11 +211,10 @@ test('The contact is updated when user tags are updated', async () => {
 			{
 				op: 'add',
 				path: '/tags/0',
-				value: tag,
+				value: otherTag,
 			},
 		],
 	);
-
 	await ctx.flushAll(ctx.session);
 
 	const updated: any = await ctx.jellyfish.getCardById(
@@ -204,5 +223,5 @@ test('The contact is updated when user tags are updated', async () => {
 		contact.id,
 	);
 
-	expect(updated.tags).toStrictEqual([tag]);
+	expect(updated.tags).toStrictEqual([originTag, otherTag]);
 });

@@ -149,10 +149,15 @@ const handler: ActionFile['handler'] = async (
 		const patch = contactProperties.reduce(
 			(accumulator: any[], property: any) => {
 				const current = _.get(attachedContact, property.path);
-				const value =
+				let value =
 					_.isNil(property.value) || _.isEqual(property.value, {})
 						? current
 						: property.value;
+
+				// Merge and de-duplicate arrays
+				if (_.isArray(value) && !_.isEmpty(value)) {
+					value = _.union(current, value);
+				}
 
 				if (!_.isNil(value) && !_.isEqual(value, current)) {
 					accumulator.push({
