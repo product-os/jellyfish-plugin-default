@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.2.1 - 2021-12-21
+
+* Remove action-library dependency [Josh Bowling]
+
 ## 21.2.0 - 2021-12-21
 
 * Add a triggered-action to snapback from improvements to support threads [Lucian Buzzo]

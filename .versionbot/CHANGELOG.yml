@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove action-library dependency
+      hash: 9a018062045734442d938e8844bf2c884d12f08b
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 21.2.1
+  date: 2021-12-21T23:09:39.210Z
+- commits:
     - subject: Add a triggered-action to snapback from improvements to support threads
       hash: 9c3bd6854a5a08a3efb28259eae71f360f470bb4
       body: |
