@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.164 - 2021-12-21
+
+* Merge contact tags instead of replace [Josh Bowling]
+
 ## 21.1.163 - 2021-12-20
 
 * Sync tags between user and contact [Josh Bowling]
