@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.1.165 - 2021-12-21
+
+* Sync contact tags with user, add tests [Josh Bowling]
+
 ## 21.1.164 - 2021-12-21
 
 * Merge contact tags instead of replace [Josh Bowling]

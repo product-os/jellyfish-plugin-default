@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'Sync contact tags with user, add tests'
+      hash: 18a173d2e587d982090970c03010b605b31c5e5e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 21.1.165
+  date: 2021-12-21T09:37:20.528Z
+- commits:
     - subject: Merge contact tags instead of replace
       hash: 82883a79a2cc63a31fb520fb7c150a449c6c6c55
       body: ''
