@@ -1,4 +1,20 @@
 - commits:
+    - subject: Remove dev-only peer dependencies
+      hash: a1767886deec72567bb8b21afa9378cc2b784686
+      body: |
+        These only force dependencies to use the same version we're using during
+        testing, which is not the same version they would use in production.
+        Meaning we are testing against a different setup than prod.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Carol Schulze <carol@balena.io>
+        signed-off-by: Carol Schulze <carol@balena.io>
+      author: Carol Schulze
+      nested: []
+  version: 21.2.1
+  date: 2021-12-22T18:56:45.188Z
+- commits:
     - subject: Add a triggered-action to snapback from improvements to support threads
       hash: 9c3bd6854a5a08a3efb28259eae71f360f470bb4
       body: |
