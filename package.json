@@ -59,7 +59,7 @@
     "@balena/jellyfish-plugin-product-os": "^2.9.4",
     "@balena/jellyfish-sync": "^6.2.1",
     "@balena/jellyfish-test-harness": "^8.1.203",
-    "@balena/jellyfish-types": "^1.2.39",
+    "@balena/jellyfish-types": "^2.0.0",
     "@balena/lint": "^6.2.0",
     "@types/is-uuid": "^1.0.0",
     "@types/jest": "^27.0.3",
