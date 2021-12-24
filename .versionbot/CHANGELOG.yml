@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-sync to ^6.2.1'
+      hash: c5fd43f873042281667eaa8ea3b168d918073342
+      body: |
+        Update @balena/jellyfish-sync from 6.1.129 to 6.2.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 21.2.2
+  date: 2021-12-24T02:51:45.884Z
+- commits:
     - subject: Remove dev-only peer dependencies
       hash: a1767886deec72567bb8b21afa9378cc2b784686
       body: |

@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.2.2 - 2021-12-24
+
+* patch: Update dependency @balena/jellyfish-sync to ^6.2.1 [Renovate Bot]
+
 ## 21.2.1 - 2021-12-22
 
 * Remove dev-only peer dependencies [Carol Schulze]
