@@ -1,4 +1,4 @@
-import ActionLibrary from '@balena/jellyfish-action-library';
+import { ActionLibrary } from '@balena/jellyfish-action-library';
 import * as errors from '@balena/jellyfish-sync/build/errors';
 import * as pipeline from '@balena/jellyfish-sync/build/pipeline';
 import { syncIntegrationScenario } from '@balena/jellyfish-test-harness';

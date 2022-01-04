@@ -1,7 +1,7 @@
+import { ActionLibrary } from '@balena/jellyfish-action-library';
+import { ProductOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { integrationHelpers } from '@balena/jellyfish-test-harness';
 import { strict as assert } from 'assert';
-import { ProductOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import ActionLibrary = require('@balena/jellyfish-action-library');
 import { DefaultPlugin } from '../../../lib';
 
 let ctx: integrationHelpers.IntegrationTestContext;
