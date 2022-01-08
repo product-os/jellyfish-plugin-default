@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.2.11 - 2022-01-08
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 21.2.10 - 2022-01-04
 
 * Update action-library imports [Josh Bowling]

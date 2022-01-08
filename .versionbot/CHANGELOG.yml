@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update internal-patch'
+      hash: 5966288cf81e59b6750f7911df3e988781c00ac0
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 21.2.11
+  date: 2022-01-08T05:46:32.288Z
+- commits:
     - subject: Update action-library imports
       hash: 9ee488460c5d09f8ba40649b54f197b7e3631da0
       body: ''
