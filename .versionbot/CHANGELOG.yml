@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update external-non-major Docker tags'
+      hash: e262eac9ea7dd26ecb021a2eda12169ddca908e1
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 21.2.18
+  date: 2022-01-17T13:56:18.940Z
+- commits:
     - subject: Use default mixins from plugin base
       hash: a212180a0b4546db15868f0edc014eb26fd92ba7
       body: |

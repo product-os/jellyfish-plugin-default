@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.2.18 - 2022-01-17
+
+* patch: Update external-non-major Docker tags [Renovate Bot]
+
 ## 21.2.17 - 2022-01-17
 
 * Use default mixins from plugin base [Lucian Buzzo]
