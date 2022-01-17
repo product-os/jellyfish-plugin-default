@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 22.0.0 - 2022-01-17
+
+* Lock down guest user role [Lucian Buzzo]
+
 ## 21.2.17 - 2022-01-17
 
 * Use default mixins from plugin base [Lucian Buzzo]

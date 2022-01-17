@@ -1,4 +1,20 @@
 - commits:
+    - subject: Lock down guest user role
+      hash: 9914d133fb2f4b445ad883f1d076c5325216f77e
+      body: |
+        This changes the guest user role so that it can only view the guest user
+        contract. This change goes hand-in-hand with updates to the worker
+        service that add special routes for login and password reset.
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 22.0.0
+  date: 2022-01-17T13:58:19.586Z
+- commits:
     - subject: Use default mixins from plugin base
       hash: a212180a0b4546db15868f0edc014eb26fd92ba7
       body: |
