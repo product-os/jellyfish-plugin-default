@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-core to ^12.2.1'
+      hash: b434e6e737d1e6a35bd750c225397530f0ab1921
+      body: |
+        Update @balena/jellyfish-core from 12.1.0 to 12.2.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 21.2.19
+  date: 2022-01-17T18:51:41.422Z
+- commits:
     - subject: 'patch: Update external-non-major Docker tags'
       hash: e262eac9ea7dd26ecb021a2eda12169ddca908e1
       body: ''

@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.2.19 - 2022-01-17
+
+* patch: Update dependency @balena/jellyfish-core to ^12.2.1 [Renovate Bot]
+
 ## 21.2.18 - 2022-01-17
 
 * patch: Update external-non-major Docker tags [Renovate Bot]
