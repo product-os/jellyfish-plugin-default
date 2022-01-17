@@ -36,16 +36,14 @@ export function brainstormCall({
 				snippet: {
 					data: {
 						datetime: {
-							$ref: uiSchemaDef('dateTime'),
+							...uiSchemaDef('dateTime'),
 							'ui:title': null,
 						},
 					},
 				},
 				fields: {
 					data: {
-						datetime: {
-							$ref: uiSchemaDef('dateTime'),
-						},
+						datetime: uiSchemaDef('dateTime'),
 					},
 				},
 			},

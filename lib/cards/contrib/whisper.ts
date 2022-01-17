@@ -104,38 +104,18 @@ export function whisper({ uiSchemaDef }: Mixins): ContractDefinition {
 			uiSchema: {
 				fields: {
 					data: {
-						actor: {
-							$ref: uiSchemaDef('idOrSlugLink'),
-						},
-						target: {
-							$ref: uiSchemaDef('idOrSlugLink'),
-						},
-						mirrors: {
-							$ref: uiSchemaDef('mirrors'),
-						},
-						timestamp: {
-							$ref: uiSchemaDef('dateTime'),
-						},
-						edited_at: {
-							$ref: uiSchemaDef('dateTime'),
-						},
-						readBy: {
-							$ref: uiSchemaDef('usernameList'),
-						},
+						actor: uiSchemaDef('idOrSlugLink'),
+						target: uiSchemaDef('idOrSlugLink'),
+						mirrors: uiSchemaDef('mirrors'),
+						timestamp: uiSchemaDef('dateTime'),
+						edited_at: uiSchemaDef('dateTime'),
+						readBy: uiSchemaDef('usernameList'),
 						payload: {
 							'ui:title': null,
-							mentionsUser: {
-								$ref: uiSchemaDef('usernameList'),
-							},
-							alertsUser: {
-								$ref: uiSchemaDef('usernameList'),
-							},
-							mentionsGroup: {
-								$ref: uiSchemaDef('groupList'),
-							},
-							alertsGroup: {
-								$ref: uiSchemaDef('groupList'),
-							},
+							mentionsUser: uiSchemaDef('usernameList'),
+							alertsUser: uiSchemaDef('usernameList'),
+							mentionsGroup: uiSchemaDef('groupList'),
+							alertsGroup: uiSchemaDef('groupList'),
 						},
 					},
 				},

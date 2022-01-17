@@ -1,8 +1,6 @@
 import { JellyfishPluginBase } from '@balena/jellyfish-plugin-base';
 import { cards } from './cards';
-import { mixins } from './cards/mixins';
 import { actions } from './actions';
-export const cardMixins = mixins;
 
 // tslint:disable-next-line: no-var-requires
 const { version } = require('../package.json');
@@ -16,7 +14,6 @@ export class DefaultPlugin extends JellyfishPluginBase {
 			slug: 'jellyfish-plugin-default',
 			name: 'Default Jellyfish Plugin',
 			version,
-			mixins,
 			cards,
 			actions,
 		});

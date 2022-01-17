@@ -70,12 +70,8 @@ export function salesThread({
 						inbox: {
 							'ui:widget': 'HighlightedName',
 						},
-						tags: {
-							$ref: uiSchemaDef('badgeList'),
-						},
-						mirrors: {
-							$ref: uiSchemaDef('mirrors'),
-						},
+						tags: uiSchemaDef('badgeList'),
+						mirrors: uiSchemaDef('mirrors'),
 						status: {
 							'ui:widget': 'Badge',
 						},

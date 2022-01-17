@@ -93,9 +93,7 @@ export function contact({ uiSchemaDef }: Mixins): ContractDefinition {
 						mirrors: null,
 						profile: {
 							'ui:title': null,
-							email: {
-								$ref: uiSchemaDef('email'),
-							},
+							email: uiSchemaDef('email'),
 							name: {
 								'ui:title': null,
 								'ui:order': ['first', 'last'],
@@ -116,7 +114,7 @@ export function contact({ uiSchemaDef }: Mixins): ContractDefinition {
 							'ui:title': null,
 							'ui:order': ['type', 'company', 'email'],
 							email: {
-								$ref: uiSchemaDef('email'),
+								...uiSchemaDef('email'),
 								'ui:options': {
 									flexDirection: 'row',
 								},

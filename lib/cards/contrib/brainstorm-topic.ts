@@ -3,6 +3,25 @@ import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
 
 const statusOptions = ['open', 'ongoing', 'closed', 'archived'];
 
+const getFormUiSchema = () => ({
+	data: {
+		category: {
+			'ui:widget': 'AutoCompleteWidget',
+			'ui:options': {
+				resource: 'brainstorm-topic',
+				keyPath: 'data.category',
+			},
+		},
+		reporter: {
+			'ui:widget': 'AutoCompleteWidget',
+			'ui:options': {
+				resource: 'user',
+				keyPath: 'slug',
+			},
+		},
+	},
+});
+
 export function brainstormTopic({
 	mixin,
 	uiSchemaDef,
@@ -58,13 +77,13 @@ export function brainstormTopic({
 					data: {
 						'ui:order': ['reporter', 'mentionsUser', 'status', 'category'],
 						reporter: {
-							$ref: uiSchemaDef('username'),
+							...uiSchemaDef('username'),
 							'ui:options': {
 								flexDirection: 'row',
 							},
 						},
 						mentionsUser: {
-							$ref: uiSchemaDef('usernameList'),
+							...uiSchemaDef('usernameList'),
 							'ui:options': {
 								flexDirection: 'row',
 							},
@@ -92,9 +111,7 @@ export function brainstormTopic({
 						category: {
 							'ui:widget': 'HighlightedName',
 						},
-						reporter: {
-							$ref: uiSchemaDef('username'),
-						},
+						reporter: uiSchemaDef('username'),
 						flowdockThreadUrl: {
 							'ui:options': {
 								blank: true,
@@ -102,32 +119,8 @@ export function brainstormTopic({
 						},
 					},
 				},
-				edit: {
-					$ref: '#/data/uiSchema/definitions/form',
-				},
-				create: {
-					$ref: '#/data/uiSchema/edit',
-				},
-				definitions: {
-					form: {
-						data: {
-							category: {
-								'ui:widget': 'AutoCompleteWidget',
-								'ui:options': {
-									resource: 'brainstorm-topic',
-									keyPath: 'data.category',
-								},
-							},
-							reporter: {
-								'ui:widget': 'AutoCompleteWidget',
-								'ui:options': {
-									resource: 'user',
-									keyPath: 'slug',
-								},
-							},
-						},
-					},
-				},
+				edit: getFormUiSchema(),
+				create: getFormUiSchema(),
 			},
 		},
 	});
