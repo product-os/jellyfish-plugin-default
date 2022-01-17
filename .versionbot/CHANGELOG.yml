@@ -1,4 +1,24 @@
 - commits:
+    - subject: Use default mixins from plugin base
+      hash: a212180a0b4546db15868f0edc014eb26fd92ba7
+      body: |
+        The plugin base now provides these mixins by default, so having them
+        here is unnecessary. The call signature for uiSchemaDef has changed, no
+        longer using `$ref` and instead just providing the fragment entirely.
+        This commit also removes other uses of `$ref` which is being incorrectly
+        being used in `uiSchema` as a templating system. In a future PR use of
+        `$ref` will likely be deprecated for non JSON shcema values, so making
+        the change now saves us some headaches.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 21.2.17
+  date: 2022-01-17T13:40:35.781Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-action-library to ^16.2.0'
       hash: f3a2ea06799c212a47cc5f4510acdebdf62ec4a8
       body: |

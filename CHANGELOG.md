@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.2.17 - 2022-01-17
+
+* Use default mixins from plugin base [Lucian Buzzo]
+
 ## 21.2.16 - 2022-01-12
 
 * patch: Update dependency @balena/jellyfish-action-library to ^16.2.0 [Renovate Bot]
