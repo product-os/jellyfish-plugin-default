@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.2.22 - 2022-01-19
+
+* patch: Update internal-non-major [Renovate Bot]
+
 ## 21.2.21 - 2022-01-19
 
 * patch: Update dependency typedoc to ^0.22.11 [Renovate Bot]
