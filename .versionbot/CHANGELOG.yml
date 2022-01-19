@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'patch: Update dependency typedoc to ^0.22.11'
+      hash: 1a36b1334e9604d8df6340c505388a166a65d0ae
+      body: |
+        Update typedoc from 0.22.10 to 0.22.11
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 21.2.21
+  date: 2022-01-19T05:39:38.578Z
+- commits:
     - subject: 'patch: Update resinci/jellyfish-test Docker tag to v1.4.20'
       hash: 0f0415a8b0cac8f7e7f30307d1a208822ae8444c
       body: |

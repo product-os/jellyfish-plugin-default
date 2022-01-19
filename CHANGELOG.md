@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.2.21 - 2022-01-19
+
+* patch: Update dependency typedoc to ^0.22.11 [Renovate Bot]
+
 ## 21.2.20 - 2022-01-18
 
 * patch: Update resinci/jellyfish-test Docker tag to v1.4.20 [Renovate Bot]
