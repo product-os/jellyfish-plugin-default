@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'Drop community, guest, operator and test roles'
+      hash: 4c084ead18e6a866054d6cbb110b4254ed188760
+      body: |
+        These roles have been moved to jellyfish-core
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 22.0.0
+  date: 2022-01-20T06:43:11.240Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-core to ^13.2.0'
       hash: 1e13650baa776baf10df93d793069cceb584a8de
       body: ''

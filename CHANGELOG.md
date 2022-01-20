@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 22.0.0 - 2022-01-20
+
+* Drop community, guest, operator and test roles [Josh Bowling]
+
 ## 21.2.25 - 2022-01-20
 
 * patch: Update dependency @balena/jellyfish-core to ^13.2.0 [Renovate Bot]
