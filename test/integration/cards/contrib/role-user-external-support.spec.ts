@@ -60,7 +60,7 @@ afterAll(() => {
 	return integrationHelpers.after(ctx);
 });
 
-describe('role-user-community', () => {
+describe('role-user-external-support', () => {
 	it('users should not be able to create threads with product values other than balenaCloud', async () => {
 		const user = await createUser(['user-external-support'], balenaOrg);
 

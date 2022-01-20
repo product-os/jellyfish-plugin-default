@@ -1,8 +1,4 @@
 import { userGuest } from './contrib/user-guest';
-import { roleUserCommunity } from './contrib/role-user-community';
-import { roleUserOperator } from './contrib/role-user-operator';
-import { roleUserGuest } from './contrib/role-user-guest';
-import { roleUserTest } from './contrib/role-user-test';
 import { roleUserExternalSupport } from './contrib/role-user-external-support';
 import { viewActiveTriggeredActions } from './contrib/view-active-triggered-actions';
 import { viewActive } from './contrib/view-active';
@@ -83,10 +79,6 @@ export const cards = [
 	userGuest,
 
 	// Roles
-	roleUserCommunity,
-	roleUserOperator,
-	roleUserGuest,
-	roleUserTest,
 	roleUserExternalSupport,
 
 	// Internal views
