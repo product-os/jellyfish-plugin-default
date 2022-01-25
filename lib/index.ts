@@ -1,6 +1,7 @@
-import { JellyfishPluginBase } from '@balena/jellyfish-plugin-base';
-import { cards } from './cards';
+import { PluginDefinition } from '@balena/jellyfish-worker';
 import { actions } from './actions';
+import { contracts } from './contracts';
+export * as testUtils from './test-utils';
 
 // tslint:disable-next-line: no-var-requires
 const { version } = require('../package.json');
@@ -8,14 +9,12 @@ const { version } = require('../package.json');
 /**
  * The default Jellyfish plugin.
  */
-export class DefaultPlugin extends JellyfishPluginBase {
-	constructor() {
-		super({
-			slug: 'jellyfish-plugin-default',
-			name: 'Default Jellyfish Plugin',
-			version,
-			cards,
-			actions,
-		});
-	}
-}
+export const defaultPlugin = (): PluginDefinition => {
+	return {
+		slug: 'plugin-default',
+		name: 'Default Jellyfish Plugin',
+		version,
+		actions,
+		contracts,
+	};
+};

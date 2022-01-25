@@ -1,15 +1,11 @@
+import { PluginManager } from '@balena/jellyfish-worker';
 import _ from 'lodash';
-import { cardMixins } from '@balena/jellyfish-core';
-import { DefaultPlugin } from '../../lib';
+import { defaultPlugin } from '../../lib';
 
-const context = {
-	id: 'jellyfish-plugin-default-test',
-};
-
-const plugin = new DefaultPlugin();
+const pluginManager = new PluginManager([defaultPlugin()]);
 
 test('Expected cards are loaded', () => {
-	const cards = plugin.getCards(context, cardMixins);
+	const cards = pluginManager.getCards();
 
 	// Sanity check
 	expect(_.isEmpty(cards)).toBe(false);
@@ -20,7 +16,7 @@ test('Expected cards are loaded', () => {
 });
 
 test('Expected actions are loaded', () => {
-	const actions = plugin.getActions(context);
+	const actions = pluginManager.getActions();
 
 	// Sanity check
 	expect(_.isEmpty(actions)).toBe(false);
