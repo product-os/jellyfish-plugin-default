@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.2.41 - 2022-01-27
+
+* Update @balena/jellyfish-test-harness from 8.1.203 to 9.2.11 [Renovate Bot]
+
 ## 21.2.40 - 2022-01-27
 
 * Ignore decrypted git secrets [Josh Bowling]

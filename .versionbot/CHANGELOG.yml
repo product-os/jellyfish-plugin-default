@@ -1,4 +1,15 @@
 - commits:
+    - subject: Update @balena/jellyfish-test-harness from 8.1.203 to 9.2.11
+      hash: 84e109bbf356d7861dc7f875892fde5cde360b7e
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 21.2.41
+  date: 2022-01-27T05:02:04.225Z
+- commits:
     - subject: Ignore decrypted git secrets
       hash: 3d9cf9dd3c76a4b58a9252176e5879bf60f15739
       body: ''
