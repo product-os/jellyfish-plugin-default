@@ -56,7 +56,7 @@
     "@balena/jellyfish-action-library": "^16.2.0",
     "@balena/jellyfish-config": "^2.0.2",
     "@balena/jellyfish-core": "^14.1.0",
-    "@balena/jellyfish-plugin-product-os": "^2.9.4",
+    "@balena/jellyfish-plugin-product-os": "^3.0.7",
     "@balena/jellyfish-sync": "^6.3.0",
     "@balena/jellyfish-test-harness": "^8.1.203",
     "@balena/jellyfish-types": "^2.0.0",
