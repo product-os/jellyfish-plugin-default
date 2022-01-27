@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.2.40 - 2022-01-27
+
+* Ignore decrypted git secrets [Josh Bowling]
+
 ## 21.2.39 - 2022-01-27
 
 * 🔄 Synced file(s) with product-os/secrets [joshbwlng]
