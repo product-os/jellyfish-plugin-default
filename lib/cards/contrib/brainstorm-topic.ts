@@ -39,11 +39,14 @@ export function brainstormTopic({
 		data: {
 			schema: {
 				type: 'object',
-				required: ['name', 'data'],
+				required: ['name', 'loop', 'data'],
 				properties: {
 					name: {
 						type: 'string',
 						fullTextSearch: true,
+					},
+					loop: {
+						type: 'string',
 					},
 					data: {
 						type: 'object',

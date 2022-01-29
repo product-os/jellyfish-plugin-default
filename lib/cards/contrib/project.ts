@@ -34,12 +34,15 @@ export function project({
 		data: {
 			schema: {
 				type: 'object',
-				required: ['name'],
+				required: ['name', 'loop'],
 				properties: {
 					name: {
 						type: 'string',
 						pattern: '^.*\\S.*$',
 						fullTextSearch: true,
+					},
+					loop: {
+						type: 'string',
 					},
 					data: {
 						type: 'object',
