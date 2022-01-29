@@ -7,13 +7,11 @@ This plugin currently only provides the default set of cards necessary for norma
 Below is an example how to use this library:
 
 ```typescript
-import { cardMixins } from '@balena/jellyfish-core';
-import { DefaultPlugin } from '@balena/jellyfish-plugin-default';
+import { defaultPlugin } from '@balena/jellyfish-plugin-default';
 
-const plugin = new DefaultPlugin();
-
-// Load cards from this plugin, can use custom mixins
-const cards = plugin.getCards(context, cardMixins);
+// Load cards from this plugin
+const pluginManager = new PluginManager([defaultPlugin()]);
+const cards = plugin.getCards();
 console.dir(cards);
 ```
 
@@ -30,13 +28,17 @@ Unit tests can be easily run with the command `npm test`.
 The integration tests require Postgres and Redis instances. The simplest way to run the tests locally is with `docker-compose`.
 
 ```
+$ git secret reveal
 $ npm run test:compose
 ```
 
 You can also run tests locally against Postgres and Redis instances running in `docker-compose`:
 ```
+$ git secret reveal
 $ npm run compose
-$ REDIS_HOST=localhost POSTGRES_HOST=localhost npx jest test/integration/pipeline.spec.ts
+$ export INTEGRATION_GOOGLE_MEET_CREDENTIALS=$(cat .balena/secrets/integration_google_meet_credentials)
+$ export MAILGUN_TOKEN=$(cat .balena/secrets/mailgun_token)
+$ REDIS_HOST=localhost POSTGRES_HOST=localhost npx jest test/integration/actions/action-ping.spec.ts
 ```
 
 You can also access these Postgres and Redis instances:

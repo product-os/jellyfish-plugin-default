@@ -1,27 +1,31 @@
 import * as assert from '@balena/jellyfish-assert';
 import { getLogger } from '@balena/jellyfish-logger';
-import type { ActionFile } from '@balena/jellyfish-plugin-base';
-import { TypeContract } from '@balena/jellyfish-types/build/core';
-import { WorkerContext } from '@balena/jellyfish-types/build/worker';
+import { Contract, TypeContract } from '@balena/jellyfish-types/build/core';
+import {
+	ActionDefinition,
+	ActionHandlerRequest,
+	errors as workerErrors,
+	WorkerContext,
+} from '@balena/jellyfish-worker';
 import { v4 as isUUID } from 'is-uuid';
 import _ from 'lodash';
 
 const logger = getLogger(__filename);
 
-const handler: ActionFile['handler'] = async (
+const handler: ActionDefinition['handler'] = async (
 	session: string,
 	context: WorkerContext,
-	card: any,
-	request: any,
+	card: Contract,
+	request: ActionHandlerRequest,
 ) => {
-	logger.info(request.context, 'Maintaining contact', {
+	logger.info(request.logContext, 'Maintaining contact', {
 		id: card.id,
 		slug: card.slug,
 		type: card.type,
 	});
 
 	const slug = card.slug.replace(/^user-/, 'contact-');
-	const userProfile = card.data.profile || {};
+	const userProfile = card.data.profile || ({} as any);
 	userProfile.name = userProfile.name || {};
 
 	const LINK_NAME_CONTACT_USER = 'is attached to user';
@@ -32,17 +36,17 @@ const handler: ActionFile['handler'] = async (
 		'contact@1.0.0',
 	)) as TypeContract;
 	assert.INTERNAL(
-		request.context,
+		request.logContext,
 		typeCard,
-		context.errors.WorkerNoElement as any, // TS-TODO fix this
+		workerErrors.WorkerNoElement,
 		'No such type: contact',
 	);
 
 	const originCard =
 		card.data.origin &&
-		(isUUID(card.data.origin)
-			? await context.getCardById(session, card.data.origin)
-			: await context.getCardBySlug(session, card.data.origin));
+		(isUUID(card.data.origin as string)
+			? await context.getCardById(session, card.data.origin as string)
+			: await context.getCardBySlug(session, card.data.origin as string));
 
 	const contactProperties = [
 		{
@@ -167,7 +171,7 @@ const handler: ActionFile['handler'] = async (
 			[],
 		);
 
-		logger.info(request.context, 'Patching shadow profile', {
+		logger.info(request.logContext, 'Patching shadow profile', {
 			slug: attachedContact.slug,
 			data: attachedContact.data,
 			patch,
@@ -218,9 +222,9 @@ const handler: ActionFile['handler'] = async (
 		'link@1.0.0',
 	)) as TypeContract;
 	assert.INTERNAL(
-		request.context,
+		request.logContext,
 		linkTypeCard,
-		context.errors.WorkerNoElement as any, // TS-TODO fix this
+		workerErrors.WorkerNoElement,
 		'No such type: link',
 	);
 
@@ -285,10 +289,11 @@ const handler: ActionFile['handler'] = async (
 	};
 };
 
-export const actionMaintainContact: ActionFile = {
+export const actionMaintainContact: ActionDefinition = {
 	handler,
-	card: {
+	contract: {
 		slug: 'action-maintain-contact',
+		version: '1.0.0',
 		type: 'action@1.0.0',
 		name: 'Maintain a contact for a user',
 		data: {
