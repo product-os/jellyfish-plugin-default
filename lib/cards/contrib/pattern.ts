@@ -1,6 +1,8 @@
 import type { Mixins } from '@balena/jellyfish-plugin-base';
 import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
 
+const WEIGHT_GRAVITY = 1.8;
+
 const statusOptions = [
 	'open',
 	'brainstorming',
@@ -72,11 +74,17 @@ export function pattern({
 									'contract.links["has attached"] && contract.links["has attached"].length ? (FILTER(contract.links["has attached"], { type: "improvement@1.0.0", data: { status: "completed" } }).length / REJECT(FILTER(contract.links["has attached"], { type: "improvement@1.0.0" }), { data: { status: "denied-or-failed" } }).length) * 100 : 0',
 							},
 							weight: {
-								description: 'How active the pattern is',
+								description:
+									'How active the pattern is. Decays over time using the hackernews algorithm (Score = (P-1) / (T+2)^G)',
 								default: 0,
 								type: 'number',
-								$$formula:
-									'contract.links["has attached"].length + contract.links["is attached to"].length + contract.links["relates to"].length',
+								$$formula: `
+									(
+										contract.links["has attached"].length + 
+										contract.links["is attached to"].length + 
+										contract.links["relates to"].length
+									) / POWER((NOW() - DATEVALUE(contract.created_at)) / (1000 * 60 * 60), ${WEIGHT_GRAVITY})
+								`,
 							},
 						},
 					},
