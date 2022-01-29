@@ -1,4 +1,20 @@
 - commits:
+    - subject: Replace plugin-base with worker
+      hash: be6f19d1b4518a3fecff38df03b48480cd14cd31
+      body: |
+        Upgrade to new plugin interface in worker
+        Remove roles that were moved to core
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 22.0.0
+  title: Replace plugin-base with worker
+  date: 2022-01-29T05:30:18.024Z
+- commits:
     - subject: Update dependencies (external non-major bumps)
       hash: c74d2512fe78891f3818e5e389e9d02b2cd855f8
       body: ""
