@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update dependencies (external non-major bumps)
+      hash: c74d2512fe78891f3818e5e389e9d02b2cd855f8
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 21.2.43
+  title: Update dependencies (external non-major bumps)
+  date: 2022-01-29T00:41:22.186Z
+- commits:
     - subject: 🔄 Synced file(s) with product-os/secrets
       hash: ca20a2bb09504e14a48be1c51b17769a7f843424
       body: ""

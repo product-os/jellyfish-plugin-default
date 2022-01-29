@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.2.43 - 2022-01-29
+
+* Update dependencies (external non-major bumps) [Renovate Bot]
+
 ## 21.2.42 - 2022-01-28
 
 * 🔄 Synced file(s) with product-os/secrets [joshbwlng]
