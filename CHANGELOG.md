@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 22.0.1 - 2022-01-29
+
+* Update internal-patch [Renovate Bot]
+
 ## 22.0.0 - 2022-01-29
 
 * Replace plugin-base with worker [Josh Bowling]

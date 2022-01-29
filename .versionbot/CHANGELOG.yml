@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update internal-patch
+      hash: 27263ee85f25917ed4af8fc187372bfaeddca9be
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 22.0.1
+  title: Update internal-patch
+  date: 2022-01-29T05:59:25.779Z
+- commits:
     - subject: Replace plugin-base with worker
       hash: be6f19d1b4518a3fecff38df03b48480cd14cd31
       body: |
