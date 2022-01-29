@@ -42,6 +42,7 @@ const handler: ActionDefinition['handler'] = async (
 		'No such type: contact',
 	);
 
+	// TS-TODO: Stop casting with as string
 	const originCard =
 		card.data.origin &&
 		(isUUID(card.data.origin as string)
