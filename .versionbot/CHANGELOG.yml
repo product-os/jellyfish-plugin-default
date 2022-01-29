@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update @balena/jellyfish-plugin-product-os from 2.9.4 to 3.0.10
+      hash: 223210af2e6bbee30f5de0df015c906af2cc50c4
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 21.2.44
+  title: Update @balena/jellyfish-plugin-product-os from 2.9.4 to 3.0.10
+  date: 2022-01-29T02:57:52.452Z
+- commits:
     - subject: Update dependencies (external non-major bumps)
       hash: c74d2512fe78891f3818e5e389e9d02b2cd855f8
       body: ""

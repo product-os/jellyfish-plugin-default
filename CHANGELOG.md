@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 21.2.44 - 2022-01-29
+
+* Update @balena/jellyfish-plugin-product-os from 2.9.4 to 3.0.10 [Renovate Bot]
+
 ## 21.2.43 - 2022-01-29
 
 * Update dependencies (external non-major bumps) [Renovate Bot]
