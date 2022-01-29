@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add missing TS-TODO comment
+      hash: 76a152699a45b8de296816113757d38333e37b24
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 22.0.2
+  title: Add missing TS-TODO comment
+  date: 2022-01-29T07:38:44.401Z
+- commits:
     - subject: Update internal-patch
       hash: 27263ee85f25917ed4af8fc187372bfaeddca9be
       body: ""

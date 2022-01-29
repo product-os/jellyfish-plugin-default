@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 22.0.2 - 2022-01-29
+
+* Add missing TS-TODO comment [Josh Bowling]
+
 ## 22.0.1 - 2022-01-29
 
 * Update internal-patch [Renovate Bot]
