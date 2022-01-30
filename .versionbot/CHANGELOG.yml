@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update external-major Docker tags
+      hash: 04a205d473570f87cd7ae1c7e590b2568834e2f0
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 22.0.3
+  title: Update external-major Docker tags (major)
+  date: 2022-01-29T08:00:21.951Z
+- commits:
     - subject: Add missing TS-TODO comment
       hash: 76a152699a45b8de296816113757d38333e37b24
       body: ""
