@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update @balena/jellyfish-worker from 16.1.7 to 16.2.3
+      hash: c523855645421da980ea67ef6411783f64320843
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 22.0.4
+  title: Update @balena/jellyfish-worker from 16.1.7 to 16.2.3
+  date: 2022-01-30T05:33:53.306Z
+- commits:
     - subject: Update external-major Docker tags
       hash: 04a205d473570f87cd7ae1c7e590b2568834e2f0
       body: ""
