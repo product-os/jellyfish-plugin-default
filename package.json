@@ -50,7 +50,7 @@
     "@balena/jellyfish-core": "^14.1.4",
     "@balena/jellyfish-logger": "4.0.27",
     "@balena/jellyfish-mail": "^2.0.171",
-    "@balena/jellyfish-worker": "^17.0.0",
+    "@balena/jellyfish-worker": "^18.0.0",
     "axios": "^0.25.0",
     "bcrypt": "^5.0.1",
     "blueimp-md5": "^2.19.0",
@@ -64,7 +64,7 @@
   },
   "devDependencies": {
     "@balena/jellyfish-config": "^2.0.2",
-    "@balena/jellyfish-plugin-product-os": "^3.0.11",
+    "@balena/jellyfish-plugin-product-os": "^4.0.0",
     "@balena/jellyfish-types": "^2.0.0",
     "@balena/lint": "^6.2.0",
     "@types/bcrypt": "^5.0.0",
