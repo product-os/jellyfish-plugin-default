@@ -7,8 +7,8 @@ import {
 import type { TypeContract } from '@balena/jellyfish-types/build/core';
 import { add, sub } from 'date-fns';
 import { google } from 'googleapis';
-import { has } from 'lodash';
 import isBase64 from 'is-base64';
+import { has } from 'lodash';
 import type { GoogleMeetCredentials } from '../../lib/types';
 
 const CALENDAR_ID = 'primary';

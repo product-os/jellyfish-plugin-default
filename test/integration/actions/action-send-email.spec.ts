@@ -1,6 +1,6 @@
 import { testUtils as coreTestUtils } from '@balena/jellyfish-core';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import { WorkerContext } from '@balena/jellyfish-worker';
+import type { WorkerContext } from '@balena/jellyfish-worker';
 import _ from 'lodash';
 import { defaultPlugin, testUtils } from '../../../lib';
 import { actionSendEmail } from '../../../lib/actions/action-send-email';

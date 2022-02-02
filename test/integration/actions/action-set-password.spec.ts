@@ -1,7 +1,7 @@
+import { strict as assert } from 'assert';
 import { testUtils as coreTestUtils } from '@balena/jellyfish-core';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { errors as workerErrors } from '@balena/jellyfish-worker';
-import { strict as assert } from 'assert';
 import bcrypt from 'bcrypt';
 import { defaultPlugin, testUtils } from '../../../lib';
 import {

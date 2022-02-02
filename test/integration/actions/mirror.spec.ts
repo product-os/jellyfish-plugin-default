@@ -1,14 +1,14 @@
 import { testUtils as coreTestUtils } from '@balena/jellyfish-core';
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import { WorkerContext } from '@balena/jellyfish-worker';
+import type { WorkerContext } from '@balena/jellyfish-worker';
 import { isArray, isEmpty } from 'lodash';
 import sinon from 'sinon';
 import { defaultPlugin, testUtils } from '../../../lib';
+import { actionSetUpdate } from '../../../lib/actions/action-set-update';
 import { mirror } from '../../../lib/actions/mirror';
 import { makeHandlerRequest } from './helpers';
 import { foobarPlugin } from './plugin';
-import { actionSetUpdate } from '../../../lib/actions/action-set-update';
 
 const source = 'foobar';
 let supportThread: any;

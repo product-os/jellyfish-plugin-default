@@ -1,6 +1,6 @@
 import { testUtils as coreTestUtils } from '@balena/jellyfish-core';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import { WorkerContext } from '@balena/jellyfish-worker';
+import type { WorkerContext } from '@balena/jellyfish-worker';
 import { google } from 'googleapis';
 import sinon from 'sinon';
 import { defaultPlugin, testUtils } from '../../../lib';

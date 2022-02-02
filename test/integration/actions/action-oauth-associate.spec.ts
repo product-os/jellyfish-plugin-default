@@ -1,6 +1,6 @@
 import { testUtils as coreTestUtils } from '@balena/jellyfish-core';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import { WorkerContext } from '@balena/jellyfish-worker';
+import type { WorkerContext } from '@balena/jellyfish-worker';
 import { isArray, isNull } from 'lodash';
 import { defaultPlugin, testUtils } from '../../../lib';
 import { actionOAuthAssociate } from '../../../lib/actions/action-oauth-associate';

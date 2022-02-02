@@ -1,7 +1,7 @@
 import { testUtils as coreTestUtils } from '@balena/jellyfish-core';
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import { WorkerContext } from '@balena/jellyfish-worker';
+import type { WorkerContext } from '@balena/jellyfish-worker';
 import { isArray } from 'lodash';
 import sinon from 'sinon';
 import { defaultPlugin, testUtils } from '../../../lib';

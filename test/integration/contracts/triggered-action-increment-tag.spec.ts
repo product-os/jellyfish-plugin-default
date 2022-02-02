@@ -1,7 +1,7 @@
+import { strict as assert } from 'assert';
 import { testUtils as coreTestUtils } from '@balena/jellyfish-core';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import { Contract } from '@balena/jellyfish-types/build/core';
-import { strict as assert } from 'assert';
+import type { Contract } from '@balena/jellyfish-types/build/core';
 import { defaultPlugin, testUtils } from '../../../lib';
 
 let ctx: testUtils.TestContext;

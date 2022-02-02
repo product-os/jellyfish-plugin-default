@@ -1,6 +1,6 @@
+import { strict as assert } from 'assert';
 import { testUtils as coreTestUtils } from '@balena/jellyfish-core';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import { strict as assert } from 'assert';
 import _ from 'lodash';
 import { defaultPlugin, testUtils } from '../../../lib';
 
