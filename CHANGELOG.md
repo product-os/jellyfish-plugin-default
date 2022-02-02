@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.1.0 - 2022-02-02
+
+* Export mirror action helper [karaxuna]
+
 ## 23.0.7 - 2022-02-02
 
 * Misc minor fixes [Carol Schulze]

@@ -1,4 +1,16 @@
 - commits:
+    - subject: Export mirror action helper
+      hash: f07d3f8faa1b6501add49fd1b6bd05e5573cf8fa
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: karaxuna
+      nested: []
+  version: 23.1.0
+  title: Export mirror action helper
+  date: 2022-02-02T14:00:15.207Z
+- commits:
     - subject: Misc minor fixes
       hash: cdd0bb3073205add19a8408c6cc4867ab9401896
       body: ""
