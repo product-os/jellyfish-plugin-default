@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.0.7 - 2022-02-02
+
+* Misc minor fixes [Carol Schulze]
+
 ## 23.0.6 - 2022-02-02
 
 * Fix type imports [Josh Bowling]

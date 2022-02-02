@@ -1,4 +1,18 @@
 - commits:
+    - subject: Misc minor fixes
+      hash: cdd0bb3073205add19a8408c6cc4867ab9401896
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Carol Schulze <carol@balena.io>
+        signed-off-by: Carol Schulze <carol@balena.io>
+      author: Carol Schulze
+      nested: []
+  version: 23.0.7
+  title: Misc minor fixes
+  date: 2022-02-02T13:11:39.139Z
+- commits:
     - subject: Fix type imports
       hash: 894d26fcddfd198722457ca4fe2989100261127c
       body: ""
