@@ -1,7 +1,7 @@
+import { strict as assert } from 'assert';
 import { testUtils as coreTestUtils } from '@balena/jellyfish-core';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import { WorkerContext } from '@balena/jellyfish-worker';
-import { strict as assert } from 'assert';
+import type { WorkerContext } from '@balena/jellyfish-worker';
 import { pick } from 'lodash';
 import { defaultPlugin, testUtils } from '../../../lib';
 import { actionIncrementTag } from '../../../lib/actions/action-increment-tag';

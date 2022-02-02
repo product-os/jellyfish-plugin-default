@@ -1,6 +1,6 @@
+import { strict as assert } from 'assert';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { testUtils as workerTestUtils } from '@balena/jellyfish-worker';
-import { strict as assert } from 'assert';
 import { defaultPlugin } from '../../../lib';
 
 let ctx: workerTestUtils.TestContext;

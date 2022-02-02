@@ -1,7 +1,7 @@
+import { strict as assert } from 'assert';
 import { testUtils as coreTestUtils } from '@balena/jellyfish-core';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import { WorkerContext } from '@balena/jellyfish-worker';
-import { strict as assert } from 'assert';
+import type { WorkerContext } from '@balena/jellyfish-worker';
 import { isArray, isNull } from 'lodash';
 import * as semver from 'semver';
 import { defaultPlugin, testUtils } from '../../../lib';

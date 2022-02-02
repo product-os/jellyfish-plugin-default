@@ -1,7 +1,7 @@
+import { strict as assert } from 'assert';
 import { testUtils as coreTestUtils } from '@balena/jellyfish-core';
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import { strict as assert } from 'assert';
 import nock from 'nock';
 import { defaultPlugin, testUtils } from '../../../lib';
 import { PASSWORDLESS_USER_HASH } from '../../../lib/actions/constants';

@@ -1,3 +1,4 @@
+import { strict as assert } from 'assert';
 import { testUtils as coreTestUtils } from '@balena/jellyfish-core';
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
@@ -5,7 +6,6 @@ import {
 	errors as workerErrors,
 	WorkerContext,
 } from '@balena/jellyfish-worker';
-import { strict as assert } from 'assert';
 import nock from 'nock';
 import { defaultPlugin, testUtils } from '../../../lib';
 import { actionSendFirstTimeLoginLink } from '../../../lib/actions/action-send-first-time-login-link';

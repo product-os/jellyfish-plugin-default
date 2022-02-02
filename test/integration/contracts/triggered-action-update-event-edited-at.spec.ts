@@ -1,8 +1,7 @@
+import { strict as assert } from 'assert';
 import { testUtils as coreTestUtils } from '@balena/jellyfish-core';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import { strict as assert } from 'assert';
-import isBefore from 'date-fns/isBefore';
-import isValid from 'date-fns/isValid';
+import { isBefore, isValid } from 'date-fns';
 import { defaultPlugin, testUtils } from '../../../lib';
 
 let ctx: testUtils.TestContext;

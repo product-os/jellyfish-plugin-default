@@ -1,4 +1,4 @@
-import { IntegrationDefinition, Map } from '@balena/jellyfish-worker';
+import type { IntegrationDefinition, Map } from '@balena/jellyfish-worker';
 import { FoobarIntegration, foobarIntegrationDefinition } from './foobar';
 
 export { FoobarIntegration };
