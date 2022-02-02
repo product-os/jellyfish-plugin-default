@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.0.6 - 2022-02-02
+
+* Fix type imports [Josh Bowling]
+
 ## 23.0.5 - 2022-02-02
 
 * Update @balena/jellyfish-core from 14.1.5 to 14.2.0 [Renovate Bot]

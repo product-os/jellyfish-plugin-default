@@ -1,4 +1,18 @@
 - commits:
+    - subject: Fix type imports
+      hash: 894d26fcddfd198722457ca4fe2989100261127c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 23.0.6
+  title: Fix type imports
+  date: 2022-02-02T08:32:48.309Z
+- commits:
     - subject: Update @balena/jellyfish-core from 14.1.5 to 14.2.0
       hash: 743bdd9f5095d973c080e314a5d095add839533b
       body: ""
