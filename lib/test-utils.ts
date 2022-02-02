@@ -1,5 +1,5 @@
 import { testUtils as coreTestUtils } from '@balena/jellyfish-core';
-import { Contract } from '@balena/jellyfish-types/build/core';
+import type { Contract } from '@balena/jellyfish-types/build/core';
 import {
 	ActionDefinition,
 	PluginDefinition,
