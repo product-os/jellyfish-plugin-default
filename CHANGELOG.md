@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.1.1 - 2022-02-02
+
+* Update @balena/jellyfish-worker from 18.2.0 to 18.3.0 [Renovate Bot]
+
 ## 23.1.0 - 2022-02-02
 
 * Export mirror action helper [karaxuna]
