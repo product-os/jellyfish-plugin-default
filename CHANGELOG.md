@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.1.8 - 2022-02-06
+
+* Update internal-patch [Renovate Bot]
+
 ## 23.1.7 - 2022-02-06
 
 * Update dependencies (external major bumps) [Renovate Bot]
