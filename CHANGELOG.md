@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.1.9 - 2022-02-06
+
+* Optimize postgres for tests [Josh Bowling]
+
 ## 23.1.8 - 2022-02-06
 
 * Update internal-patch [Renovate Bot]

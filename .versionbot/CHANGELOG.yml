@@ -1,4 +1,18 @@
 - commits:
+    - subject: Optimize postgres for tests
+      hash: d017bd7e87ed8fc5e07315793c56539bca38d3cb
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 23.1.9
+  title: "'Optimize postgres for tests'"
+  date: 2022-02-06T12:27:53.012Z
+- commits:
     - subject: Update internal-patch
       hash: 74f5752f62ddddace24819e3f2252ae3a5a86d0f
       body: ""
