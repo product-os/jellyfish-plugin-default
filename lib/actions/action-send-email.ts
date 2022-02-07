@@ -1,13 +1,8 @@
 import { defaultEnvironment } from '@balena/jellyfish-environment';
-import type { Contract } from '@balena/jellyfish-types/build/core';
 import type { ActionDefinition } from '@balena/jellyfish-worker';
 import { MailOptions } from '@balena/jellyfish-environment';
 import axios from 'axios';
 import FormData from 'form-data';
-
-const MAIL_OPTIONS = defaultEnvironment.mail.options || {
-	domain: '',
-};
 
 interface SendEmailOptions {
 	toAddress: string;
@@ -71,33 +66,6 @@ class Mailgun {
 			headers: form.getHeaders(),
 		});
 	}
-}
-
-/**
- * @summary Build and return send email request options.
- * @function
- *
- * @param userCard - user to send email to
- * @param subject - email subject
- * @param html - email body HTML
- * @returns send email request options
- */
-export function buildSendEmailOptions(
-	userCard: Contract,
-	subject: string,
-	html: string,
-): SendEmailOptions {
-	let userEmail = userCard.data.email;
-	if (Array.isArray(userEmail)) {
-		userEmail = userEmail[0];
-	}
-
-	return {
-		fromAddress: `no-reply@${MAIL_OPTIONS.domain}`,
-		toAddress: userEmail as string,
-		subject,
-		html,
-	};
 }
 
 const handler: ActionDefinition['handler'] = async (

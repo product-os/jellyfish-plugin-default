@@ -10,8 +10,9 @@ import type {
 	WorkerContext,
 } from '@balena/jellyfish-worker';
 import crypto from 'crypto';
-import { actionSendEmail, buildSendEmailOptions } from './action-send-email';
+import { actionSendEmail } from './action-send-email';
 import { PASSWORDLESS_USER_HASH } from './constants';
+import { buildSendEmailOptions } from './mail-utils';
 import { addLinkCard } from './utils';
 
 const logger = getLogger(__filename);
