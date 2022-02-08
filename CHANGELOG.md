@@ -5,6 +5,12 @@
 
 # v0.0.3
 
+## 23.1.11 - 2022-02-08
+
+* Update send email tests [Josh Bowling]
+* Refactor email option function into a seperate utility file [Lucian Buzzo]
+* Drop dependency on the jellyfish-mail package [Lucian Buzzo]
+
 ## 23.1.10 - 2022-02-06
 
 * Update internal-patch [Renovate Bot]

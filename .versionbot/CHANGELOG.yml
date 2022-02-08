@@ -1,4 +1,43 @@
 - commits:
+    - subject: Update send email tests
+      hash: 6bb3f6e3720290146c4f01485792b940d627318e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Refactor email option function into a seperate utility file
+      hash: e33c5e39ff1da1864eb9874f673c0a952b406f3d
+      body: |
+        It doesn't make sense to include the `buildSendEmailOptions` utility
+        inside the `action-send-email` file, since its not actually used there.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+    - subject: Drop dependency on the jellyfish-mail package
+      hash: 09f2370092f38cfb46f2824c9959dfe04a36f50a
+      body: |
+        The abstraction inside `jellyfish-mail` can be held entirely inside the
+        `action-send-email` action, allowing us to archive the whole
+        `jellyfish-mail` repo.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 23.1.11
+  title: "'Drop dependency on the jellyfish-mail package'"
+  date: 2022-02-08T01:40:46.891Z
+- commits:
     - subject: Update internal-patch
       hash: 7e26dfe1a8e94bb20c26870a14c576aa89503e55
       body: ""
