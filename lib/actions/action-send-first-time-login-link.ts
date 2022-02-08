@@ -12,7 +12,8 @@ import {
 } from '@balena/jellyfish-worker';
 import { get, includes, intersectionBy } from 'lodash';
 import { v4 as uuidv4 } from 'uuid';
-import { actionSendEmail, buildSendEmailOptions } from './action-send-email';
+import { actionSendEmail } from './action-send-email';
+import { buildSendEmailOptions } from './mail-utils';
 import { addLinkCard } from './utils';
 
 const logger = getLogger(__filename);
