@@ -48,12 +48,12 @@ beforeAll(async () => {
 	);
 });
 
-afterAll(async () => {
-	return testUtils.destroyContext(ctx);
+afterEach(() => {
+	nock.cleanAll();
 });
 
-afterEach(async () => {
-	nock.cleanAll();
+afterAll(() => {
+	return testUtils.destroyContext(ctx);
 });
 
 function nockRequest() {

@@ -81,13 +81,13 @@ const handler: ActionDefinition['handler'] = async (
 		defaultEnvironment.mail.options
 	) {
 		const client = new Mailgun(defaultEnvironment.mail.options);
-		const response = await client.sendEmail({
+		await client.sendEmail({
 			toAddress,
 			fromAddress,
 			subject,
 			html,
 		});
-		return response;
+		return null;
 	} else {
 		throw new Error('Mail integration not found');
 	}
