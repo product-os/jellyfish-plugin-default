@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.1.12 - 2022-02-08
+
+* Update @balena/jellyfish-worker from 18.5.4 to 18.6.0 [Renovate Bot]
+
 ## 23.1.11 - 2022-02-08
 
 * Update send email tests [Josh Bowling]
