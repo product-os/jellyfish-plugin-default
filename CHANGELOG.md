@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.1.14 - 2022-02-10
+
+* Update @balena/jellyfish-core from 14.2.4 to 14.3.0 [Renovate Bot]
+
 ## 23.1.13 - 2022-02-09
 
 * Update resinci/jellyfish-test Docker tag to v1.4.24 [Renovate Bot]
