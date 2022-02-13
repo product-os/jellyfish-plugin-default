@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update internal-patch
+      hash: dac5b07785593ac7d7a1131a48a78d12e14c9463
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 23.1.21
+  title: "'Update internal-patch'"
+  date: 2022-02-13T21:24:21.486Z
+- commits:
     - subject: "milestone: Add a progress bar"
       hash: a6f34672c50179073d5c1fb00fb8cf3b66ba6afb
       body: |
