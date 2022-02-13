@@ -1,4 +1,22 @@
 - commits:
+    - subject: "milestone: Add a progress bar"
+      hash: a6f34672c50179073d5c1fb00fb8cf3b66ba6afb
+      body: |
+        This change adds a progress bar on milestones, that fills up as attached
+        issues are closed.
+
+        Fixes https://github.com/product-os/jellyfish-plugin-default/issues/957
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 23.1.20
+  title: "'milestone: Add a progress bar'"
+  date: 2022-02-13T19:04:29.736Z
+- commits:
     - subject: Update internal-patch
       hash: 402e082283732b68428ad74d0282ad2ead13e2d9
       body: ""

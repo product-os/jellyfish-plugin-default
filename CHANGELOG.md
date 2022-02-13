@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.1.20 - 2022-02-13
+
+* milestone: Add a progress bar [Lucian Buzzo]
+
 ## 23.1.19 - 2022-02-13
 
 * Update internal-patch [Renovate Bot]
