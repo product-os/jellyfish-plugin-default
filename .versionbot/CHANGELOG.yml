@@ -1,4 +1,18 @@
 - commits:
+    - subject: "milestone: Fix typo in progress schema"
+      hash: a7aca3ec28f9b1eb43e5cc318c3cc3759e917b7c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 23.1.23
+  title: "'milestone: Fix typo in progress schema'"
+  date: 2022-02-14T10:12:39.252Z
+- commits:
     - subject: Update internal-patch
       hash: 93c7801f9a70a0f3bb9eedcc6e3845205dfecdb8
       body: ""
