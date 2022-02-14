@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.2.0 - 2022-02-14
+
+* milestone: Add formula to change status based on attached issues [Lucian Buzzo]
+
 ## 23.1.23 - 2022-02-14
 
 * milestone: Fix typo in progress schema [Lucian Buzzo]
