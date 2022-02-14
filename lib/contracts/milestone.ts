@@ -31,8 +31,8 @@ export const milestone: ContractDefinition = cardMixins.mixin(
 				data: {
 					type: 'object',
 					properties: {
-						milestonesPercentComplete: {
-							title: 'Milestones progress',
+						percentComplete: {
+							title: 'Progress',
 							default: 0,
 							type: 'number',
 							readOnly: true,
