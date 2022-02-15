@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update resinci/jellyfish-test from v1.4.26 to v1.4.27
+      hash: e5da4553e58afed7b1192d355c16660b705ce4a4
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 23.2.4
+  title: "'Update resinci/jellyfish-test from v1.4.26 to v1.4.27'"
+  date: 2022-02-15T21:10:11.231Z
+- commits:
     - subject: Add a description field to milestones
       hash: f289f024b36a434c979aadc228951e9f8c402755
       body: |
