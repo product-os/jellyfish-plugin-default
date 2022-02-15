@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 23.2.1 - 2022-02-15
+
+* Update internal-patch [Renovate Bot]
+* Update resinci/jellyfish-test from v1.4.25 to v1.4.26 [Renovate Bot]
+
 ## 23.2.0 - 2022-02-14
 
 * milestone: Add formula to change status based on attached issues [Lucian Buzzo]
