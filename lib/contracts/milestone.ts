@@ -59,6 +59,11 @@ export const milestone: ContractDefinition = cardMixins.mixin(
 								) * 100 : 0
 							`,
 						},
+						description: {
+							type: 'string',
+							format: 'markdown',
+							title: 'Description',
+						},
 					},
 				},
 			},
@@ -67,7 +72,7 @@ export const milestone: ContractDefinition = cardMixins.mixin(
 		uiSchema: {
 			fields: {
 				data: {
-					'ui:order': ['status', 'percentComplete'],
+					'ui:order': ['status', 'percentComplete', 'description'],
 					percentComplete: {
 						'ui:widget': 'ProgressBar',
 						'ui:options': {
