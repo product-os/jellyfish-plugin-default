@@ -1,4 +1,19 @@
 - commits:
+    - subject: Add a description field to milestones
+      hash: f289f024b36a434c979aadc228951e9f8c402755
+      body: |
+        Fixes https://github.com/product-os/jellyfish-plugin-default/issues/968
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 23.2.3
+  title: "'Add a description field to milestones'"
+  date: 2022-02-15T13:59:17.796Z
+- commits:
     - subject: Update internal-patch
       hash: a6d198ee40135034fd6d961c6de2e10645ee09a4
       body: ""
