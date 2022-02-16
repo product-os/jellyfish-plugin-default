@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 23.2.4 - 2022-02-16
+
+* Update internal-patch [Renovate Bot]
+* Update resinci/jellyfish-test from v1.4.26 to v1.4.27 [Renovate Bot]
+
 ## 23.2.3 - 2022-02-15
 
 * Add a description field to milestones [Lucian Buzzo]

@@ -1,4 +1,24 @@
 - commits:
+    - subject: Update internal-patch
+      hash: d8c236aa6ecd9171aa5d567c4378aba146825a94
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+    - subject: Update resinci/jellyfish-test from v1.4.26 to v1.4.27
+      hash: e5da4553e58afed7b1192d355c16660b705ce4a4
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 23.2.4
+  title: "'Update internal-patch'"
+  date: 2022-02-16T01:13:59.339Z
+- commits:
     - subject: Add a description field to milestones
       hash: f289f024b36a434c979aadc228951e9f8c402755
       body: |
