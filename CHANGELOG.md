@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 23.2.7 - 2022-02-21
+
+* Update @balena/jellyfish-core from 14.3.8 to 14.4.2 [Renovate Bot]
+* Update balena/open-balena-db from v5.0.2 to v5.0.3 [Renovate Bot]
+
 ## 23.2.6 - 2022-02-17
 
 * 🔄 Synced file(s) with product-os/secrets [joshbwlng]

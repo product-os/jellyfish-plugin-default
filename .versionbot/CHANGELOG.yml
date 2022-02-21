@@ -1,4 +1,24 @@
 - commits:
+    - subject: Update @balena/jellyfish-core from 14.3.8 to 14.4.2
+      hash: 83c4e2fa083c7e7e202c7c2cb1604bb2d924711e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+    - subject: Update balena/open-balena-db from v5.0.2 to v5.0.3
+      hash: ae93d0e9649afdd2bdd841bfd0df54c1bcdce74c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 23.2.7
+  title: "'Update @balena/jellyfish-core from 14.3.8 to 14.4.2'"
+  date: 2022-02-21T13:48:34.274Z
+- commits:
     - subject: 🔄 Synced file(s) with product-os/secrets
       hash: fca5dd0d07fb815d2fa415313e0a758c0e1bcfad
       body: ""
