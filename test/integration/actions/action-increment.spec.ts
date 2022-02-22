@@ -34,9 +34,8 @@ describe('action-increment', () => {
 		);
 		contract.type = 'foobar@1.0.0';
 
-		expect.assertions(1);
-		try {
-			await handler(ctx.session, actionContext, contract, {
+		await expect(
+			handler(ctx.session, actionContext, contract, {
 				context: {
 					id: `TEST-${coreTestUtils.generateRandomId()}`,
 				},
@@ -44,10 +43,8 @@ describe('action-increment', () => {
 				actor: ctx.adminUserId,
 				originator: coreTestUtils.generateRandomId(),
 				arguments: {},
-			} as any);
-		} catch (error: any) {
-			expect(error.message).toEqual(`No such type: ${contract.type}`);
-		}
+			} as any),
+		).rejects.toThrow();
 	});
 
 	test('should increment specified path if number', async () => {

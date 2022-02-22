@@ -69,10 +69,8 @@ describe('action-send-email', () => {
 	});
 
 	test('should throw an error when the email is invalid', async () => {
-		expect.hasAssertions();
-
-		try {
-			await handler(
+		await expect(
+			handler(
 				ctx.session,
 				actionContext,
 				{} as any,
@@ -82,9 +80,7 @@ describe('action-send-email', () => {
 					subject: 'sending real email',
 					html: 'with real text in the body',
 				}),
-			);
-		} catch (error) {
-			expect(_.get(error, ['response', 'status'])).toEqual(400);
-		}
+			),
+		).rejects.toThrow();
 	});
 });
