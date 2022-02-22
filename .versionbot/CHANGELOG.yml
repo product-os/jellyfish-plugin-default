@@ -1,4 +1,28 @@
 - commits:
+    - subject: Update core and worker
+      hash: e3ba88a0b945069b0ecef65ff795e1de373e0e23
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Update tests
+      hash: fe3e3b97fa88b35c9be6aa3efe7be1f47a002053
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 23.2.8
+  title: "'Update tests'"
+  date: 2022-02-22T07:31:17.086Z
+- commits:
     - subject: Update balena/open-balena-db from v5.0.2 to v5.0.3
       hash: ae93d0e9649afdd2bdd841bfd0df54c1bcdce74c
       body: ""

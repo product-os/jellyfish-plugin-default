@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 23.2.8 - 2022-02-22
+
+* Update core and worker [Josh Bowling]
+* Update tests [Josh Bowling]
+
 ## 23.2.7 - 2022-02-17
 
 * Update balena/open-balena-db from v5.0.2 to v5.0.3 [Renovate Bot]
