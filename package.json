@@ -46,9 +46,9 @@
   "author": "Balena.io. <hello@balena.io>",
   "license": "AGPL-3.0",
   "dependencies": {
-    "@balena/jellyfish-assert": "^1.2.14",
+    "@balena/jellyfish-assert": "^1.2.15",
     "@balena/jellyfish-core": "^14.4.3",
-    "@balena/jellyfish-logger": "4.0.37",
+    "@balena/jellyfish-logger": "4.0.38",
     "@balena/jellyfish-worker": "^18.7.1",
     "axios": "^0.26.0",
     "bcrypt": "^5.0.1",
