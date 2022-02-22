@@ -96,25 +96,17 @@ describe('action-broadcast', () => {
 		const session = coreTestUtils.generateRandomId();
 		localContext.privilegedSession = session;
 
-		expect.assertions(1);
-		try {
-			await handler(
-				session,
-				localContext,
-				ctx.worker.typeContracts['user@1.0.0'],
-				{
-					context: {
-						id: `TEST-${coreTestUtils.generateRandomId()}`,
-					},
-					timestamp: new Date().toISOString(),
-					actor: ctx.adminUserId,
-					originator: coreTestUtils.generateRandomId(),
-					arguments: {},
-				} as any,
-			);
-		} catch (error: any) {
-			expect(error.message).toEqual(`Invalid session: ${session}`);
-		}
+		await expect(
+			handler(session, localContext, ctx.worker.typeContracts['user@1.0.0'], {
+				context: {
+					id: `TEST-${coreTestUtils.generateRandomId()}`,
+				},
+				timestamp: new Date().toISOString(),
+				actor: ctx.adminUserId,
+				originator: coreTestUtils.generateRandomId(),
+				arguments: {},
+			} as any),
+		).rejects.toThrow();
 	});
 
 	test('should post a broadcast message to an empty thread', async () => {
