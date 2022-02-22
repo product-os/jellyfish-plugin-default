@@ -195,6 +195,7 @@ describe('role-user-community', () => {
 			'subscription',
 			'support-thread',
 			'update',
+			'view',
 		]);
 	});
 });
