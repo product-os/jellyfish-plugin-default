@@ -1,4 +1,16 @@
 - commits:
+    - subject: Allow external user to view all views
+      hash: df09c1ec4cdff4cf48109a0546aad90f3008aa0f
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: karaxuna
+      nested: []
+  version: 23.3.0
+  title: "'Allow external user to view all views'"
+  date: 2022-02-22T20:23:56.850Z
+- commits:
     - subject: Don't pin version of jellyfish-logger
       hash: ab3af915a135b4dcccb3fba5fea2f1bd2f652a29
       body: ""
