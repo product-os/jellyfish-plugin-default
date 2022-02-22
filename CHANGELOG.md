@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.2.11 - 2022-02-22
+
+* Don't pin version of jellyfish-logger [Lucian Buzzo]
+
 ## 23.2.10 - 2022-02-22
 
 * Update internal-patch [Renovate Bot]

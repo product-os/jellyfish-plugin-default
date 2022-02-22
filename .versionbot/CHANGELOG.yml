@@ -1,4 +1,18 @@
 - commits:
+    - subject: Don't pin version of jellyfish-logger
+      hash: ab3af915a135b4dcccb3fba5fea2f1bd2f652a29
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 23.2.11
+  title: "'Don't pin version of jellyfish-logger'"
+  date: 2022-02-22T17:56:35.190Z
+- commits:
     - subject: Update internal-patch
       hash: c00fa6d6cb09b46bafd0e3db16004d10c5ac3d5f
       body: ""
