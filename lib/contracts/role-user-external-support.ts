@@ -124,6 +124,7 @@ export const roleUserExternalSupport: RoleContractDefinition = {
 								'subscription',
 								'create',
 								'update',
+								'view',
 							],
 						},
 						type: {
@@ -156,6 +157,27 @@ export const roleUserExternalSupport: RoleContractDefinition = {
 						type: {
 							type: 'string',
 							const: 'action@1.0.0',
+						},
+						data: {
+							type: 'object',
+							additionalProperties: true,
+						},
+					},
+				},
+				{
+					type: 'object',
+					required: ['id', 'slug', 'type', 'data'],
+					properties: {
+						id: {
+							type: 'string',
+						},
+						slug: {
+							type: 'string',
+							enum: ['view-all-views'],
+						},
+						type: {
+							type: 'string',
+							const: 'view@1.0.0',
 						},
 						data: {
 							type: 'object',
