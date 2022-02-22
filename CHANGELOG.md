@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.2.10 - 2022-02-22
+
+* Update internal-patch [Renovate Bot]
+
 ## 23.2.9 - 2022-02-22
 
 * Update typedoc from 0.22.11 to 0.22.12 [Renovate Bot]
