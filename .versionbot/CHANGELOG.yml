@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update @balena/jellyfish-worker from 18.7.1 to 18.8.0
+      hash: b23cab54f87981cedff85f1d00eb4e9a1e35bbb2
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 23.3.1
+  title: "'Update @balena/jellyfish-worker from 18.7.1 to 18.8.0'"
+  date: 2022-02-22T20:41:09.992Z
+- commits:
     - subject: Allow external user to view all views
       hash: df09c1ec4cdff4cf48109a0546aad90f3008aa0f
       body: ""
