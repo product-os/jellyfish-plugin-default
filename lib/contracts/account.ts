@@ -18,7 +18,7 @@ export const account: ContractDefinition = {
 					},
 				},
 				name: {
-					type: 'string',
+					type: ['string', 'null'],
 					fullTextSearch: true,
 				},
 				data: {
