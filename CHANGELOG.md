@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.3.5 - 2022-02-25
+
+* Update internal-patch [Renovate Bot]
+
 ## 23.3.4 - 2022-02-24
 
 * Allow null for name field [Josh Bowling]
