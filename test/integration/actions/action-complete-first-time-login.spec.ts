@@ -31,7 +31,7 @@ beforeAll(async () => {
 		'org-balena@1.0.0',
 	);
 	assert(balenaOrg);
-	await ctx.createLink(
+	await ctx.createLinkThroughWorker(
 		ctx.adminUserId,
 		ctx.session,
 		(await ctx.kernel.getContractById(
@@ -69,7 +69,7 @@ describe('action-complete-first-time-login', () => {
 			PASSWORDLESS_USER_HASH,
 		);
 		const session = await ctx.createSession(user);
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -123,7 +123,7 @@ describe('action-complete-first-time-login', () => {
 
 	test('should fail when the first-time login does not match a valid card', async () => {
 		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -149,7 +149,7 @@ describe('action-complete-first-time-login', () => {
 
 	test('should fail when the first-time login token has expired', async () => {
 		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -225,7 +225,7 @@ describe('action-complete-first-time-login', () => {
 
 	test('should fail when the first-time login is not active', async () => {
 		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -292,7 +292,7 @@ describe('action-complete-first-time-login', () => {
 			PASSWORDLESS_USER_HASH,
 		);
 		const session = await ctx.createSession(user);
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -351,7 +351,7 @@ describe('action-complete-first-time-login', () => {
 			coreTestUtils.generateRandomSlug(),
 			PASSWORDLESS_USER_HASH,
 		);
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -419,7 +419,7 @@ describe('action-complete-first-time-login', () => {
 			coreTestUtils.generateRandomSlug(),
 			coreTestUtils.generateRandomId(),
 		);
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,

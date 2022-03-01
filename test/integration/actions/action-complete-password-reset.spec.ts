@@ -39,7 +39,7 @@ beforeAll(async () => {
 		'org-balena@1.0.0',
 	);
 	assert(balenaOrg);
-	await ctx.createLink(
+	await ctx.createLinkThroughWorker(
 		ctx.adminUserId,
 		ctx.session,
 		(await ctx.kernel.getContractById(
