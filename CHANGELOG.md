@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.3.15 - 2022-03-01
+
+* Bump core and worker [Josh Bowling]
+
 ## 23.3.14 - 2022-02-28
 
 * Update internal-patch [Renovate Bot]
