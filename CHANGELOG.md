@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.3.18 - 2022-03-01
+
+* Update internal-patch [Renovate Bot]
+
 ## 23.3.17 - 2022-03-01
 
 * Renovate: Stop ignoring internal patches [Josh Bowling]
