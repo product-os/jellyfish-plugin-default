@@ -37,7 +37,7 @@ test('should re-open a closed support thread if an improvement attached to an at
 			status: 'open',
 		},
 	);
-	await ctx.createLink(
+	await ctx.createLinkThroughWorker(
 		user.id,
 		session.id,
 		supportThread,
@@ -54,7 +54,7 @@ test('should re-open a closed support thread if an improvement attached to an at
 			status: 'proposed',
 		},
 	);
-	await ctx.createLink(
+	await ctx.createLinkThroughWorker(
 		user.id,
 		session.id,
 		pattern,

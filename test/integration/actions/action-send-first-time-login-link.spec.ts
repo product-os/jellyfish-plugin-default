@@ -34,7 +34,7 @@ beforeAll(async () => {
 		'org-balena@1.0.0',
 	);
 	assert(balenaOrg);
-	await ctx.createLink(
+	await ctx.createLinkThroughWorker(
 		ctx.adminUserId,
 		ctx.session,
 		(await ctx.kernel.getContractById(
@@ -89,7 +89,7 @@ describe('action-send-first-time-login-link', () => {
 	test('should create a first-time login contract for a user', async () => {
 		nockRequest();
 		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -137,7 +137,7 @@ describe('action-send-first-time-login-link', () => {
 		nockRequest();
 		const username = coreTestUtils.generateRandomSlug();
 		const user = await ctx.createUser(username);
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -202,7 +202,7 @@ describe('action-send-first-time-login-link', () => {
 		nockRequest();
 		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
 		const session = await ctx.createSession(user);
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -236,7 +236,7 @@ describe('action-send-first-time-login-link', () => {
 	test('should invalidate previous first-time logins', async () => {
 		nockRequest();
 		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -304,7 +304,7 @@ describe('action-send-first-time-login-link', () => {
 		nockRequest();
 		const firstUser = await ctx.createUser(coreTestUtils.generateRandomSlug());
 		const secondUser = await ctx.createUser(coreTestUtils.generateRandomSlug());
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			firstUser,
@@ -312,7 +312,7 @@ describe('action-send-first-time-login-link', () => {
 			'is member of',
 			'has member',
 		);
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			secondUser,
@@ -378,7 +378,7 @@ describe('action-send-first-time-login-link', () => {
 		mailBody = '';
 		nockRequest();
 		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -443,7 +443,7 @@ describe('action-send-first-time-login-link', () => {
 		const requester = await ctx.createUser(coreTestUtils.generateRandomSlug());
 		const requesterSession = await ctx.createSession(requester);
 		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -473,7 +473,7 @@ describe('action-send-first-time-login-link', () => {
 			{},
 		);
 		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -496,7 +496,7 @@ describe('action-send-first-time-login-link', () => {
 	test('community role is added to a supplied user with no role set', async () => {
 		nockRequest();
 		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -545,7 +545,7 @@ describe('action-send-first-time-login-link', () => {
 	test('roles should be set to community role when community role is not present', async () => {
 		nockRequest();
 		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -594,7 +594,7 @@ describe('action-send-first-time-login-link', () => {
 	test('roles should not be updated when community role is present', async () => {
 		nockRequest();
 		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -647,7 +647,7 @@ describe('action-send-first-time-login-link', () => {
 			coreTestUtils.generateRandomId(),
 		);
 		const session = await ctx.createSession(communityUser);
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			targetUser,
@@ -655,7 +655,7 @@ describe('action-send-first-time-login-link', () => {
 			'is member of',
 			'has member',
 		);
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			communityUser,

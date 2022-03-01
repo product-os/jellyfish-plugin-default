@@ -25,7 +25,7 @@ beforeAll(async () => {
 		'org-balena@1.0.0',
 	);
 	assert(balenaOrg);
-	await ctx.createLink(
+	await ctx.createLinkThroughWorker(
 		ctx.adminUserId,
 		ctx.session,
 		(await ctx.kernel.getContractById(
@@ -65,7 +65,7 @@ describe('action-request-password-reset', () => {
 		nockRequest();
 		const username = coreTestUtils.generateRandomSlug();
 		const user = await ctx.createUser(username);
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -114,7 +114,7 @@ describe('action-request-password-reset', () => {
 		nockRequest();
 		const username = coreTestUtils.generateRandomSlug();
 		const user = await ctx.createUser(username);
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -180,7 +180,7 @@ describe('action-request-password-reset', () => {
 	test('should fail silently if the username does not match a user', async () => {
 		nockRequest();
 		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -234,7 +234,7 @@ describe('action-request-password-reset', () => {
 		const username = coreTestUtils.generateRandomSlug();
 		const user = await ctx.createUser(username);
 		const session = await ctx.createSession(user);
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -271,7 +271,7 @@ describe('action-request-password-reset', () => {
 		nockRequest();
 		const username = coreTestUtils.generateRandomSlug();
 		const user = await ctx.createUser(username, PASSWORDLESS_USER_HASH);
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -324,7 +324,7 @@ describe('action-request-password-reset', () => {
 		nockRequest();
 		const username = coreTestUtils.generateRandomSlug();
 		const user = await ctx.createUser(username);
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,
@@ -396,7 +396,7 @@ describe('action-request-password-reset', () => {
 		const secondUsername = coreTestUtils.generateRandomSlug();
 		const firstUser = await ctx.createUser(firstUsername);
 		const secondUser = await ctx.createUser(secondUsername);
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			firstUser,
@@ -404,7 +404,7 @@ describe('action-request-password-reset', () => {
 			'is member of',
 			'has member',
 		);
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			secondUser,
@@ -493,7 +493,7 @@ describe('action-request-password-reset', () => {
 		firstUserCreate.context = firstUserCreate.logContext;
 		const firstUser = await ctx.processAction(ctx.session, firstUserCreate);
 		expect(firstUser.error).toBe(false);
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			firstUser.data,
@@ -517,7 +517,7 @@ describe('action-request-password-reset', () => {
 		secondUserCreate.context = secondUserCreate.logContext;
 		const secondUser = await ctx.processAction(ctx.session, secondUserCreate);
 		expect(secondUser.error).toBe(false);
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			secondUser.data,
@@ -588,7 +588,7 @@ describe('action-request-password-reset', () => {
 		nockRequest();
 		const username = coreTestUtils.generateRandomSlug();
 		const user = await ctx.createUser(username);
-		await ctx.createLink(
+		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
 			user,

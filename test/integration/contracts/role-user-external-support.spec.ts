@@ -17,7 +17,7 @@ async function createUser(roles: string[], org: any): Promise<any> {
 	);
 
 	// Link user to org
-	await ctx.createLink(
+	await ctx.createLinkThroughWorker(
 		ctx.adminUserId,
 		ctx.session,
 		user,
