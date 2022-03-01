@@ -1,4 +1,18 @@
 - commits:
+    - subject: Remove jest esm transforms
+      hash: db066cf4b8faaceb0f9088fa47842100437dede1
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 23.3.16
+  title: "'Remove jest esm transforms'"
+  date: 2022-03-01T08:50:31.337Z
+- commits:
     - subject: Bump core and worker
       hash: fcc0a3b660ecfec9591358f9a7e9cfa49aaf889d
       body: ""

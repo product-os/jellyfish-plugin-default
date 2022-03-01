@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.3.16 - 2022-03-01
+
+* Remove jest esm transforms [Josh Bowling]
+
 ## 23.3.15 - 2022-03-01
 
 * Bump core and worker [Josh Bowling]
