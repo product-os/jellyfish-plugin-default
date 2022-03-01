@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.3.17 - 2022-03-01
+
+* Renovate: Stop ignoring internal patches [Josh Bowling]
+
 ## 23.3.16 - 2022-03-01
 
 * Remove jest esm transforms [Josh Bowling]
