@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.3.21 - 2022-03-04
+
+* Update core and worker [Josh Bowling]
+
 ## 23.3.20 - 2022-03-02
 
 * Update internal-patch [Renovate Bot]

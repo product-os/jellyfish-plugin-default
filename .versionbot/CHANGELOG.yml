@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update core and worker
+      hash: 90b4336a37a285726e1f6cd14959e7377a86e443
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 23.3.21
+  title: "'Update core and worker'"
+  date: 2022-03-04T09:12:52.534Z
+- commits:
     - subject: Update internal-patch
       hash: e17f0c3e89aa4ace24b31f2d017098c85e91935f
       body: ""
