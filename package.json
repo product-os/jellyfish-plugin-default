@@ -47,9 +47,9 @@
   "license": "AGPL-3.0",
   "dependencies": {
     "@balena/jellyfish-assert": "^1.2.16",
-    "@balena/jellyfish-core": "^16.0.0",
+    "@balena/jellyfish-core": "^16.0.1",
     "@balena/jellyfish-logger": "^5.0.2",
-    "@balena/jellyfish-worker": "^19.0.3",
+    "@balena/jellyfish-worker": "^19.0.6",
     "axios": "^0.26.0",
     "bcrypt": "^5.0.1",
     "blueimp-md5": "^2.19.0",
