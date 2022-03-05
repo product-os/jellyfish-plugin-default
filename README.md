@@ -8,10 +8,11 @@ Below is an example how to use this library:
 
 ```typescript
 import { defaultPlugin } from '@balena/jellyfish-plugin-default';
+import { PluginManager } from '@balena/jellyfish-worker';
 
 // Load cards from this plugin
 const pluginManager = new PluginManager([defaultPlugin()]);
-const cards = plugin.getCards();
+const cards = pluginManager.getCards();
 console.dir(cards);
 ```
 
