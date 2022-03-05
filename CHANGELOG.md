@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.3.23 - 2022-03-05
+
+* Update internal-patch [Renovate Bot]
+
 ## 23.3.22 - 2022-03-05
 
 * Update readme usage example [Josh Bowling]
