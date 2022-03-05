@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.3.22 - 2022-03-05
+
+* Update readme usage example [Josh Bowling]
+
 ## 23.3.21 - 2022-03-04
 
 * Update core and worker [Josh Bowling]
