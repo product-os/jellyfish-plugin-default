@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.3.26 - 2022-03-06
+
+* Update internal-patch [Renovate Bot]
+
 ## 23.3.25 - 2022-03-06
 
 * Update lint-staged from 12.3.4 to 12.3.5 [Josh Bowling]
