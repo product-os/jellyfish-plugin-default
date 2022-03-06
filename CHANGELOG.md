@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.0 - 2022-03-06
+
+* Remove view-all-forum-threads view [Josh Bowling]
+
 ## 23.3.26 - 2022-03-06
 
 * Update internal-patch [Renovate Bot]
