@@ -1,4 +1,22 @@
 - commits:
+    - subject: Filter out discussions from forum support view
+      hash: 5e27962449dad46960cc6574874cab0093daeb30
+      body: |
+        Blog discussion threads are to be managed in
+        the new "Blog Disussions" channel. Removing
+        them from forum support thread view to avoid
+        confusion.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 23.3.27
+  title: "'Filter out discussions from forum support view'"
+  date: 2022-03-06T05:45:28.562Z
+- commits:
     - subject: Update internal-patch
       hash: 6ec457a84f59faba18a870032c3ce0995be56360
       body: ""

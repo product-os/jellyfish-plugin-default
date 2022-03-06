@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 23.3.27 - 2022-03-06
+
+* Filter out discussions from forum support view [Josh Bowling]
+
 ## 23.3.26 - 2022-03-06
 
 * Update internal-patch [Renovate Bot]
