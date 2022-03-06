@@ -53,7 +53,6 @@ import { viewAllBrainstormTopics } from './view-all-brainstorm-topics';
 import { viewAllContacts } from './view-all-contacts';
 import { viewAllCustomers } from './view-all-customers';
 import { viewAllFaqs } from './view-all-faqs';
-import { viewAllForumThreads } from './view-all-forum-threads';
 import { viewAllGroups } from './view-all-groups';
 import { viewAllImprovements } from './view-all-improvements';
 import { viewAllOpportunities } from './view-all-opportunities';
@@ -159,7 +158,6 @@ export const contracts: ContractDefinition[] = [
 	viewAllSagas,
 	viewAllSalesThreads,
 	viewSupportThreadsParticipation,
-	viewAllForumThreads,
 	viewPaidSupportThreads,
 	viewCustomerSuccessSupportThreads,
 	viewSecuritySupportThreads,
