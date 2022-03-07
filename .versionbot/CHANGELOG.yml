@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add discussions as support-thread category
+      hash: 76cd3aadc4ff687f07595d2d5ce7bcc0023ed228
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 24.0.1
+  title: "'Add discussions as support-thread category'"
+  date: 2022-03-07T00:17:14.644Z
+- commits:
     - subject: Remove view-all-forum-threads view
       hash: e2327448d52b32cfb0844cd539a17969e30c728c
       body: |
