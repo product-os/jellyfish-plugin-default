@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.2 - 2022-03-07
+
+* Update internal-patch [Renovate Bot]
+
 ## 24.0.1 - 2022-03-07
 
 * Add discussions as support-thread category [Josh Bowling]
