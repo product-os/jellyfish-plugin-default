@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.6 - 2022-03-07
+
+* Update typescript from 4.5.5 to 4.6.2 [Renovate Bot]
+
 ## 24.0.5 - 2022-03-07
 
 * Update typedoc from 0.22.12 to 0.22.13 [Renovate Bot]
