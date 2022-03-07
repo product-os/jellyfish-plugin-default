@@ -31,6 +31,7 @@ export const supportThread: ContractDefinition = cardMixins.mixin(
 								'devices',
 								'fleetops',
 								'security',
+								'discussions',
 							],
 							fullTextSearch: true,
 						},
