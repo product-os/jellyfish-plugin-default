@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.10 - 2022-03-09
+
+* Use events mixin for pipeline and checkin contracts [Lucian Buzzo]
+
 ## 24.0.9 - 2022-03-09
 
 * Update internal-patch [Renovate Bot]

@@ -1,4 +1,24 @@
 - commits:
+    - subject: Use events mixin for pipeline and checkin contracts
+      hash: ebb58c6ce768cb78ba6d98ddf8fe70f4e552ce7a
+      body: >
+        In the future, the $events syntactic sugar will be removed from
+        formulas.
+
+        This change switches formulas that were using $events for tag
+
+        aggregation to use the withEvents mixin instead.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 24.0.10
+  title: "'Use events mixin for pipeline and checkin contracts'"
+  date: 2022-03-09T17:26:43.474Z
+- commits:
     - subject: Update internal-patch
       hash: 9ad6695462af5833cdff5cbe067ce59778cb068a
       body: ""
