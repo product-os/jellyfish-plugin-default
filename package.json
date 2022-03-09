@@ -50,7 +50,7 @@
     "@balena/jellyfish-core": "^16.0.10",
     "@balena/jellyfish-logger": "^5.0.6",
     "@balena/jellyfish-worker": "^19.0.18",
-    "axios": "^0.26.0",
+    "axios": "^0.26.1",
     "bcrypt": "^5.0.1",
     "blueimp-md5": "^2.19.0",
     "date-fns": "^2.28.0",
