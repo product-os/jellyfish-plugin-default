@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.11 - 2022-03-09
+
+* Update axios from 0.26.0 to 0.26.1 [Renovate Bot]
+
 ## 24.0.10 - 2022-03-09
 
 * Use events mixin for pipeline and checkin contracts [Lucian Buzzo]

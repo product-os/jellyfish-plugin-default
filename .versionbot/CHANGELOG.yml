@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update axios from 0.26.0 to 0.26.1
+      hash: 68f1aa7917dc232d5490454ce6bfc676131efcbf
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 24.0.11
+  title: "'Update axios from 0.26.0 to 0.26.1'"
+  date: 2022-03-09T17:50:07.050Z
+- commits:
     - subject: Use events mixin for pipeline and checkin contracts
       hash: ebb58c6ce768cb78ba6d98ddf8fe70f4e552ce7a
       body: >
