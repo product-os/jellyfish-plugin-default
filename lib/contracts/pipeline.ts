@@ -1,9 +1,15 @@
+import { cardMixins } from '@balena/jellyfish-core';
 import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
 
-export const pipeline: ContractDefinition = {
-	slug: 'pipeline',
+const slug = 'pipeline';
+const type = 'type@1.0.0';
+
+export const pipeline: ContractDefinition = cardMixins.mixin(
+	cardMixins.withEvents(slug, type),
+)({
+	slug,
 	name: 'Pipeline',
-	type: 'type@1.0.0',
+	type,
 	markers: [],
 	data: {
 		schema: {
@@ -13,13 +19,6 @@ export const pipeline: ContractDefinition = {
 					type: 'string',
 					pattern: '^.*\\S.*$',
 					fullTextSearch: true,
-				},
-				tags: {
-					type: 'array',
-					items: {
-						type: 'string',
-					},
-					$$formula: "AGGREGATE($events, 'tags')",
 				},
 				data: {
 					type: 'object',
@@ -42,4 +41,4 @@ export const pipeline: ContractDefinition = {
 			},
 		},
 	},
-};
+});

@@ -26,10 +26,15 @@ const getFormUiSchema = () => ({
 	},
 });
 
-export const checkin: ContractDefinition = {
-	slug: 'checkin',
+const slug = 'checkin';
+const type = 'type@1.0.0';
+
+export const checkin: ContractDefinition = cardMixins.mixin(
+	cardMixins.withEvents(slug, type),
+)({
+	slug,
 	name: 'Checkin',
-	type: 'type@1.0.0',
+	type,
 	markers: [],
 	data: {
 		schema: {
@@ -39,13 +44,6 @@ export const checkin: ContractDefinition = {
 					type: 'string',
 					pattern: '^.*\\S.*$',
 					fullTextSearch: true,
-				},
-				tags: {
-					type: 'array',
-					items: {
-						type: 'string',
-					},
-					$$formula: "AGGREGATE($events, 'tags')",
 				},
 				data: {
 					type: 'object',
@@ -187,4 +185,4 @@ export const checkin: ContractDefinition = {
 			create: getFormUiSchema(),
 		},
 	},
-};
+});
