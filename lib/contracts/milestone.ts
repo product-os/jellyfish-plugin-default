@@ -39,10 +39,10 @@ export const milestone: ContractDefinition = cardMixins.mixin(
 							enumNames: statusNames,
 							readOnly: true,
 							$$formula: `
-                                contract.data.percentComplete === 100 ? 
-                                    "completed" : 
-                                    contract.data.percentComplete === 0 ? 
-                                        "open" : 
+                                contract.data.percentComplete === 100 ?
+                                    "completed" :
+                                    contract.data.percentComplete === 0 ?
+                                        "open" :
                                         "in-progress"
                             `,
 						},
@@ -53,8 +53,8 @@ export const milestone: ContractDefinition = cardMixins.mixin(
 							readOnly: true,
 							// eslint-disable-next-line max-len
 							$$formula: `
-								contract.links["is attached to"] && contract.links["is attached to"].length ? (
-									FILTER(contract.links["is attached to"], { type: "issue@1.0.0", data: { status: "closed" } }).length / 
+								contract.links["is attached to"] && FILTER(contract.links["is attached to"], { type: "issue@1.0.0" }).length ? (
+									FILTER(contract.links["is attached to"], { type: "issue@1.0.0", data: { status: "closed" } }).length /
 									FILTER(contract.links["is attached to"], { type: "issue@1.0.0" }).length
 								) * 100 : 0
 							`,
