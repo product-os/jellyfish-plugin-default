@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.12 - 2022-03-09
+
+* Bump core and worker [Josh Bowling]
+
 ## 24.0.11 - 2022-03-09
 
 * Update axios from 0.26.0 to 0.26.1 [Renovate Bot]
