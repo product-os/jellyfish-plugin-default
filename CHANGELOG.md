@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.13 - 2022-03-11
+
+* Fix milestone formula assumption [Josh Bowling]
+
 ## 24.0.12 - 2022-03-09
 
 * Bump core and worker [Josh Bowling]

@@ -1,4 +1,22 @@
 - commits:
+    - subject: Fix milestone formula assumption
+      hash: e8d7eb3cda1e2f8b33e53662d6537d2fbc66331c
+      body: |
+        Milestones can be attached to more than just
+        issue contracts. Without this fix, data.percentComplete
+        becomes null instead of a number when it is attached to
+        something, but not issues.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 24.0.13
+  title: "'Fix milestone formula assumption'"
+  date: 2022-03-11T03:30:12.722Z
+- commits:
     - subject: Bump core and worker
       hash: 7ce5b387bb5f62f3ae94f1a22828b54f2291085b
       body: ""
