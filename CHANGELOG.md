@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.14 - 2022-03-11
+
+* Update @balena/jellyfish-worker from 19.0.20 to 19.0.21 [Josh Bowling]
+
 ## 24.0.13 - 2022-03-11
 
 * Fix milestone formula assumption [Josh Bowling]
