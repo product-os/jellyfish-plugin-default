@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.17 - 2022-03-12
+
+* 🔄 Synced file(s) with product-os/secrets [joshbwlng]
+
 ## 24.0.16 - 2022-03-12
 
 * Update external-major [Renovate Bot]
