@@ -1,5 +1,5 @@
 import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from '@balena/jellyfish-core';
+import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { errors as workerErrors } from '@balena/jellyfish-worker';
 import bcrypt from 'bcrypt';

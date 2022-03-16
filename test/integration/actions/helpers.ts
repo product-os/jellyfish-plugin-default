@@ -1,4 +1,4 @@
-import { Kernel, testUtils as coreTestUtils } from '@balena/jellyfish-core';
+import { Kernel, testUtils as coreTestUtils } from 'autumndb';
 import type { ActionData } from '@balena/jellyfish-types/build/core';
 import {
 	ActionContractDefinition,

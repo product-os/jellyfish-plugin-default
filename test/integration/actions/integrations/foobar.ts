@@ -1,4 +1,4 @@
-import { Kernel } from '@balena/jellyfish-core';
+import { Kernel } from 'autumndb';
 import type {
 	Integration,
 	IntegrationDefinition,
