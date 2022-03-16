@@ -1,5 +1,5 @@
 import { strict as assert } from 'assert';
-import { Kernel } from '@balena/jellyfish-core';
+import { Kernel } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { defaultPlugin, testUtils } from '../../../lib';
 

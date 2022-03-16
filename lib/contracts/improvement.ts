@@ -1,4 +1,4 @@
-import { cardMixins } from '@balena/jellyfish-core';
+import { cardMixins } from 'autumndb';
 import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
 import * as fs from 'fs';
 import * as path from 'path';

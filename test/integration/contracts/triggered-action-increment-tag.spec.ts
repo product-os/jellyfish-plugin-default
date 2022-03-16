@@ -1,5 +1,5 @@
 import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from '@balena/jellyfish-core';
+import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { Contract } from '@balena/jellyfish-types/build/core';
 import { defaultPlugin, testUtils } from '../../../lib';

@@ -1,5 +1,5 @@
 import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from '@balena/jellyfish-core';
+import { testUtils as coreTestUtils } from 'autumndb';
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import nock from 'nock';

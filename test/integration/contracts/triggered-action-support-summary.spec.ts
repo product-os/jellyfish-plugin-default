@@ -1,4 +1,4 @@
-import { testUtils as coreTestUtils } from '@balena/jellyfish-core';
+import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { defaultPlugin, testUtils } from '../../../lib';
 
