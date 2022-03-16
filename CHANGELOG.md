@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.22 - 2022-03-16
+
+* Use autumndb instead of jellyfish-core [Lucian Buzzo]
+
 ## 24.0.21 - 2022-03-16
 
 * Update internal-patch [Renovate Bot]
