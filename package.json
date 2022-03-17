@@ -48,8 +48,8 @@
   "dependencies": {
     "@balena/jellyfish-assert": "^1.2.18",
     "@balena/jellyfish-logger": "^5.0.7",
-    "@balena/jellyfish-worker": "^20.0.5",
-    "autumndb": "^17.0.3",
+    "@balena/jellyfish-worker": "^20.0.6",
+    "autumndb": "^17.0.6",
     "axios": "^0.26.1",
     "bcrypt": "^5.0.1",
     "blueimp-md5": "^2.19.0",
