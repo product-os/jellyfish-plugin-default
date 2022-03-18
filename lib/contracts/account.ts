@@ -1,5 +1,5 @@
-import { cardMixins } from 'autumndb';
 import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
+import { contractMixins } from 'autumndb';
 
 export const account: ContractDefinition = {
 	slug: 'account',
@@ -138,9 +138,9 @@ export const account: ContractDefinition = {
 					type: {
 						'ui:widget': 'HighlightedName',
 					},
-					email: cardMixins.uiSchemaDef('email'),
-					startsOnDate: cardMixins.uiSchemaDef('date'),
-					endsOnDate: cardMixins.uiSchemaDef('date'),
+					email: contractMixins.uiSchemaDef('email'),
+					startsOnDate: contractMixins.uiSchemaDef('date'),
+					endsOnDate: contractMixins.uiSchemaDef('date'),
 				},
 			},
 		},

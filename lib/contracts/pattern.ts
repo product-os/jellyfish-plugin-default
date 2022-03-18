@@ -1,5 +1,5 @@
-import { cardMixins } from 'autumndb';
 import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
+import { contractMixins } from 'autumndb';
 
 const slug = 'pattern';
 const type = 'type@1.0.0';
@@ -28,9 +28,9 @@ const statusNames = [
 	'Closed (unresolved)',
 ];
 
-export const pattern: ContractDefinition = cardMixins.mixin(
-	cardMixins.withEvents(slug, type),
-	cardMixins.asPipelineItem(
+export const pattern: ContractDefinition = contractMixins.mixin(
+	contractMixins.withEvents(slug, type),
+	contractMixins.asPipelineItem(
 		slug,
 		type,
 		statusOptions,

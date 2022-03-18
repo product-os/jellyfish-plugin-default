@@ -1,5 +1,5 @@
-import { cardMixins } from 'autumndb';
 import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
+import { contractMixins } from 'autumndb';
 
 const getFormUiSchema = () => ({
 	data: {
@@ -29,8 +29,8 @@ const getFormUiSchema = () => ({
 const slug = 'checkin';
 const type = 'type@1.0.0';
 
-export const checkin: ContractDefinition = cardMixins.mixin(
-	cardMixins.withEvents(slug, type),
+export const checkin: ContractDefinition = contractMixins.mixin(
+	contractMixins.withEvents(slug, type),
 )({
 	slug,
 	name: 'Checkin',
@@ -147,7 +147,7 @@ export const checkin: ContractDefinition = cardMixins.mixin(
 			fields: {
 				data: {
 					'ui:order': ['minutes', 'datetime', '*'],
-					datetime: cardMixins.uiSchemaDef('dateTime'),
+					datetime: contractMixins.uiSchemaDef('dateTime'),
 					unnecessary_attendees: {
 						items: {
 							'ui:widget': 'Link',

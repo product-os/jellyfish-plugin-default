@@ -1,5 +1,5 @@
-import { cardMixins } from 'autumndb';
 import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
+import { contractMixins } from 'autumndb';
 
 export const brainstormCall: ContractDefinition = {
 	slug: 'brainstorm-call',
@@ -31,14 +31,14 @@ export const brainstormCall: ContractDefinition = {
 			snippet: {
 				data: {
 					datetime: {
-						...cardMixins.uiSchemaDef('dateTime'),
+						...contractMixins.uiSchemaDef('dateTime'),
 						'ui:title': null,
 					},
 				},
 			},
 			fields: {
 				data: {
-					datetime: cardMixins.uiSchemaDef('dateTime'),
+					datetime: contractMixins.uiSchemaDef('dateTime'),
 				},
 			},
 		},

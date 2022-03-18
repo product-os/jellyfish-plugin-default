@@ -1,5 +1,5 @@
-import { cardMixins } from 'autumndb';
 import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
+import { contractMixins } from 'autumndb';
 
 export const blogPost: ContractDefinition = {
 	slug: 'blog-post',
@@ -245,7 +245,7 @@ export const blogPost: ContractDefinition = {
 						},
 					},
 					post_header_meta: {
-						date: cardMixins.uiSchemaDef('date'),
+						date: contractMixins.uiSchemaDef('date'),
 						featured_img: null,
 						og_img: null,
 					},

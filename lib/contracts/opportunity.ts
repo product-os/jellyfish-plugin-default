@@ -1,5 +1,5 @@
-import { cardMixins } from 'autumndb';
 import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
+import { contractMixins } from 'autumndb';
 
 const slug = 'opportunity';
 const type = 'type@1.0.0';
@@ -12,9 +12,9 @@ const statusOptions = [
 	'Closed Lost',
 ];
 
-export const opportunity: ContractDefinition = cardMixins.mixin(
-	cardMixins.withEvents(slug, type),
-	cardMixins.asPipelineItem(slug, type, statusOptions, statusOptions[0]),
+export const opportunity: ContractDefinition = contractMixins.mixin(
+	contractMixins.withEvents(slug, type),
+	contractMixins.asPipelineItem(slug, type, statusOptions, statusOptions[0]),
 )({
 	slug,
 	name: 'Opportunity',
@@ -94,7 +94,7 @@ export const opportunity: ContractDefinition = cardMixins.mixin(
 					status: {
 						'ui:Widget': 'Badge',
 					},
-					dueDate: cardMixins.uiSchemaDef('date'),
+					dueDate: contractMixins.uiSchemaDef('date'),
 				},
 			},
 		},
