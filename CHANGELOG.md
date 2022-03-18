@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.25 - 2022-03-18
+
+* Replace cardMixins with contractMixins [Josh Bowling]
+
 ## 24.0.24 - 2022-03-17
 
 * Update internal-patch [Renovate Bot]
