@@ -1,11 +1,12 @@
 import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
-import { contractMixins } from 'autumndb';
+import { contractMixins as workerContractMixins } from '@balena/jellyfish-worker';
+import { contractMixins as autumndbContractMixins } from 'autumndb';
 
 const slug = 'sales-thread';
 const type = 'type@1.0.0';
 
-export const salesThread: ContractDefinition = contractMixins.mixin(
-	contractMixins.asPipelineItem(slug, type),
+export const salesThread: ContractDefinition = workerContractMixins.mixin(
+	workerContractMixins.asPipelineItem(slug, type),
 )({
 	slug,
 	name: 'Sales Thread',
@@ -70,8 +71,8 @@ export const salesThread: ContractDefinition = contractMixins.mixin(
 					inbox: {
 						'ui:widget': 'HighlightedName',
 					},
-					tags: contractMixins.uiSchemaDef('badgeList'),
-					mirrors: contractMixins.uiSchemaDef('mirrors'),
+					tags: autumndbContractMixins.uiSchemaDef('badgeList'),
+					mirrors: autumndbContractMixins.uiSchemaDef('mirrors'),
 					status: {
 						'ui:widget': 'Badge',
 					},

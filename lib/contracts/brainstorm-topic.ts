@@ -1,5 +1,6 @@
 import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
-import { contractMixins } from 'autumndb';
+import { contractMixins as workerContractMixins } from '@balena/jellyfish-worker';
+import { contractMixins as autumndbContractMixins } from 'autumndb';
 
 const slug = 'brainstorm-topic';
 const type = 'type@1.0.0';
@@ -24,9 +25,9 @@ const getFormUiSchema = () => ({
 	},
 });
 
-export const brainstormTopic: ContractDefinition = contractMixins.mixin(
-	contractMixins.withEvents(slug, type),
-	contractMixins.asPipelineItem(slug, type, statusOptions),
+export const brainstormTopic: ContractDefinition = workerContractMixins.mixin(
+	workerContractMixins.withEvents(slug, type),
+	workerContractMixins.asPipelineItem(slug, type, statusOptions),
 )({
 	slug,
 	name: 'Brainstorm Topic',
@@ -73,13 +74,13 @@ export const brainstormTopic: ContractDefinition = contractMixins.mixin(
 				data: {
 					'ui:order': ['reporter', 'mentionsUser', 'status', 'category'],
 					reporter: {
-						...contractMixins.uiSchemaDef('username'),
+						...autumndbContractMixins.uiSchemaDef('username'),
 						'ui:options': {
 							flexDirection: 'row',
 						},
 					},
 					mentionsUser: {
-						...contractMixins.uiSchemaDef('usernameList'),
+						...autumndbContractMixins.uiSchemaDef('usernameList'),
 						'ui:options': {
 							flexDirection: 'row',
 						},
@@ -107,7 +108,7 @@ export const brainstormTopic: ContractDefinition = contractMixins.mixin(
 					category: {
 						'ui:widget': 'HighlightedName',
 					},
-					reporter: contractMixins.uiSchemaDef('username'),
+					reporter: autumndbContractMixins.uiSchemaDef('username'),
 					flowdockThreadUrl: {
 						'ui:options': {
 							blank: true,
