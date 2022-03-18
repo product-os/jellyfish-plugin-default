@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.27 - 2022-03-18
+
+* Update internal-patch [Renovate Bot]
+
 ## 24.0.26 - 2022-03-18
 
 * Use worker contract mixins [Josh Bowling]
