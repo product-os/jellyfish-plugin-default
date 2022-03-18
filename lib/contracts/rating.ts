@@ -1,5 +1,5 @@
-import { cardMixins } from 'autumndb';
 import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
+import { contractMixins } from 'autumndb';
 
 const getFormUiSchema = () => ({
 	data: {
@@ -109,18 +109,18 @@ export const rating: ContractDefinition = {
 		uiSchema: {
 			fields: {
 				data: {
-					actor: cardMixins.uiSchemaDef('idOrSlugLink'),
-					target: cardMixins.uiSchemaDef('idOrSlugLink'),
-					mirrors: cardMixins.uiSchemaDef('mirrors'),
-					timestamp: cardMixins.uiSchemaDef('dateTime'),
-					edited_at: cardMixins.uiSchemaDef('dateTime'),
-					readBy: cardMixins.uiSchemaDef('usernameList'),
+					actor: contractMixins.uiSchemaDef('idOrSlugLink'),
+					target: contractMixins.uiSchemaDef('idOrSlugLink'),
+					mirrors: contractMixins.uiSchemaDef('mirrors'),
+					timestamp: contractMixins.uiSchemaDef('dateTime'),
+					edited_at: contractMixins.uiSchemaDef('dateTime'),
+					readBy: contractMixins.uiSchemaDef('usernameList'),
 					payload: {
 						'ui:title': null,
-						mentionsUser: cardMixins.uiSchemaDef('usernameList'),
-						alertsUser: cardMixins.uiSchemaDef('usernameList'),
-						mentionsGroup: cardMixins.uiSchemaDef('groupList'),
-						alertsGroup: cardMixins.uiSchemaDef('groupList'),
+						mentionsUser: contractMixins.uiSchemaDef('usernameList'),
+						alertsUser: contractMixins.uiSchemaDef('usernameList'),
+						mentionsGroup: contractMixins.uiSchemaDef('groupList'),
+						alertsGroup: contractMixins.uiSchemaDef('groupList'),
 						comment: {
 							'ui:widget': 'textarea',
 							'ui:options': {

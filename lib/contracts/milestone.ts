@@ -1,14 +1,14 @@
-import { cardMixins } from 'autumndb';
 import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
+import { contractMixins } from 'autumndb';
 
 const slug = 'milestone';
 const type = 'type@1.0.0';
 const statusOptions = ['open', 'in-progress', 'denied-or-failed', 'completed'];
 const statusNames = ['Open', 'In progress', 'Denied or Failed', 'Completed'];
 
-export const milestone: ContractDefinition = cardMixins.mixin(
-	cardMixins.withEvents(slug, type),
-	cardMixins.asPipelineItem(
+export const milestone: ContractDefinition = contractMixins.mixin(
+	contractMixins.withEvents(slug, type),
+	contractMixins.asPipelineItem(
 		slug,
 		type,
 		statusOptions,

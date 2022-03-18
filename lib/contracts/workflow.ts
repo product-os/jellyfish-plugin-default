@@ -1,14 +1,14 @@
-import { cardMixins } from 'autumndb';
 import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
+import { contractMixins } from 'autumndb';
 
 const slug = 'workflow';
 const type = 'type@1.0.0';
 const statusOptions = ['draft', 'candidate', 'complete'];
 const statusNames = ['Draft', 'Candidate', 'Complete'];
 
-export const workflow: ContractDefinition = cardMixins.mixin(
-	cardMixins.withEvents(slug, type),
-	cardMixins.asPipelineItem(
+export const workflow: ContractDefinition = contractMixins.mixin(
+	contractMixins.withEvents(slug, type),
+	contractMixins.asPipelineItem(
 		slug,
 		type,
 		statusOptions,

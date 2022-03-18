@@ -1,11 +1,11 @@
-import { cardMixins } from 'autumndb';
 import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
+import { contractMixins } from 'autumndb';
 
 const slug = 'pipeline';
 const type = 'type@1.0.0';
 
-export const pipeline: ContractDefinition = cardMixins.mixin(
-	cardMixins.withEvents(slug, type),
+export const pipeline: ContractDefinition = contractMixins.mixin(
+	contractMixins.withEvents(slug, type),
 )({
 	slug,
 	name: 'Pipeline',
