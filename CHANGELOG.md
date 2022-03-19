@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.28 - 2022-03-19
+
+* Add missing dependencies [Josh Bowling]
+
 ## 24.0.27 - 2022-03-18
 
 * Update internal-patch [Renovate Bot]
