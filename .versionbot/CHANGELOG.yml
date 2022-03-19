@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update external-major
+      hash: 935045a6769f4efdbd51debcd35a0d6d2c241f31
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 24.0.29
+  title: "'Update external-major (major)'"
+  date: 2022-03-19T03:49:06.812Z
+- commits:
     - subject: Add missing dependencies
       hash: ff4058f9cac190a629cb6bed26abfdda7d5c5fe1
       body: ""

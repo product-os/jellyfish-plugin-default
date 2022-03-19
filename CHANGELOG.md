@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.29 - 2022-03-19
+
+* Update external-major [Renovate Bot]
+
 ## 24.0.28 - 2022-03-19
 
 * Add missing dependencies [Josh Bowling]
