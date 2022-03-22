@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.34 - 2022-03-22
+
+* Update internal-patch [Renovate Bot]
+
 ## 24.0.33 - 2022-03-22
 
 * Update upstreams in repo.yml [Josh Bowling]
