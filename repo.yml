@@ -10,3 +10,5 @@ upstream:
     url: "https://github.com/product-os/autumndb"
   - repo: "jellyfish-worker"
     url: "https://github.com/product-os/jellyfish-worker"
+  - repo: "jellyfish-plugin-product-os"
+    url: "https://github.com/product-os/jellyfish-plugin-product-os"
