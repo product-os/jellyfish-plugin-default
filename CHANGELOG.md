@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.33 - 2022-03-22
+
+* Update upstreams in repo.yml [Josh Bowling]
+
 ## 24.0.32 - 2022-03-21
 
 * Update resinci/jellyfish-test from v3.0.1 to v3.0.2 [Renovate Bot]

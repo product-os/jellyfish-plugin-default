@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update upstreams in repo.yml
+      hash: 90c31be5ce8262b092c1b19b687aa4de33bb634d
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 24.0.33
+  title: "'Update upstreams in repo.yml'"
+  date: 2022-03-22T04:37:09.766Z
+- commits:
     - subject: Update resinci/jellyfish-test from v3.0.1 to v3.0.2
       hash: 8375321c5f94f670113bfdbc30321d27c563fd10
       body: ""
