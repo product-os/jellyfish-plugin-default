@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.38 - 2022-03-23
+
+* Update internal-patch [Renovate Bot]
+
 ## 24.0.37 - 2022-03-23
 
 * Update balena/open-balena-db from v5.0.3 to v5.1.0 [Renovate Bot]
