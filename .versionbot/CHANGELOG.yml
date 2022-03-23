@@ -1,5 +1,25 @@
 - commits:
     - subject: Update internal-patch
+      hash: 04553774cad7c5046615af842c8bd96ed5f2189c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+    - subject: Update autumndb from 19.0.3 to 19.1.0
+      hash: 50ac112f86f41b62ace98aa9bb191402d7a5bfb9
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 24.0.36
+  title: "'Update internal-patch'"
+  date: 2022-03-23T03:13:18.140Z
+- commits:
+    - subject: Update internal-patch
       hash: 5eb8b2a36ad7e9075855112b2bc43b4ff9c43854
       body: ""
       footer:
