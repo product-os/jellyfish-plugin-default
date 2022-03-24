@@ -1,6 +1,6 @@
+import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { strict as assert } from 'assert';
 import { Kernel } from 'autumndb';
-import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { defaultPlugin, testUtils } from '../../../lib';
 
 let ctx: testUtils.TestContext;

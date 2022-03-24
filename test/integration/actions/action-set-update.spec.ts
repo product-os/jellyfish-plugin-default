@@ -1,7 +1,7 @@
-import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { WorkerContext } from '@balena/jellyfish-worker';
+import { strict as assert } from 'assert';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import { isArray, isNull } from 'lodash';
 import { defaultPlugin, testUtils } from '../../../lib';
 import { actionSetUpdate } from '../../../lib/actions/action-set-update';
@@ -15,7 +15,7 @@ beforeAll(async () => {
 		plugins: [productOsPlugin(), defaultPlugin()],
 	});
 	actionContext = ctx.worker.getActionContext({
-		id: `test-${coreTestUtils.generateRandomId()}`,
+		id: `test-${autumndbTestUtils.generateRandomId()}`,
 	});
 });
 
@@ -28,7 +28,7 @@ describe('action-set-update', () => {
 		const supportThread = await ctx.createSupportThread(
 			ctx.adminUserId,
 			ctx.session,
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
 				status: 'open',
 				tags: ['foo'],
@@ -37,11 +37,11 @@ describe('action-set-update', () => {
 
 		const request: any = {
 			context: {
-				id: `TEST-${coreTestUtils.generateRandomId()}`,
+				id: `TEST-${autumndbTestUtils.generateRandomId()}`,
 			},
 			timestamp: new Date().toISOString(),
 			actor: ctx.adminUserId,
-			originator: coreTestUtils.generateRandomId(),
+			originator: autumndbTestUtils.generateRandomId(),
 			arguments: {
 				property: ['data', 'tags'],
 				value: ['bar'],
@@ -72,7 +72,7 @@ describe('action-set-update', () => {
 		const supportThread = await ctx.createSupportThread(
 			ctx.adminUserId,
 			ctx.session,
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
 				status: 'open',
 				tags: ['foo'],
@@ -81,11 +81,11 @@ describe('action-set-update', () => {
 
 		const request: any = {
 			context: {
-				id: `TEST-${coreTestUtils.generateRandomId()}`,
+				id: `TEST-${autumndbTestUtils.generateRandomId()}`,
 			},
 			timestamp: new Date().toISOString(),
 			actor: ctx.adminUserId,
-			originator: coreTestUtils.generateRandomId(),
+			originator: autumndbTestUtils.generateRandomId(),
 			arguments: {
 				property: 'data.tags',
 				value: ['bar'],

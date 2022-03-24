@@ -1,7 +1,7 @@
-import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { WorkerContext } from '@balena/jellyfish-worker';
+import { strict as assert } from 'assert';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import { isArray, isNull } from 'lodash';
 import * as semver from 'semver';
 import { defaultPlugin, testUtils } from '../../../lib';
@@ -17,7 +17,7 @@ beforeAll(async () => {
 		plugins: [productOsPlugin(), defaultPlugin()],
 	});
 	actionContext = ctx.worker.getActionContext({
-		id: `test-${coreTestUtils.generateRandomId()}`,
+		id: `test-${autumndbTestUtils.generateRandomId()}`,
 	});
 });
 
@@ -36,8 +36,8 @@ describe('action-merge-draft-version', () => {
 				actor: ctx.adminUserId,
 			},
 			{
-				name: coreTestUtils.generateRandomSlug(),
-				slug: coreTestUtils.generateRandomSlug({
+				name: autumndbTestUtils.generateRandomSlug(),
+				slug: autumndbTestUtils.generateRandomSlug({
 					prefix: 'card',
 				}),
 				version: '1.0.2-beta1+rev02',
@@ -83,8 +83,8 @@ describe('action-merge-draft-version', () => {
 				actor: ctx.adminUserId,
 			},
 			{
-				name: coreTestUtils.generateRandomSlug(),
-				slug: coreTestUtils.generateRandomSlug({
+				name: autumndbTestUtils.generateRandomSlug(),
+				slug: autumndbTestUtils.generateRandomSlug({
 					prefix: 'card',
 				}),
 				version: '1.0.2-beta1+rev02',

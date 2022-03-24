@@ -1,5 +1,5 @@
-import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import _ from 'lodash';
 import { defaultPlugin, testUtils } from '../../../lib';
 
@@ -12,7 +12,7 @@ beforeAll(async () => {
 		plugins: [defaultPlugin(), productOsPlugin()],
 	});
 
-	user = await ctx.createUser(coreTestUtils.generateRandomId());
+	user = await ctx.createUser(autumndbTestUtils.generateRandomId());
 	session = await ctx.createSession(user);
 });
 
@@ -38,7 +38,9 @@ describe('role-user-community', () => {
 	});
 
 	test('users should not be able to view messages on threads they cannot view', async () => {
-		const otherUser = await ctx.createUser(coreTestUtils.generateRandomId());
+		const otherUser = await ctx.createUser(
+			autumndbTestUtils.generateRandomId(),
+		);
 		expect(otherUser.data.roles).toEqual(['user-community']);
 		const otherUserSession = await ctx.createSession(otherUser);
 

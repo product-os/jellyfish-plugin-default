@@ -1,7 +1,7 @@
-import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { WorkerContext } from '@balena/jellyfish-worker';
+import { strict as assert } from 'assert';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import { pick } from 'lodash';
 import { defaultPlugin, testUtils } from '../../../lib';
 import { actionIncrementTag } from '../../../lib/actions/action-increment-tag';
@@ -15,7 +15,7 @@ beforeAll(async () => {
 		plugins: [productOsPlugin(), defaultPlugin()],
 	});
 	actionContext = ctx.worker.getActionContext({
-		id: `test-${coreTestUtils.generateRandomId()}`,
+		id: `test-${autumndbTestUtils.generateRandomId()}`,
 	});
 });
 
@@ -29,7 +29,7 @@ describe('action-increment-tag', () => {
 			ctx.adminUserId,
 			ctx.session,
 			'tag@1.0.0',
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
 				count: 0,
 			},
@@ -37,11 +37,11 @@ describe('action-increment-tag', () => {
 
 		const request: any = {
 			context: {
-				id: `TEST-${coreTestUtils.generateRandomId()}`,
+				id: `TEST-${autumndbTestUtils.generateRandomId()}`,
 			},
 			timestamp: new Date().toISOString(),
 			actor: ctx.adminUserId,
-			originator: coreTestUtils.generateRandomId(),
+			originator: autumndbTestUtils.generateRandomId(),
 			arguments: {
 				name: tag.slug.replace(/^tag-/, ''),
 			},
@@ -69,7 +69,7 @@ describe('action-increment-tag', () => {
 	});
 
 	test('should create a new tag if one does not exist', async () => {
-		const name = `tag-${coreTestUtils.generateRandomId()}`;
+		const name = `tag-${autumndbTestUtils.generateRandomId()}`;
 		const id = await ctx.queue.producer.enqueue(
 			ctx.worker.getId(),
 			ctx.session,

@@ -1,8 +1,8 @@
-import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from 'autumndb';
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { WorkerContext } from '@balena/jellyfish-worker';
+import { strict as assert } from 'assert';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import nock from 'nock';
 import { defaultPlugin, testUtils } from '../../../lib';
 import { actionCompleteFirstTimeLogin } from '../../../lib/actions/action-complete-first-time-login';
@@ -21,7 +21,7 @@ beforeAll(async () => {
 		plugins: [productOsPlugin(), defaultPlugin()],
 	});
 	actionContext = ctx.worker.getActionContext({
-		id: `test-${coreTestUtils.generateRandomId()}`,
+		id: `test-${autumndbTestUtils.generateRandomId()}`,
 	});
 
 	// Get org and add test user as member
@@ -65,7 +65,7 @@ afterEach(async () => {
 describe('action-complete-first-time-login', () => {
 	test("should update the user's password when the firstTimeLoginToken is valid", async () => {
 		const user = await ctx.createUser(
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			PASSWORDLESS_USER_HASH,
 		);
 		const session = await ctx.createSession(user);
@@ -97,7 +97,7 @@ describe('action-complete-first-time-login', () => {
 		});
 
 		// TODO: temporary workaround for context/logContext mismatch
-		const newPassword = coreTestUtils.generateRandomId();
+		const newPassword = autumndbTestUtils.generateRandomId();
 		const completeFirstTimeLoginAction = (await ctx.worker.pre(ctx.session, {
 			action: 'action-complete-first-time-login@1.0.0',
 			logContext: ctx.logContext,
@@ -122,7 +122,7 @@ describe('action-complete-first-time-login', () => {
 	});
 
 	test('should fail when the first-time login does not match a valid card', async () => {
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
+		const user = await ctx.createUser(autumndbTestUtils.generateRandomSlug());
 		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
@@ -132,7 +132,7 @@ describe('action-complete-first-time-login', () => {
 			'has member',
 		);
 
-		const fakeToken = coreTestUtils.generateRandomId();
+		const fakeToken = autumndbTestUtils.generateRandomId();
 		await expect(
 			ctx.processAction(ctx.session, {
 				action: 'action-complete-first-time-login@1.0.0',
@@ -141,14 +141,14 @@ describe('action-complete-first-time-login', () => {
 				type: user.type,
 				arguments: {
 					firstTimeLoginToken: fakeToken,
-					newPassword: coreTestUtils.generateRandomId(),
+					newPassword: autumndbTestUtils.generateRandomId(),
 				},
 			}),
 		).rejects.toThrowError();
 	});
 
 	test('should fail when the first-time login token has expired', async () => {
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
+		const user = await ctx.createUser(autumndbTestUtils.generateRandomSlug());
 		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
@@ -217,14 +217,14 @@ describe('action-complete-first-time-login', () => {
 				type: user.type,
 				arguments: {
 					firstTimeLoginToken: match.data.firstTimeLoginToken,
-					newPassword: coreTestUtils.generateRandomId(),
+					newPassword: autumndbTestUtils.generateRandomId(),
 				},
 			}),
 		).rejects.toThrowError();
 	});
 
 	test('should fail when the first-time login is not active', async () => {
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
+		const user = await ctx.createUser(autumndbTestUtils.generateRandomSlug());
 		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
@@ -280,7 +280,7 @@ describe('action-complete-first-time-login', () => {
 				type: user.type,
 				arguments: {
 					firstTimeLoginToken: match.data.firstTimeLoginToken,
-					newPassword: coreTestUtils.generateRandomId(),
+					newPassword: autumndbTestUtils.generateRandomId(),
 				},
 			}),
 		).rejects.toThrowError();
@@ -288,7 +288,7 @@ describe('action-complete-first-time-login', () => {
 
 	test('should fail if the user becomes inactive between requesting and completing the first-time login', async () => {
 		const user = await ctx.createUser(
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			PASSWORDLESS_USER_HASH,
 		);
 		const session = await ctx.createSession(user);
@@ -327,7 +327,7 @@ describe('action-complete-first-time-login', () => {
 			},
 		});
 
-		const newPassword = coreTestUtils.generateRandomId();
+		const newPassword = autumndbTestUtils.generateRandomId();
 		const completeFirstTimeLoginAction = (await ctx.worker.pre(ctx.session, {
 			action: 'action-complete-first-time-login@1.0.0',
 			logContext: ctx.logContext,
@@ -348,7 +348,7 @@ describe('action-complete-first-time-login', () => {
 
 	test('should invalidate the first-time-login card', async () => {
 		const user = await ctx.createUser(
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			PASSWORDLESS_USER_HASH,
 		);
 		await ctx.createLinkThroughWorker(
@@ -401,7 +401,7 @@ describe('action-complete-first-time-login', () => {
 			user,
 			makeHandlerRequest(ctx, actionCompleteFirstTimeLogin.contract, {
 				firstTimeLoginToken: firstTimeLogin.data.firstTimeLoginToken,
-				newPassword: coreTestUtils.generateRandomId(),
+				newPassword: autumndbTestUtils.generateRandomId(),
 			}),
 		);
 
@@ -416,8 +416,8 @@ describe('action-complete-first-time-login', () => {
 
 	test('should throw an error when the user already has a password set', async () => {
 		const user = await ctx.createUser(
-			coreTestUtils.generateRandomSlug(),
-			coreTestUtils.generateRandomId(),
+			autumndbTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomId(),
 		);
 		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
@@ -465,7 +465,7 @@ describe('action-complete-first-time-login', () => {
 				type: user.type,
 				arguments: {
 					firstTimeLoginToken: match.data.firstTimeLoginToken,
-					newPassword: coreTestUtils.generateRandomId(),
+					newPassword: autumndbTestUtils.generateRandomId(),
 				},
 			}),
 		).rejects.toThrowError();

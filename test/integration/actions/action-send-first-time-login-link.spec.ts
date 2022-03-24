@@ -1,11 +1,11 @@
-import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from 'autumndb';
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import {
 	errors as workerErrors,
 	WorkerContext,
 } from '@balena/jellyfish-worker';
+import { strict as assert } from 'assert';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import nock from 'nock';
 import { defaultPlugin, testUtils } from '../../../lib';
 import { actionSendFirstTimeLoginLink } from '../../../lib/actions/action-send-first-time-login-link';
@@ -24,7 +24,7 @@ beforeAll(async () => {
 		plugins: [productOsPlugin(), defaultPlugin()],
 	});
 	actionContext = ctx.worker.getActionContext({
-		id: `test-${coreTestUtils.generateRandomId()}`,
+		id: `test-${autumndbTestUtils.generateRandomId()}`,
 	});
 
 	// Get org and add test user as member
@@ -71,7 +71,7 @@ function nockRequest() {
 
 describe('action-send-first-time-login-link', () => {
 	test('should throw an error if the user does not have an email address', async () => {
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
+		const user = await ctx.createUser(autumndbTestUtils.generateRandomSlug());
 		user.data.email = [];
 
 		await expect(
@@ -88,7 +88,7 @@ describe('action-send-first-time-login-link', () => {
 
 	test('should create a first-time login contract for a user', async () => {
 		nockRequest();
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
+		const user = await ctx.createUser(autumndbTestUtils.generateRandomSlug());
 		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
@@ -135,7 +135,7 @@ describe('action-send-first-time-login-link', () => {
 	test('should send a first-time-login email to a user', async () => {
 		mailBody = '';
 		nockRequest();
-		const username = coreTestUtils.generateRandomSlug();
+		const username = autumndbTestUtils.generateRandomSlug();
 		const user = await ctx.createUser(username);
 		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
@@ -200,7 +200,7 @@ describe('action-send-first-time-login-link', () => {
 
 	test('should throw error if the user is inactive', async () => {
 		nockRequest();
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
+		const user = await ctx.createUser(autumndbTestUtils.generateRandomSlug());
 		const session = await ctx.createSession(user);
 		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
@@ -235,7 +235,7 @@ describe('action-send-first-time-login-link', () => {
 
 	test('should invalidate previous first-time logins', async () => {
 		nockRequest();
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
+		const user = await ctx.createUser(autumndbTestUtils.generateRandomSlug());
 		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
@@ -302,8 +302,12 @@ describe('action-send-first-time-login-link', () => {
 
 	test('should not invalidate previous first-time logins from other users', async () => {
 		nockRequest();
-		const firstUser = await ctx.createUser(coreTestUtils.generateRandomSlug());
-		const secondUser = await ctx.createUser(coreTestUtils.generateRandomSlug());
+		const firstUser = await ctx.createUser(
+			autumndbTestUtils.generateRandomSlug(),
+		);
+		const secondUser = await ctx.createUser(
+			autumndbTestUtils.generateRandomSlug(),
+		);
 		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
@@ -377,7 +381,7 @@ describe('action-send-first-time-login-link', () => {
 	test('successfully sends an email to a user with an array of emails', async () => {
 		mailBody = '';
 		nockRequest();
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
+		const user = await ctx.createUser(autumndbTestUtils.generateRandomSlug());
 		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
@@ -387,8 +391,8 @@ describe('action-send-first-time-login-link', () => {
 			'has member',
 		);
 		const emails = [
-			`${coreTestUtils.generateRandomSlug()}@example.com`,
-			`${coreTestUtils.generateRandomSlug()}@example.com`,
+			`${autumndbTestUtils.generateRandomSlug()}@example.com`,
+			`${autumndbTestUtils.generateRandomSlug()}@example.com`,
 		];
 
 		// Update user emails
@@ -425,7 +429,7 @@ describe('action-send-first-time-login-link', () => {
 
 	test('throws an error when the first-time-login user has no org', async () => {
 		nockRequest();
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
+		const user = await ctx.createUser(autumndbTestUtils.generateRandomSlug());
 
 		await expect(
 			ctx.processAction(ctx.session, {
@@ -440,9 +444,11 @@ describe('action-send-first-time-login-link', () => {
 
 	test('throws an error when the first-time-login requester has no org', async () => {
 		nockRequest();
-		const requester = await ctx.createUser(coreTestUtils.generateRandomSlug());
+		const requester = await ctx.createUser(
+			autumndbTestUtils.generateRandomSlug(),
+		);
 		const requesterSession = await ctx.createSession(requester);
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
+		const user = await ctx.createUser(autumndbTestUtils.generateRandomSlug());
 		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
@@ -469,10 +475,10 @@ describe('action-send-first-time-login-link', () => {
 			ctx.adminUserId,
 			ctx.session,
 			'org@1.0.0',
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{},
 		);
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
+		const user = await ctx.createUser(autumndbTestUtils.generateRandomSlug());
 		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
@@ -495,7 +501,7 @@ describe('action-send-first-time-login-link', () => {
 
 	test('community role is added to a supplied user with no role set', async () => {
 		nockRequest();
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
+		const user = await ctx.createUser(autumndbTestUtils.generateRandomSlug());
 		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
@@ -544,7 +550,7 @@ describe('action-send-first-time-login-link', () => {
 
 	test('roles should be set to community role when community role is not present', async () => {
 		nockRequest();
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
+		const user = await ctx.createUser(autumndbTestUtils.generateRandomSlug());
 		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
@@ -593,7 +599,7 @@ describe('action-send-first-time-login-link', () => {
 
 	test('roles should not be updated when community role is present', async () => {
 		nockRequest();
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
+		const user = await ctx.createUser(autumndbTestUtils.generateRandomSlug());
 		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
 			ctx.session,
@@ -642,9 +648,11 @@ describe('action-send-first-time-login-link', () => {
 	});
 
 	test('users with the "user-community" role cannot send a first-time login link to another user', async () => {
-		const targetUser = await ctx.createUser(coreTestUtils.generateRandomId());
+		const targetUser = await ctx.createUser(
+			autumndbTestUtils.generateRandomId(),
+		);
 		const communityUser = await ctx.createUser(
-			coreTestUtils.generateRandomId(),
+			autumndbTestUtils.generateRandomId(),
 		);
 		const session = await ctx.createSession(communityUser);
 		await ctx.createLinkThroughWorker(

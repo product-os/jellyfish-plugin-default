@@ -1,7 +1,7 @@
-import { testUtils as coreTestUtils } from 'autumndb';
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { WorkerContext } from '@balena/jellyfish-worker';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import { isArray } from 'lodash';
 import sinon from 'sinon';
 import { defaultPlugin, testUtils } from '../../../lib';
@@ -21,13 +21,13 @@ beforeAll(async () => {
 		plugins: [productOsPlugin(), defaultPlugin(), foobarPlugin()],
 	});
 	actionContext = ctx.worker.getActionContext({
-		id: `test-${coreTestUtils.generateRandomId()}`,
+		id: `test-${autumndbTestUtils.generateRandomId()}`,
 	});
 
 	supportThread = await ctx.createSupportThread(
 		ctx.adminUserId,
 		ctx.session,
-		coreTestUtils.generateRandomSlug(),
+		autumndbTestUtils.generateRandomSlug(),
 		{
 			status: 'open',
 			source,

@@ -1,10 +1,10 @@
-import { testUtils as coreTestUtils } from 'autumndb';
 import type { Contract } from '@balena/jellyfish-types/build/core';
 import {
 	ActionDefinition,
 	PluginDefinition,
 	testUtils as workerTestUtils,
 } from '@balena/jellyfish-worker';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import _ from 'lodash';
 
 /**
@@ -35,7 +35,7 @@ export interface TestContext extends workerTestUtils.TestContext {
 /**
  * Options accepted by `newContext`.
  */
-export interface NewContextOptions extends coreTestUtils.NewContextOptions {
+export interface NewContextOptions extends autumndbTestUtils.NewContextOptions {
 	/**
 	 * Set of plugins needed to run tests.
 	 */

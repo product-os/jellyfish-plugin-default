@@ -1,7 +1,7 @@
-import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { WorkerContext } from '@balena/jellyfish-worker';
+import { strict as assert } from 'assert';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import _ from 'lodash';
 import { defaultPlugin, testUtils } from '../../../lib';
 import { actionIncrement } from '../../../lib/actions/action-increment';
@@ -15,7 +15,7 @@ beforeAll(async () => {
 		plugins: [productOsPlugin(), defaultPlugin()],
 	});
 	actionContext = ctx.worker.getActionContext({
-		id: `test-${coreTestUtils.generateRandomId()}`,
+		id: `test-${autumndbTestUtils.generateRandomId()}`,
 	});
 });
 
@@ -29,7 +29,7 @@ describe('action-increment', () => {
 			ctx.adminUserId,
 			ctx.session,
 			'card@1.0.0',
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{},
 		);
 		contract.type = 'foobar@1.0.0';
@@ -37,11 +37,11 @@ describe('action-increment', () => {
 		await expect(
 			handler(ctx.session, actionContext, contract, {
 				context: {
-					id: `TEST-${coreTestUtils.generateRandomId()}`,
+					id: `TEST-${autumndbTestUtils.generateRandomId()}`,
 				},
 				timestamp: new Date().toISOString(),
 				actor: ctx.adminUserId,
-				originator: coreTestUtils.generateRandomId(),
+				originator: autumndbTestUtils.generateRandomId(),
 				arguments: {},
 			} as any),
 		).rejects.toThrow();
@@ -52,7 +52,7 @@ describe('action-increment', () => {
 			ctx.adminUserId,
 			ctx.session,
 			'card@1.0.0',
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
 				count: 0,
 			},
@@ -60,11 +60,11 @@ describe('action-increment', () => {
 
 		const request: any = {
 			context: {
-				id: `TEST-${coreTestUtils.generateRandomId()}`,
+				id: `TEST-${autumndbTestUtils.generateRandomId()}`,
 			},
 			timestamp: new Date().toISOString(),
 			actor: ctx.adminUserId,
-			originator: coreTestUtils.generateRandomId(),
+			originator: autumndbTestUtils.generateRandomId(),
 			arguments: {
 				path: ['data', 'count'],
 			},
@@ -99,7 +99,7 @@ describe('action-increment', () => {
 			ctx.adminUserId,
 			ctx.session,
 			'card@1.0.0',
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
 				count: 'foobar',
 			},
@@ -107,11 +107,11 @@ describe('action-increment', () => {
 
 		const request: any = {
 			context: {
-				id: `TEST-${coreTestUtils.generateRandomId()}`,
+				id: `TEST-${autumndbTestUtils.generateRandomId()}`,
 			},
 			timestamp: new Date().toISOString(),
 			actor: ctx.adminUserId,
-			originator: coreTestUtils.generateRandomId(),
+			originator: autumndbTestUtils.generateRandomId(),
 			arguments: {
 				path: ['data', 'count'],
 			},

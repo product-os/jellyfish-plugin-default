@@ -1,5 +1,4 @@
 import * as assert from '@balena/jellyfish-assert';
-import { errors as coreErrors } from 'autumndb';
 import type {
 	Contract,
 	TypeContract,
@@ -10,6 +9,7 @@ import {
 	errors as workerErrors,
 	WorkerContext,
 } from '@balena/jellyfish-worker';
+import { errors as autumndbErrors } from 'autumndb';
 import bcrypt from 'bcrypt';
 import { BCRYPT_SALT_ROUNDS } from './constants';
 
@@ -186,7 +186,7 @@ const handler: ActionDefinition['handler'] = async (
 		.catch((error: unknown) => {
 			// A schema mismatch here means that the patch could
 			// not be applied to the card due to permissions.
-			if (error instanceof coreErrors.JellyfishSchemaMismatch) {
+			if (error instanceof autumndbErrors.JellyfishSchemaMismatch) {
 				// TS-TODO: Ensure this error is what is expected with Context type
 				const newError = new workerErrors.WorkerAuthenticationError(
 					'Password change not allowed',

@@ -1,4 +1,4 @@
-import type { TriggeredActionContractDefinition } from '@balena/jellyfish-types/build/worker';
+import type { TriggeredActionContractDefinition } from '@balena/jellyfish-worker';
 
 export const triggeredActionSupportReopen: TriggeredActionContractDefinition = {
 	slug: 'triggered-action-support-reopen',

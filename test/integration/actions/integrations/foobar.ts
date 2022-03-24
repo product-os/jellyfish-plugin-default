@@ -1,8 +1,8 @@
-import { Kernel } from 'autumndb';
 import type {
 	Integration,
 	IntegrationDefinition,
 } from '@balena/jellyfish-worker';
+import { Kernel } from 'autumndb';
 import _ from 'lodash';
 import { v4 as uuidv4 } from 'uuid';
 

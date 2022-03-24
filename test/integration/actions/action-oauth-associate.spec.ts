@@ -1,6 +1,6 @@
-import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { WorkerContext } from '@balena/jellyfish-worker';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import { isArray, isNull } from 'lodash';
 import { defaultPlugin, testUtils } from '../../../lib';
 import { actionOAuthAssociate } from '../../../lib/actions/action-oauth-associate';
@@ -15,7 +15,7 @@ beforeAll(async () => {
 		plugins: [productOsPlugin(), defaultPlugin(), foobarPlugin()],
 	});
 	actionContext = ctx.worker.getActionContext({
-		id: `test-${coreTestUtils.generateRandomId()}`,
+		id: `test-${autumndbTestUtils.generateRandomId()}`,
 	});
 });
 
@@ -29,20 +29,20 @@ describe('action-oauth-associate', () => {
 			ctx.adminUserId,
 			ctx.session,
 			'user@1.0.0',
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
-				hash: coreTestUtils.generateRandomId(),
+				hash: autumndbTestUtils.generateRandomId(),
 				roles: [],
 			},
 		);
 
 		const result: any = await handler(ctx.session, actionContext, user, {
 			logContext: {
-				id: `TEST-${coreTestUtils.generateRandomId()}`,
+				id: `TEST-${autumndbTestUtils.generateRandomId()}`,
 			},
 			timestamp: new Date().toISOString(),
 			actor: ctx.adminUserId,
-			originator: coreTestUtils.generateRandomId(),
+			originator: autumndbTestUtils.generateRandomId(),
 			arguments: {
 				provider: 'foobar',
 			},
