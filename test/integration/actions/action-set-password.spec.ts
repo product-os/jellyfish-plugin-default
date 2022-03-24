@@ -1,7 +1,7 @@
-import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { errors as workerErrors } from '@balena/jellyfish-worker';
+import { strict as assert } from 'assert';
+import { testUtils as coreTestUtils } from 'autumndb';
 import bcrypt from 'bcrypt';
 import { defaultPlugin, testUtils } from '../../../lib';
 import {
@@ -39,7 +39,7 @@ describe('action-set-password', () => {
 			},
 		})) as any;
 		request.context = request.logContext;
-		await ctx.queue.producer.enqueue(ctx.worker.getId(), ctx.session, request);
+		await ctx.worker.producer.enqueue(ctx.worker.getId(), ctx.session, request);
 
 		const dequeued: any = await ctx.dequeue();
 		expect(dequeued.data.arguments.currentPassword).not.toBe(password);
@@ -69,13 +69,13 @@ describe('action-set-password', () => {
 		})) as any;
 		options.context = options.logContext;
 
-		const request = await ctx.queue.producer.enqueue(
+		const request = await ctx.worker.producer.enqueue(
 			ctx.worker.getId(),
 			ctx.session,
 			options,
 		);
 		await ctx.flushAll(ctx.session);
-		const resetResult = await ctx.queue.producer.waitResults(
+		const resetResult = await ctx.worker.producer.waitResults(
 			ctx.logContext,
 			request,
 		);
@@ -108,13 +108,13 @@ describe('action-set-password', () => {
 			},
 		})) as any;
 		options.context = options.logContext;
-		const request = await ctx.queue.producer.enqueue(
+		const request = await ctx.worker.producer.enqueue(
 			ctx.worker.getId(),
 			ctx.session,
 			options,
 		);
 		await ctx.flushAll(ctx.session);
-		const result = await ctx.queue.producer.waitResults(
+		const result = await ctx.worker.producer.waitResults(
 			ctx.logContext,
 			request,
 		);
@@ -186,7 +186,7 @@ describe('action-set-password', () => {
 			},
 		})) as any;
 		options.context = options.logContext;
-		await ctx.queue.producer.enqueue(ctx.worker.getId(), ctx.session, options);
+		await ctx.worker.producer.enqueue(ctx.worker.getId(), ctx.session, options);
 
 		const dequeued: any = await ctx.dequeue();
 		expect(dequeued.data.arguments.currentPassword).toEqual('');
@@ -241,13 +241,13 @@ describe('action-set-password', () => {
 		})) as any;
 		options.context = options.logContext;
 
-		const request = await ctx.queue.producer.enqueue(
+		const request = await ctx.worker.producer.enqueue(
 			ctx.worker.getId(),
 			ctx.session,
 			options,
 		);
 		await ctx.flushAll(session.id);
-		const result = await ctx.queue.producer.waitResults(
+		const result = await ctx.worker.producer.waitResults(
 			ctx.logContext,
 			request,
 		);
@@ -279,13 +279,13 @@ describe('action-set-password', () => {
 		})) as any;
 		options.context = options.logContext;
 
-		const request = await ctx.queue.producer.enqueue(
+		const request = await ctx.worker.producer.enqueue(
 			ctx.worker.getId(),
 			ctx.session,
 			options,
 		);
 		await ctx.flushAll(session.id);
-		const result = await ctx.queue.producer.waitResults(
+		const result = await ctx.worker.producer.waitResults(
 			ctx.logContext,
 			request,
 		);

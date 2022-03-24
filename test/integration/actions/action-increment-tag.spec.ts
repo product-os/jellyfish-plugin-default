@@ -1,7 +1,7 @@
-import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { WorkerContext } from '@balena/jellyfish-worker';
+import { strict as assert } from 'assert';
+import { testUtils as coreTestUtils } from 'autumndb';
 import { pick } from 'lodash';
 import { defaultPlugin, testUtils } from '../../../lib';
 import { actionIncrementTag } from '../../../lib/actions/action-increment-tag';
@@ -70,7 +70,7 @@ describe('action-increment-tag', () => {
 
 	test('should create a new tag if one does not exist', async () => {
 		const name = `tag-${coreTestUtils.generateRandomId()}`;
-		const id = await ctx.queue.producer.enqueue(
+		const id = await ctx.worker.producer.enqueue(
 			ctx.worker.getId(),
 			ctx.session,
 			{
@@ -85,7 +85,7 @@ describe('action-increment-tag', () => {
 			},
 		);
 		await ctx.flushAll(ctx.session);
-		const result = await ctx.queue.producer.waitResults(ctx.logContext, id);
+		const result = await ctx.worker.producer.waitResults(ctx.logContext, id);
 		expect(result.error).toBe(false);
 
 		const tagContract = await ctx.kernel.getContractById(

@@ -1,6 +1,6 @@
-import { strict as assert } from 'assert';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { testUtils as workerTestUtils } from '@balena/jellyfish-worker';
+import { strict as assert } from 'assert';
 import { defaultPlugin } from '../../../lib';
 
 let ctx: workerTestUtils.TestContext;
@@ -17,7 +17,7 @@ afterAll(() => {
 
 // Runs the action-maintain-contact action and returns the resulting contact contract
 const maintainContact = async (userContract) => {
-	const request = await ctx.queue.producer.enqueue(
+	const request = await ctx.worker.producer.enqueue(
 		ctx.worker.getId(),
 		ctx.session,
 		{
@@ -31,7 +31,7 @@ const maintainContact = async (userContract) => {
 
 	await ctx.flush(ctx.session);
 
-	const result: any = await ctx.queue.producer.waitResults(
+	const result: any = await ctx.worker.producer.waitResults(
 		ctx.logContext,
 		request,
 	);

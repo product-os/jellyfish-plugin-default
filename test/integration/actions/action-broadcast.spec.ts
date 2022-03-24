@@ -119,7 +119,7 @@ describe('action-broadcast', () => {
 			},
 		);
 
-		const request = await ctx.queue.producer.enqueue(
+		const request = await ctx.worker.producer.enqueue(
 			ctx.worker.getId(),
 			ctx.session,
 			{
@@ -134,7 +134,7 @@ describe('action-broadcast', () => {
 		);
 
 		await ctx.flushAll(ctx.session);
-		const result = await ctx.queue.producer.waitResults(
+		const result = await ctx.worker.producer.waitResults(
 			ctx.logContext,
 			request,
 		);
@@ -201,7 +201,7 @@ describe('action-broadcast', () => {
 			coreTestUtils.generateRandomSlug(),
 		);
 
-		const request = await ctx.queue.producer.enqueue(
+		const request = await ctx.worker.producer.enqueue(
 			ctx.worker.getId(),
 			ctx.session,
 			{
@@ -215,7 +215,7 @@ describe('action-broadcast', () => {
 			},
 		);
 		await ctx.flushAll(ctx.session);
-		const result: any = await ctx.queue.producer.waitResults(
+		const result: any = await ctx.worker.producer.waitResults(
 			ctx.logContext,
 			request,
 		);
@@ -279,7 +279,7 @@ describe('action-broadcast', () => {
 		);
 
 		// Create a broadcast message on the thread
-		const request1 = await ctx.queue.producer.enqueue(
+		const request1 = await ctx.worker.producer.enqueue(
 			ctx.worker.getId(),
 			ctx.session,
 			{
@@ -293,7 +293,7 @@ describe('action-broadcast', () => {
 			},
 		);
 		await ctx.flushAll(ctx.session);
-		const result1: any = await ctx.queue.producer.waitResults(
+		const result1: any = await ctx.worker.producer.waitResults(
 			ctx.logContext,
 			request1,
 		);
@@ -303,7 +303,7 @@ describe('action-broadcast', () => {
 		await ctx.createMessage(ctx.adminUserId, ctx.session, supportThread, 'Foo');
 
 		// Try to create another broadcast message with the same message on the thread
-		const request2 = await ctx.queue.producer.enqueue(
+		const request2 = await ctx.worker.producer.enqueue(
 			ctx.worker.getId(),
 			ctx.session,
 			{
@@ -317,7 +317,7 @@ describe('action-broadcast', () => {
 			},
 		);
 		await ctx.flushAll(ctx.session);
-		const result2 = await ctx.queue.producer.waitResults(
+		const result2 = await ctx.worker.producer.waitResults(
 			ctx.logContext,
 			request2,
 		);
@@ -381,7 +381,7 @@ describe('action-broadcast', () => {
 		);
 
 		const message1 = 'Broadcast test 1';
-		const request1 = await ctx.queue.producer.enqueue(
+		const request1 = await ctx.worker.producer.enqueue(
 			ctx.worker.getId(),
 			ctx.session,
 			{
@@ -395,7 +395,7 @@ describe('action-broadcast', () => {
 			},
 		);
 		await ctx.flushAll(ctx.session);
-		const result1: any = await ctx.queue.producer.waitResults(
+		const result1: any = await ctx.worker.producer.waitResults(
 			ctx.logContext,
 			request1,
 		);
@@ -409,7 +409,7 @@ describe('action-broadcast', () => {
 		);
 
 		const message2 = 'Broadcast test 2';
-		const request2 = await ctx.queue.producer.enqueue(
+		const request2 = await ctx.worker.producer.enqueue(
 			ctx.worker.getId(),
 			ctx.session,
 			{
@@ -423,7 +423,7 @@ describe('action-broadcast', () => {
 			},
 		);
 		await ctx.flushAll(ctx.session);
-		const result2: any = await ctx.queue.producer.waitResults(
+		const result2: any = await ctx.worker.producer.waitResults(
 			ctx.logContext,
 			request2,
 		);
