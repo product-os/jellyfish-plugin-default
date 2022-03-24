@@ -1,4 +1,21 @@
 - commits:
+    - subject: Update imports
+      hash: bebbd2db2e570ab7a6124356862d6a592961d6df
+      body: |
+        Move away from jellyfish-types.
+        Stop using core alias for autumndb imports.
+        Alphabetize imports.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 24.0.39
+  title: "'Update imports'"
+  date: 2022-03-24T09:22:12.283Z
+- commits:
     - subject: Update internal-patch
       hash: d71f2e0e727068c27262abffae080a5a3950381b
       body: ""
