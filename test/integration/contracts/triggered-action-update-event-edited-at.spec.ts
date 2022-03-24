@@ -1,6 +1,6 @@
-import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
+import { strict as assert } from 'assert';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import { isBefore, isValid } from 'date-fns';
 import { defaultPlugin, testUtils } from '../../../lib';
 
@@ -13,7 +13,7 @@ beforeAll(async () => {
 		plugins: [defaultPlugin(), productOsPlugin()],
 	});
 
-	user = await ctx.createUser(coreTestUtils.generateRandomId());
+	user = await ctx.createUser(autumndbTestUtils.generateRandomId());
 	session = await ctx.createSession(user);
 });
 
@@ -25,20 +25,20 @@ test('editing a message triggers an update to the edited_at field', async () => 
 	const supportThread = await ctx.createSupportThread(
 		user.id,
 		session.id,
-		coreTestUtils.generateRandomId(),
+		autumndbTestUtils.generateRandomId(),
 		{
 			status: 'open',
 		},
 	);
-	const update1 = coreTestUtils.generateRandomId();
-	const update2 = coreTestUtils.generateRandomId();
+	const update1 = autumndbTestUtils.generateRandomId();
+	const update2 = autumndbTestUtils.generateRandomId();
 
 	// Verify that initial the edited_at field is undefined
 	const message = await ctx.createMessage(
 		user.id,
 		session.id,
 		supportThread,
-		coreTestUtils.generateRandomId(),
+		autumndbTestUtils.generateRandomId(),
 	);
 	expect(typeof message.data.edited_at).toEqual('undefined');
 
@@ -111,12 +111,12 @@ test('updating a meta field in the message payload triggers an update to the edi
 	const supportThread = await ctx.createSupportThread(
 		user.id,
 		session.id,
-		coreTestUtils.generateRandomId(),
+		autumndbTestUtils.generateRandomId(),
 		{
 			status: 'open',
 		},
 	);
-	const mentionedUserSlug = coreTestUtils.generateRandomSlug({
+	const mentionedUserSlug = autumndbTestUtils.generateRandomSlug({
 		prefix: 'user',
 	});
 

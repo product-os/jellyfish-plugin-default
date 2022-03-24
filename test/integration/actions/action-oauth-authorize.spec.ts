@@ -1,8 +1,8 @@
-import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from 'autumndb';
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { WorkerContext } from '@balena/jellyfish-worker';
+import { strict as assert } from 'assert';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import { isEmpty, isString } from 'lodash';
 import nock from 'nock';
 import sinon from 'sinon';
@@ -20,7 +20,7 @@ beforeAll(async () => {
 		plugins: [productOsPlugin(), defaultPlugin(), foobarPlugin()],
 	});
 	actionContext = ctx.worker.getActionContext({
-		id: `test-${coreTestUtils.generateRandomId()}`,
+		id: `test-${autumndbTestUtils.generateRandomId()}`,
 	});
 });
 
@@ -41,7 +41,7 @@ describe('action-oauth-authorize', () => {
 		assert(foobarIntegrationDefinition.OAUTH_BASE_URL);
 		nock(foobarIntegrationDefinition.OAUTH_BASE_URL)
 			.post('/oauth/token')
-			.reply(200, coreTestUtils.generateRandomId());
+			.reply(200, autumndbTestUtils.generateRandomId());
 
 		sinon.stub(defaultEnvironment, 'getIntegration').callsFake(() => {
 			return {
@@ -54,23 +54,23 @@ describe('action-oauth-authorize', () => {
 			ctx.adminUserId,
 			ctx.session,
 			'user@1.0.0',
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
-				hash: coreTestUtils.generateRandomId(),
+				hash: autumndbTestUtils.generateRandomId(),
 				roles: [],
 			},
 		);
 
 		const result = await handler(ctx.session, actionContext, user, {
 			context: {
-				id: `TEST-${coreTestUtils.generateRandomId()}`,
+				id: `TEST-${autumndbTestUtils.generateRandomId()}`,
 			},
 			timestamp: new Date().toISOString(),
 			actor: ctx.adminUserId,
-			originator: coreTestUtils.generateRandomId(),
+			originator: autumndbTestUtils.generateRandomId(),
 			arguments: {
 				provider: 'foobar',
-				code: coreTestUtils.generateRandomId(),
+				code: autumndbTestUtils.generateRandomId(),
 				origin: 'http://localhost',
 			},
 		} as any);

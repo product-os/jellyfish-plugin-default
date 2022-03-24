@@ -1,7 +1,7 @@
-import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { Contract } from '@balena/jellyfish-types/build/core';
+import { strict as assert } from 'assert';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import { defaultPlugin, testUtils } from '../../../lib';
 
 let ctx: testUtils.TestContext;
@@ -14,7 +14,7 @@ beforeAll(async () => {
 		plugins: [defaultPlugin(), productOsPlugin()],
 	});
 
-	user = await ctx.createUser(coreTestUtils.generateRandomId());
+	user = await ctx.createUser(autumndbTestUtils.generateRandomId());
 	session = await ctx.createSession(user);
 });
 
@@ -46,7 +46,7 @@ test('should sanely handle line breaks before tags in messages/whispers', async 
 		'foobar',
 		{},
 	);
-	const tagName = coreTestUtils.generateRandomSlug({
+	const tagName = autumndbTestUtils.generateRandomSlug({
 		prefix: 'test-tag',
 	});
 
@@ -88,13 +88,13 @@ test('should sanely handle multiple tags in messages/whispers', async () => {
 		'foobar',
 		{},
 	);
-	const tagName1 = coreTestUtils.generateRandomSlug({
+	const tagName1 = autumndbTestUtils.generateRandomSlug({
 		prefix: 'test-tag',
 	});
-	const tagName2 = coreTestUtils.generateRandomSlug({
+	const tagName2 = autumndbTestUtils.generateRandomSlug({
 		prefix: 'test-tag',
 	});
-	const tagName3 = coreTestUtils.generateRandomSlug({
+	const tagName3 = autumndbTestUtils.generateRandomSlug({
 		prefix: 'test-tag',
 	});
 
@@ -181,7 +181,7 @@ test('should create a new tag when one is found in a message', async () => {
 		'foobar',
 		{},
 	);
-	const tagName = coreTestUtils.generateRandomSlug({
+	const tagName = autumndbTestUtils.generateRandomSlug({
 		prefix: 'test-tag',
 	});
 

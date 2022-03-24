@@ -1,7 +1,7 @@
-import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { WorkerContext } from '@balena/jellyfish-worker';
+import { strict as assert } from 'assert';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import { cloneDeep, isArray, isNull, map, pick, sortBy } from 'lodash';
 import { defaultPlugin, testUtils } from '../../../lib';
 import { actionBroadcast } from '../../../lib/actions/action-broadcast';
@@ -15,7 +15,7 @@ beforeAll(async () => {
 		plugins: [productOsPlugin(), defaultPlugin()],
 	});
 	actionContext = ctx.worker.getActionContext({
-		id: `test-${coreTestUtils.generateRandomId()}`,
+		id: `test-${autumndbTestUtils.generateRandomId()}`,
 	});
 });
 
@@ -29,7 +29,7 @@ describe('action-broadcast', () => {
 		const supportThread = await ctx.createSupportThread(
 			ctx.adminUserId,
 			ctx.session,
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
 				status: 'open',
 			},
@@ -38,19 +38,19 @@ describe('action-broadcast', () => {
 			ctx.adminUserId,
 			ctx.session,
 			supportThread,
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 		);
 
 		expect.hasAssertions();
 		const result = await handler(ctx.session, actionContext, message, {
 			context: {
-				id: `TEST-${coreTestUtils.generateRandomId()}`,
+				id: `TEST-${autumndbTestUtils.generateRandomId()}`,
 			},
 			timestamp: new Date().toISOString(),
 			actor: ctx.adminUserId,
-			originator: coreTestUtils.generateRandomId(),
+			originator: autumndbTestUtils.generateRandomId(),
 			arguments: {
-				message: coreTestUtils.generateRandomId(),
+				message: autumndbTestUtils.generateRandomId(),
 			},
 		} as any);
 		if (!isNull(result) && !isArray(result)) {
@@ -60,11 +60,11 @@ describe('action-broadcast', () => {
 
 	test('should return null on matched message', async () => {
 		// Create a thread with a matching message already linked
-		const body = coreTestUtils.generateRandomSlug();
+		const body = autumndbTestUtils.generateRandomSlug();
 		const supportThread = await ctx.createSupportThread(
 			ctx.adminUserId,
 			ctx.session,
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
 				status: 'open',
 			},
@@ -79,11 +79,11 @@ describe('action-broadcast', () => {
 		// Execute action and check that no new message was broadcast
 		const result = await handler(ctx.session, actionContext, supportThread, {
 			context: {
-				id: `TEST-${coreTestUtils.generateRandomId()}`,
+				id: `TEST-${autumndbTestUtils.generateRandomId()}`,
 			},
 			timestamp: new Date().toISOString(),
 			actor: ctx.adminUserId,
-			originator: coreTestUtils.generateRandomId(),
+			originator: autumndbTestUtils.generateRandomId(),
 			arguments: {
 				message: (message as any).data.payload.message,
 			},
@@ -93,17 +93,17 @@ describe('action-broadcast', () => {
 
 	test('should throw an error on invalid session', async () => {
 		const localContext = cloneDeep(actionContext);
-		const session = coreTestUtils.generateRandomId();
+		const session = autumndbTestUtils.generateRandomId();
 		localContext.privilegedSession = session;
 
 		await expect(
 			handler(session, localContext, ctx.worker.typeContracts['user@1.0.0'], {
 				context: {
-					id: `TEST-${coreTestUtils.generateRandomId()}`,
+					id: `TEST-${autumndbTestUtils.generateRandomId()}`,
 				},
 				timestamp: new Date().toISOString(),
 				actor: ctx.adminUserId,
-				originator: coreTestUtils.generateRandomId(),
+				originator: autumndbTestUtils.generateRandomId(),
 				arguments: {},
 			} as any),
 		).rejects.toThrow();
@@ -113,7 +113,7 @@ describe('action-broadcast', () => {
 		const supportThread = await ctx.createSupportThread(
 			ctx.adminUserId,
 			ctx.session,
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
 				status: 'open',
 			},
@@ -189,7 +189,7 @@ describe('action-broadcast', () => {
 		const supportThread = await ctx.createSupportThread(
 			ctx.adminUserId,
 			ctx.session,
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
 				status: 'open',
 			},
@@ -198,7 +198,7 @@ describe('action-broadcast', () => {
 			ctx.adminUserId,
 			ctx.session,
 			supportThread,
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 		);
 
 		const request = await ctx.queue.producer.enqueue(
@@ -272,7 +272,7 @@ describe('action-broadcast', () => {
 		const supportThread = await ctx.createSupportThread(
 			ctx.adminUserId,
 			ctx.session,
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
 				status: 'open',
 			},
@@ -374,7 +374,7 @@ describe('action-broadcast', () => {
 		const supportThread = await ctx.createSupportThread(
 			ctx.adminUserId,
 			ctx.session,
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
 				status: 'open',
 			},
@@ -405,7 +405,7 @@ describe('action-broadcast', () => {
 			ctx.adminUserId,
 			ctx.session,
 			supportThread,
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 		);
 
 		const message2 = 'Broadcast test 2';

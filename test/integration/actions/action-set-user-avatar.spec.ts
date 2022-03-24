@@ -1,7 +1,7 @@
-import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { WorkerContext } from '@balena/jellyfish-worker';
+import { strict as assert } from 'assert';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import md5 from 'blueimp-md5';
 import { isArray, isNull } from 'lodash';
 import nock from 'nock';
@@ -18,7 +18,7 @@ beforeAll(async () => {
 		plugins: [productOsPlugin(), defaultPlugin()],
 	});
 	actionContext = ctx.worker.getActionContext({
-		id: `test-${coreTestUtils.generateRandomId()}`,
+		id: `test-${autumndbTestUtils.generateRandomId()}`,
 	});
 });
 
@@ -37,7 +37,7 @@ afterEach(() => {
  * @returns random email address
  */
 function genEmail(): string {
-	return `${coreTestUtils.generateRandomId()}@foo.bar`;
+	return `${autumndbTestUtils.generateRandomId()}@foo.bar`;
 }
 
 describe('action-set-user-avatar', () => {
@@ -46,9 +46,9 @@ describe('action-set-user-avatar', () => {
 			ctx.adminUserId,
 			ctx.session,
 			'user@1.0.0',
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
-				hash: coreTestUtils.generateRandomId(),
+				hash: autumndbTestUtils.generateRandomId(),
 				roles: [],
 			},
 		);
@@ -81,11 +81,11 @@ describe('action-set-user-avatar', () => {
 			ctx.adminUserId,
 			ctx.session,
 			'user@1.0.0',
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
-				hash: coreTestUtils.generateRandomId(),
+				hash: autumndbTestUtils.generateRandomId(),
 				roles: [],
-				avatar: coreTestUtils.generateRandomId(),
+				avatar: autumndbTestUtils.generateRandomId(),
 			},
 		);
 
@@ -116,9 +116,9 @@ describe('action-set-user-avatar', () => {
 			ctx.adminUserId,
 			ctx.session,
 			'user@1.0.0',
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
-				hash: coreTestUtils.generateRandomId(),
+				hash: autumndbTestUtils.generateRandomId(),
 				roles: [],
 				email: genEmail(),
 			},
@@ -155,9 +155,9 @@ describe('action-set-user-avatar', () => {
 			ctx.adminUserId,
 			ctx.session,
 			'user@1.0.0',
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
-				hash: coreTestUtils.generateRandomId(),
+				hash: autumndbTestUtils.generateRandomId(),
 				roles: [],
 				email: [genEmail(), genEmail()],
 			},
@@ -197,9 +197,9 @@ describe('action-set-user-avatar', () => {
 			ctx.adminUserId,
 			ctx.session,
 			'user@1.0.0',
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
-				hash: coreTestUtils.generateRandomId(),
+				hash: autumndbTestUtils.generateRandomId(),
 				roles: [],
 				email: genEmail(),
 			},
@@ -238,9 +238,9 @@ describe('action-set-user-avatar', () => {
 			ctx.adminUserId,
 			ctx.session,
 			'user@1.0.0',
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
-				hash: coreTestUtils.generateRandomId(),
+				hash: autumndbTestUtils.generateRandomId(),
 				roles: [],
 				email: [genEmail(), genEmail()],
 			},
@@ -282,9 +282,9 @@ describe('action-set-user-avatar', () => {
 			ctx.adminUserId,
 			ctx.session,
 			'user@1.0.0',
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
-				hash: coreTestUtils.generateRandomId(),
+				hash: autumndbTestUtils.generateRandomId(),
 				roles: [],
 				email: [genEmail(), genEmail()],
 			},
@@ -326,9 +326,9 @@ describe('action-set-user-avatar', () => {
 			ctx.adminUserId,
 			ctx.session,
 			'user@1.0.0',
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
-				hash: coreTestUtils.generateRandomId(),
+				hash: autumndbTestUtils.generateRandomId(),
 				roles: [],
 				email: genEmail(),
 				avatar: null,

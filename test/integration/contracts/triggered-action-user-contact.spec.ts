@@ -1,6 +1,6 @@
-import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
+import { strict as assert } from 'assert';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import { defaultPlugin, testUtils } from '../../../lib';
 
 let ctx: testUtils.TestContext;
@@ -16,7 +16,7 @@ afterAll(() => {
 });
 
 test('The contact is updated when the user is updated', async () => {
-	const username = coreTestUtils.generateRandomId();
+	const username = autumndbTestUtils.generateRandomId();
 
 	const inserted = await ctx.worker.insertCard(
 		ctx.logContext,
@@ -28,7 +28,7 @@ test('The contact is updated when the user is updated', async () => {
 		},
 		{
 			name: username,
-			slug: coreTestUtils.generateRandomSlug({
+			slug: autumndbTestUtils.generateRandomSlug({
 				prefix: 'user',
 			}),
 			version: '1.0.0',
@@ -110,7 +110,7 @@ test('The contact is updated when the user is updated', async () => {
 
 test('The contact is updated when user tags are updated', async () => {
 	// Insert a new user and check that a contact is created.
-	const username = coreTestUtils.generateRandomId();
+	const username = autumndbTestUtils.generateRandomId();
 	const firstTag = 'foo';
 	let user = await ctx.worker.insertCard(
 		ctx.logContext,
@@ -122,7 +122,7 @@ test('The contact is updated when user tags are updated', async () => {
 		},
 		{
 			name: username,
-			slug: coreTestUtils.generateRandomSlug({
+			slug: autumndbTestUtils.generateRandomSlug({
 				prefix: 'user',
 			}),
 			version: '1.0.0',

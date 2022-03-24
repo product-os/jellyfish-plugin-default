@@ -1,11 +1,11 @@
-import { Kernel, testUtils as coreTestUtils } from 'autumndb';
-import type { ActionData } from '@balena/jellyfish-types/build/core';
+import type { ActionData } from '@balena/jellyfish-queue';
 import {
 	ActionContractDefinition,
 	ActionHandlerRequest,
 	ActionPreRequest,
 	testUtils as workerTestUtils,
 } from '@balena/jellyfish-worker';
+import { Kernel, testUtils as autumndbTestUtils } from 'autumndb';
 import { v4 as uuidv4 } from 'uuid';
 
 export function makeHandlerRequest(
@@ -14,7 +14,7 @@ export function makeHandlerRequest(
 	requestArguments = {},
 ): ActionHandlerRequest {
 	const contract = {
-		id: coreTestUtils.generateRandomId(),
+		id: autumndbTestUtils.generateRandomId(),
 		...Kernel.defaults<ActionData>(actionContract),
 	};
 
@@ -39,7 +39,7 @@ export function makePreRequest(
 ): ActionPreRequest {
 	return {
 		action: actionContract.slug,
-		card: options.card || coreTestUtils.generateRandomId(),
+		card: options.card || autumndbTestUtils.generateRandomId(),
 		type: options.type || 'card@1.0.0',
 		logContext: context.logContext,
 		arguments: options.requestArguments || {},

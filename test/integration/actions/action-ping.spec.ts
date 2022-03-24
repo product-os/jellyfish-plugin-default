@@ -1,7 +1,7 @@
-import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { WorkerContext } from '@balena/jellyfish-worker';
+import { strict as assert } from 'assert';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import { defaultPlugin, testUtils } from '../../../lib';
 import { actionPing } from '../../../lib/actions/action-ping';
 
@@ -14,7 +14,7 @@ beforeAll(async () => {
 		plugins: [productOsPlugin(), defaultPlugin()],
 	});
 	actionContext = ctx.worker.getActionContext({
-		id: `test-${coreTestUtils.generateRandomId()}`,
+		id: `test-${autumndbTestUtils.generateRandomId()}`,
 	});
 });
 
@@ -26,9 +26,9 @@ describe('action-ping', () => {
 	test('should update specified contract', async () => {
 		// Create ping contract
 		const ping = await ctx.kernel.insertContract(ctx.logContext, ctx.session, {
-			id: coreTestUtils.generateRandomId(),
-			name: coreTestUtils.generateRandomSlug(),
-			slug: coreTestUtils.generateRandomSlug({
+			id: autumndbTestUtils.generateRandomId(),
+			name: autumndbTestUtils.generateRandomSlug(),
+			slug: autumndbTestUtils.generateRandomSlug({
 				prefix: 'ping',
 			}),
 			type: 'ping@1.0.0',
@@ -43,11 +43,11 @@ describe('action-ping', () => {
 		// Create request using ping contract
 		const request: any = {
 			context: {
-				id: `TEST-${coreTestUtils.generateRandomId()}`,
+				id: `TEST-${autumndbTestUtils.generateRandomId()}`,
 			},
 			timestamp: new Date().toISOString(),
 			actor: ctx.adminUserId,
-			originator: coreTestUtils.generateRandomId(),
+			originator: autumndbTestUtils.generateRandomId(),
 			arguments: {
 				slug: ping.slug,
 			},

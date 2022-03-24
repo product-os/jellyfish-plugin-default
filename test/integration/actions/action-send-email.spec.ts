@@ -1,7 +1,7 @@
-import { testUtils as coreTestUtils } from 'autumndb';
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { WorkerContext } from '@balena/jellyfish-worker';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import _ from 'lodash';
 import nock from 'nock';
 import { defaultPlugin, testUtils } from '../../../lib';
@@ -19,7 +19,7 @@ beforeAll(async () => {
 		plugins: [productOsPlugin(), defaultPlugin()],
 	});
 	actionContext = ctx.worker.getActionContext({
-		id: `test-${coreTestUtils.generateRandomId()}`,
+		id: `test-${autumndbTestUtils.generateRandomId()}`,
 	});
 });
 
@@ -51,8 +51,8 @@ describe('action-send-email', () => {
 		const args = {
 			toAddress: 'foo@example.com',
 			fromAddress: 'bar@example.com',
-			subject: coreTestUtils.generateRandomId(),
-			html: coreTestUtils.generateRandomId(),
+			subject: autumndbTestUtils.generateRandomId(),
+			html: autumndbTestUtils.generateRandomId(),
 		};
 		await ctx.processAction(ctx.session, {
 			action: 'action-send-email@1.0.0',

@@ -1,7 +1,7 @@
-import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { WorkerContext } from '@balena/jellyfish-worker';
+import { strict as assert } from 'assert';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import { defaultPlugin, testUtils } from '../../../lib';
 import { actionDeleteCard } from '../../../lib/actions/action-delete-card';
 import { makeHandlerRequest } from './helpers';
@@ -15,7 +15,7 @@ beforeAll(async () => {
 		plugins: [productOsPlugin(), defaultPlugin()],
 	});
 	actionContext = ctx.worker.getActionContext({
-		id: `test-${coreTestUtils.generateRandomId()}`,
+		id: `test-${autumndbTestUtils.generateRandomId()}`,
 	});
 });
 
@@ -34,8 +34,8 @@ describe('action-delete-card', () => {
 				actor: ctx.adminUserId,
 			},
 			{
-				name: coreTestUtils.generateRandomSlug(),
-				slug: coreTestUtils.generateRandomSlug({
+				name: autumndbTestUtils.generateRandomSlug(),
+				slug: autumndbTestUtils.generateRandomSlug({
 					prefix: 'card',
 				}),
 				active: false,

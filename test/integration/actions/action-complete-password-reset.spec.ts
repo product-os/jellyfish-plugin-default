@@ -1,8 +1,8 @@
-import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from 'autumndb';
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { WorkerContext } from '@balena/jellyfish-worker';
+import { strict as assert } from 'assert';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import bcrypt from 'bcrypt';
 import crypto from 'crypto';
 import { isArray, isNull } from 'lodash';
@@ -29,7 +29,7 @@ beforeAll(async () => {
 		plugins: [productOsPlugin(), defaultPlugin()],
 	});
 	actionContext = ctx.worker.getActionContext({
-		id: `test-${coreTestUtils.generateRandomId()}`,
+		id: `test-${autumndbTestUtils.generateRandomId()}`,
 	});
 
 	// Get org and add test user as member
@@ -74,7 +74,7 @@ afterEach(() => {
 
 describe('action-complete-password-reset', () => {
 	test('should hash new password', async () => {
-		const plaintext = coreTestUtils.generateRandomId();
+		const plaintext = autumndbTestUtils.generateRandomId();
 		const request = makePreRequest(ctx, actionCompletePasswordReset.contract, {
 			requestArguments: { newPassword: plaintext },
 		});
@@ -90,7 +90,7 @@ describe('action-complete-password-reset', () => {
 	});
 
 	test('should replace the user password when the requestToken is valid', async () => {
-		const username = coreTestUtils.generateRandomSlug();
+		const username = autumndbTestUtils.generateRandomSlug();
 		const user = await ctx.createUser(username, hash);
 		const session = await ctx.createSession(user);
 
@@ -112,7 +112,7 @@ describe('action-complete-password-reset', () => {
 			type: user.type,
 			arguments: {
 				resetToken,
-				newPassword: coreTestUtils.generateRandomId(),
+				newPassword: autumndbTestUtils.generateRandomId(),
 			},
 		})) as any;
 
@@ -135,7 +135,7 @@ describe('action-complete-password-reset', () => {
 	});
 
 	test('should fail when the reset token does not match a valid card', async () => {
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
+		const user = await ctx.createUser(autumndbTestUtils.generateRandomSlug());
 
 		const completePasswordReset = (await ctx.worker.pre(ctx.session, {
 			action: 'action-complete-password-reset@1.0.0',
@@ -144,7 +144,7 @@ describe('action-complete-password-reset', () => {
 			type: user.type,
 			arguments: {
 				resetToken: 'fake-reset-token',
-				newPassword: coreTestUtils.generateRandomId(),
+				newPassword: autumndbTestUtils.generateRandomId(),
 			},
 		})) as any;
 		completePasswordReset.logContext = completePasswordReset.context;
@@ -155,7 +155,7 @@ describe('action-complete-password-reset', () => {
 	});
 
 	test('should fail when the reset token has expired', async () => {
-		const username = coreTestUtils.generateRandomSlug();
+		const username = autumndbTestUtils.generateRandomSlug();
 		const user = await ctx.createUser(username, hash);
 
 		await ctx.processAction(ctx.session, {
@@ -233,7 +233,7 @@ describe('action-complete-password-reset', () => {
 			type: user.type,
 			arguments: {
 				resetToken,
-				newPassword: coreTestUtils.generateRandomId(),
+				newPassword: autumndbTestUtils.generateRandomId(),
 			},
 		})) as any;
 
@@ -246,7 +246,7 @@ describe('action-complete-password-reset', () => {
 	});
 
 	test('should fail when the reset token is not active', async () => {
-		const username = coreTestUtils.generateRandomSlug();
+		const username = autumndbTestUtils.generateRandomSlug();
 		const user = await ctx.createUser(username, hash);
 		await ctx.processAction(ctx.session, {
 			action: 'action-request-password-reset@1.0.0',
@@ -311,7 +311,7 @@ describe('action-complete-password-reset', () => {
 			type: user.type,
 			arguments: {
 				resetToken,
-				newPassword: coreTestUtils.generateRandomId(),
+				newPassword: autumndbTestUtils.generateRandomId(),
 			},
 		})) as any;
 
@@ -324,7 +324,7 @@ describe('action-complete-password-reset', () => {
 	});
 
 	test('should fail if the user becomes inactive between requesting and completing the password reset', async () => {
-		const username = coreTestUtils.generateRandomSlug();
+		const username = autumndbTestUtils.generateRandomSlug();
 		const user = await ctx.createUser(username, hash);
 		const session = await ctx.createSession(user);
 
@@ -355,7 +355,7 @@ describe('action-complete-password-reset', () => {
 			type: user.type,
 			arguments: {
 				resetToken,
-				newPassword: coreTestUtils.generateRandomId(),
+				newPassword: autumndbTestUtils.generateRandomId(),
 			},
 		})) as any;
 
@@ -369,7 +369,7 @@ describe('action-complete-password-reset', () => {
 	});
 
 	test('should soft delete password reset card', async () => {
-		const username = coreTestUtils.generateRandomSlug();
+		const username = autumndbTestUtils.generateRandomSlug();
 		const user = await ctx.createUser(username, hash);
 
 		const requestPasswordReset = await ctx.processAction(ctx.session, {
@@ -390,7 +390,7 @@ describe('action-complete-password-reset', () => {
 			type: user.type,
 			arguments: {
 				resetToken,
-				newPassword: coreTestUtils.generateRandomId(),
+				newPassword: autumndbTestUtils.generateRandomId(),
 			},
 		})) as any;
 

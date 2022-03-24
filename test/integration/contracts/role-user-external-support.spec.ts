@@ -1,6 +1,6 @@
-import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
+import { strict as assert } from 'assert';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import _ from 'lodash';
 import { defaultPlugin, testUtils } from '../../../lib';
 
@@ -11,8 +11,8 @@ let testOrg: any;
 async function createUser(roles: string[], org: any): Promise<any> {
 	// Create user
 	const user = await ctx.createUser(
-		coreTestUtils.generateRandomId(),
-		coreTestUtils.generateRandomId(),
+		autumndbTestUtils.generateRandomId(),
+		autumndbTestUtils.generateRandomId(),
 		roles,
 	);
 

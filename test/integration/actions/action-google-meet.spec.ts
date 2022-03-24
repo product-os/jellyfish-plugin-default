@@ -1,6 +1,6 @@
-import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { WorkerContext } from '@balena/jellyfish-worker';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import { google } from 'googleapis';
 import sinon from 'sinon';
 import { defaultPlugin, testUtils } from '../../../lib';
@@ -17,7 +17,7 @@ beforeAll(async () => {
 		plugins: [productOsPlugin(), defaultPlugin()],
 	});
 	actionContext = ctx.worker.getActionContext({
-		id: `test-${coreTestUtils.generateRandomId()}`,
+		id: `test-${autumndbTestUtils.generateRandomId()}`,
 	});
 });
 
@@ -56,21 +56,21 @@ describe('action-google-meet', () => {
 		const supportThread = await ctx.createSupportThread(
 			ctx.adminUserId,
 			ctx.session,
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
 				status: 'open',
 			},
 		);
 
 		stub({
-			id: coreTestUtils.generateRandomId(),
+			id: autumndbTestUtils.generateRandomId(),
 		});
 
 		const message = await ctx.createMessage(
 			ctx.adminUserId,
 			ctx.session,
 			supportThread,
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 		);
 		await expect(
 			handler(
@@ -88,7 +88,7 @@ describe('action-google-meet', () => {
 		const supportThread = await ctx.createSupportThread(
 			ctx.adminUserId,
 			ctx.session,
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
 				status: 'open',
 			},
@@ -96,14 +96,14 @@ describe('action-google-meet', () => {
 
 		stub({
 			hangoutLink: conferenceUrl,
-			id: coreTestUtils.generateRandomId(),
+			id: autumndbTestUtils.generateRandomId(),
 		});
 
 		const message = await ctx.createMessage(
 			ctx.adminUserId,
 			ctx.session,
 			supportThread,
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 		);
 		message.type = 'foobar';
 		await expect(
@@ -120,7 +120,7 @@ describe('action-google-meet', () => {
 		const supportThread = await ctx.createSupportThread(
 			ctx.adminUserId,
 			ctx.session,
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
 				status: 'open',
 			},
@@ -143,7 +143,7 @@ describe('action-google-meet', () => {
 		const supportThread = await ctx.createSupportThread(
 			ctx.adminUserId,
 			ctx.session,
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			{
 				status: 'open',
 			},

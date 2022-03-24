@@ -1,5 +1,5 @@
-import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import { defaultPlugin, testUtils } from '../../../lib';
 
 let ctx: testUtils.TestContext;
@@ -11,7 +11,7 @@ beforeAll(async () => {
 		plugins: [defaultPlugin(), productOsPlugin()],
 	});
 
-	user = await ctx.createUser(coreTestUtils.generateRandomId());
+	user = await ctx.createUser(autumndbTestUtils.generateRandomId());
 	session = await ctx.createSession(user);
 });
 

@@ -1,7 +1,7 @@
-import { strict as assert } from 'assert';
-import { testUtils as coreTestUtils } from 'autumndb';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { errors as workerErrors } from '@balena/jellyfish-worker';
+import { strict as assert } from 'assert';
+import { testUtils as autumndbTestUtils } from 'autumndb';
 import bcrypt from 'bcrypt';
 import { defaultPlugin, testUtils } from '../../../lib';
 import {
@@ -23,11 +23,14 @@ afterAll(async () => {
 
 describe('action-set-password', () => {
 	test('should not store the passwords in the queue when using action-set-password', async () => {
-		const password = coreTestUtils.generateRandomId();
+		const password = autumndbTestUtils.generateRandomId();
 		const hash = await bcrypt.hash(password, BCRYPT_SALT_ROUNDS);
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug(), hash);
+		const user = await ctx.createUser(
+			autumndbTestUtils.generateRandomSlug(),
+			hash,
+		);
 
-		const newPassword = coreTestUtils.generateRandomId();
+		const newPassword = autumndbTestUtils.generateRandomId();
 		const request = (await ctx.worker.pre(ctx.session, {
 			action: 'action-set-password@1.0.0',
 			logContext: ctx.logContext,
@@ -52,7 +55,7 @@ describe('action-set-password', () => {
 
 	test('should change the password of a password-less user given no password', async () => {
 		const user = await ctx.createUser(
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			PASSWORDLESS_USER_HASH,
 		);
 
@@ -64,7 +67,7 @@ describe('action-set-password', () => {
 			type: user.type,
 			arguments: {
 				currentPassword: null,
-				newPassword: coreTestUtils.generateRandomId(),
+				newPassword: autumndbTestUtils.generateRandomId(),
 			},
 		})) as any;
 		options.context = options.logContext;
@@ -92,9 +95,12 @@ describe('action-set-password', () => {
 	});
 
 	test('should change a user password', async () => {
-		const password = coreTestUtils.generateRandomId();
+		const password = autumndbTestUtils.generateRandomId();
 		const hash = await bcrypt.hash(password, BCRYPT_SALT_ROUNDS);
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug(), hash);
+		const user = await ctx.createUser(
+			autumndbTestUtils.generateRandomSlug(),
+			hash,
+		);
 
 		// TODO: temporary workaround for context/logContext mismatch
 		const options = (await ctx.worker.pre(ctx.session, {
@@ -104,7 +110,7 @@ describe('action-set-password', () => {
 			type: user.type,
 			arguments: {
 				currentPassword: password,
-				newPassword: coreTestUtils.generateRandomId(),
+				newPassword: autumndbTestUtils.generateRandomId(),
 			},
 		})) as any;
 		options.context = options.logContext;
@@ -131,9 +137,12 @@ describe('action-set-password', () => {
 	});
 
 	test('should not change a user password given invalid current password', async () => {
-		const password = coreTestUtils.generateRandomId();
+		const password = autumndbTestUtils.generateRandomId();
 		const hash = await bcrypt.hash(password, BCRYPT_SALT_ROUNDS);
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug(), hash);
+		const user = await ctx.createUser(
+			autumndbTestUtils.generateRandomSlug(),
+			hash,
+		);
 
 		await expect(
 			ctx.worker.pre(ctx.session, {
@@ -143,16 +152,19 @@ describe('action-set-password', () => {
 				type: user.type,
 				arguments: {
 					currentPassword: 'xxxxxxxxxxxxxxxxxxxxxx',
-					newPassword: coreTestUtils.generateRandomId(),
+					newPassword: autumndbTestUtils.generateRandomId(),
 				},
 			}),
 		).rejects.toThrow(workerErrors.WorkerAuthenticationError);
 	});
 
 	test('should not change a user password given a null current password', async () => {
-		const password = coreTestUtils.generateRandomId();
+		const password = autumndbTestUtils.generateRandomId();
 		const hash = await bcrypt.hash(password, BCRYPT_SALT_ROUNDS);
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug(), hash);
+		const user = await ctx.createUser(
+			autumndbTestUtils.generateRandomSlug(),
+			hash,
+		);
 
 		await expect(
 			ctx.worker.pre(ctx.session, {
@@ -170,7 +182,7 @@ describe('action-set-password', () => {
 
 	test('should not store the passwords when using action-set-password on a first time password', async () => {
 		const user = await ctx.createUser(
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			PASSWORDLESS_USER_HASH,
 		);
 
@@ -182,7 +194,7 @@ describe('action-set-password', () => {
 			type: user.type,
 			arguments: {
 				currentPassword: null,
-				newPassword: coreTestUtils.generateRandomId(),
+				newPassword: autumndbTestUtils.generateRandomId(),
 			},
 		})) as any;
 		options.context = options.logContext;
@@ -196,7 +208,7 @@ describe('action-set-password', () => {
 
 	test('should not change the password of a password-less user given a password', async () => {
 		const user = await ctx.createUser(
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			PASSWORDLESS_USER_HASH,
 		);
 
@@ -215,14 +227,14 @@ describe('action-set-password', () => {
 	});
 
 	test('a community user should not be able to reset other users passwords', async () => {
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
+		const user = await ctx.createUser(autumndbTestUtils.generateRandomSlug());
 		expect(user.data.roles).toEqual(['user-community']);
 		const session = await ctx.createSession(user);
 
-		const password = coreTestUtils.generateRandomId().split('-')[0];
+		const password = autumndbTestUtils.generateRandomId().split('-')[0];
 		const hash = await bcrypt.hash(password, BCRYPT_SALT_ROUNDS);
 		const otherUser = await ctx.createUser(
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			hash,
 		);
 		expect(otherUser.data.hash).toEqual(hash);
@@ -255,12 +267,12 @@ describe('action-set-password', () => {
 	});
 
 	test('a community user should not be able to set a first time password for another user', async () => {
-		const user = await ctx.createUser(coreTestUtils.generateRandomSlug());
+		const user = await ctx.createUser(autumndbTestUtils.generateRandomSlug());
 		expect(user.data.roles).toEqual(['user-community']);
 		const session = await ctx.createSession(user);
 
 		const otherUser = await ctx.createUser(
-			coreTestUtils.generateRandomSlug(),
+			autumndbTestUtils.generateRandomSlug(),
 			PASSWORDLESS_USER_HASH,
 		);
 		expect(otherUser.data.hash).toEqual(PASSWORDLESS_USER_HASH);
