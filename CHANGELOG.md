@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.42 - 2022-03-25
+
+* Update @balena/jellyfish-plugin-default from 20.2.10 to 21.0.0 [Josh Bowling]
+
 ## 24.0.41 - 2022-03-24
 
 * Update typescript from 4.6.2 to 4.6.3 [Renovate Bot]

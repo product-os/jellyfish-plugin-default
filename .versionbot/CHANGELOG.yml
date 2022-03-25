@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update @balena/jellyfish-plugin-default from 20.2.10 to 21.0.0
+      hash: b109eb6674963381ea342026d96379827194d917
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Sigend-off-by: Josh Bowling <josh@balena.io>
+        sigend-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 24.0.42
+  title: "'Update @balena/jellyfish-plugin-default from 20.2.10 to 21.0.0'"
+  date: 2022-03-25T01:47:03.740Z
+- commits:
     - subject: Update typescript from 4.6.2 to 4.6.3
       hash: a8d48a9b59b9f026586c88d4db366c7d8877d21c
       body: ""
