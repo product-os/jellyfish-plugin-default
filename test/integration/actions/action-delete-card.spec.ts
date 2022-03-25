@@ -90,7 +90,7 @@ describe('action-delete-card', () => {
 			{},
 		);
 
-		const request = await ctx.queue.producer.enqueue(
+		const request = await ctx.worker.producer.enqueue(
 			ctx.worker.getId(),
 			ctx.session,
 			{
@@ -102,7 +102,7 @@ describe('action-delete-card', () => {
 			},
 		);
 		await ctx.flushAll(ctx.session);
-		const result = await ctx.queue.producer.waitResults(
+		const result = await ctx.worker.producer.waitResults(
 			ctx.logContext,
 			request,
 		);

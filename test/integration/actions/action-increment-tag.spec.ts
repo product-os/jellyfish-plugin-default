@@ -70,7 +70,7 @@ describe('action-increment-tag', () => {
 
 	test('should create a new tag if one does not exist', async () => {
 		const name = `tag-${autumndbTestUtils.generateRandomId()}`;
-		const id = await ctx.queue.producer.enqueue(
+		const id = await ctx.worker.producer.enqueue(
 			ctx.worker.getId(),
 			ctx.session,
 			{
@@ -85,7 +85,7 @@ describe('action-increment-tag', () => {
 			},
 		);
 		await ctx.flushAll(ctx.session);
-		const result = await ctx.queue.producer.waitResults(ctx.logContext, id);
+		const result = await ctx.worker.producer.waitResults(ctx.logContext, id);
 		expect(result.error).toBe(false);
 
 		const tagContract = await ctx.kernel.getContractById(
