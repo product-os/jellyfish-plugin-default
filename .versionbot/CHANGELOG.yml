@@ -1,4 +1,26 @@
 - commits:
+    - subject: Update ActionData type import
+      hash: c261d410e200c21c09c2258501279e2791760314
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Update internal-patch
+      hash: 862f6942cfcdeb481e7d7e4e34e7b211c8f477e3
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 24.0.43
+  title: "'Update internal-patch'"
+  date: 2022-03-27T14:15:31.716Z
+- commits:
     - subject: Update @balena/jellyfish-plugin-default from 20.2.10 to 21.0.0
       hash: b109eb6674963381ea342026d96379827194d917
       body: ""

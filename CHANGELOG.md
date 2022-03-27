@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 24.0.43 - 2022-03-27
+
+* Update ActionData type import [Josh Bowling]
+* Update internal-patch [Renovate Bot]
+
 ## 24.0.42 - 2022-03-25
 
 * Update @balena/jellyfish-plugin-default from 20.2.10 to 21.0.0 [Josh Bowling]
