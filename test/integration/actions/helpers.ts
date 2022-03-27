@@ -1,6 +1,6 @@
-import type { ActionData } from '@balena/jellyfish-queue';
 import {
 	ActionContractDefinition,
+	ActionData,
 	ActionHandlerRequest,
 	ActionPreRequest,
 	testUtils as workerTestUtils,
