@@ -1,4 +1,18 @@
 - commits:
+    - subject: Test worker contract PR
+      hash: b01fcfc75879ba5dc9929cb1e2d164c970d15594
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 24.0.44
+  title: "'Test worker contract PR'"
+  date: 2022-03-28T02:01:14.782Z
+- commits:
     - subject: Update ActionData type import
       hash: c261d410e200c21c09c2258501279e2791760314
       body: ""
