@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.44 - 2022-03-28
+
+* Update internal-patch [Renovate Bot]
+
 ## 24.0.43 - 2022-03-27
 
 * Update ActionData type import [Josh Bowling]
