@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.45 - 2022-03-29
+
+* Rename card to contract [Josh Bowling]
+
 ## 24.0.44 - 2022-03-28
 
 * Update internal-patch [Renovate Bot]
