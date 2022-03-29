@@ -13,7 +13,7 @@ import crypto from 'crypto';
 import { actionSendEmail } from './action-send-email';
 import { PASSWORDLESS_USER_HASH } from './constants';
 import { buildSendEmailOptions } from './mail-utils';
-import { addLinkCard } from './utils';
+import { addLinkContract } from './utils';
 
 const logger = getLogger(__filename);
 const sendEmailHandler = actionSendEmail.handler;
@@ -21,13 +21,13 @@ const sendEmailHandler = actionSendEmail.handler;
 const ACTIONS = defaultEnvironment.actions;
 
 /**
- * @summary Get user card by slug
+ * @summary Get user contract by slug
  * @function
  *
  * @param session - user session
  * @param query - query function
  * @param username - username
- * @returns user card
+ * @returns user contract
  */
 export async function getUserBySlug(
 	session: string,
@@ -93,19 +93,19 @@ export async function getUserBySlug(
 }
 
 /**
- * @summary Invalidate previous password reset cards for a user
+ * @summary Invalidate previous password reset contracts for a user
  * @function
  *
  * @param context - execution context
  * @param userId - user ID
  * @param request - action request
- * @param typeCard - type card
+ * @param typeContract - type contract
  */
 export async function invalidatePreviousPasswordResets(
 	context: WorkerContext,
 	userId: string,
 	request: ActionHandlerRequest,
-	typeCard: TypeContract,
+	typeContract: TypeContract,
 ): Promise<void> {
 	const previousPasswordResets = await context.query(
 		context.privilegedSession,
@@ -141,7 +141,7 @@ export async function invalidatePreviousPasswordResets(
 			previousPasswordResets.map((passwordReset: Contract) => {
 				return context.patchCard(
 					context.privilegedSession,
-					typeCard,
+					typeContract,
 					{
 						timestamp: request.timestamp,
 						actor: request.actor,
@@ -163,20 +163,20 @@ export async function invalidatePreviousPasswordResets(
 }
 
 /**
- * @summary Create password reset card for a user
+ * @summary Create password reset contract for a user
  * @function
  *
  * @param context - execution context
  * @param request - action request
- * @param user - user for whom the password reset card is for
- * @param typeCard - type card
- * @returns created password reset card
+ * @param user - user for whom the password reset contract is for
+ * @param typeContract - type contract
+ * @returns created password reset contract
  */
-export async function addPasswordResetCard(
+export async function addPasswordResetContract(
 	context: WorkerContext,
 	request: ActionHandlerRequest,
 	user: Contract,
-	typeCard: TypeContract,
+	typeContract: TypeContract,
 ): Promise<Contract> {
 	const resetToken = crypto
 		.createHmac('sha256', ACTIONS.resetPasswordSecretToken)
@@ -187,7 +187,7 @@ export async function addPasswordResetCard(
 	const expiresAt = new Date(hourInFuture);
 	return (await context.insertCard(
 		context.privilegedSession,
-		typeCard,
+		typeContract,
 		{
 			timestamp: request.timestamp,
 			actor: request.actor,
@@ -211,22 +211,22 @@ export async function addPasswordResetCard(
  * @function
  *
  * @param context - execution context
- * @param userCard - user card
+ * @param userContract - user contract
  * @param resetToken - reset token
  * @returns send email request response
  */
 export async function sendEmail(
 	context: WorkerContext,
-	userCard: Contract,
+	userContract: Contract,
 	resetToken: string,
 ): Promise<any> {
-	const username = userCard.slug.replace(/^user-/g, '');
+	const username = userContract.slug.replace(/^user-/g, '');
 	const url = `https://jel.ly.fish/password_reset/${resetToken}/${username}`;
 	const html = `<p>Hello,</p><p>We have received a password reset request for the Jellyfish account attached to this email.</p><p>Please use the link below to reset your password:</p><a href="${url}">${url}</a><p>Cheers</p><p>Jellyfish Team</p><a href="https://jel.ly.fish">https://jel.ly.fish</a>`;
 
-	return sendEmailHandler(context.privilegedSession, context, userCard, {
+	return sendEmailHandler(context.privilegedSession, context, userContract, {
 		arguments: buildSendEmailOptions(
-			userCard,
+			userContract,
 			'Jellyfish Password Reset',
 			html,
 		),
@@ -236,15 +236,15 @@ export async function sendEmail(
 const handler: ActionDefinition['handler'] = async (
 	_session,
 	context,
-	card,
+	contract,
 	request,
 ) => {
 	const username = request.arguments.username;
 	const response = {
-		id: card.id,
-		type: card.type,
-		version: card.version,
-		slug: card.slug,
+		id: contract.id,
+		type: contract.type,
+		version: contract.version,
+		slug: contract.slug,
 	};
 
 	const user = await getUserBySlug(
@@ -280,19 +280,28 @@ const handler: ActionDefinition['handler'] = async (
 	}
 
 	try {
-		const typeCard = (await context.getCardBySlug(
+		const typeContract = (await context.getCardBySlug(
 			context.privilegedSession,
 			'password-reset@1.0.0',
 		))! as TypeContract;
-		await invalidatePreviousPasswordResets(context, user.id, request, typeCard);
-		const passwordResetCard = await addPasswordResetCard(
+		await invalidatePreviousPasswordResets(
+			context,
+			user.id,
+			request,
+			typeContract,
+		);
+		const passwordResetContract = await addPasswordResetContract(
 			context,
 			request,
 			user,
-			typeCard,
+			typeContract,
 		);
-		await addLinkCard(context, request, passwordResetCard, user);
-		await sendEmail(context, user, passwordResetCard.data.resetToken as string);
+		await addLinkContract(context, request, passwordResetContract, user);
+		await sendEmail(
+			context,
+			user,
+			passwordResetContract.data.resetToken as string,
+		);
 	} catch (error) {
 		logger.warn(
 			request.logContext,

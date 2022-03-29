@@ -4,13 +4,13 @@ import { defaultPlugin } from '../../lib';
 
 const pluginManager = new PluginManager([defaultPlugin()]);
 
-test('Expected cards are loaded', () => {
-	const cards = pluginManager.getCards();
+test('Expected contracts are loaded', () => {
+	const contracts = pluginManager.getCards();
 
 	// Sanity check
-	expect(_.isEmpty(cards)).toBe(false);
-	expect(cards.message.name).toEqual('Chat message');
-	expect(cards['action-maintain-contact'].name).toEqual(
+	expect(_.isEmpty(contracts)).toBe(false);
+	expect(contracts.message.name).toEqual('Chat message');
+	expect(contracts['action-maintain-contact'].name).toEqual(
 		'Maintain a contact for a user',
 	);
 });

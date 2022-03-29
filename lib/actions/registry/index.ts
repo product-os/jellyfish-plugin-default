@@ -1,7 +1,7 @@
-import axios from 'axios';
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { getLogger, LogContext } from '@balena/jellyfish-logger';
 import type { ContractSummary } from '@balena/jellyfish-types/build/core';
+import axios from 'axios';
 import { TypedError } from 'typed-error';
 
 const logger = getLogger(__filename);
@@ -114,8 +114,8 @@ const registrySchema = defaultEnvironment.registry.insecureHttp
 	? 'http://'
 	: 'https://';
 
-const manifestUrl = (card: ContractSummary) =>
-	`${registrySchema}${defaultEnvironment.registry.host}/v2/${card.slug}/manifests/${card.version}`;
+const manifestUrl = (contract: ContractSummary) =>
+	`${registrySchema}${defaultEnvironment.registry.host}/v2/${contract.slug}/manifests/${contract.version}`;
 
 const parseWwwAuthenticate = (wwwAuthenticate: any) => {
 	return {

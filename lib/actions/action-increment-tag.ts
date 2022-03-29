@@ -31,7 +31,7 @@ export function mergeIncrements(
 const handler: ActionDefinition['handler'] = async (
 	session,
 	context,
-	card,
+	contract,
 	request,
 ) => {
 	const names = castArray(request.arguments.name);
@@ -42,7 +42,7 @@ const handler: ActionDefinition['handler'] = async (
 		const name = trim(item.toLowerCase().trim(), '#');
 		const slug = `tag-${name}`;
 
-		const tagCard = await context.getCardBySlug(session, `${slug}@1.0.0`);
+		const tagContract = await context.getCardBySlug(session, `${slug}@1.0.0`);
 
 		const incrementOptions = {
 			actor: request.actor,
@@ -52,10 +52,10 @@ const handler: ActionDefinition['handler'] = async (
 			},
 		};
 
-		if (tagCard) {
+		if (tagContract) {
 			mergeIncrements(
 				increments,
-				await actionIncrementHandler(session, context, tagCard, {
+				await actionIncrementHandler(session, context, tagContract, {
 					...request,
 					...incrementOptions,
 				}),
@@ -78,14 +78,14 @@ const handler: ActionDefinition['handler'] = async (
 		};
 
 		try {
-			const result = await actionCreateCardHandler(session, context, card, {
+			const result = await actionCreateCardHandler(session, context, contract, {
 				...request,
 				...createOptions,
 			});
 			mergeIncrements(increments, result);
 			continue;
 		} catch (error: any) {
-			// Notice action-create-card throws an error if the card
+			// Notice action-create-card throws an error if the contract
 			// you want to create already exists. Because we check if
 			// the tag exists to decide whether to update or insert in
 			// a non atomic way, two calls can concurrently think the
@@ -95,7 +95,7 @@ const handler: ActionDefinition['handler'] = async (
 			// can check if our insert failed, and if so retry using
 			// an update instead.
 			if (error.name === 'JellyfishElementAlreadyExists') {
-				// Get the card again
+				// Get the contract again
 				const input = (await context.getCardBySlug(session, `${slug}@1.0.0`))!;
 
 				mergeIncrements(

@@ -9,25 +9,25 @@ import { get, isNumber, toInteger } from 'lodash';
 const handler: ActionDefinition['handler'] = async (
 	session,
 	context,
-	card,
+	contract,
 	request,
 ) => {
-	const typeCard = (await context.getCardBySlug(
+	const typeContract = (await context.getCardBySlug(
 		session,
-		card.type,
+		contract.type,
 	))! as TypeContract;
 
 	assert.INTERNAL(
 		request.logContext,
-		typeCard,
+		typeContract,
 		workerErrors.WorkerNoElement,
-		`No such type: ${card.type}`,
+		`No such type: ${contract.type}`,
 	);
 
-	const current = get(card, request.arguments.path);
+	const current = get(contract, request.arguments.path);
 	const result = await context.patchCard(
 		session,
-		typeCard,
+		typeContract,
 		{
 			timestamp: request.timestamp,
 			reason: request.arguments.reason,
@@ -35,7 +35,7 @@ const handler: ActionDefinition['handler'] = async (
 			originator: request.originator,
 			attachEvents: true,
 		},
-		card,
+		contract,
 		[
 			{
 				op: isNumber(current) ? 'replace' : 'add',
@@ -63,7 +63,7 @@ export const actionIncrement: ActionDefinition = {
 		slug: 'action-increment',
 		version: '1.0.0',
 		type: 'action@1.0.0',
-		name: 'Increment a field on a card',
+		name: 'Increment a field on a contract',
 		data: {
 			arguments: {
 				reason: {

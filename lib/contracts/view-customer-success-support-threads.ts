@@ -10,7 +10,7 @@ export const viewCustomerSuccessSupportThreads: ViewContractDefinition = {
 		namespace: 'Support',
 		allOf: [
 			{
-				name: 'Active cards',
+				name: 'Active contracts',
 				schema: {
 					anyOf: [
 						{

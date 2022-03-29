@@ -13,14 +13,14 @@ import { BCRYPT_SALT_ROUNDS, PASSWORDLESS_USER_HASH } from './constants';
 const actionCreateSession = actions['action-create-session'];
 
 const pre: ActionDefinition['pre'] = async (session, context, request) => {
-	const card = await context.getCardById(
+	const contract = await context.getCardById(
 		context.privilegedSession,
 		request.card,
 	);
 	const isFirstTimePassword =
-		card &&
-		card.data &&
-		card.data.hash === PASSWORDLESS_USER_HASH &&
+		contract &&
+		contract.data &&
+		contract.data.hash === PASSWORDLESS_USER_HASH &&
 		!request.arguments.currentPassword;
 
 	// TS-TODO: This is broken
@@ -54,32 +54,32 @@ const pre: ActionDefinition['pre'] = async (session, context, request) => {
 const handler: ActionDefinition['handler'] = async (
 	session,
 	context,
-	card,
+	contract,
 	request,
 ) => {
-	const typeCard = (await context.getCardBySlug(
+	const typeContract = (await context.getCardBySlug(
 		session,
-		card.type,
+		contract.type,
 	))! as TypeContract;
 
 	assert.INTERNAL(
 		request.logContext,
-		typeCard,
+		typeContract,
 		workerErrors.WorkerNoElement,
-		`No such type: ${card.type}`,
+		`No such type: ${contract.type}`,
 	);
 
 	return context
 		.patchCard(
 			session,
-			typeCard,
+			typeContract,
 			{
 				timestamp: request.timestamp,
 				actor: request.actor,
 				originator: request.originator,
 				attachEvents: false,
 			},
-			card,
+			contract,
 			[
 				{
 					op: isEmpty(request.arguments.currentPassword) ? 'add' : 'replace',
@@ -90,7 +90,7 @@ const handler: ActionDefinition['handler'] = async (
 		)
 		.catch((error: unknown) => {
 			// A schema mismatch here means that the patch could
-			// not be applied to the card due to permissions.
+			// not be applied to the contract due to permissions.
 			if (error instanceof autumndbErrors.JellyfishSchemaMismatch) {
 				const newError = new workerErrors.WorkerAuthenticationError(
 					'Password change not allowed',

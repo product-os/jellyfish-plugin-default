@@ -9,7 +9,7 @@ export const viewAllSalesThreads: ViewContractDefinition = {
 		namespace: 'Sales',
 		allOf: [
 			{
-				name: 'Active cards',
+				name: 'Active contracts',
 				schema: {
 					anyOf: [
 						{

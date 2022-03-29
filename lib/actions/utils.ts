@@ -8,27 +8,27 @@ import type {
 } from '@balena/jellyfish-worker';
 
 /**
- * @summary Add link between user card and another card
+ * @summary Add link between user contract and another contract
  * @function
  *
  * @param context - execution context
  * @param request - action request
- * @param fromCard - card to link from
- * @param userCard - user card to link to
+ * @param fromContract - contract to link from
+ * @param userContract - user contract to link to
  */
-export async function addLinkCard(
+export async function addLinkContract(
 	context: WorkerContext,
 	request: ActionHandlerRequest,
-	fromCard: Contract,
-	userCard: Contract,
+	fromContract: Contract,
+	userContract: Contract,
 ): Promise<void> {
-	const linkTypeCard = (await context.getCardBySlug(
+	const linkTypeContract = (await context.getCardBySlug(
 		context.privilegedSession,
 		'link@1.0.0',
 	))! as TypeContract;
 	await context.insertCard(
 		context.privilegedSession,
-		linkTypeCard,
+		linkTypeContract,
 		{
 			timestamp: request.timestamp,
 			actor: request.actor,
@@ -42,12 +42,12 @@ export async function addLinkCard(
 			data: {
 				inverseName: 'has requested',
 				from: {
-					id: fromCard.id,
-					type: fromCard.type,
+					id: fromContract.id,
+					type: fromContract.type,
 				},
 				to: {
-					id: userCard.id,
-					type: userCard.type,
+					id: userContract.id,
+					type: userContract.type,
 				},
 			},
 		},

@@ -24,7 +24,7 @@ afterAll(async () => {
 });
 
 describe('action-broadcast', () => {
-	test('should return a broadcast card on unmatched message', async () => {
+	test('should return a broadcast contract on unmatched message', async () => {
 		// Post a message to a thread
 		const supportThread = await ctx.createSupportThread(
 			ctx.adminUserId,
@@ -179,9 +179,12 @@ describe('action-broadcast', () => {
 		expect(threadWithLinks).toBeTruthy();
 		assert(threadWithLinks.links);
 		const timeline = threadWithLinks.links['has attached element'];
-		const sortedTimeline = map(sortBy(timeline, 'data.timestamp'), (card) => {
-			return pick(card, ['slug', 'data.payload.message']);
-		});
+		const sortedTimeline = map(
+			sortBy(timeline, 'data.timestamp'),
+			(contract) => {
+				return pick(contract, ['slug', 'data.payload.message']);
+			},
+		);
 		expect(sortedTimeline[0].slug).toMatch(/^broadcast-message-/);
 	});
 
@@ -260,9 +263,12 @@ describe('action-broadcast', () => {
 		assert(threadWithLinks.links);
 
 		const timeline = threadWithLinks.links['has attached element'];
-		const sortedTimeline = map(sortBy(timeline, 'data.timestamp'), (card) => {
-			return pick(card, ['slug', 'data.payload.message']);
-		});
+		const sortedTimeline = map(
+			sortBy(timeline, 'data.timestamp'),
+			(contract) => {
+				return pick(contract, ['slug', 'data.payload.message']);
+			},
+		);
 		expect(sortedTimeline.length).toEqual(2);
 		expect(sortedTimeline[1].slug).toMatch(/^broadcast-message/);
 	});
@@ -364,9 +370,12 @@ describe('action-broadcast', () => {
 
 		const timeline = threadWithLinks.links['has attached element'];
 		expect(timeline.length).toEqual(2);
-		const sortedTimeline = map(sortBy(timeline, 'data.timestamp'), (card) => {
-			return pick(card, ['slug']);
-		});
+		const sortedTimeline = map(
+			sortBy(timeline, 'data.timestamp'),
+			(contract) => {
+				return pick(contract, ['slug']);
+			},
+		);
 		expect(sortedTimeline[0].slug).toMatch(/^broadcast-message/);
 	});
 
@@ -469,9 +478,12 @@ describe('action-broadcast', () => {
 		assert(threadWithLinks.links);
 
 		const timeline = threadWithLinks.links['has attached element'];
-		const sortedTimeline = map(sortBy(timeline, 'data.timestamp'), (card) => {
-			return pick(card, ['slug', 'data.payload.message']);
-		});
+		const sortedTimeline = map(
+			sortBy(timeline, 'data.timestamp'),
+			(contract) => {
+				return pick(contract, ['slug', 'data.payload.message']);
+			},
+		);
 		expect(sortedTimeline.length).toEqual(3);
 		expect(sortedTimeline[0].slug).toMatch(/^broadcast-message/);
 		expect(sortedTimeline[0].data).toEqual({

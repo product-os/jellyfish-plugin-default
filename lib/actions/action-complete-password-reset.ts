@@ -23,18 +23,18 @@ const pre: ActionDefinition['pre'] = async (_session, _context, request) => {
 };
 
 /**
- * @summary Get a password reset card from the backend
+ * @summary Get a password reset contract from the backend
  * @function
  *
  * @param context - execution context
  * @param request - action request
- * @returns password reset card
+ * @returns password reset contract
  */
-export async function getPasswordResetCard(
+export async function getPasswordResetContract(
 	context: WorkerContext,
 	request: ActionHandlerRequest,
 ): Promise<Contract> {
-	const [passwordResetCard] = await context.query(
+	const [passwordResetContract] = await context.query(
 		context.privilegedSession,
 		{
 			$$links: {
@@ -80,38 +80,37 @@ export async function getPasswordResetCard(
 			limit: 1,
 		},
 	);
-	return passwordResetCard;
+	return passwordResetContract;
 }
 
 /**
- * @summary Invalidate a password reset card
+ * @summary Invalidate a password reset contract
  * @function
  *
  * @param context - execution context
- * @param session - user session
  * @param request - action request
- * @param passwordResetCard - password reset card
- * @returns invalidated password reset card
+ * @param passwordResetContract - password reset contract
+ * @returns invalidated password reset contract
  */
 export async function invalidatePasswordReset(
 	context: WorkerContext,
 	request: ActionHandlerRequest,
-	passwordResetCard: Contract,
+	passwordResetContract: Contract,
 ): Promise<Contract> {
-	const typeCard = (await context.getCardBySlug(
+	const typeContract = (await context.getCardBySlug(
 		context.privilegedSession,
 		'password-reset@1.0.0',
 	))! as TypeContract;
 	return (await context.patchCard(
 		context.privilegedSession,
-		typeCard,
+		typeContract,
 		{
 			timestamp: request.timestamp,
 			actor: request.actor,
 			originator: request.originator,
 			attachEvents: true,
 		},
-		passwordResetCard,
+		passwordResetContract,
 		[
 			{
 				op: 'replace',
@@ -125,10 +124,10 @@ export async function invalidatePasswordReset(
 const handler: ActionDefinition['handler'] = async (
 	session,
 	context,
-	_card,
+	_contract,
 	request,
 ) => {
-	const passwordReset = await getPasswordResetCard(context, request);
+	const passwordReset = await getPasswordResetContract(context, request);
 	assert.USER(
 		request.logContext,
 		passwordReset,
@@ -159,7 +158,7 @@ const handler: ActionDefinition['handler'] = async (
 		throw newError;
 	}
 
-	const userTypeCard = (await context.getCardBySlug(
+	const userTypeContract = (await context.getCardBySlug(
 		session,
 		'user@latest',
 	))! as TypeContract;
@@ -167,7 +166,7 @@ const handler: ActionDefinition['handler'] = async (
 	return context
 		.patchCard(
 			context.privilegedSession,
-			userTypeCard,
+			userTypeContract,
 			{
 				timestamp: request.timestamp,
 				actor: request.actor,
@@ -185,7 +184,7 @@ const handler: ActionDefinition['handler'] = async (
 		)
 		.catch((error: unknown) => {
 			// A schema mismatch here means that the patch could
-			// not be applied to the card due to permissions.
+			// not be applied to the contract due to permissions.
 			if (error instanceof autumndbErrors.JellyfishSchemaMismatch) {
 				// TS-TODO: Ensure this error is what is expected with Context type
 				const newError = new workerErrors.WorkerAuthenticationError(

@@ -77,7 +77,7 @@ describe('mirror()', () => {
 		expect(isEmpty(result)).toBe(true);
 	});
 
-	test('should return a list of cards', async () => {
+	test('should return a list of contracts', async () => {
 		sinon.stub(defaultEnvironment, 'getIntegration').callsFake(() => {
 			return {};
 		});

@@ -15,66 +15,66 @@ const logger = getLogger(__filename);
 const handler: ActionDefinition['handler'] = async (
 	session: string,
 	context: WorkerContext,
-	card: Contract,
+	contract: Contract,
 	request: ActionHandlerRequest,
 ) => {
 	logger.info(request.logContext, 'Maintaining contact', {
-		id: card.id,
-		slug: card.slug,
-		type: card.type,
+		id: contract.id,
+		slug: contract.slug,
+		type: contract.type,
 	});
 
-	const slug = card.slug.replace(/^user-/, 'contact-');
-	const userProfile = card.data.profile || ({} as any);
+	const slug = contract.slug.replace(/^user-/, 'contact-');
+	const userProfile = contract.data.profile || ({} as any);
 	userProfile.name = userProfile.name || {};
 
 	const LINK_NAME_CONTACT_USER = 'is attached to user';
 	const LINK_NAME_USER_CONTACT = 'has contact';
 
-	const typeCard = (await context.getCardBySlug(
+	const typeContract = (await context.getCardBySlug(
 		session,
 		'contact@1.0.0',
 	)) as TypeContract;
 	assert.INTERNAL(
 		request.logContext,
-		typeCard,
+		typeContract,
 		workerErrors.WorkerNoElement,
 		'No such type: contact',
 	);
 
 	// TS-TODO: Stop casting with as string
-	const originCard =
-		card.data.origin &&
-		(isUUID(card.data.origin as string)
-			? await context.getCardById(session, card.data.origin as string)
-			: await context.getCardBySlug(session, card.data.origin as string));
+	const originContract =
+		contract.data.origin &&
+		(isUUID(contract.data.origin as string)
+			? await context.getCardById(session, contract.data.origin as string)
+			: await context.getCardBySlug(session, contract.data.origin as string));
 
 	const contactProperties = [
 		{
 			path: ['active'],
-			value: card.active,
+			value: contract.active,
 		},
 		{
 			path: ['name'],
-			value: card.name,
+			value: contract.name,
 		},
 		{
 			path: ['tags'],
-			value: card.tags,
+			value: contract.tags,
 		},
 		{
 			path: ['data', 'origin'],
-			value: card.data.origin,
+			value: contract.data.origin,
 		},
 		{
 			// Elevate the external event source so that the UI can display it
 			// without having to perform extra link traversals on every contact.
 			path: ['data', 'source'],
-			value: _.get(originCard, ['data', 'source']),
+			value: _.get(originContract, ['data', 'source']),
 		},
 		{
 			path: ['data', 'profile', 'email'],
-			value: card.data.email,
+			value: contract.data.email,
 		},
 		{
 			path: ['data', 'profile', 'company'],
@@ -123,11 +123,11 @@ const handler: ActionDefinition['handler'] = async (
 					properties: {
 						slug: {
 							type: 'string',
-							const: card.slug,
+							const: contract.slug,
 						},
 						type: {
 							type: 'string',
-							const: card.type,
+							const: contract.type,
 						},
 					},
 				},
@@ -180,7 +180,7 @@ const handler: ActionDefinition['handler'] = async (
 
 		await context.patchCard(
 			session,
-			typeCard,
+			typeContract,
 			{
 				timestamp: request.timestamp,
 				reason: 'Updated user contact',
@@ -203,8 +203,8 @@ const handler: ActionDefinition['handler'] = async (
 	const contact = {
 		slug,
 		version: '1.0.0',
-		name: card.name || '',
-		active: card.active,
+		name: contract.name || '',
+		active: contract.active,
 		data: {
 			profile: {},
 		},
@@ -218,27 +218,27 @@ const handler: ActionDefinition['handler'] = async (
 		_.set(contact, property.path, property.value);
 	}
 
-	const linkTypeCard = (await context.getCardBySlug(
+	const linkTypeContract = (await context.getCardBySlug(
 		session,
 		'link@1.0.0',
 	)) as TypeContract;
 	assert.INTERNAL(
 		request.logContext,
-		linkTypeCard,
+		linkTypeContract,
 		workerErrors.WorkerNoElement,
 		'No such type: link',
 	);
 
-	const contactCard = await context.getCardBySlug(
+	const contactContract = await context.getCardBySlug(
 		session,
 		`${contact.slug}@${contact.version}`,
 	);
 
 	const result =
-		contactCard ||
+		contactContract ||
 		(await context.insertCard(
 			session,
-			typeCard,
+			typeContract,
 			{
 				timestamp: request.timestamp,
 				actor: request.actor,
@@ -251,7 +251,7 @@ const handler: ActionDefinition['handler'] = async (
 
 	await context.insertCard(
 		session,
-		linkTypeCard,
+		linkTypeContract,
 		{
 			timestamp: request.timestamp,
 			actor: request.actor,
@@ -270,16 +270,16 @@ const handler: ActionDefinition['handler'] = async (
 					type: result.type,
 				},
 				to: {
-					id: card.id,
-					type: card.type,
+					id: contract.id,
+					type: contract.type,
 				},
 			},
 		},
 	);
 
 	// Retry now that we fixed the missing link
-	if (contactCard) {
-		return handler(session, context, card, request);
+	if (contactContract) {
+		return handler(session, context, contract, request);
 	}
 
 	return {

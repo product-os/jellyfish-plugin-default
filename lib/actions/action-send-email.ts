@@ -1,6 +1,5 @@
-import { defaultEnvironment } from '@balena/jellyfish-environment';
+import { defaultEnvironment, MailOptions } from '@balena/jellyfish-environment';
 import type { ActionDefinition } from '@balena/jellyfish-worker';
-import { MailOptions } from '@balena/jellyfish-environment';
 import axios from 'axios';
 import FormData from 'form-data';
 
@@ -71,7 +70,7 @@ class Mailgun {
 const handler: ActionDefinition['handler'] = async (
 	_session,
 	_context,
-	_card,
+	_contract,
 	request,
 ) => {
 	const { fromAddress, toAddress, subject, html } = request.arguments;

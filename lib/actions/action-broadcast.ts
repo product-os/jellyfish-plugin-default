@@ -5,7 +5,7 @@ const actionCreateEventHandler = actions['action-create-event'].handler;
 const handler: ActionDefinition['handler'] = async (
 	session,
 	context,
-	card,
+	contract,
 	request,
 ) => {
 	const eventBaseType = 'message';
@@ -20,7 +20,7 @@ const handler: ActionDefinition['handler'] = async (
 				properties: {
 					id: {
 						type: 'string',
-						const: card.id,
+						const: contract.id,
 					},
 				},
 			},
@@ -69,7 +69,7 @@ const handler: ActionDefinition['handler'] = async (
 		},
 	};
 
-	return actionCreateEventHandler(session, context, card, eventRequest);
+	return actionCreateEventHandler(session, context, contract, eventRequest);
 };
 
 export const actionBroadcast: ActionDefinition = {

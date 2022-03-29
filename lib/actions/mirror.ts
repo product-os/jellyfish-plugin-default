@@ -13,7 +13,7 @@ const mirror = async (
 	type: string,
 	session: string,
 	context: WorkerContext,
-	card: ContractSummary,
+	contract: ContractSummary,
 	request: ActionHandlerRequest,
 ) => {
 	// Don't sync back changes that came externally
@@ -39,12 +39,12 @@ const mirror = async (
 		}
 	}
 
-	const cards = await metrics
+	const contracts = await metrics
 		.measureMirror(type, async () => {
 			return context.sync.mirror(
 				type,
 				defaultEnvironment.getIntegration(type),
-				card,
+				contract,
 				context.sync.getActionContext(
 					type,
 					context,
@@ -63,7 +63,7 @@ const mirror = async (
 			throw error;
 		});
 
-	return cards.map((element: ContractSummary) => {
+	return contracts.map((element: ContractSummary) => {
 		return {
 			id: element.id,
 			type: element.type,

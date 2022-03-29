@@ -32,9 +32,9 @@ interface MergeableData {
 }
 
 /**
- * Takes in a draft version of a card (e.g. 1.0.1-alpha1+rev1) and
- * creates a copy of the card as its final equivalent (i.e. 1.0.1+rev1)
- * and also links any existing artifacts to this new card
+ * Takes in a draft version of a contract (e.g. 1.0.1-alpha1+rev1) and
+ * creates a copy of the contract as its final equivalent (i.e. 1.0.1+rev1)
+ * and also links any existing artifacts to this new contract
  */
 export const actionMergeDraftVersion: ActionDefinition = {
 	contract: {
@@ -49,64 +49,64 @@ export const actionMergeDraftVersion: ActionDefinition = {
 			arguments: {},
 		},
 	},
-	handler: async (session, context, card, request) => {
+	handler: async (session, context, contract, request) => {
 		logger.info(request.logContext, 'merging draft version', {
-			slug: card.slug,
-			version: card.version,
+			slug: contract.slug,
+			version: contract.version,
 		});
 
 		assert.USER(
 			request.logContext,
-			semver.prerelease(card.version),
+			semver.prerelease(contract.version),
 			workerErrors.WorkerNoElement,
-			`Not a draft version: ${card.version}`,
+			`Not a draft version: ${contract.version}`,
 		);
 
-		const typeCard = (await context.getCardBySlug(
+		const typeContract = (await context.getCardBySlug(
 			session,
-			card.type,
+			contract.type,
 		))! as TypeContract;
 
 		assert.USER(
 			request.logContext,
-			typeCard,
+			typeContract,
 			workerErrors.WorkerNoElement,
-			`No such type: ${card.type}`,
+			`No such type: ${contract.type}`,
 		);
 
-		// TS-TODO: fix type confusion in plugin base
-		const cardData = card.data as unknown as MergeableData;
-		const previousArtifactReady = cardData.$transformer.artifactReady;
+		// TS-TODO: fix type confusion
+		const contractData = contract.data as unknown as MergeableData;
+		const previousArtifactReady = contractData.$transformer.artifactReady;
 
-		// * create deep copy of card *without* data.$transformer (TODO check this) and version finalized
-		// * insert card
+		// * create deep copy of contract *without* data.$transformer (TODO check this) and version finalized
+		// * insert contract
 		// * link artifacts
-		// * update card with artifactReady=true (need to do this as two steps for docker registry permission checks)
-		// * link cards with 'was merged as'
+		// * update contract with artifactReady=true (need to do this as two steps for docker registry permission checks)
+		// * link contracts with 'was merged as'
 
-		const finalVersionCard = _.cloneDeep(
-			card,
+		const finalVersionContract = _.cloneDeep(
+			contract,
 		) as unknown as Contract<MergeableData>;
-		Reflect.deleteProperty(finalVersionCard, 'id');
+		Reflect.deleteProperty(finalVersionContract, 'id');
 		if (previousArtifactReady) {
-			finalVersionCard.data.$transformer.artifactReady = false;
+			finalVersionContract.data.$transformer.artifactReady = false;
 		}
-		finalVersionCard.version = makeFinal(card.version);
+		finalVersionContract.version = makeFinal(contract.version);
 
 		// TODO check if final version already exists
 
-		const insertedFinalCard = (await context.insertCard(
+		const insertedFinalContract = (await context.insertCard(
 			session,
-			typeCard,
+			typeContract,
 			{
 				timestamp: request.timestamp,
 				actor: request.actor,
 				originator: request.originator,
 				attachEvents: true,
 			},
-			finalVersionCard,
+			finalVersionContract,
 		))!;
-		finalVersionCard.id = insertedFinalCard.id;
+		finalVersionContract.id = insertedFinalContract.id;
 
 		if (previousArtifactReady) {
 			// NOTE
@@ -120,8 +120,8 @@ export const actionMergeDraftVersion: ActionDefinition = {
 			))!;
 			await retagArtifact(
 				request.logContext,
-				card,
-				finalVersionCard,
+				contract,
+				finalVersionContract,
 				actorContract.slug,
 				session,
 			);
@@ -131,21 +131,21 @@ export const actionMergeDraftVersion: ActionDefinition = {
 			const newArtifactReady =
 				typeof previousArtifactReady === 'string'
 					? previousArtifactReady.replace(
-							card.version,
-							finalVersionCard.version,
+							contract.version,
+							finalVersionContract.version,
 					  )
 					: previousArtifactReady;
 
 			await context.patchCard(
 				session,
-				typeCard,
+				typeContract,
 				{
 					timestamp: request.timestamp,
 					actor: request.actor,
 					originator: request.originator,
 					attachEvents: true,
 				},
-				finalVersionCard,
+				finalVersionContract,
 				[
 					{
 						op: 'replace',
@@ -156,12 +156,12 @@ export const actionMergeDraftVersion: ActionDefinition = {
 			);
 		}
 
-		await linkCards(
+		await linkContracts(
 			context,
 			session,
 			request,
-			card,
-			insertedFinalCard,
+			contract,
+			insertedFinalContract,
 			mergeLinkVerb,
 			mergeLinkInverseVerb,
 		);
@@ -184,7 +184,7 @@ export const actionMergeDraftVersion: ActionDefinition = {
 						properties: {
 							id: {
 								type: 'string',
-								const: card.id,
+								const: contract.id,
 							},
 						},
 					},
@@ -194,18 +194,18 @@ export const actionMergeDraftVersion: ActionDefinition = {
 		);
 
 		if (contractRepo) {
-			await linkCards(
+			await linkContracts(
 				context,
 				session,
 				request,
 				contractRepo,
-				insertedFinalCard,
+				insertedFinalContract,
 				repoLinkVerb,
 				repoLinkInverseVerb,
 			);
 		}
 
-		const result = insertedFinalCard;
+		const result = insertedFinalContract;
 
 		return {
 			id: result.id,
@@ -226,29 +226,29 @@ const makeFinal = (version: string): string => {
 	return `${v.major}.${v.minor}.${v.patch}${build}`;
 };
 
-const linkCards = async (
+const linkContracts = async (
 	context: WorkerContext,
 	session: string,
 	request: any,
-	card: ContractSummary,
-	insertedFinalCard: ContractSummary,
+	contract: ContractSummary,
+	insertedFinalContract: ContractSummary,
 	verb: string,
 	inverseVerb: string,
 ) => {
-	const linkTypeCard = (await context.getCardBySlug(
+	const linkTypeContract = (await context.getCardBySlug(
 		session,
 		'link@1.0.0',
 	))! as TypeContract;
 	assert.INTERNAL(
 		request.logContext,
-		linkTypeCard,
+		linkTypeContract,
 		workerErrors.WorkerNoElement,
 		'No such type: link',
 	);
 
 	await context.insertCard(
 		session,
-		linkTypeCard,
+		linkTypeContract,
 		{
 			timestamp: request.timestamp,
 			actor: request.actor,
@@ -262,14 +262,14 @@ const linkCards = async (
 			data: {
 				inverseName: inverseVerb,
 				from: {
-					id: card.id,
-					slug: card.slug,
-					type: card.type,
+					id: contract.id,
+					slug: contract.slug,
+					type: contract.type,
 				},
 				to: {
-					id: insertedFinalCard.id,
-					slug: insertedFinalCard.slug,
-					type: insertedFinalCard.type,
+					id: insertedFinalContract.id,
+					slug: insertedFinalContract.slug,
+					type: insertedFinalContract.type,
 				},
 			},
 		},

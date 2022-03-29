@@ -13,7 +13,7 @@ describe('mergeIncrements()', () => {
 		const set: ContractSummary[] = [];
 		const item: ContractSummary = {
 			id: '1234',
-			slug: 'card-1234',
+			slug: 'contract-1234',
 			version: '1.0.0',
 			type: 'card@1.0.0',
 		};
@@ -26,13 +26,13 @@ describe('mergeIncrements()', () => {
 		const items: ContractSummary[] = [
 			{
 				id: '1234',
-				slug: 'card-1234',
+				slug: 'contract-1234',
 				version: '1.0.0',
 				type: 'card@1.0.0',
 			},
 			{
 				id: '5678',
-				slug: 'card-5678',
+				slug: 'contract-5678',
 				version: '1.0.0',
 				type: 'card@1.0.0',
 			},

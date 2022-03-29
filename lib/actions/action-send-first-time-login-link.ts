@@ -14,18 +14,18 @@ import { get, includes, intersectionBy } from 'lodash';
 import { v4 as uuidv4 } from 'uuid';
 import { actionSendEmail } from './action-send-email';
 import { buildSendEmailOptions } from './mail-utils';
-import { addLinkCard } from './utils';
+import { addLinkContract } from './utils';
 
 const logger = getLogger(__filename);
 const sendEmailHandler = actionSendEmail.handler;
 
 /**
- * @summary Get organization cards for a given user
+ * @summary Get organization contracts for a given user
  * @function
  *
  * @param context - execution context
  * @param userId - user ID
- * @returns set of organization cards
+ * @returns set of organization contracts
  */
 export async function queryUserOrgs(
 	context: WorkerContext,
@@ -104,19 +104,19 @@ export async function getUserRoles(
 }
 
 /**
- * @summary Invalidate previous first time login cards
+ * @summary Invalidate previous first time login contracts
  * @function
  *
  * @param context - execution context
  * @param request - action request
  * @param userId - user ID
- * @param typeCard - type card
+ * @param typeContract - type contract
  */
 export async function invalidatePreviousFirstTimeLogins(
 	context: WorkerContext,
 	request: ActionHandlerRequest,
 	userId: string,
-	typeCard: TypeContract,
+	typeContract: TypeContract,
 ): Promise<void> {
 	const previousFirstTimeLogins = await context.query(
 		context.privilegedSession,
@@ -152,7 +152,7 @@ export async function invalidatePreviousFirstTimeLogins(
 			previousFirstTimeLogins.map((firstTimeLogin: Contract) => {
 				return context.patchCard(
 					context.privilegedSession,
-					typeCard,
+					typeContract,
 					{
 						timestamp: request.timestamp,
 						actor: request.actor,
@@ -174,18 +174,18 @@ export async function invalidatePreviousFirstTimeLogins(
 }
 
 /**
- * @summary Add first-time login card
+ * @summary Add first-time login contract
  * @function
  *
  * @param context - execution context
  * @param request - action request
- * @param typeCard - type card
- * @returns created first-time login card
+ * @param typeContract - type contract
+ * @returns created first-time login contract
  */
 export async function addFirstTimeLogin(
 	context: WorkerContext,
 	request: ActionHandlerRequest,
-	typeCard: TypeContract,
+	typeContract: TypeContract,
 ): Promise<Contract> {
 	const firstTimeLoginToken = uuidv4();
 	const requestedAt = new Date();
@@ -197,7 +197,7 @@ export async function addFirstTimeLogin(
 	const expiresAt = new Date(sevenDaysinFuture);
 	return (await context.insertCard(
 		context.privilegedSession,
-		typeCard,
+		typeContract,
 		{
 			timestamp: request.timestamp,
 			actor: request.actor,
@@ -221,22 +221,22 @@ export async function addFirstTimeLogin(
  * @function
  *
  * @param context - execution context
- * @param userCard - user card
+ * @param userContract - user contract
  * @param firstTimeLoginToken - first-time login token
  * @returns send email request response
  */
 export async function sendEmail(
 	context: WorkerContext,
-	userCard: Contract,
+	userContract: Contract,
 	firstTimeLoginToken: string,
 ): Promise<any> {
-	const username = userCard.slug.replace(/^user-/g, '');
+	const username = userContract.slug.replace(/^user-/g, '');
 	const url = `https://jel.ly.fish/first_time_login/${firstTimeLoginToken}/${username}`;
 	const html = `<p>Hello,</p><p>Here is a link to login to your new Jellyfish account ${username}.</p><p>Please use the link below to set your password and login:</p><a href="${url}">${url}</a><p>Cheers</p><p>Jellyfish Team</p><a href="https://jel.ly.fish">https://jel.ly.fish</a>`;
 
-	return sendEmailHandler(context.privilegedSession, context, userCard, {
+	return sendEmailHandler(context.privilegedSession, context, userContract, {
 		arguments: buildSendEmailOptions(
-			userCard,
+			userContract,
 			'Jellyfish First Time Login',
 			html,
 		),
@@ -249,12 +249,12 @@ export async function sendEmail(
  *
  * @param context - execution context
  * @param request - action request
- * @param userCard - user card
+ * @param userContract - user contract
  */
 export async function checkOrgs(
 	context: WorkerContext,
 	request: ActionHandlerRequest,
-	userCard: Contract,
+	userContract: Contract,
 ): Promise<void> {
 	const requesterOrgs = await queryUserOrgs(context, request.actor);
 	assert.USER(
@@ -264,12 +264,12 @@ export async function checkOrgs(
 		'You do not belong to an organisation and thus cannot send a first-time login link to any users',
 	);
 
-	const userOrgs = await queryUserOrgs(context, userCard.id);
+	const userOrgs = await queryUserOrgs(context, userContract.id);
 	assert.USER(
 		request.logContext,
 		userOrgs.length > 0,
 		workerErrors.WorkerNoElement,
-		`User with slug ${userCard.slug} is not a member of any organisations`,
+		`User with slug ${userContract.slug} is not a member of any organisations`,
 	);
 
 	const sharedOrgs = intersectionBy(userOrgs, requesterOrgs, 'id');
@@ -277,7 +277,7 @@ export async function checkOrgs(
 		request.logContext,
 		sharedOrgs.length > 0,
 		workerErrors.WorkerAuthenticationError,
-		`User with slug ${userCard.slug} is not a member of any of your organisations`,
+		`User with slug ${userContract.slug} is not a member of any of your organisations`,
 	);
 }
 
@@ -287,29 +287,29 @@ export async function checkOrgs(
  *
  * @param context - execution context
  * @param session - user session
- * @param userCard - user card
+ * @param userContract - user contract
  * @param request - action request
  */
 async function setCommunityRole(
 	context: WorkerContext,
 	session: string,
-	userCard: Contract,
+	userContract: Contract,
 	request: ActionHandlerRequest,
 ): Promise<void> {
-	const typeCard = (await context.getCardBySlug(
+	const typeContract = (await context.getCardBySlug(
 		session,
 		'user@latest',
 	))! as TypeContract;
 	await context.patchCard(
 		context.privilegedSession,
-		typeCard,
+		typeContract,
 		{
 			timestamp: request.timestamp,
 			actor: request.actor,
 			originator: request.originator,
 			attachEvents: true,
 		},
-		userCard,
+		userContract,
 		[
 			{
 				op: 'replace',
@@ -320,75 +320,75 @@ async function setCommunityRole(
 	);
 	logger.info(
 		request.logContext,
-		`Added community role to user with slug ${userCard.slug}`,
+		`Added community role to user with slug ${userContract.slug}`,
 	);
 }
 
 const handler: ActionDefinition['handler'] = async (
 	session,
 	context,
-	userCard,
+	userContract,
 	request,
 ) => {
-	const typeCard = (await context.getCardBySlug(
+	const typeContract = (await context.getCardBySlug(
 		session,
 		'first-time-login@latest',
 	))! as TypeContract;
-	const userEmails = userCard.data.email as string[];
+	const userEmails = userContract.data.email as string[];
 
 	assert.USER(
 		request.logContext,
-		typeCard,
+		typeContract,
 		workerErrors.WorkerNoElement,
 		'No such type: first-time-login',
 	);
 
 	assert.USER(
 		request.logContext,
-		userCard.active,
+		userContract.active,
 		workerErrors.WorkerNoElement,
-		`User with slug ${userCard.slug} is not active`,
+		`User with slug ${userContract.slug} is not active`,
 	);
 
 	assert.USER(
 		request.logContext,
-		userCard.data.email && userEmails.length,
+		userContract.data.email && userEmails.length,
 		workerErrors.WorkerNoElement,
-		`User with slug ${userCard.slug} does not have an email address`,
+		`User with slug ${userContract.slug} does not have an email address`,
 	);
 
-	await checkOrgs(context, request, userCard);
-	const userRoles = await getUserRoles(context, userCard.id, request);
+	await checkOrgs(context, request, userContract);
+	const userRoles = await getUserRoles(context, userContract.id, request);
 	if (!includes(userRoles, 'user-community')) {
 		logger.info(
 			request.logContext,
-			`User with slug ${userCard.slug} does not have community role. Setting role now`,
+			`User with slug ${userContract.slug} does not have community role. Setting role now`,
 		);
-		await setCommunityRole(context, session, userCard, request);
+		await setCommunityRole(context, session, userContract, request);
 	}
 
 	await invalidatePreviousFirstTimeLogins(
 		context,
 		request,
-		userCard.id,
-		typeCard,
+		userContract.id,
+		typeContract,
 	);
-	const firstTimeLoginCard = await addFirstTimeLogin(
+	const firstTimeLoginContract = await addFirstTimeLogin(
 		context,
 		request,
-		typeCard,
+		typeContract,
 	);
-	await addLinkCard(context, request, firstTimeLoginCard, userCard);
+	await addLinkContract(context, request, firstTimeLoginContract, userContract);
 	await sendEmail(
 		context,
-		userCard,
-		firstTimeLoginCard.data.firstTimeLoginToken as string,
+		userContract,
+		firstTimeLoginContract.data.firstTimeLoginToken as string,
 	);
 	return {
-		id: userCard.id,
-		type: userCard.type,
-		version: userCard.version,
-		slug: userCard.slug,
+		id: userContract.id,
+		type: userContract.type,
+		version: userContract.version,
+		slug: userContract.slug,
 	};
 };
 

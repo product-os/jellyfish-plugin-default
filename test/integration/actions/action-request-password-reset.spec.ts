@@ -61,7 +61,7 @@ function nockRequest() {
 }
 
 describe('action-request-password-reset', () => {
-	test('should create a password reset card and user link when arguments match a valid user', async () => {
+	test('should create a password reset contract and user link when arguments match a valid user', async () => {
 		nockRequest();
 		const username = autumndbTestUtils.generateRandomSlug();
 		const user = await ctx.createUser(username);

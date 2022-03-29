@@ -164,7 +164,7 @@ describe('role-user-community', () => {
 		).rejects.toThrowError();
 	});
 
-	it('external support user should not be able to view other card types', async () => {
+	it('external support user should not be able to view other contract types', async () => {
 		const user = await createUser(['user-external-support'], testOrg);
 		const session = await ctx.createSession(user);
 
@@ -181,8 +181,8 @@ describe('role-user-community', () => {
 				},
 			})
 		)
-			.map((typeCard) => {
-				return typeCard.slug;
+			.map((typeContract) => {
+				return typeContract.slug;
 			})
 			.sort();
 

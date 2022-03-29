@@ -3,7 +3,7 @@ import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
 export const ping: ContractDefinition = {
 	slug: 'ping',
 	type: 'type@1.0.0',
-	name: 'The ping card',
+	name: 'The ping contract',
 	markers: [],
 	data: {
 		schema: {

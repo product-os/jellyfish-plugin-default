@@ -139,7 +139,7 @@ describe('action-google-meet', () => {
 		).toBe(true);
 	});
 
-	test('should update the card with the conference URL', async () => {
+	test('should update the contract with the conference URL', async () => {
 		const supportThread = await ctx.createSupportThread(
 			ctx.adminUserId,
 			ctx.session,
@@ -157,24 +157,28 @@ describe('action-google-meet', () => {
 			arguments: {},
 		});
 
-		const [updatedCard] = await ctx.kernel.query(ctx.logContext, ctx.session, {
-			type: 'object',
-			required: ['id', 'type'],
-			additionalProperties: true,
-			properties: {
-				type: {
-					type: 'string',
-					const: supportThread.type,
-				},
-				id: {
-					type: 'string',
-					const: supportThread.id,
+		const [updatedContract] = await ctx.kernel.query(
+			ctx.logContext,
+			ctx.session,
+			{
+				type: 'object',
+				required: ['id', 'type'],
+				additionalProperties: true,
+				properties: {
+					type: {
+						type: 'string',
+						const: supportThread.type,
+					},
+					id: {
+						type: 'string',
+						const: supportThread.id,
+					},
 				},
 			},
-		});
+		);
 
 		expect(
-			(updatedCard.data as any).conferenceUrl.startsWith(
+			(updatedContract.data as any).conferenceUrl.startsWith(
 				'https://meet.google.com',
 			),
 		).toBe(true);

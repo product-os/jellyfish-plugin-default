@@ -9,7 +9,7 @@ export const viewAllBrainstormTopics: ViewContractDefinition = {
 		namespace: 'Brainstorms',
 		allOf: [
 			{
-				name: 'Active cards',
+				name: 'Active contracts',
 				schema: {
 					type: 'object',
 					properties: {

@@ -4,12 +4,12 @@ import type { ActionDefinition } from '@balena/jellyfish-worker';
 const handler: ActionDefinition['handler'] = async (
 	session,
 	context,
-	card,
+	contract,
 	request,
 ) => {
 	const result = await context.replaceCard(
 		session,
-		card as TypeContract,
+		contract as TypeContract,
 		{
 			timestamp: request.timestamp,
 			actor: request.actor,
@@ -17,7 +17,7 @@ const handler: ActionDefinition['handler'] = async (
 			reason: 'Ping',
 
 			// So that we don't infinitely materialize links
-			// in the ping card.
+			// in the ping contract.
 			attachEvents: false,
 		},
 		{

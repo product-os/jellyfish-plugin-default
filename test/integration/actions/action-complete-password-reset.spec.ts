@@ -134,7 +134,7 @@ describe('action-complete-password-reset', () => {
 		await ctx.flushAll(ctx.session);
 	});
 
-	test('should fail when the reset token does not match a valid card', async () => {
+	test('should fail when the reset token does not match a valid contract', async () => {
 		const user = await ctx.createUser(autumndbTestUtils.generateRandomSlug());
 
 		const completePasswordReset = (await ctx.worker.pre(ctx.session, {
@@ -368,7 +368,7 @@ describe('action-complete-password-reset', () => {
 		await ctx.flushAll(ctx.session);
 	});
 
-	test('should soft delete password reset card', async () => {
+	test('should soft delete password reset contract', async () => {
 		const username = autumndbTestUtils.generateRandomSlug();
 		const user = await ctx.createUser(username, hash);
 

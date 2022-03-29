@@ -24,8 +24,8 @@ afterAll(async () => {
 });
 
 describe('action-delete-card', () => {
-	test('should return card if already not active', async () => {
-		const card = await ctx.worker.insertCard(
+	test('should return contract if already not active', async () => {
+		const contract = await ctx.worker.insertCard(
 			ctx.logContext,
 			ctx.session,
 			ctx.worker.typeContracts['card@1.0.0'],
@@ -45,44 +45,44 @@ describe('action-delete-card', () => {
 				},
 			},
 		);
-		assert(card);
+		assert(contract);
 
 		const result = await handler(
 			ctx.session,
 			actionContext,
-			card,
+			contract,
 			makeHandlerRequest(ctx, actionDeleteCard.contract),
 		);
 		expect(result).toEqual({
-			id: card.id,
-			type: card.type,
-			version: card.version,
-			slug: card.slug,
+			id: contract.id,
+			type: contract.type,
+			version: contract.version,
+			slug: contract.slug,
 		});
 	});
 
 	test('should throw an error on invalid type', async () => {
-		const card = await ctx.createContract(
+		const contract = await ctx.createContract(
 			ctx.adminUserId,
 			ctx.session,
 			'card@1.0.0',
 			null,
 			{},
 		);
-		card.type = 'foobar@1.0.0';
+		contract.type = 'foobar@1.0.0';
 
 		await expect(
 			handler(
 				ctx.session,
 				actionContext,
-				card,
+				contract,
 				makeHandlerRequest(ctx, actionDeleteCard.contract),
 			),
-		).rejects.toThrow(`No such type: ${card.type}`);
+		).rejects.toThrow(`No such type: ${contract.type}`);
 	});
 
-	test('should delete a card', async () => {
-		const card = await ctx.createContract(
+	test('should delete a contract', async () => {
+		const contract = await ctx.createContract(
 			ctx.adminUserId,
 			ctx.session,
 			'card@1.0.0',
@@ -96,8 +96,8 @@ describe('action-delete-card', () => {
 			{
 				action: 'action-delete-card@1.0.0',
 				logContext: ctx.logContext,
-				card: card.id,
-				type: card.type,
+				card: contract.id,
+				type: contract.type,
 				arguments: {},
 			},
 		);
@@ -108,12 +108,12 @@ describe('action-delete-card', () => {
 		);
 		expect(result.error).toBe(false);
 
-		const resultCard = await ctx.kernel.getContractById(
+		const resultContract = await ctx.kernel.getContractById(
 			ctx.logContext,
 			ctx.session,
-			card.id,
+			contract.id,
 		);
-		assert(resultCard);
-		expect(resultCard.active).toBe(false);
+		assert(resultContract);
+		expect(resultContract.active).toBe(false);
 	});
 });

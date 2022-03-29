@@ -9,7 +9,7 @@ export const viewSupportThreadsParticipation: ViewContractDefinition = {
 		namespace: 'Support',
 		allOf: [
 			{
-				name: 'Active cards',
+				name: 'Active contracts',
 				schema: {
 					anyOf: [
 						{

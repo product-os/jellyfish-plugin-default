@@ -5,30 +5,30 @@ import { get, isString } from 'lodash';
 const handler: ActionDefinition['handler'] = async (
 	session,
 	context,
-	card,
+	contract,
 	request,
 ) => {
-	const typeCard = (await context.getCardBySlug(
+	const typeContract = (await context.getCardBySlug(
 		session,
-		card.type,
+		contract.type,
 	))! as TypeContract;
 
 	const path = isString(request.arguments.property)
 		? `/${request.arguments.property.replace(/\./g, '/')}`
 		: `/${request.arguments.property.join('/')}`;
 
-	const current = get(card, request.arguments.property);
+	const current = get(contract, request.arguments.property);
 
 	const result = await context.patchCard(
 		session,
-		typeCard,
+		typeContract,
 		{
 			timestamp: request.timestamp,
 			actor: request.actor,
 			originator: request.originator,
 			attachEvents: true,
 		},
-		card,
+		contract,
 		[
 			{
 				op: current ? 'replace' : 'add',
@@ -56,7 +56,7 @@ export const actionSetUpdate: ActionDefinition = {
 		slug: 'action-set-update',
 		version: '1.0.0',
 		type: 'action@1.0.0',
-		name: 'Update a field on a card',
+		name: 'Update a field on a contract',
 		data: {
 			filter: {
 				type: 'object',

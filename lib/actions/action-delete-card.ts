@@ -8,39 +8,39 @@ import {
 const handler: ActionDefinition['handler'] = async (
 	session,
 	context,
-	card,
+	contract,
 	request,
 ) => {
-	if (!card.active) {
+	if (!contract.active) {
 		return {
-			id: card.id,
-			type: card.type,
-			version: card.version,
-			slug: card.slug,
+			id: contract.id,
+			type: contract.type,
+			version: contract.version,
+			slug: contract.slug,
 		};
 	}
 
-	const typeCard = (await context.getCardBySlug(
+	const typeContract = (await context.getCardBySlug(
 		session,
-		card.type,
+		contract.type,
 	))! as TypeContract;
 	assert.USER(
 		request.logContext,
-		typeCard,
+		typeContract,
 		workerErrors.WorkerNoElement,
-		`No such type: ${card.type}`,
+		`No such type: ${contract.type}`,
 	);
 
 	const result = await context.patchCard(
 		context.privilegedSession,
-		typeCard,
+		typeContract,
 		{
 			timestamp: request.timestamp,
 			actor: request.actor,
 			originator: request.originator,
 			attachEvents: true,
 		},
-		card,
+		contract,
 		[
 			{
 				op: 'replace',
@@ -68,7 +68,7 @@ export const actionDeleteCard: ActionDefinition = {
 		slug: 'action-delete-card',
 		version: '1.0.0',
 		type: 'action@1.0.0',
-		name: 'Delete a card',
+		name: 'Delete a contract',
 		data: {
 			extends: 'action-update-card',
 			arguments: {},

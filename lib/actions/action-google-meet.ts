@@ -46,7 +46,7 @@ export function getCredentials(): GoogleMeetCredentials {
 const handler: ActionDefinition['handler'] = async (
 	session,
 	context,
-	card,
+	contract,
 	request,
 ) => {
 	const credentials = getCredentials();
@@ -116,21 +116,21 @@ const handler: ActionDefinition['handler'] = async (
 
 	const conferenceUrl = event.data.hangoutLink;
 
-	const typeCard = (await context.getCardBySlug(
+	const typeContract = (await context.getCardBySlug(
 		session,
-		`${card.type}@latest`,
+		`${contract.type}@latest`,
 	))! as TypeContract;
 
 	assert.INTERNAL(
 		request.logContext,
-		typeCard,
+		typeContract,
 		workerErrors.WorkerNoElement,
-		`No such type: ${card.type}`,
+		`No such type: ${contract.type}`,
 	);
 
 	const patchResult = await context.patchCard(
 		context.privilegedSession,
-		typeCard,
+		typeContract,
 		{
 			timestamp: request.timestamp,
 			actor: request.actor,
@@ -138,10 +138,10 @@ const handler: ActionDefinition['handler'] = async (
 			reason: `Google Meet created: [join here](${conferenceUrl})`,
 			attachEvents: true,
 		},
-		card,
+		contract,
 		[
 			{
-				op: has(card, ['data', 'conferenceUrl']) ? 'replace' : 'add',
+				op: has(contract, ['data', 'conferenceUrl']) ? 'replace' : 'add',
 				path: '/data/conferenceUrl',
 				value: conferenceUrl,
 			},

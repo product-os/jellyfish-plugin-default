@@ -21,7 +21,7 @@ export class FoobarIntegration implements Integration {
 				time: new Date(),
 				actor: uuidv4(),
 				card: {
-					slug: `card-${uuidv4()}`,
+					slug: `contract-${uuidv4()}`,
 					type: 'card@1.0.0',
 					version: '1.0.0',
 					data: {},
@@ -30,13 +30,13 @@ export class FoobarIntegration implements Integration {
 		];
 	}
 
-	public async mirror(_card: any, options: any): Promise<any> {
+	public async mirror(_contract: any, options: any): Promise<any> {
 		return [
 			{
 				time: new Date(),
 				actor: options.actor,
 				card: {
-					slug: `card-${uuidv4()}`,
+					slug: `contract-${uuidv4()}`,
 					type: 'card@1.0.0',
 					version: '1.0.0',
 					data: {},

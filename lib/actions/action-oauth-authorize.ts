@@ -5,7 +5,7 @@ import { isNull } from 'lodash';
 const handler: ActionDefinition['handler'] = async (
 	session,
 	context,
-	_card,
+	_contract,
 	request,
 ) => {
 	const syncContextInstance = context.sync.getActionContext(

@@ -9,17 +9,17 @@ const MAIL_OPTIONS = defaultEnvironment.mail.options || {
  * @summary Build and return send email request options.
  * @function
  *
- * @param userCard - user to send email to
+ * @param userContract - user to send email to
  * @param subject - email subject
  * @param html - email body HTML
  * @returns send email request options
  */
 export function buildSendEmailOptions(
-	userCard: Contract,
+	userContract: Contract,
 	subject: string,
 	html: string,
 ) {
-	let userEmail = userCard.data.email;
+	let userEmail = userContract.data.email;
 	if (Array.isArray(userEmail)) {
 		userEmail = userEmail[0];
 	}

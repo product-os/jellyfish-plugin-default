@@ -19,14 +19,14 @@ const logger = getLogger(__filename);
 const pre = actionCompletePasswordReset.pre;
 
 /**
- * @summary Get first-time login card from database
+ * @summary Get first-time login contract from database
  * @function
  *
  * @param context - execution context
  * @param request - action request
  * @returns
  */
-export async function getFirstTimeLoginCard(
+export async function getFirstTimeLoginContract(
 	context: WorkerContext,
 	request: ActionHandlerRequest,
 ): Promise<Contract | null> {
@@ -80,34 +80,33 @@ export async function getFirstTimeLoginCard(
 }
 
 /**
- * @summary Invalidate a first-time login card
+ * @summary Invalidate a first-time login contract
  * @function
  *
  * @param context - execution context
- * @param session - user session
  * @param request - action request
- * @param card - first-time login card to invalidate
- * @returns invalidated first-time login card
+ * @param contract - first-time login contract to invalidate
+ * @returns invalidated first-time login contract
  */
 export async function invalidateFirstTimeLogin(
 	context: WorkerContext,
 	request: ActionHandlerRequest,
-	card: Contract,
+	contract: Contract,
 ): Promise<Contract> {
-	const typeCard = (await context.getCardBySlug(
+	const typeContract = (await context.getCardBySlug(
 		context.privilegedSession,
 		'first-time-login@latest',
 	))! as TypeContract;
 	return (await context.patchCard(
 		context.privilegedSession,
-		typeCard,
+		typeContract,
 		{
 			timestamp: request.timestamp,
 			actor: request.actor,
 			originator: request.originator,
 			attachEvents: true,
 		},
-		card,
+		contract,
 		[
 			{
 				op: 'replace',
@@ -121,17 +120,17 @@ export async function invalidateFirstTimeLogin(
 const handler: ActionDefinition['handler'] = async (
 	session,
 	context,
-	_card,
+	_contract,
 	request,
 ) => {
-	const firstTimeLogin = await getFirstTimeLoginCard(context, request);
+	const firstTimeLogin = await getFirstTimeLoginContract(context, request);
 	if (isNil(firstTimeLogin)) {
 		const error = new workerErrors.WorkerAuthenticationError(
 			'First-time login token invalid',
 		);
 		logger.warn(
 			request.logContext,
-			`Could not find firstTimeLogin card with token ${request.arguments.firstTimeLoginToken}`,
+			`Could not find firstTimeLogin contract with token ${request.arguments.firstTimeLoginToken}`,
 		);
 		throw error;
 	}
@@ -150,7 +149,7 @@ const handler: ActionDefinition['handler'] = async (
 		);
 		logger.warn(
 			request.logContext,
-			`FirstTimeLogin card with token
+			`FirstTimeLogin contract with token
 			${request.arguments.firstTimeLoginToken} has no user attached`,
 		);
 		throw error;
@@ -181,7 +180,7 @@ const handler: ActionDefinition['handler'] = async (
 		'User already has a password set',
 	);
 
-	const userTypeCard = (await context.getCardBySlug(
+	const userTypeContract = (await context.getCardBySlug(
 		session,
 		'user@latest',
 	))! as TypeContract;
@@ -189,7 +188,7 @@ const handler: ActionDefinition['handler'] = async (
 	return context
 		.patchCard(
 			context.privilegedSession,
-			userTypeCard,
+			userTypeContract,
 			{
 				timestamp: request.timestamp,
 				actor: request.actor,
@@ -211,7 +210,7 @@ const handler: ActionDefinition['handler'] = async (
 			});
 
 			// A schema mismatch here means that the patch could
-			// not be applied to the card due to permissions.
+			// not be applied to the contract due to permissions.
 			if (error instanceof autumndbErrors.JellyfishSchemaMismatch) {
 				// TS-TODO: Ensure this error is what is expected with Context type
 				const newError = new workerErrors.WorkerAuthenticationError(

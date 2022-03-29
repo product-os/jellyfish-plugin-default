@@ -2,13 +2,13 @@ import type { ViewContractDefinition } from '@balena/jellyfish-types/build/core'
 
 export const viewActive: ViewContractDefinition = {
 	slug: 'view-active',
-	name: 'Active cards',
+	name: 'Active contracts',
 	type: 'view@1.0.0',
 	markers: [],
 	data: {
 		allOf: [
 			{
-				name: 'Active cards',
+				name: 'Active contracts',
 				schema: {
 					type: 'object',
 					properties: {

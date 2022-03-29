@@ -24,7 +24,7 @@ afterAll(async () => {
 });
 
 describe('action-oauth-associate', () => {
-	test('should return single user card', async () => {
+	test('should return single user contract', async () => {
 		const user = await ctx.createContract(
 			ctx.adminUserId,
 			ctx.session,

@@ -139,7 +139,7 @@ export const contracts: ContractDefinition[] = [
 	viewMyOrgs,
 	viewMyConversations,
 
-	// Balena org cards
+	// Balena org contracts
 	orgBalena,
 	productBalenaCloud,
 	productJellyfish,

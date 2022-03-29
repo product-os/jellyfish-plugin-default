@@ -3,12 +3,12 @@ import type { ActionDefinition } from '@balena/jellyfish-worker';
 const handler: ActionDefinition['handler'] = async (
 	_session,
 	context,
-	card,
+	contract,
 	request,
 ) => {
 	return context.sync.associate(
 		request.arguments.provider,
-		card,
+		contract,
 		request.arguments.credentials,
 
 		// We need privileged access in order to add the access

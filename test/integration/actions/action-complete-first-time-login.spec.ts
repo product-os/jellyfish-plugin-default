@@ -121,7 +121,7 @@ describe('action-complete-first-time-login', () => {
 		expect(updated.data.hash).not.toEqual(PASSWORDLESS_USER_HASH);
 	});
 
-	test('should fail when the first-time login does not match a valid card', async () => {
+	test('should fail when the first-time login does not match a valid contract', async () => {
 		const user = await ctx.createUser(autumndbTestUtils.generateRandomSlug());
 		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
@@ -346,7 +346,7 @@ describe('action-complete-first-time-login', () => {
 		).rejects.toThrowError();
 	});
 
-	test('should invalidate the first-time-login card', async () => {
+	test('should invalidate the first-time-login contract', async () => {
 		const user = await ctx.createUser(
 			autumndbTestUtils.generateRandomSlug(),
 			PASSWORDLESS_USER_HASH,

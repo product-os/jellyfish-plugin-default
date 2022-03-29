@@ -1,4 +1,3 @@
-import axios from 'axios';
 import * as assert from '@balena/jellyfish-assert';
 import { getLogger } from '@balena/jellyfish-logger';
 import type { TypeContract } from '@balena/jellyfish-types/build/core';
@@ -6,6 +5,7 @@ import {
 	ActionDefinition,
 	errors as workerErrors,
 } from '@balena/jellyfish-worker';
+import axios from 'axios';
 import md5 from 'blueimp-md5';
 import { get, isNil } from 'lodash';
 
@@ -42,18 +42,18 @@ export async function gravatarExists(url: string): Promise<boolean> {
 const handler: ActionDefinition['handler'] = async (
 	session,
 	context,
-	card,
+	contract,
 	request,
 ) => {
-	const email = get(card, ['data', 'email']);
+	const email = get(contract, ['data', 'email']);
 
 	// If a gravatar value is already set or the user has no email, exit early
-	if (!email || !isNil(get(card, ['data', 'avatar']))) {
+	if (!email || !isNil(get(contract, ['data', 'avatar']))) {
 		return {
-			id: card.id,
-			slug: card.slug,
-			version: card.version,
-			type: card.type,
+			id: contract.id,
+			slug: contract.slug,
+			version: contract.version,
+			type: contract.type,
 		};
 	}
 
@@ -81,26 +81,26 @@ const handler: ActionDefinition['handler'] = async (
 		});
 	}
 
-	const typeCard = (await context.getCardBySlug(
+	const typeContract = (await context.getCardBySlug(
 		session,
 		'user@1.0.0',
 	))! as TypeContract;
 
 	assert.INTERNAL(
 		request.logContext,
-		typeCard,
+		typeContract,
 		workerErrors.WorkerNoElement,
 		'No such type: user',
 	);
 
 	logger.info(request.logContext, 'Patching user avatar', {
-		slug: card.slug,
+		slug: contract.slug,
 		patch,
 	});
 
 	await context.patchCard(
 		session,
-		typeCard,
+		typeContract,
 		{
 			timestamp: request.timestamp,
 			reason: 'Updated user avatar',
@@ -108,15 +108,15 @@ const handler: ActionDefinition['handler'] = async (
 			originator: request.originator,
 			attachEvents: true,
 		},
-		card,
+		contract,
 		patch,
 	);
 
 	return {
-		id: card.id,
-		slug: card.slug,
-		version: card.version,
-		type: card.type,
+		id: contract.id,
+		slug: contract.slug,
+		version: contract.version,
+		type: contract.type,
 	};
 };
 
