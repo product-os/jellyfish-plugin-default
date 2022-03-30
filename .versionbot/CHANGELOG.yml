@@ -1,4 +1,22 @@
 - commits:
+    - subject: Move contact to jellyfish-worker package
+      hash: 5f20d25b39c5c296ae7508e3663a971f1814a937
+      body: >
+        As of https://github.com/product-os/jellyfish-worker/pull/1368 the
+        `contact` type is now included in the worker.
+
+        This is due to the sync framework now offering functionality for connecting synced data to contacts.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 24.0.45
+  title: "'Move contact to jellyfish-worker package'"
+  date: 2022-03-30T12:45:49.808Z
+- commits:
     - subject: Update internal-patch
       hash: 5ac03ce25247134c23d922bca79824991078275e
       body: ""
