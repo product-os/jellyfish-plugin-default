@@ -5,7 +5,6 @@ import { brainstormCall } from './brainstorm-call';
 import { brainstormTopic } from './brainstorm-topic';
 import { chartConfiguration } from './chart-configuration';
 import { checkin } from './checkin';
-import { contact } from './contact';
 import { externalEvent } from './external-event';
 import { faq } from './faq';
 import { feedbackItem } from './feedback-item';
@@ -93,7 +92,6 @@ export const contracts: ContractDefinition[] = [
 	brainstormTopic,
 	chartConfiguration,
 	checkin,
-	contact,
 	externalEvent,
 	faq,
 	feedbackItem,
