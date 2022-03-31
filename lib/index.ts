@@ -2,6 +2,7 @@ import type { PluginDefinition } from '@balena/jellyfish-worker';
 import { actions } from './actions';
 import { contracts } from './contracts';
 export * as testUtils from './test-utils';
+export * from './types';
 export { mirror } from './actions/mirror';
 
 // tslint:disable-next-line: no-var-requires
