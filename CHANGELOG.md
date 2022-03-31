@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.46 - 2022-03-30
+
+* Update @balena/jellyfish-worker from 21.0.8 to 21.1.0 [Renovate Bot]
+
 ## 24.0.45 - 2022-03-30
 
 * Move contact to jellyfish-worker package [Lucian Buzzo]
