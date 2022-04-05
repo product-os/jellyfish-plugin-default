@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.49 - 2022-04-04
+
+* Update resinci/jellyfish-test from v3.0.3 to v3.0.4 [Renovate Bot]
+
 ## 24.0.48 - 2022-04-02
 
 * Update external-non-major [Renovate Bot]
