@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.60 - 2022-04-12
+
+* Update internal-patch [Renovate Bot]
+
 ## 24.0.59 - 2022-04-11
 
 * 🔄 Synced file(s) with product-os/secrets [joshbwlng]
