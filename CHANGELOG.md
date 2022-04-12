@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 24.0.65 - 2022-04-12
+
+* Update resinci/jellyfish-test from v3.0.6 to v3.0.7 [Renovate Bot]
+* Update internal-patch [Renovate Bot]
+
 ## 24.0.64 - 2022-04-12
 
 * Update secrets [Josh Bowling]
