@@ -43,7 +43,9 @@ beforeAll(async () => {
 		'is member of',
 		'has member',
 	);
+});
 
+beforeEach(() => {
 	nock(`${MAIL_OPTIONS!.baseUrl}/${MAIL_OPTIONS!.domain}`)
 		.persist()
 		.post('/messages')
