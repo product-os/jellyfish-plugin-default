@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.64 - 2022-04-12
+
+* Update secrets [Josh Bowling]
+
 ## 24.0.63 - 2022-04-12
 
 * Update internal-patch [Renovate Bot]
