@@ -47,9 +47,9 @@
   "license": "AGPL-3.0",
   "dependencies": {
     "@balena/jellyfish-assert": "^1.2.24",
-    "@balena/jellyfish-environment": "^9.1.13",
+    "@balena/jellyfish-environment": "^9.1.16",
     "@balena/jellyfish-logger": "^5.0.19",
-    "@balena/jellyfish-worker": "^21.2.6",
+    "@balena/jellyfish-worker": "^21.2.7",
     "autumndb": "^19.1.19",
     "axios": "^0.26.1",
     "bcrypt": "^5.0.1",
