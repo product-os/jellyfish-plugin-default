@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.72 - 2022-04-13
+
+* Remove git secrets [Josh Bowling]
+
 ## 24.0.71 - 2022-04-13
 
 * Update internal-patch [Renovate Bot]
