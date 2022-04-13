@@ -1,4 +1,18 @@
 - commits:
+    - subject: Remove mailgun token from readme
+      hash: e1e7c07ded6ddc41228a6079111ef12020e700d4
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 24.0.66
+  title: "'Remove mailgun token from readme'"
+  date: 2022-04-13T00:41:59.999Z
+- commits:
     - subject: Update resinci/jellyfish-test from v3.0.6 to v3.0.7
       hash: b6995b0ea2a8fac295981356af17c6901a9f5f58
       body: ""

@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.66 - 2022-04-13
+
+* Remove mailgun token from readme [Josh Bowling]
+
 ## 24.0.65 - 2022-04-12
 
 * Update resinci/jellyfish-test from v3.0.6 to v3.0.7 [Renovate Bot]
