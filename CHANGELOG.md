@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.68 - 2022-04-13
+
+* Update secrets [Josh Bowling]
+
 ## 24.0.67 - 2022-04-13
 
 * Nock all Google Meet tests [Josh Bowling]

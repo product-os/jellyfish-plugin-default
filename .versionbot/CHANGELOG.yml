@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update secrets
+      hash: aad79b4c4610ba8b2c759ed182cfb40c1aa676c1
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 24.0.68
+  title: "'Update secrets'"
+  date: 2022-04-13T03:06:38.761Z
+- commits:
     - subject: Nock all Google Meet tests
       hash: 5d6193778b672bfd814262ec75bd6be35a6f1f0a
       body: |
