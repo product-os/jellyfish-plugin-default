@@ -10,10 +10,10 @@ Below is an example how to use this library:
 import { defaultPlugin } from '@balena/jellyfish-plugin-default';
 import { PluginManager } from '@balena/jellyfish-worker';
 
-// Load cards from this plugin
+// Load contracts from this plugin
 const pluginManager = new PluginManager([defaultPlugin()]);
-const cards = pluginManager.getCards();
-console.dir(cards);
+const contracts = pluginManager.getCards();
+console.dir(contracts);
 ```
 
 # Documentation
@@ -28,13 +28,11 @@ Unit tests can be easily run with the command `npm test`.
 
 The integration tests require Postgres and Redis instances. The simplest way to run the tests locally is with `docker-compose`.
 ```
-git secret reveal -f
 npm run test:compose
 ```
 
 You can also run tests locally against Postgres and Redis instances running in `docker-compose`:
 ```
-git secret reveal -f
 npm run compose
 REDIS_HOST=localhost POSTGRES_HOST=localhost npx jest test/integration/actions/action-ping.spec.ts
 ```
