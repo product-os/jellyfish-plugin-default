@@ -1,47 +1,17 @@
 import * as assert from '@balena/jellyfish-assert';
 import { defaultEnvironment } from '@balena/jellyfish-environment';
+import type { TypeContract } from '@balena/jellyfish-types/build/core';
 import {
 	ActionDefinition,
 	errors as workerErrors,
 } from '@balena/jellyfish-worker';
-import type { TypeContract } from '@balena/jellyfish-types/build/core';
 import { add, sub } from 'date-fns';
 import { google } from 'googleapis';
-import isBase64 from 'is-base64';
 import { has } from 'lodash';
 import type { GoogleMeetCredentials } from '../../lib/types';
 
 const CALENDAR_ID = 'primary';
 const GOOGLE_CALENDAR_API_VERSION = 'v3';
-
-// TODO: Remove non-base64 string support.
-/**
- * Get Google Meet credentials from environment variable.
- * Temporarily supports both raw strings and base64 strings
- * while we migrate this variable to base64.
- *
- * @function
- *
- * @returns Parsed Google Meet credentials object
- */
-export function getCredentials(): GoogleMeetCredentials {
-	const raw = defaultEnvironment.integration['google-meet'].credentials;
-	if (!raw) {
-		throw new Error(
-			'Google Meet credentials environment variable was not found!',
-		);
-	}
-	try {
-		const parsed = isBase64(raw)
-			? JSON.parse(Buffer.from(raw, 'base64').toString())
-			: JSON.parse(raw);
-		return parsed;
-	} catch (error) {
-		throw new Error(
-			`Failed to parse Google Meet stringified JSON environment variable: ${error}`,
-		);
-	}
-}
 
 const handler: ActionDefinition['handler'] = async (
 	session,
@@ -49,7 +19,9 @@ const handler: ActionDefinition['handler'] = async (
 	card,
 	request,
 ) => {
-	const credentials = getCredentials();
+	const credentials: GoogleMeetCredentials = JSON.parse(
+		defaultEnvironment.integration['google-meet'].credentials,
+	);
 	const auth = new google.auth.GoogleAuth({
 		projectId: credentials.project_id,
 		credentials: {
