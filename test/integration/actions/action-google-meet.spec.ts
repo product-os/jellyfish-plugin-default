@@ -116,29 +116,6 @@ describe('action-google-meet', () => {
 		).rejects.toThrow(new Error(`No such type: ${message.type}`));
 	});
 
-	test('should return a conference URL', async () => {
-		const supportThread = await ctx.createSupportThread(
-			ctx.adminUserId,
-			ctx.session,
-			autumndbTestUtils.generateRandomSlug(),
-			{
-				status: 'open',
-			},
-		);
-
-		const result = await ctx.processAction(ctx.session, {
-			action: 'action-google-meet@1.0.0',
-			logContext: ctx.logContext,
-			card: supportThread.id,
-			type: supportThread.type,
-			arguments: {},
-		});
-
-		expect(
-			result.data.conferenceUrl.startsWith('https://meet.google.com'),
-		).toBe(true);
-	});
-
 	test('should update the card with the conference URL', async () => {
 		const supportThread = await ctx.createSupportThread(
 			ctx.adminUserId,
@@ -148,6 +125,11 @@ describe('action-google-meet', () => {
 				status: 'open',
 			},
 		);
+
+		stub({
+			hangoutLink: 'https://meet.google.com',
+			id: autumndbTestUtils.generateRandomId(),
+		});
 
 		await ctx.processAction(ctx.session, {
 			action: 'action-google-meet@1.0.0',
