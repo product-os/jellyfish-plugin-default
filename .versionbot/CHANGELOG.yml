@@ -1,4 +1,23 @@
 - commits:
+    - subject: Nock all Google Meet tests
+      hash: 5d6193778b672bfd814262ec75bd6be35a6f1f0a
+      body: |
+        We now no longer need to account for
+        Google Meet credentials being provided
+        through env vars as base64. We were doing
+        this for tests only, but will now use a
+        default dummy value for tests.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 24.0.67
+  title: "'Nock all Google Meet tests'"
+  date: 2022-04-13T02:37:25.168Z
+- commits:
     - subject: Remove mailgun token from readme
       hash: e1e7c07ded6ddc41228a6079111ef12020e700d4
       body: ""

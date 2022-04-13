@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.67 - 2022-04-13
+
+* Nock all Google Meet tests [Josh Bowling]
+
 ## 24.0.66 - 2022-04-13
 
 * Remove mailgun token from readme [Josh Bowling]
