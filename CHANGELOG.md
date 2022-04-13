@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.69 - 2022-04-13
+
+* Update secrets [Josh Bowling]
+
 ## 24.0.68 - 2022-04-13
 
 * Update secrets [Josh Bowling]
