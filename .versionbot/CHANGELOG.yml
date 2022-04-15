@@ -1,4 +1,24 @@
 - commits:
+    - subject: Update internal-patch
+      hash: 14ddaea50d97009021a3bf6a3b3e32603a560f3c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+    - subject: 🔄 Synced file(s) with product-os/jellyfish-config
+      hash: e3b34928fb21ea2b15e442b85c8dc162d7951d62
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: joshbwlng
+      nested: []
+  version: 24.0.73
+  title: "'Update internal-patch'"
+  date: 2022-04-15T14:43:42.694Z
+- commits:
     - subject: Remove git secrets
       hash: 2fc0a4d77560c6b83a476105e0897866f10802fa
       body: |
