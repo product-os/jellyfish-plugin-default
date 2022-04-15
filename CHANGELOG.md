@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.73 - 2022-04-15
+
+* 🔄 Synced file(s) with product-os/jellyfish-config [joshbwlng]
+
 ## 24.0.72 - 2022-04-13
 
 * Remove git secrets [Josh Bowling]
