@@ -1,4 +1,18 @@
 - commits:
+    - subject: Test worker v22
+      hash: 5ed780a343752ac5c7a1598de0e7ecfc6c6410b9
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 24.0.79
+  title: "'Test worker v22'"
+  date: 2022-04-18T03:15:27.693Z
+- commits:
     - subject: Update external-non-major
       hash: 57815a06ee3d461228aebdffc52dd8e83792a2bb
       body: ""
