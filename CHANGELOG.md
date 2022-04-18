@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.79 - 2022-04-18
+
+* Update @balena/jellyfish-worker from 21.2.12 to 22.0.0 [Josh Bowling]
+
 ## 24.0.78 - 2022-04-16
 
 * Update external-non-major [Renovate Bot]
