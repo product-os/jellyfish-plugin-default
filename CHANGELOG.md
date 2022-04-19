@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.81 - 2022-04-19
+
+* Bump internal deps [Josh Bowling]
+
 ## 24.0.80 - 2022-04-18
 
 * Update resinci/jellyfish-test from v3.0.7 to v3.0.8 [Renovate Bot]
