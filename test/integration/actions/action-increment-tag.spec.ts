@@ -1,5 +1,8 @@
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import type { WorkerContext } from '@balena/jellyfish-worker';
+import type {
+	ActionRequestContract,
+	WorkerContext,
+} from '@balena/jellyfish-worker';
 import { strict as assert } from 'assert';
 import { testUtils as autumndbTestUtils } from 'autumndb';
 import { pick } from 'lodash';
@@ -70,22 +73,42 @@ describe('action-increment-tag', () => {
 
 	test('should create a new tag if one does not exist', async () => {
 		const name = `tag-${autumndbTestUtils.generateRandomId()}`;
-		const id = await ctx.worker.producer.enqueue(
-			ctx.worker.getId(),
+		const typeContract = ctx.worker.typeContracts['tag@1.0.0'];
+		const actionRequest = await ctx.worker.insertCard(
+			ctx.logContext,
 			ctx.session,
+			ctx.worker.typeContracts['action-request@1.0.0'],
 			{
-				logContext: ctx.logContext,
-				action: 'action-increment-tag@1.0.0',
-				card: 'tag@1.0.0',
-				type: 'type',
-				arguments: {
-					reason: null,
-					name,
+				attachEvents: false,
+				timestamp: new Date().toISOString(),
+			},
+			{
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-increment-tag@1.0.0',
+					context: ctx.logContext,
+					card: typeContract.id,
+					type: typeContract.type,
+					actor: ctx.adminUserId,
+					epoch: new Date().valueOf(),
+					input: {
+						id: typeContract.id,
+					},
+					timestamp: new Date().toISOString(),
+					arguments: {
+						reason: null,
+						name,
+					},
 				},
 			},
 		);
+		assert(actionRequest);
+
 		await ctx.flushAll(ctx.session);
-		const result = await ctx.worker.producer.waitResults(ctx.logContext, id);
+		const result = await ctx.worker.producer.waitResults(
+			ctx.logContext,
+			actionRequest as ActionRequestContract,
+		);
 		expect(result.error).toBe(false);
 
 		const tagContract = await ctx.kernel.getContractById(

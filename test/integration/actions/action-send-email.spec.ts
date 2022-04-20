@@ -55,11 +55,20 @@ describe('action-send-email', () => {
 			html: autumndbTestUtils.generateRandomId(),
 		};
 		await ctx.processAction(ctx.session, {
-			action: 'action-send-email@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: args,
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-send-email@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: args,
+			},
 		});
 
 		expect(includes('to', args.toAddress, mailBody)).toBe(true);

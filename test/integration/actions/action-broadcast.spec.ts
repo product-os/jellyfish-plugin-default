@@ -1,5 +1,8 @@
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import type { WorkerContext } from '@balena/jellyfish-worker';
+import type {
+	ActionRequestContract,
+	WorkerContext,
+} from '@balena/jellyfish-worker';
 import { strict as assert } from 'assert';
 import { testUtils as autumndbTestUtils } from 'autumndb';
 import { cloneDeep, isArray, isNull, map, pick, sortBy } from 'lodash';
@@ -119,16 +122,30 @@ describe('action-broadcast', () => {
 			},
 		);
 
-		const request = await ctx.worker.producer.enqueue(
-			ctx.worker.getId(),
+		const request = await ctx.worker.insertCard(
+			ctx.logContext,
 			ctx.session,
+			ctx.worker.typeContracts['action-request@1.0.0'],
 			{
-				action: 'action-broadcast@1.0.0',
-				card: supportThread.id,
-				type: supportThread.type,
-				logContext: ctx.logContext,
-				arguments: {
-					message: 'Broadcast test',
+				attachEvents: false,
+				timestamp: new Date().toISOString(),
+			},
+			{
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-broadcast@1.0.0',
+					context: ctx.logContext,
+					card: supportThread.id,
+					type: supportThread.type,
+					actor: ctx.adminUserId,
+					epoch: new Date().valueOf(),
+					input: {
+						id: supportThread.id,
+					},
+					timestamp: new Date().toISOString(),
+					arguments: {
+						message: 'Broadcast test',
+					},
 				},
 			},
 		);
@@ -136,7 +153,7 @@ describe('action-broadcast', () => {
 		await ctx.flushAll(ctx.session);
 		const result = await ctx.worker.producer.waitResults(
 			ctx.logContext,
-			request,
+			request as ActionRequestContract,
 		);
 		expect(result.error).toBe(false);
 
@@ -201,23 +218,37 @@ describe('action-broadcast', () => {
 			autumndbTestUtils.generateRandomSlug(),
 		);
 
-		const request = await ctx.worker.producer.enqueue(
-			ctx.worker.getId(),
+		const request = await ctx.worker.insertCard(
+			ctx.logContext,
 			ctx.session,
+			ctx.worker.typeContracts['action-request@1.0.0'],
 			{
-				action: 'action-broadcast@1.0.0',
-				card: supportThread.id,
-				type: supportThread.type,
-				logContext: ctx.logContext,
-				arguments: {
-					message: 'Broadcast test',
+				attachEvents: false,
+				timestamp: new Date().toISOString(),
+			},
+			{
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-broadcast@1.0.0',
+					context: ctx.logContext,
+					card: supportThread.id,
+					type: supportThread.type,
+					actor: ctx.adminUserId,
+					epoch: new Date().valueOf(),
+					input: {
+						id: supportThread.id,
+					},
+					timestamp: new Date().toISOString(),
+					arguments: {
+						message: 'Broadcast test',
+					},
 				},
 			},
 		);
 		await ctx.flushAll(ctx.session);
 		const result: any = await ctx.worker.producer.waitResults(
 			ctx.logContext,
-			request,
+			request as ActionRequestContract,
 		);
 		expect(result.error).toBe(false);
 
@@ -279,23 +310,37 @@ describe('action-broadcast', () => {
 		);
 
 		// Create a broadcast message on the thread
-		const request1 = await ctx.worker.producer.enqueue(
-			ctx.worker.getId(),
+		const request1 = await ctx.worker.insertCard(
+			ctx.logContext,
 			ctx.session,
+			ctx.worker.typeContracts['action-request@1.0.0'],
 			{
-				action: 'action-broadcast@1.0.0',
-				card: supportThread.id,
-				type: supportThread.type,
-				logContext: ctx.logContext,
-				arguments: {
-					message: 'Broadcast test',
+				attachEvents: false,
+				timestamp: new Date().toISOString(),
+			},
+			{
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-broadcast@1.0.0',
+					context: ctx.logContext,
+					card: supportThread.id,
+					type: supportThread.type,
+					actor: ctx.adminUserId,
+					epoch: new Date().valueOf(),
+					input: {
+						id: supportThread.id,
+					},
+					timestamp: new Date().toISOString(),
+					arguments: {
+						message: 'Broadcast test',
+					},
 				},
 			},
 		);
 		await ctx.flushAll(ctx.session);
 		const result1: any = await ctx.worker.producer.waitResults(
 			ctx.logContext,
-			request1,
+			request1 as ActionRequestContract,
 		);
 		expect(result1.error).toBe(false);
 
@@ -303,23 +348,37 @@ describe('action-broadcast', () => {
 		await ctx.createMessage(ctx.adminUserId, ctx.session, supportThread, 'Foo');
 
 		// Try to create another broadcast message with the same message on the thread
-		const request2 = await ctx.worker.producer.enqueue(
-			ctx.worker.getId(),
+		const request2 = await ctx.worker.insertCard(
+			ctx.logContext,
 			ctx.session,
+			ctx.worker.typeContracts['action-request@1.0.0'],
 			{
-				action: 'action-broadcast@1.0.0',
-				card: supportThread.id,
-				type: supportThread.type,
-				logContext: ctx.logContext,
-				arguments: {
-					message: 'Broadcast test',
+				attachEvents: false,
+				timestamp: new Date().toISOString(),
+			},
+			{
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-broadcast@1.0.0',
+					context: ctx.logContext,
+					card: supportThread.id,
+					type: supportThread.type,
+					actor: ctx.adminUserId,
+					epoch: new Date().valueOf(),
+					input: {
+						id: supportThread.id,
+					},
+					timestamp: new Date().toISOString(),
+					arguments: {
+						message: 'Broadcast test',
+					},
 				},
 			},
 		);
 		await ctx.flushAll(ctx.session);
 		const result2 = await ctx.worker.producer.waitResults(
 			ctx.logContext,
-			request2,
+			request2 as ActionRequestContract,
 		);
 		expect(result2.error).toBe(false);
 
@@ -381,23 +440,37 @@ describe('action-broadcast', () => {
 		);
 
 		const message1 = 'Broadcast test 1';
-		const request1 = await ctx.worker.producer.enqueue(
-			ctx.worker.getId(),
+		const request1 = await ctx.worker.insertCard(
+			ctx.logContext,
 			ctx.session,
+			ctx.worker.typeContracts['action-request@1.0.0'],
 			{
-				action: 'action-broadcast@1.0.0',
-				card: supportThread.id,
-				type: supportThread.type,
-				logContext: ctx.logContext,
-				arguments: {
-					message: message1,
+				attachEvents: false,
+				timestamp: new Date().toISOString(),
+			},
+			{
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-broadcast@1.0.0',
+					context: ctx.logContext,
+					card: supportThread.id,
+					type: supportThread.type,
+					actor: ctx.adminUserId,
+					epoch: new Date().valueOf(),
+					input: {
+						id: supportThread.id,
+					},
+					timestamp: new Date().toISOString(),
+					arguments: {
+						message: message1,
+					},
 				},
 			},
 		);
 		await ctx.flushAll(ctx.session);
 		const result1: any = await ctx.worker.producer.waitResults(
 			ctx.logContext,
-			request1,
+			request1 as ActionRequestContract,
 		);
 		expect(result1.error).toBe(false);
 
@@ -409,23 +482,37 @@ describe('action-broadcast', () => {
 		);
 
 		const message2 = 'Broadcast test 2';
-		const request2 = await ctx.worker.producer.enqueue(
-			ctx.worker.getId(),
+		const request2 = await ctx.worker.insertCard(
+			ctx.logContext,
 			ctx.session,
+			ctx.worker.typeContracts['action-request@1.0.0'],
 			{
-				action: 'action-broadcast@1.0.0',
-				card: supportThread.id,
-				type: supportThread.type,
-				logContext: ctx.logContext,
-				arguments: {
-					message: message2,
+				attachEvents: false,
+				timestamp: new Date().toISOString(),
+			},
+			{
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-broadcast@1.0.0',
+					context: ctx.logContext,
+					card: supportThread.id,
+					type: supportThread.type,
+					actor: ctx.adminUserId,
+					epoch: new Date().valueOf(),
+					input: {
+						id: supportThread.id,
+					},
+					timestamp: new Date().toISOString(),
+					arguments: {
+						message: message2,
+					},
 				},
 			},
 		);
 		await ctx.flushAll(ctx.session);
 		const result2: any = await ctx.worker.producer.waitResults(
 			ctx.logContext,
-			request2,
+			request2 as ActionRequestContract,
 		);
 		expect(result2.error).toBe(false);
 

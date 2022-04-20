@@ -99,11 +99,20 @@ describe('action-send-first-time-login-link', () => {
 		);
 
 		const sendFirstTimeLogin = await ctx.processAction(ctx.session, {
-			action: 'action-send-first-time-login-link@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-send-first-time-login-link@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				actor: ctx.adminUserId,
+				timestamp: new Date().toISOString(),
+				input: {
+					id: user.id,
+				},
+				arguments: {},
+			},
 		});
 		expect(sendFirstTimeLogin.error).toBe(false);
 
@@ -148,11 +157,20 @@ describe('action-send-first-time-login-link', () => {
 		const email = (user.data as any).email[0];
 
 		const sendFirstTimeLogin = await ctx.processAction(ctx.session, {
-			action: 'action-send-first-time-login-link@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-send-first-time-login-link@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {},
+			},
 		});
 		expect(sendFirstTimeLogin.error).toBe(false);
 
@@ -212,24 +230,40 @@ describe('action-send-first-time-login-link', () => {
 		);
 
 		const requestDelete = await ctx.processAction(ctx.session, {
-			action: 'action-delete-card@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-delete-card@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {},
+			},
 		});
 		expect(requestDelete.error).toBe(false);
 
-		const sendFirstTimeLoginAction = {
-			action: 'action-send-first-time-login-link@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {},
-		};
-
 		await expect(
-			ctx.processAction(session.id, sendFirstTimeLoginAction),
+			ctx.processAction(session.id, {
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-send-first-time-login-link@1.0.0',
+					context: ctx.logContext,
+					card: user.id,
+					type: user.type,
+					epoch: new Date().valueOf(),
+					timestamp: new Date().toISOString(),
+					actor: user.id,
+					input: {
+						id: user.id,
+					},
+					arguments: {},
+				},
+			}),
 		).rejects.toThrowError();
 	});
 
@@ -246,11 +280,20 @@ describe('action-send-first-time-login-link', () => {
 		);
 
 		const sendFirstTimeLoginAction = {
-			action: 'action-send-first-time-login-link@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-send-first-time-login-link@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {},
+			},
 		};
 
 		const firstPasswordResetRequest = await ctx.processAction(
@@ -326,19 +369,37 @@ describe('action-send-first-time-login-link', () => {
 		);
 
 		await ctx.processAction(ctx.session, {
-			action: 'action-send-first-time-login-link@1.0.0',
-			logContext: ctx.logContext,
-			card: firstUser.id,
-			type: firstUser.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-send-first-time-login-link@1.0.0',
+				context: ctx.logContext,
+				card: firstUser.id,
+				type: firstUser.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: firstUser.id,
+				input: {
+					id: firstUser.id,
+				},
+				arguments: {},
+			},
 		});
 
 		await ctx.processAction(ctx.session, {
-			action: 'action-send-first-time-login-link@1.0.0',
-			logContext: ctx.logContext,
-			card: secondUser.id,
-			type: secondUser.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-send-first-time-login-link@1.0.0',
+				context: ctx.logContext,
+				card: secondUser.id,
+				type: secondUser.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: secondUser.id,
+				input: {
+					id: secondUser.id,
+				},
+				arguments: {},
+			},
 		});
 
 		const firstTimeLogins = await ctx.kernel.query(
@@ -416,11 +477,20 @@ describe('action-send-first-time-login-link', () => {
 		await ctx.flushAll(ctx.session);
 
 		const firstTimeLogin = await ctx.processAction(ctx.session, {
-			action: 'action-send-first-time-login-link@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-send-first-time-login-link@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {},
+			},
 		});
 
 		expect(firstTimeLogin.error).toBe(false);
@@ -433,11 +503,20 @@ describe('action-send-first-time-login-link', () => {
 
 		await expect(
 			ctx.processAction(ctx.session, {
-				action: 'action-send-first-time-login-link@1.0.0',
-				logContext: ctx.logContext,
-				card: user.id,
-				type: user.type,
-				arguments: {},
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-send-first-time-login-link@1.0.0',
+					context: ctx.logContext,
+					card: user.id,
+					type: user.type,
+					epoch: new Date().valueOf(),
+					timestamp: new Date().toISOString(),
+					actor: user.id,
+					input: {
+						id: user.id,
+					},
+					arguments: {},
+				},
 			}),
 		).rejects.toThrowError();
 	});
@@ -460,11 +539,20 @@ describe('action-send-first-time-login-link', () => {
 
 		await expect(
 			ctx.processAction(requesterSession.id, {
-				action: 'action-send-first-time-login-link@1.0.0',
-				logContext: ctx.logContext,
-				card: user.id,
-				type: user.type,
-				arguments: {},
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-send-first-time-login-link@1.0.0',
+					context: ctx.logContext,
+					card: user.id,
+					type: user.type,
+					epoch: new Date().valueOf(),
+					timestamp: new Date().toISOString(),
+					actor: user.id,
+					input: {
+						id: user.id,
+					},
+					arguments: {},
+				},
 			}),
 		).rejects.toThrowError();
 	});
@@ -490,11 +578,20 @@ describe('action-send-first-time-login-link', () => {
 
 		await expect(
 			ctx.processAction(ctx.session, {
-				action: 'action-send-first-time-login-link@1.0.0',
-				logContext: ctx.logContext,
-				card: user.id,
-				type: user.type,
-				arguments: {},
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-send-first-time-login-link@1.0.0',
+					context: ctx.logContext,
+					card: user.id,
+					type: user.type,
+					epoch: new Date().valueOf(),
+					timestamp: new Date().toISOString(),
+					actor: ctx.adminUserId,
+					input: {
+						id: user.id,
+					},
+					arguments: {},
+				},
 			}),
 		).rejects.toThrowError();
 	});
@@ -532,11 +629,20 @@ describe('action-send-first-time-login-link', () => {
 		await ctx.flushAll(ctx.session);
 
 		await ctx.processAction(ctx.session, {
-			action: 'action-send-first-time-login-link@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-send-first-time-login-link@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {},
+			},
 		});
 
 		const updated = await ctx.kernel.getContractById(
@@ -581,11 +687,20 @@ describe('action-send-first-time-login-link', () => {
 		await ctx.flushAll(ctx.session);
 
 		await ctx.processAction(ctx.session, {
-			action: 'action-send-first-time-login-link@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-send-first-time-login-link@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {},
+			},
 		});
 
 		const updated = await ctx.kernel.getContractById(
@@ -631,11 +746,20 @@ describe('action-send-first-time-login-link', () => {
 		await ctx.flushAll(ctx.session);
 
 		await ctx.processAction(ctx.session, {
-			action: 'action-send-first-time-login-link@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-send-first-time-login-link@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				actor: user.id,
+				epoch: new Date().valueOf(),
+				input: {
+					id: user.id,
+				},
+				timestamp: new Date().toISOString(),
+				arguments: {},
+			},
 		});
 
 		const updated = await ctx.kernel.getContractById(

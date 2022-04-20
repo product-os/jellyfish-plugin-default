@@ -1,5 +1,9 @@
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import { testUtils as workerTestUtils } from '@balena/jellyfish-worker';
+import { UserContract } from '@balena/jellyfish-types/build/core';
+import {
+	ActionRequestContract,
+	testUtils as workerTestUtils,
+} from '@balena/jellyfish-worker';
 import { strict as assert } from 'assert';
 import { defaultPlugin } from '../../../lib';
 
@@ -16,24 +20,39 @@ afterAll(() => {
 });
 
 // Runs the action-maintain-contact action and returns the resulting contact contract
-const maintainContact = async (userContract) => {
-	const request = await ctx.worker.producer.enqueue(
-		ctx.worker.getId(),
+const maintainContact = async (userContract: UserContract) => {
+	const actionRequest = await ctx.worker.insertCard(
+		ctx.logContext,
 		ctx.session,
+		ctx.worker.typeContracts['action-request@1.0.0'],
 		{
-			action: 'action-maintain-contact@1.0.0',
-			logContext: ctx.logContext,
-			card: userContract.id,
-			type: userContract.type,
-			arguments: {},
+			attachEvents: false,
+			timestamp: new Date().toISOString(),
+		},
+		{
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-maintain-contact@1.0.0',
+				context: ctx.logContext,
+				card: userContract.id,
+				type: userContract.type,
+				actor: ctx.adminUserId,
+				epoch: new Date().valueOf(),
+				input: {
+					id: userContract.id,
+				},
+				timestamp: new Date().toISOString(),
+				arguments: {},
+			},
 		},
 	);
+	assert(actionRequest);
 
 	await ctx.flush(ctx.session);
 
 	const result: any = await ctx.worker.producer.waitResults(
 		ctx.logContext,
-		request,
+		actionRequest as ActionRequestContract,
 	);
 
 	expect(result.error).toBe(false);
@@ -62,7 +81,7 @@ describe('action-maintain-contact', () => {
 			},
 		);
 
-		const userCard = await ctx.kernel.insertContract(
+		const userContract = await ctx.kernel.insertContract<UserContract>(
 			ctx.logContext,
 			ctx.session,
 			{
@@ -81,12 +100,12 @@ describe('action-maintain-contact', () => {
 				},
 			},
 		);
+		assert(userContract);
 
-		const contactCard = await maintainContact(userCard);
+		const contactContract = await maintainContact(userContract);
+		assert(contactContract !== null);
 
-		assert(contactCard !== null);
-
-		expect(contactCard.data).toEqual({
+		expect(contactContract.data).toEqual({
 			origin: origin.id,
 			source: 'my-fake-service',
 			profile: {
@@ -100,7 +119,7 @@ describe('action-maintain-contact', () => {
 	});
 
 	it('should prettify name when creating user contact', async () => {
-		const userCard = await ctx.kernel.insertContract(
+		const userContract = await ctx.kernel.insertContract<UserContract>(
 			ctx.logContext,
 			ctx.session,
 			{
@@ -118,19 +137,19 @@ describe('action-maintain-contact', () => {
 				},
 			},
 		);
+		assert(userContract);
 
-		const contactCard = await maintainContact(userCard);
+		const contactContract = await maintainContact(userContract);
+		assert(contactContract !== null);
 
-		assert(contactCard !== null);
-
-		expect((contactCard.data.profile as any).name).toEqual({
+		expect((contactContract.data.profile as any).name).toEqual({
 			first: 'John',
 			last: 'Doe',
 		});
 	});
 
 	it('should link the contact to the user', async () => {
-		const userCard = await ctx.kernel.insertContract(
+		const userContract = await ctx.kernel.insertContract<UserContract>(
 			ctx.logContext,
 			ctx.session,
 			{
@@ -142,8 +161,9 @@ describe('action-maintain-contact', () => {
 				},
 			},
 		);
+		assert(userContract);
 
-		const contact = await maintainContact(userCard);
+		const contact = await maintainContact(userContract);
 
 		assert(contact !== null);
 
@@ -158,7 +178,7 @@ describe('action-maintain-contact', () => {
 			properties: {
 				id: {
 					type: 'string',
-					const: userCard.id,
+					const: userContract.id,
 				},
 			},
 		});
@@ -168,7 +188,7 @@ describe('action-maintain-contact', () => {
 	});
 
 	it('should be able to sync updates to user first names', async () => {
-		const userCard = await ctx.kernel.insertContract(
+		const userContract = await ctx.kernel.insertContract<UserContract>(
 			ctx.logContext,
 			ctx.session,
 			{
@@ -186,13 +206,14 @@ describe('action-maintain-contact', () => {
 				},
 			},
 		);
+		assert(userContract);
 
-		await maintainContact(userCard);
+		await maintainContact(userContract);
 
 		await ctx.kernel.patchContractBySlug(
 			ctx.logContext,
 			ctx.session,
-			`${userCard.slug}@${userCard.version}`,
+			`${userContract.slug}@${userContract.version}`,
 			[
 				{
 					op: 'replace',
@@ -202,11 +223,11 @@ describe('action-maintain-contact', () => {
 			],
 		);
 
-		const contactCard = await maintainContact(userCard);
+		const contactContract = await maintainContact(userContract);
 
-		assert(contactCard !== null);
+		assert(contactContract !== null);
 
-		expect(contactCard.data.profile).toEqual({
+		expect(contactContract.data.profile).toEqual({
 			email: 'johndoe@example.com',
 			title: 'Frontend Engineer',
 			name: {
@@ -216,7 +237,7 @@ describe('action-maintain-contact', () => {
 	});
 
 	it('should apply a user patch to a contact that diverged', async () => {
-		const userCard = await ctx.kernel.insertContract(
+		const userContract = await ctx.kernel.insertContract<UserContract>(
 			ctx.logContext,
 			ctx.session,
 			{
@@ -231,8 +252,9 @@ describe('action-maintain-contact', () => {
 				},
 			},
 		);
+		assert(userContract);
 
-		const result1 = await maintainContact(userCard);
+		const result1 = await maintainContact(userContract);
 
 		assert(result1 !== null);
 
@@ -251,7 +273,7 @@ describe('action-maintain-contact', () => {
 		await ctx.kernel.patchContractBySlug(
 			ctx.logContext,
 			ctx.session,
-			`${userCard.slug}@${userCard.version}`,
+			`${userContract.slug}@${userContract.version}`,
 			[
 				{
 					op: 'replace',
@@ -261,7 +283,7 @@ describe('action-maintain-contact', () => {
 			],
 		);
 
-		const result = await maintainContact(userCard);
+		const result = await maintainContact(userContract);
 
 		assert(result !== null);
 
@@ -269,7 +291,7 @@ describe('action-maintain-contact', () => {
 	});
 
 	it('should update the name of existing contact', async () => {
-		const userCard = await ctx.kernel.insertContract(
+		const userContract = await ctx.kernel.insertContract<UserContract>(
 			ctx.logContext,
 			ctx.session,
 			{
@@ -284,13 +306,14 @@ describe('action-maintain-contact', () => {
 				},
 			},
 		);
+		assert(userContract);
 
-		await maintainContact(userCard);
+		await maintainContact(userContract);
 
 		await ctx.kernel.patchContractBySlug(
 			ctx.logContext,
 			ctx.session,
-			`${userCard.slug}@${userCard.version}`,
+			`${userContract.slug}@${userContract.version}`,
 			[
 				{
 					op: 'replace',
@@ -300,7 +323,7 @@ describe('action-maintain-contact', () => {
 			],
 		);
 
-		const result = await maintainContact(userCard);
+		const result = await maintainContact(userContract);
 
 		assert(result !== null);
 
@@ -308,7 +331,7 @@ describe('action-maintain-contact', () => {
 	});
 
 	it('should delete an existing contact if the user is deleted', async () => {
-		const userCard = await ctx.kernel.insertContract(
+		const userContract = await ctx.kernel.insertContract<UserContract>(
 			ctx.logContext,
 			ctx.session,
 			{
@@ -323,13 +346,14 @@ describe('action-maintain-contact', () => {
 				},
 			},
 		);
+		assert(userContract);
 
-		await maintainContact(userCard);
+		await maintainContact(userContract);
 
 		await ctx.kernel.patchContractBySlug(
 			ctx.logContext,
 			ctx.session,
-			`${userCard.slug}@${userCard.version}`,
+			`${userContract.slug}@${userContract.version}`,
 			[
 				{
 					op: 'replace',
@@ -339,15 +363,15 @@ describe('action-maintain-contact', () => {
 			],
 		);
 
-		const contactCard = await maintainContact(userCard);
+		const contactContract = await maintainContact(userContract);
 
-		assert(contactCard !== null);
+		assert(contactContract !== null);
 
-		expect(contactCard.active).toBe(false);
+		expect(contactContract.active).toBe(false);
 	});
 
 	it('should not remove a property from an existing linked contact', async () => {
-		const userCard = await ctx.kernel.insertContract(
+		const userContract = await ctx.kernel.insertContract<UserContract>(
 			ctx.logContext,
 			ctx.session,
 			{
@@ -362,13 +386,14 @@ describe('action-maintain-contact', () => {
 				},
 			},
 		);
+		assert(userContract);
 
-		await maintainContact(userCard);
+		await maintainContact(userContract);
 
 		await ctx.kernel.patchContractBySlug(
 			ctx.logContext,
 			ctx.session,
-			`${userCard.slug}@${userCard.version}`,
+			`${userContract.slug}@${userContract.version}`,
 			[
 				{
 					op: 'remove',
@@ -377,15 +402,17 @@ describe('action-maintain-contact', () => {
 			],
 		);
 
-		const contactCard = await maintainContact(userCard);
+		const contactContract = await maintainContact(userContract);
 
-		assert(contactCard !== null);
+		assert(contactContract !== null);
 
-		expect((contactCard.data.profile as any).title).toBe('Frontend Engineer');
+		expect((contactContract.data.profile as any).title).toBe(
+			'Frontend Engineer',
+		);
 	});
 
 	it('should add a property to an existing linked contact', async () => {
-		const userCard = await ctx.kernel.insertContract(
+		const userContract = await ctx.kernel.insertContract<UserContract>(
 			ctx.logContext,
 			ctx.session,
 			{
@@ -397,13 +424,14 @@ describe('action-maintain-contact', () => {
 				},
 			},
 		);
+		assert(userContract);
 
-		await maintainContact(userCard);
+		await maintainContact(userContract);
 
 		await ctx.kernel.patchContractBySlug(
 			ctx.logContext,
 			ctx.session,
-			`${userCard.slug}@${userCard.version}`,
+			`${userContract.slug}@${userContract.version}`,
 			[
 				{
 					op: 'add',
@@ -418,11 +446,11 @@ describe('action-maintain-contact', () => {
 			],
 		);
 
-		const contactCard = await maintainContact(userCard);
+		const contactContract = await maintainContact(userContract);
 
-		assert(contactCard !== null);
+		assert(contactContract !== null);
 
-		expect(contactCard.data.profile).toEqual({
+		expect(contactContract.data.profile).toEqual({
 			email: 'johndoe@example.com',
 			company: 'Balena',
 			name: {},
@@ -430,7 +458,7 @@ describe('action-maintain-contact', () => {
 	});
 
 	it('should create a contact for a user with little profile info', async () => {
-		const userCard = await ctx.kernel.insertContract(
+		const userContract = await ctx.kernel.insertContract<UserContract>(
 			ctx.logContext,
 			ctx.session,
 			{
@@ -442,12 +470,13 @@ describe('action-maintain-contact', () => {
 				},
 			},
 		);
+		assert(userContract);
 
-		const contactCard = await maintainContact(userCard);
+		const contactContract = await maintainContact(userContract);
 
-		assert(contactCard !== null);
+		assert(contactContract !== null);
 
-		expect(contactCard.data).toEqual({
+		expect(contactContract.data).toEqual({
 			profile: {
 				email: 'johndoe@example.com',
 				name: {},
@@ -456,7 +485,7 @@ describe('action-maintain-contact', () => {
 	});
 
 	it('should use the user name when creating a contact', async () => {
-		const userCard = await ctx.kernel.insertContract(
+		const userContract = await ctx.kernel.insertContract<UserContract>(
 			ctx.logContext,
 			ctx.session,
 			{
@@ -469,16 +498,17 @@ describe('action-maintain-contact', () => {
 				},
 			},
 		);
+		assert(userContract);
 
-		const contactCard = await maintainContact(userCard);
+		const contactContract = await maintainContact(userContract);
 
-		assert(contactCard !== null);
+		assert(contactContract !== null);
 
-		expect(contactCard.name).toBe('John Doe');
+		expect(contactContract.name).toBe('John Doe');
 	});
 
 	it('should create an inactive contact given an inactive user', async () => {
-		const userCard = await ctx.kernel.insertContract(
+		const userContract = await ctx.kernel.insertContract<UserContract>(
 			ctx.logContext,
 			ctx.session,
 			{
@@ -491,16 +521,17 @@ describe('action-maintain-contact', () => {
 				},
 			},
 		);
+		assert(userContract);
 
-		const contactCard = await maintainContact(userCard);
+		const contactContract = await maintainContact(userContract);
 
-		assert(contactCard !== null);
+		assert(contactContract !== null);
 
-		expect(contactCard.active).toBe(false);
+		expect(contactContract.active).toBe(false);
 	});
 
 	it('should create a contact for a user with plenty of info', async () => {
-		const userCard = await ctx.kernel.insertContract(
+		const userContract = await ctx.kernel.insertContract<UserContract>(
 			ctx.logContext,
 			ctx.session,
 			{
@@ -523,12 +554,13 @@ describe('action-maintain-contact', () => {
 				},
 			},
 		);
+		assert(userContract);
 
-		const contactCard = await maintainContact(userCard);
+		const contactContract = await maintainContact(userContract);
 
-		assert(contactCard !== null);
+		assert(contactContract !== null);
 
-		expect(contactCard.data.profile).toEqual({
+		expect(contactContract.data.profile).toEqual({
 			email: 'johndoe@example.com',
 			company: 'Balena.io',
 			title: 'Senior Directory of the Jellyfish Task Force',
@@ -543,7 +575,7 @@ describe('action-maintain-contact', () => {
 	});
 
 	it('should create a contact for a user with multiple emails', async () => {
-		const userCard = await ctx.kernel.insertContract(
+		const userContract = await ctx.kernel.insertContract<UserContract>(
 			ctx.logContext,
 			ctx.session,
 			{
@@ -561,12 +593,13 @@ describe('action-maintain-contact', () => {
 				},
 			},
 		);
+		assert(userContract);
 
-		const contactCard = await maintainContact(userCard);
+		const contactContract = await maintainContact(userContract);
 
-		assert(contactCard !== null);
+		assert(contactContract !== null);
 
-		expect((contactCard.data.profile as any).email).toEqual([
+		expect((contactContract.data.profile as any).email).toEqual([
 			'johndoe@example.com',
 			'johndoe@gmail.com',
 		]);
