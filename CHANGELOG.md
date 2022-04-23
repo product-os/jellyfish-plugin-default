@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.84 - 2022-04-23
+
+* Update internal-patch [Renovate Bot]
+
 ## 24.0.83 - 2022-04-23
 
 * Update external-non-major [Renovate Bot]
