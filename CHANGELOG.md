@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.87 - 2022-04-27
+
+* Update @balena/jellyfish-environment from 10.0.2 to 11.0.0 [Renovate Bot]
+
 ## 24.0.86 - 2022-04-26
 
 * Update internal-patch [Renovate Bot]
