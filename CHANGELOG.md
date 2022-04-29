@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.91 - 2022-04-29
+
+* Adapt the external support role for the `authentication-{password,oauth}` contract types [Carol Schulze]
+
 ## 24.0.90 - 2022-04-29
 
 * Update internal-patch [Renovate Bot]
