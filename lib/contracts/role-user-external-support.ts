@@ -283,13 +283,22 @@ export const roleUserExternalSupport: RoleContractDefinition = {
 				},
 				{
 					properties: {
-						id: {
-							const: {
-								$eval: 'user.id',
-							},
-						},
 						type: {
-							const: 'authentication@1.0.0',
+							enum: [
+								'authentication-oauth@1.0.0',
+								'authentication-password@1.0.0',
+							],
+						},
+						data: {
+							type: 'object',
+							required: ['actorId'],
+							properties: {
+								actorId: {
+									const: {
+										$eval: 'user.id',
+									},
+								},
+							},
 						},
 					},
 				},
