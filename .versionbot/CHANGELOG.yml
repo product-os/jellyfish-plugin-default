@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update internal-patch
+      hash: 6bd781fd1d89737d97eef5287c4d2d8d6bafc188
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 24.0.92
+  title: "'Update internal-patch'"
+  date: 2022-04-30T04:14:59.548Z
+- commits:
     - subject: Adapt the external support role for the
         `authentication-{password,oauth}` contract types
       hash: 6940f783fa24723e3a8a46edd42636468fdef6bd
