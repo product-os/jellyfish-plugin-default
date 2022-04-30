@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update @balena/jellyfish-worker from 22.1.13 to 23.0.0
+      hash: 0c705120e8b32740a7428d7482efad2e48737cd9
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 24.0.92
+  title: "'Update @balena/jellyfish-worker from 22.1.13 to 23.0.0'"
+  date: 2022-04-30T04:19:28.810Z
+- commits:
     - subject: Adapt the external support role for the
         `authentication-{password,oauth}` contract types
       hash: 6940f783fa24723e3a8a46edd42636468fdef6bd
