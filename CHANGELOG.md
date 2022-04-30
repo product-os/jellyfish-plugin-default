@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.94 - 2022-04-30
+
+* Update internal-patch [Renovate Bot]
+
 ## 24.0.93 - 2022-04-30
 
 * Bump internal packages [Josh Bowling]
