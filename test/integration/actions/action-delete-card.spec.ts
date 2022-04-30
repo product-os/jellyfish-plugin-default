@@ -1,5 +1,8 @@
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import type { WorkerContext } from '@balena/jellyfish-worker';
+import type {
+	ActionRequestContract,
+	WorkerContext,
+} from '@balena/jellyfish-worker';
 import { strict as assert } from 'assert';
 import { testUtils as autumndbTestUtils } from 'autumndb';
 import { defaultPlugin, testUtils } from '../../../lib';
@@ -90,21 +93,35 @@ describe('action-delete-card', () => {
 			{},
 		);
 
-		const request = await ctx.worker.producer.enqueue(
-			ctx.worker.getId(),
+		const request = await ctx.worker.insertCard(
+			ctx.logContext,
 			ctx.session,
+			ctx.worker.typeContracts['action-request@1.0.0'],
 			{
-				action: 'action-delete-card@1.0.0',
-				logContext: ctx.logContext,
-				card: card.id,
-				type: card.type,
-				arguments: {},
+				attachEvents: false,
+				timestamp: new Date().toISOString(),
+			},
+			{
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-delete-card@1.0.0',
+					context: ctx.logContext,
+					card: card.id,
+					type: card.type,
+					actor: ctx.adminUserId,
+					epoch: new Date().valueOf(),
+					input: {
+						id: card.id,
+					},
+					timestamp: new Date().toISOString(),
+					arguments: {},
+				},
 			},
 		);
 		await ctx.flushAll(ctx.session);
 		const result = await ctx.worker.producer.waitResults(
 			ctx.logContext,
-			request,
+			request as ActionRequestContract,
 		);
 		expect(result.error).toBe(false);
 

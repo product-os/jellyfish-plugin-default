@@ -132,11 +132,20 @@ describe('action-google-meet', () => {
 		});
 
 		await ctx.processAction(ctx.session, {
-			action: 'action-google-meet@1.0.0',
-			logContext: ctx.logContext,
-			card: supportThread.id,
-			type: supportThread.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-google-meet@1.0.0',
+				context: ctx.logContext,
+				card: supportThread.id,
+				type: supportThread.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: ctx.adminUserId,
+				input: {
+					id: supportThread.id,
+				},
+				arguments: {},
+			},
 		});
 
 		const [updatedCard] = await ctx.kernel.query(ctx.logContext, ctx.session, {

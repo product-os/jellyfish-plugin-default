@@ -81,11 +81,20 @@ describe('action-complete-first-time-login', () => {
 		);
 
 		await ctx.processAction(ctx.session, {
-			action: 'action-send-first-time-login-link@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-send-first-time-login-link@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {},
+			},
 		});
 
 		const match = await ctx.waitForMatch({
@@ -98,7 +107,6 @@ describe('action-complete-first-time-login', () => {
 			},
 		});
 
-		// TODO: temporary workaround for context/logContext mismatch
 		const newPassword = autumndbTestUtils.generateRandomId();
 		const completeFirstTimeLoginAction = (await ctx.worker.pre(ctx.session, {
 			action: 'action-complete-first-time-login@1.0.0',
@@ -110,9 +118,22 @@ describe('action-complete-first-time-login', () => {
 				newPassword,
 			},
 		})) as any;
+
+		// TODO: Remove temporary workaround for context/logContext mismatch
 		completeFirstTimeLoginAction.context =
 			completeFirstTimeLoginAction.logContext;
-		await ctx.processAction(session.id, completeFirstTimeLoginAction);
+		completeFirstTimeLoginAction.epoch = new Date().valueOf();
+		completeFirstTimeLoginAction.timestamp = new Date().toISOString();
+		completeFirstTimeLoginAction.actor = user.id;
+		completeFirstTimeLoginAction.input = {
+			id: user.id,
+		};
+		Reflect.deleteProperty(completeFirstTimeLoginAction, 'logContext');
+
+		await ctx.processAction(session.id, {
+			type: 'action-request@1.0.0',
+			data: completeFirstTimeLoginAction,
+		});
 
 		const updated = await ctx.kernel.getContractById(
 			ctx.logContext,
@@ -137,13 +158,22 @@ describe('action-complete-first-time-login', () => {
 		const fakeToken = autumndbTestUtils.generateRandomId();
 		await expect(
 			ctx.processAction(ctx.session, {
-				action: 'action-complete-first-time-login@1.0.0',
-				logContext: ctx.logContext,
-				card: user.id,
-				type: user.type,
-				arguments: {
-					firstTimeLoginToken: fakeToken,
-					newPassword: autumndbTestUtils.generateRandomId(),
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-complete-first-time-login@1.0.0',
+					logContext: ctx.logContext,
+					card: user.id,
+					type: user.type,
+					epoch: new Date().valueOf(),
+					timestamp: new Date().toISOString(),
+					actor: user.id,
+					input: {
+						id: user.id,
+					},
+					arguments: {
+						firstTimeLoginToken: fakeToken,
+						newPassword: autumndbTestUtils.generateRandomId(),
+					},
 				},
 			}),
 		).rejects.toThrowError();
@@ -161,11 +191,20 @@ describe('action-complete-first-time-login', () => {
 		);
 
 		await ctx.processAction(ctx.session, {
-			action: 'action-send-first-time-login-link@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-send-first-time-login-link@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {},
+			},
 		});
 
 		const match = await ctx.waitForMatch({
@@ -213,13 +252,22 @@ describe('action-complete-first-time-login', () => {
 
 		await expect(
 			ctx.processAction(ctx.session, {
-				action: 'action-complete-first-time-login@1.0.0',
-				logContext: ctx.logContext,
-				card: user.id,
-				type: user.type,
-				arguments: {
-					firstTimeLoginToken: match.data.firstTimeLoginToken,
-					newPassword: autumndbTestUtils.generateRandomId(),
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-complete-first-time-login@1.0.0',
+					logContext: ctx.logContext,
+					card: user.id,
+					type: user.type,
+					epoch: new Date().valueOf(),
+					timestamp: new Date().toISOString(),
+					actor: user.id,
+					input: {
+						id: user.id,
+					},
+					arguments: {
+						firstTimeLoginToken: match.data.firstTimeLoginToken,
+						newPassword: autumndbTestUtils.generateRandomId(),
+					},
 				},
 			}),
 		).rejects.toThrowError();
@@ -237,11 +285,20 @@ describe('action-complete-first-time-login', () => {
 		);
 
 		await ctx.processAction(ctx.session, {
-			action: 'action-send-first-time-login-link@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-send-first-time-login-link@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {},
+			},
 		});
 
 		const match = await ctx.waitForMatch({
@@ -267,22 +324,40 @@ describe('action-complete-first-time-login', () => {
 		});
 
 		await ctx.processAction(ctx.session, {
-			action: 'action-delete-card@1.0.0',
-			logContext: ctx.logContext,
-			card: match.id,
-			type: match.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-delete-card@1.0.0',
+				context: ctx.logContext,
+				card: match.id,
+				type: match.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: match.id,
+				},
+				arguments: {},
+			},
 		});
 
 		await expect(
 			ctx.processAction(ctx.session, {
-				action: 'action-complete-first-time-login@1.0.0',
-				logContext: ctx.logContext,
-				card: user.id,
-				type: user.type,
-				arguments: {
-					firstTimeLoginToken: match.data.firstTimeLoginToken,
-					newPassword: autumndbTestUtils.generateRandomId(),
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-complete-first-time-login@1.0.0',
+					logContext: ctx.logContext,
+					card: user.id,
+					type: user.type,
+					epoch: new Date().valueOf(),
+					timestamp: new Date().toISOString(),
+					actor: user.id,
+					input: {
+						id: user.id,
+					},
+					arguments: {
+						firstTimeLoginToken: match.data.firstTimeLoginToken,
+						newPassword: autumndbTestUtils.generateRandomId(),
+					},
 				},
 			}),
 		).rejects.toThrowError();
@@ -304,19 +379,37 @@ describe('action-complete-first-time-login', () => {
 		);
 
 		await ctx.processAction(ctx.session, {
-			action: 'action-send-first-time-login-link@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-send-first-time-login-link@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {},
+			},
 		});
 
 		await ctx.processAction(ctx.session, {
-			action: 'action-delete-card@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-delete-card@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {},
+			},
 		});
 
 		const match = await ctx.waitForMatch({
@@ -340,8 +433,17 @@ describe('action-complete-first-time-login', () => {
 				newPassword,
 			},
 		})) as any;
+
+		// TODO: Remove temporary workaround for context/logContext mismatch
 		completeFirstTimeLoginAction.context =
 			completeFirstTimeLoginAction.logContext;
+		completeFirstTimeLoginAction.epoch = new Date().valueOf();
+		completeFirstTimeLoginAction.timestamp = new Date().toISOString();
+		completeFirstTimeLoginAction.actor = user.id;
+		completeFirstTimeLoginAction.input = {
+			id: user.id,
+		};
+		Reflect.deleteProperty(completeFirstTimeLoginAction, 'logContext');
 
 		await expect(
 			ctx.processAction(session.id, completeFirstTimeLoginAction),
@@ -363,12 +465,21 @@ describe('action-complete-first-time-login', () => {
 		);
 
 		await ctx.processAction(ctx.session, {
-			action: 'action-send-first-time-login-link@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {
-				username: user.slug,
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-send-first-time-login-link@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {
+					username: user.slug,
+				},
 			},
 		});
 
@@ -431,11 +542,20 @@ describe('action-complete-first-time-login', () => {
 		);
 
 		await ctx.processAction(ctx.session, {
-			action: 'action-send-first-time-login-link@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-send-first-time-login-link@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {},
+			},
 		});
 
 		const match = await ctx.waitForMatch({
@@ -461,13 +581,22 @@ describe('action-complete-first-time-login', () => {
 
 		await expect(
 			ctx.processAction(ctx.session, {
-				action: 'action-complete-first-time-login@1.0.0',
-				logContext: ctx.logContext,
-				card: user.id,
-				type: user.type,
-				arguments: {
-					firstTimeLoginToken: match.data.firstTimeLoginToken,
-					newPassword: autumndbTestUtils.generateRandomId(),
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-complete-first-time-login@1.0.0',
+					logContext: ctx.logContext,
+					card: user.id,
+					type: user.type,
+					epoch: new Date().valueOf(),
+					timestamp: new Date().toISOString(),
+					actor: user.id,
+					input: {
+						id: user.id,
+					},
+					arguments: {
+						firstTimeLoginToken: match.data.firstTimeLoginToken,
+						newPassword: autumndbTestUtils.generateRandomId(),
+					},
 				},
 			}),
 		).rejects.toThrowError();

@@ -95,12 +95,21 @@ describe('action-complete-password-reset', () => {
 		const session = await ctx.createSession(user);
 
 		const passwordReset = await ctx.processAction(ctx.session, {
-			action: 'action-request-password-reset@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {
-				username,
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-request-password-reset@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {
+					username,
+				},
 			},
 		});
 		expect(passwordReset.error).toBe(false);
@@ -116,12 +125,20 @@ describe('action-complete-password-reset', () => {
 			},
 		})) as any;
 
-		// TODO: Remove this workaround
+		// TODO: Remove temporary workaround for context/logContext mismatch
 		completePasswordReset.context = completePasswordReset.logContext;
-		const completePasswordResetResult = await ctx.processAction(
-			session.id,
-			completePasswordReset,
-		);
+		completePasswordReset.epoch = new Date().valueOf();
+		completePasswordReset.timestamp = new Date().toISOString();
+		completePasswordReset.actor = user.id;
+		completePasswordReset.input = {
+			id: user.id,
+		};
+		Reflect.deleteProperty(completePasswordReset, 'logContext');
+
+		const completePasswordResetResult = await ctx.processAction(session.id, {
+			type: 'action-request@1.0.0',
+			data: completePasswordReset,
+		});
 		expect(completePasswordResetResult.error).toBe(false);
 
 		const updated = await ctx.kernel.getContractById(
@@ -147,10 +164,22 @@ describe('action-complete-password-reset', () => {
 				newPassword: autumndbTestUtils.generateRandomId(),
 			},
 		})) as any;
-		completePasswordReset.logContext = completePasswordReset.context;
+
+		// TODO: Remove temporary workaround for context/logContext mismatch
+		completePasswordReset.context = completePasswordReset.logContext;
+		completePasswordReset.epoch = new Date().valueOf();
+		completePasswordReset.timestamp = new Date().toISOString();
+		completePasswordReset.actor = user.id;
+		completePasswordReset.input = {
+			id: user.id,
+		};
+		Reflect.deleteProperty(completePasswordReset, 'logContext');
 
 		await expect(
-			ctx.processAction(ctx.session, completePasswordReset),
+			ctx.processAction(ctx.session, {
+				type: 'action-request@1.0.0',
+				data: completePasswordReset,
+			}),
 		).rejects.toThrowError();
 	});
 
@@ -159,12 +188,21 @@ describe('action-complete-password-reset', () => {
 		const user = await ctx.createUser(username, hash);
 
 		await ctx.processAction(ctx.session, {
-			action: 'action-request-password-reset@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {
-				username,
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-request-password-reset@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {
+					username,
+				},
 			},
 		});
 
@@ -237,11 +275,21 @@ describe('action-complete-password-reset', () => {
 			},
 		})) as any;
 
-		// TODO: Remove this workaround
+		// TODO: Remove temporary workaround for context/logContext mismatch
 		completePasswordReset.context = completePasswordReset.logContext;
+		completePasswordReset.epoch = new Date().valueOf();
+		completePasswordReset.timestamp = new Date().toISOString();
+		completePasswordReset.actor = user.id;
+		completePasswordReset.input = {
+			id: user.id,
+		};
+		Reflect.deleteProperty(completePasswordReset, 'logContext');
 
 		await expect(
-			ctx.processAction(ctx.session, completePasswordReset),
+			ctx.processAction(ctx.session, {
+				type: 'action-request@1.0.0',
+				data: completePasswordReset,
+			}),
 		).rejects.toThrowError();
 	});
 
@@ -249,12 +297,21 @@ describe('action-complete-password-reset', () => {
 		const username = autumndbTestUtils.generateRandomSlug();
 		const user = await ctx.createUser(username, hash);
 		await ctx.processAction(ctx.session, {
-			action: 'action-request-password-reset@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {
-				username,
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-request-password-reset@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {
+					username,
+				},
 			},
 		});
 
@@ -296,11 +353,20 @@ describe('action-complete-password-reset', () => {
 		});
 
 		const requestDelete = await ctx.processAction(ctx.session, {
-			action: 'action-delete-card@1.0.0',
-			logContext: ctx.logContext,
-			card: match.id,
-			type: match.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-delete-card@1.0.0',
+				context: ctx.logContext,
+				card: match.id,
+				type: match.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: match.id,
+				},
+				arguments: {},
+			},
 		});
 		expect(requestDelete.error).toBe(false);
 
@@ -315,11 +381,21 @@ describe('action-complete-password-reset', () => {
 			},
 		})) as any;
 
-		// TODO: Remove this workaround
+		// TODO: Remove temporary workaround for context/logContext mismatch
 		completePasswordReset.context = completePasswordReset.logContext;
+		completePasswordReset.epoch = new Date().valueOf();
+		completePasswordReset.timestamp = new Date().toISOString();
+		completePasswordReset.actor = user.id;
+		completePasswordReset.input = {
+			id: user.id,
+		};
+		Reflect.deleteProperty(completePasswordReset, 'logContext');
 
 		await expect(
-			ctx.processAction(ctx.session, completePasswordReset),
+			ctx.processAction(ctx.session, {
+				type: 'action-request@1.0.0',
+				data: completePasswordReset,
+			}),
 		).rejects.toThrowError();
 	});
 
@@ -329,22 +405,40 @@ describe('action-complete-password-reset', () => {
 		const session = await ctx.createSession(user);
 
 		const passwordReset = await ctx.processAction(ctx.session, {
-			action: 'action-request-password-reset@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {
-				username,
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-request-password-reset@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {
+					username,
+				},
 			},
 		});
 		expect(passwordReset.error).toBe(false);
 
 		const requestDelete = await ctx.processAction(ctx.session, {
-			action: 'action-delete-card@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-delete-card@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {},
+			},
 		});
 		expect(requestDelete.error).toBe(false);
 
@@ -359,11 +453,21 @@ describe('action-complete-password-reset', () => {
 			},
 		})) as any;
 
-		// TODO: Remove this workaround
+		// TODO: Remove temporary workaround for context/logContext mismatch
 		completePasswordReset.context = completePasswordReset.logContext;
+		completePasswordReset.epoch = new Date().valueOf();
+		completePasswordReset.timestamp = new Date().toISOString();
+		completePasswordReset.actor = user.id;
+		completePasswordReset.input = {
+			id: user.id,
+		};
+		Reflect.deleteProperty(completePasswordReset, 'logContext');
 
 		await expect(
-			ctx.processAction(session.id, completePasswordReset),
+			ctx.processAction(session.id, {
+				type: 'action-request@1.0.0',
+				data: completePasswordReset,
+			}),
 		).rejects.toThrowError();
 		await ctx.flushAll(ctx.session);
 	});
@@ -373,12 +477,21 @@ describe('action-complete-password-reset', () => {
 		const user = await ctx.createUser(username, hash);
 
 		const requestPasswordReset = await ctx.processAction(ctx.session, {
-			action: 'action-request-password-reset@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {
-				username,
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-request-password-reset@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {
+					username,
+				},
 			},
 		});
 		expect(requestPasswordReset.error).toBe(false);
@@ -394,10 +507,20 @@ describe('action-complete-password-reset', () => {
 			},
 		})) as any;
 
-		// TODO: Remove this workaround
+		// TODO: Remove temporary workaround for context/logContext mismatch
 		completePasswordReset.context = completePasswordReset.logContext;
+		completePasswordReset.epoch = new Date().valueOf();
+		completePasswordReset.timestamp = new Date().toISOString();
+		completePasswordReset.actor = user.id;
+		completePasswordReset.input = {
+			id: user.id,
+		};
+		Reflect.deleteProperty(completePasswordReset, 'logContext');
 
-		await ctx.processAction(ctx.session, completePasswordReset);
+		await ctx.processAction(ctx.session, {
+			type: 'action-request@1.0.0',
+			data: completePasswordReset,
+		});
 		await ctx.waitForMatch({
 			type: 'object',
 			required: ['type', 'active', 'data'],

@@ -75,12 +75,21 @@ describe('action-request-password-reset', () => {
 		);
 
 		const requestPasswordReset = await ctx.processAction(ctx.session, {
-			action: 'action-request-password-reset@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {
-				username,
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-request-password-reset@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {
+					username,
+				},
 			},
 		});
 		expect(requestPasswordReset.error).toBe(false);
@@ -125,12 +134,21 @@ describe('action-request-password-reset', () => {
 		const email = (user.data as any).email[0];
 
 		const requestPasswordReset = await ctx.processAction(ctx.session, {
-			action: 'action-request-password-reset@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {
-				username,
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-request-password-reset@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {
+					username,
+				},
 			},
 		});
 		expect(requestPasswordReset.error).toBe(false);
@@ -190,12 +208,21 @@ describe('action-request-password-reset', () => {
 		);
 
 		const requestPasswordReset = await ctx.processAction(ctx.session, {
-			action: 'action-request-password-reset@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {
-				username: autumndbTestUtils.generateRandomSlug(),
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-request-password-reset@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {
+					username: autumndbTestUtils.generateRandomSlug(),
+				},
 			},
 		});
 		expect(requestPasswordReset.error).toBe(false);
@@ -244,26 +271,42 @@ describe('action-request-password-reset', () => {
 		);
 
 		const requestDelete = await ctx.processAction(ctx.session, {
-			action: 'action-delete-card@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {},
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-delete-card@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {},
+			},
 		});
 		expect(requestDelete.error).toBe(false);
 
-		const requestPasswordResetAction = {
-			action: 'action-request-password-reset@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {
-				username,
-			},
-		};
-
 		await expect(
-			ctx.processAction(session.id, requestPasswordResetAction),
+			ctx.processAction(session.id, {
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-request-password-reset@1.0.0',
+					context: ctx.logContext,
+					card: user.id,
+					type: user.type,
+					epoch: new Date().valueOf(),
+					timestamp: new Date().toISOString(),
+					actor: user.id,
+					input: {
+						id: user.id,
+					},
+					arguments: {
+						username,
+					},
+				},
+			}),
 		).rejects.toThrowError();
 	});
 
@@ -281,12 +324,21 @@ describe('action-request-password-reset', () => {
 		);
 
 		const requestPasswordReset = await ctx.processAction(ctx.session, {
-			action: 'action-request-password-reset@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {
-				username,
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-request-password-reset@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {
+					username,
+				},
 			},
 		});
 		expect(requestPasswordReset.error).toBe(false);
@@ -334,12 +386,21 @@ describe('action-request-password-reset', () => {
 		);
 
 		const requestPasswordResetAction = {
-			action: 'action-request-password-reset@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {
-				username,
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-request-password-reset@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {
+					username,
+				},
 			},
 		};
 
@@ -413,27 +474,43 @@ describe('action-request-password-reset', () => {
 			'has member',
 		);
 
-		const otherUserRequest = {
-			action: 'action-request-password-reset@1.0.0',
-			logContext: ctx.logContext,
-			card: secondUser.id,
-			type: secondUser.type,
-			arguments: {
-				username: secondUsername,
+		await ctx.processAction(ctx.session, {
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-request-password-reset@1.0.0',
+				context: ctx.logContext,
+				card: secondUser.id,
+				type: secondUser.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: secondUser.id,
+				input: {
+					id: secondUser.id,
+				},
+				arguments: {
+					username: secondUsername,
+				},
 			},
-		};
-		await ctx.processAction(ctx.session, otherUserRequest);
+		});
 
-		const userRequest = {
-			action: 'action-request-password-reset@1.0.0',
-			logContext: ctx.logContext,
-			card: firstUser.id,
-			type: firstUser.type,
-			arguments: {
-				username: firstUsername,
+		await ctx.processAction(ctx.session, {
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-request-password-reset@1.0.0',
+				context: ctx.logContext,
+				card: firstUser.id,
+				type: firstUser.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: firstUser.id,
+				input: {
+					id: firstUser.id,
+				},
+				arguments: {
+					username: firstUsername,
+				},
 			},
-		};
-		await ctx.processAction(ctx.session, userRequest);
+		});
 
 		const passwordResets = await ctx.kernel.query(
 			ctx.logContext,
@@ -478,7 +555,6 @@ describe('action-request-password-reset', () => {
 		const firstUsername = autumndbTestUtils.generateRandomId().split('-')[0];
 		const secondUsername = autumndbTestUtils.generateRandomId().split('-')[0];
 
-		// TODO: temporary workaround for context/logContext mismatch
 		const firstUserCreate = (await ctx.worker.pre(ctx.session, {
 			action: 'action-create-user@1.0.0',
 			logContext: ctx.logContext,
@@ -490,8 +566,21 @@ describe('action-request-password-reset', () => {
 				password,
 			},
 		})) as any;
+
+		// TODO: Remove temporary workaround for context/logContext mismatch
 		firstUserCreate.context = firstUserCreate.logContext;
-		const firstUser = await ctx.processAction(ctx.session, firstUserCreate);
+		firstUserCreate.epoch = new Date().valueOf();
+		firstUserCreate.timestamp = new Date().toISOString();
+		firstUserCreate.actor = ctx.worker.typeContracts['user@1.0.0'].id;
+		firstUserCreate.input = {
+			id: ctx.worker.typeContracts['user@1.0.0'].id,
+		};
+		Reflect.deleteProperty(firstUserCreate, 'logContext');
+
+		const firstUser = await ctx.processAction(ctx.session, {
+			type: 'action-request@1.0.0',
+			data: firstUserCreate,
+		});
 		expect(firstUser.error).toBe(false);
 		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
@@ -514,8 +603,21 @@ describe('action-request-password-reset', () => {
 				password,
 			},
 		})) as any;
+
+		// TODO: Remove temporary workaround for context/logContext mismatch
 		secondUserCreate.context = secondUserCreate.logContext;
-		const secondUser = await ctx.processAction(ctx.session, secondUserCreate);
+		secondUserCreate.epoch = new Date().valueOf();
+		secondUserCreate.timestamp = new Date().toISOString();
+		secondUserCreate.actor = ctx.worker.typeContracts['user@1.0.0'].id;
+		secondUserCreate.input = {
+			id: ctx.worker.typeContracts['user@1.0.0'].id,
+		};
+		Reflect.deleteProperty(secondUserCreate, 'logContext');
+
+		const secondUser = await ctx.processAction(ctx.session, {
+			type: 'action-request@1.0.0',
+			data: secondUserCreate,
+		});
 		expect(secondUser.error).toBe(false);
 		await ctx.createLinkThroughWorker(
 			ctx.adminUserId,
@@ -527,23 +629,41 @@ describe('action-request-password-reset', () => {
 		);
 
 		const firstPasswordResetRequest = await ctx.processAction(ctx.session, {
-			action: 'action-request-password-reset@1.0.0',
-			logContext: ctx.logContext,
-			card: firstUser.data.id,
-			type: firstUser.data.type,
-			arguments: {
-				username: firstUsername,
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-request-password-reset@1.0.0',
+				context: ctx.logContext,
+				card: firstUser.data.id,
+				type: firstUser.data.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: firstUser.data.id,
+				input: {
+					id: firstUser.data.id,
+				},
+				arguments: {
+					username: firstUsername,
+				},
 			},
 		});
 		expect(firstPasswordResetRequest.error).toBe(false);
 
 		const secondPasswordResetRequest = await ctx.processAction(ctx.session, {
-			action: 'action-request-password-reset@1.0.0',
-			logContext: ctx.logContext,
-			card: secondUser.data.id,
-			type: secondUser.data.type,
-			arguments: {
-				username: secondUsername,
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-request-password-reset@1.0.0',
+				context: ctx.logContext,
+				card: secondUser.data.id,
+				type: secondUser.data.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: secondUser.data.id,
+				input: {
+					id: secondUser.data.id,
+				},
+				arguments: {
+					username: secondUsername,
+				},
 			},
 		});
 		expect(secondPasswordResetRequest.error).toBe(false);
@@ -622,12 +742,21 @@ describe('action-request-password-reset', () => {
 		await ctx.flushAll(ctx.session);
 
 		const passwordReset = await ctx.processAction(ctx.session, {
-			action: 'action-request-password-reset@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {
-				username,
+			type: 'action-request@1.0.0',
+			data: {
+				action: 'action-request-password-reset@1.0.0',
+				context: ctx.logContext,
+				card: user.id,
+				type: user.type,
+				epoch: new Date().valueOf(),
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+				input: {
+					id: user.id,
+				},
+				arguments: {
+					username,
+				},
 			},
 		});
 		expect(passwordReset.error).toBe(false);
@@ -640,12 +769,21 @@ describe('action-request-password-reset', () => {
 
 		await expect(
 			ctx.processAction(ctx.session, {
-				action: 'action-request-password-reset@1.0.0',
-				logContext: ctx.logContext,
-				card: user.id,
-				type: user.type,
-				arguments: {
-					username: 'foo@bar.com',
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-request-password-reset@1.0.0',
+					context: ctx.logContext,
+					card: user.id,
+					type: user.type,
+					epoch: new Date().valueOf(),
+					timestamp: new Date().toISOString(),
+					actor: user.id,
+					input: {
+						id: user.id,
+					},
+					arguments: {
+						username: 'foo@bar.com',
+					},
 				},
 			}),
 		).rejects.toThrowError();

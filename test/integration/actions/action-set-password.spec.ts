@@ -1,5 +1,8 @@
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import { errors as workerErrors } from '@balena/jellyfish-worker';
+import {
+	ActionRequestContract,
+	errors as workerErrors,
+} from '@balena/jellyfish-worker';
 import { strict as assert } from 'assert';
 import { testUtils as autumndbTestUtils } from 'autumndb';
 import bcrypt from 'bcrypt';
@@ -22,7 +25,7 @@ afterAll(async () => {
 });
 
 describe('action-set-password', () => {
-	test('should not store the passwords in the queue when using action-set-password', async () => {
+	test('pre should hide password', async () => {
 		const password = autumndbTestUtils.generateRandomId();
 		const hash = await bcrypt.hash(password, BCRYPT_SALT_ROUNDS);
 		const user = await ctx.createUser(
@@ -31,7 +34,7 @@ describe('action-set-password', () => {
 		);
 
 		const newPassword = autumndbTestUtils.generateRandomId();
-		const request = (await ctx.worker.pre(ctx.session, {
+		const result = await ctx.worker.pre(ctx.session, {
 			action: 'action-set-password@1.0.0',
 			logContext: ctx.logContext,
 			card: user.id,
@@ -40,17 +43,11 @@ describe('action-set-password', () => {
 				currentPassword: password,
 				newPassword,
 			},
-		})) as any;
-		request.context = request.logContext;
-		await ctx.worker.producer.enqueue(ctx.worker.getId(), ctx.session, request);
-
-		const dequeued: any = await ctx.dequeue();
-		expect(dequeued.data.arguments.currentPassword).not.toBe(password);
-		expect(dequeued.data.arguments.currentPassword).toEqual(
-			'CHECKED IN PRE HOOK',
-		);
-		expect(dequeued.data.arguments.newPassword).toBeTruthy();
-		expect(dequeued.data.arguments.newPassword).not.toBe(newPassword);
+		});
+		assert(result);
+		expect(result.arguments.currentPassword).toEqual('CHECKED IN PRE HOOK');
+		expect(result.arguments.newPassword).toBeTruthy();
+		expect(result.arguments.newPassword).not.toBe(newPassword);
 	});
 
 	test('should change the password of a password-less user given no password', async () => {
@@ -59,28 +56,39 @@ describe('action-set-password', () => {
 			PASSWORDLESS_USER_HASH,
 		);
 
-		// TODO: temporary workaround for context/logContext mismatch
-		const options = (await ctx.worker.pre(ctx.session, {
-			action: 'action-set-password@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {
-				currentPassword: null,
-				newPassword: autumndbTestUtils.generateRandomId(),
-			},
-		})) as any;
-		options.context = options.logContext;
-
-		const request = await ctx.worker.producer.enqueue(
-			ctx.worker.getId(),
+		const actionRequest = await ctx.worker.insertCard(
+			ctx.logContext,
 			ctx.session,
-			options,
+			ctx.worker.typeContracts['action-request@1.0.0'],
+			{
+				attachEvents: false,
+				timestamp: new Date().toISOString(),
+			},
+			{
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-set-password@1.0.0',
+					context: ctx.logContext,
+					card: user.id,
+					type: user.type,
+					actor: user.id,
+					epoch: new Date().valueOf(),
+					input: {
+						id: user.id,
+					},
+					timestamp: new Date().toISOString(),
+					arguments: {
+						currentPassword: null,
+						newPassword: autumndbTestUtils.generateRandomId(),
+					},
+				},
+			},
 		);
-		await ctx.flushAll(ctx.session);
+		assert(actionRequest);
+		await ctx.flush(ctx.session);
 		const resetResult = await ctx.worker.producer.waitResults(
 			ctx.logContext,
-			request,
+			actionRequest as ActionRequestContract,
 		);
 		expect(resetResult.error).toBe(false);
 
@@ -102,27 +110,40 @@ describe('action-set-password', () => {
 			hash,
 		);
 
-		// TODO: temporary workaround for context/logContext mismatch
-		const options = (await ctx.worker.pre(ctx.session, {
-			action: 'action-set-password@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {
-				currentPassword: password,
-				newPassword: autumndbTestUtils.generateRandomId(),
-			},
-		})) as any;
-		options.context = options.logContext;
-		const request = await ctx.worker.producer.enqueue(
-			ctx.worker.getId(),
+		const actionRequest = await ctx.worker.insertCard(
+			ctx.logContext,
 			ctx.session,
-			options,
+			ctx.worker.typeContracts['action-request@1.0.0'],
+			{
+				attachEvents: false,
+				timestamp: new Date().toISOString(),
+			},
+			{
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-set-password@1.0.0',
+					context: ctx.logContext,
+					card: user.id,
+					type: user.type,
+					actor: user.id,
+					epoch: new Date().valueOf(),
+					input: {
+						id: user.id,
+					},
+					timestamp: new Date().toISOString(),
+					arguments: {
+						currentPassword: password,
+						newPassword: autumndbTestUtils.generateRandomId(),
+					},
+				},
+			},
 		);
+		assert(actionRequest);
 		await ctx.flushAll(ctx.session);
+
 		const result = await ctx.worker.producer.waitResults(
 			ctx.logContext,
-			request,
+			actionRequest as ActionRequestContract,
 		);
 		expect(result.error).toBe(false);
 
@@ -144,8 +165,8 @@ describe('action-set-password', () => {
 			hash,
 		);
 
-		await expect(
-			ctx.worker.pre(ctx.session, {
+		await expect(() => {
+			return ctx.worker.pre(ctx.session, {
 				action: 'action-set-password@1.0.0',
 				logContext: ctx.logContext,
 				card: user.id,
@@ -154,8 +175,8 @@ describe('action-set-password', () => {
 					currentPassword: 'xxxxxxxxxxxxxxxxxxxxxx',
 					newPassword: autumndbTestUtils.generateRandomId(),
 				},
-			}),
-		).rejects.toThrow(workerErrors.WorkerAuthenticationError);
+			});
+		}).rejects.toThrow(workerErrors.WorkerAuthenticationError);
 	});
 
 	test('should not change a user password given a null current password', async () => {
@@ -166,8 +187,8 @@ describe('action-set-password', () => {
 			hash,
 		);
 
-		await expect(
-			ctx.worker.pre(ctx.session, {
+		await expect(() => {
+			return ctx.worker.pre(ctx.session, {
 				action: 'action-set-password@1.0.0',
 				logContext: ctx.logContext,
 				card: user.id,
@@ -176,34 +197,8 @@ describe('action-set-password', () => {
 					currentPassword: null,
 					newPassword: 'new-password',
 				},
-			}),
-		).rejects.toThrow(workerErrors.WorkerAuthenticationError);
-	});
-
-	test('should not store the passwords when using action-set-password on a first time password', async () => {
-		const user = await ctx.createUser(
-			autumndbTestUtils.generateRandomSlug(),
-			PASSWORDLESS_USER_HASH,
-		);
-
-		// TODO: temporary workaround for context/logContext mismatch
-		const options = (await ctx.worker.pre(ctx.session, {
-			action: 'action-set-password@1.0.0',
-			logContext: ctx.logContext,
-			card: user.id,
-			type: user.type,
-			arguments: {
-				currentPassword: null,
-				newPassword: autumndbTestUtils.generateRandomId(),
-			},
-		})) as any;
-		options.context = options.logContext;
-		await ctx.worker.producer.enqueue(ctx.worker.getId(), ctx.session, options);
-
-		const dequeued: any = await ctx.dequeue();
-		expect(dequeued.data.arguments.currentPassword).toEqual('');
-		expect(dequeued.data.arguments.newPassword).toBeTruthy();
-		expect(dequeued.data.arguments.newPassword).not.toBe('new-password');
+			});
+		}).rejects.toThrow(workerErrors.WorkerAuthenticationError);
 	});
 
 	test('should not change the password of a password-less user given a password', async () => {
@@ -212,8 +207,8 @@ describe('action-set-password', () => {
 			PASSWORDLESS_USER_HASH,
 		);
 
-		await expect(
-			ctx.worker.pre(ctx.session, {
+		await expect(() => {
+			return ctx.worker.pre(ctx.session, {
 				action: 'action-set-password@1.0.0',
 				logContext: ctx.logContext,
 				card: user.id,
@@ -222,8 +217,8 @@ describe('action-set-password', () => {
 					currentPassword: 'xxxxxxxxxxxxxxxxxxxxxx',
 					newPassword: 'new-password',
 				},
-			}),
-		).rejects.toThrow(workerErrors.WorkerAuthenticationError);
+			});
+		}).rejects.toThrow(workerErrors.WorkerAuthenticationError);
 	});
 
 	test('a community user should not be able to reset other users passwords', async () => {
@@ -240,30 +235,39 @@ describe('action-set-password', () => {
 		expect(otherUser.data.hash).toEqual(hash);
 		expect(otherUser.data.roles).toEqual(['user-community']);
 
-		// TODO: temporary workaround for context/logContext mismatch
-		const options = (await ctx.worker.pre(ctx.session, {
-			action: 'action-set-password@1.0.0',
-			logContext: ctx.logContext,
-			card: otherUser.id,
-			type: otherUser.type,
-			arguments: {
-				currentPassword: password,
-				newPassword: 'foobarbaz',
-			},
-		})) as any;
-		options.context = options.logContext;
-
-		const request = await ctx.worker.producer.enqueue(
-			ctx.worker.getId(),
-			ctx.session,
-			options,
-		);
-		await ctx.flushAll(session.id);
-		const result = await ctx.worker.producer.waitResults(
+		await ctx.worker.insertCard(
 			ctx.logContext,
-			request,
+			ctx.session,
+			ctx.worker.typeContracts['action-request@1.0.0'],
+			{
+				attachEvents: false,
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+			},
+			{
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-set-password@1.0.0',
+					context: ctx.logContext,
+					card: otherUser.id,
+					type: otherUser.type,
+					actor: user.id,
+					epoch: new Date().valueOf(),
+					input: {
+						id: otherUser.id,
+					},
+					timestamp: new Date().toISOString(),
+					arguments: {
+						currentPassword: password,
+						newPassword: 'foobarbaz',
+					},
+				},
+			},
 		);
-		expect(result.error).toBe(true);
+
+		await expect(() => {
+			return ctx.flush(session.id);
+		}).rejects.toThrowError();
 	});
 
 	test('a community user should not be able to set a first time password for another user', async () => {
@@ -278,29 +282,38 @@ describe('action-set-password', () => {
 		expect(otherUser.data.hash).toEqual(PASSWORDLESS_USER_HASH);
 		expect(otherUser.data.roles).toEqual(['user-community']);
 
-		// TODO: temporary workaround for context/logContext mismatch
-		const options = (await ctx.worker.pre(ctx.session, {
-			action: 'action-set-password@1.0.0',
-			logContext: ctx.logContext,
-			card: otherUser.id,
-			type: otherUser.type,
-			arguments: {
-				currentPassword: null,
-				newPassword: 'foobarbaz',
-			},
-		})) as any;
-		options.context = options.logContext;
-
-		const request = await ctx.worker.producer.enqueue(
-			ctx.worker.getId(),
-			ctx.session,
-			options,
-		);
-		await ctx.flushAll(session.id);
-		const result = await ctx.worker.producer.waitResults(
+		await ctx.worker.insertCard(
 			ctx.logContext,
-			request,
+			ctx.session,
+			ctx.worker.typeContracts['action-request@1.0.0'],
+			{
+				attachEvents: false,
+				timestamp: new Date().toISOString(),
+				actor: user.id,
+			},
+			{
+				type: 'action-request@1.0.0',
+				data: {
+					action: 'action-set-password@1.0.0',
+					context: ctx.logContext,
+					card: otherUser.id,
+					type: otherUser.type,
+					actor: user.id,
+					epoch: new Date().valueOf(),
+					input: {
+						id: otherUser.id,
+					},
+					timestamp: new Date().toISOString(),
+					arguments: {
+						currentPassword: null,
+						newPassword: 'foobarbaz',
+					},
+				},
+			},
 		);
-		expect(result.error).toBe(true);
+
+		await expect(() => {
+			return ctx.flush(session.id);
+		}).rejects.toThrowError();
 	});
 });
