@@ -152,6 +152,9 @@ export const roleUserExternalSupport: RoleContractDefinition = {
 								'action-update-card',
 								'action-create-event',
 								'action-oauth-associate',
+								'action-integration-discourse-mirror-event',
+								'action-integration-front-mirror-event',
+								'action-integration-github-mirror-event',
 							],
 						},
 						type: {
