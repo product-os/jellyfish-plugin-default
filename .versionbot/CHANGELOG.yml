@@ -1,4 +1,22 @@
 - commits:
+    - subject: Add mirror actions to external support role
+      hash: 23bdd66c34a19613e154c42048ccee7162313291
+      body: |
+        Give access to mirror actions to users with the
+        external support role. Some actions executed by
+        these users trigger mirrors and there is no reason
+        they should not be able to execute triggered mirrors.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 24.0.99
+  title: "'Add mirror actions to external support role'"
+  date: 2022-05-03T11:41:09.543Z
+- commits:
     - subject: Update resinci/jellyfish-test from v3.0.8 to v3.0.9
       hash: 9adff4b3efe073b9c3587342018b46abd958a084
       body: ""

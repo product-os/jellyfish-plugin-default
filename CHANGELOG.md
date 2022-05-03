@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.99 - 2022-05-03
+
+* Add mirror actions to external support role [Josh Bowling]
+
 ## 24.0.98 - 2022-05-03
 
 * Update resinci/jellyfish-test from v3.0.8 to v3.0.9 [Renovate Bot]
