@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update internal-patch
+      hash: 082f5b66b2c4be5897e36181a447ba1a2893e189
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 24.0.100
+  title: "'Update internal-patch'"
+  date: 2022-05-04T02:19:10.851Z
+- commits:
     - subject: Add mirror actions to external support role
       hash: 23bdd66c34a19613e154c42048ccee7162313291
       body: |
