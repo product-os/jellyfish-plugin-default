@@ -1,4 +1,18 @@
 - commits:
+    - subject: Optionally expand improvement owners
+      hash: c61b38be74755e19610e62a8d984170c55c38f4a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 24.0.103
+  title: "'Optionally expand improvement owners'"
+  date: 2022-05-06T09:34:47.793Z
+- commits:
     - subject: Update external-major
       hash: 8cb2862c3a6a1984ab4c988fb11f3809dcb75c0f
       body: ""

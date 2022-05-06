@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 24.0.103 - 2022-05-06
+
+* Optionally expand improvement owners [Lucian Buzzo]
+
 ## 24.0.102 - 2022-05-05
 
 * Update external-major [Renovate Bot]
