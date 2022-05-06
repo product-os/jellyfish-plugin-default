@@ -1,4 +1,24 @@
 - commits:
+    - subject: Update external-major
+      hash: 8cb2862c3a6a1984ab4c988fb11f3809dcb75c0f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+    - subject: Update resinci/jellyfish-test from v3.0.9 to v3.0.10
+      hash: 99a684ec1aae0b26c760ec555fa01af384ec166c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 24.0.102
+  title: "'Update external-major (major)'"
+  date: 2022-05-05T23:09:51.379Z
+- commits:
     - subject: Update internal-patch
       hash: d11fe0eb77bc18c6efc991f7a6f711c7bfdde0d0
       body: ""
