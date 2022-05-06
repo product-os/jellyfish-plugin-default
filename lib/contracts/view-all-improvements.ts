@@ -19,6 +19,22 @@ export const viewAllImprovements: ViewContractDefinition = {
 					},
 					additionalProperties: true,
 					required: ['type'],
+					anyOf: [
+						{
+							$$links: {
+								'is owned by': {
+									type: 'object',
+									required: ['type'],
+									properties: {
+										type: {
+											const: 'user@1.0.0',
+										},
+									},
+								},
+							},
+						},
+						true,
+					],
 				},
 			},
 		],
