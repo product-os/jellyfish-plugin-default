@@ -25,6 +25,58 @@ import { productBalenaCloud } from './product-balena-cloud';
 import { productJellyfish } from './product-jellyfish';
 import { project } from './project';
 import { rating } from './rating';
+import { relationshipAccountHasBackupOwnerUser } from './relationship-account-has-backup-owner-user';
+import { relationshipAccountHasContact } from './relationship-account-has-contact';
+import { relationshipAccountIsOwnedByUser } from './relationship-account-is-owned-by-user';
+import { relationshipAnyIsBookmarkedByUser } from './relationship-any-is-bookmarked-by-user';
+import { relationshipBrainstormCallHasAttachedBrainstormTopic } from './relationship-brainstorm-call-has-attached-brainstorm-topic';
+import { relationshipBrainstormTopicHasAttachedImprovement } from './relationship-brainstorm-topic-has-attached-improvement';
+import { relationshipBrainstormTopicHasAttachedPattern } from './relationship-brainstorm-topic-has-attached-pattern';
+import { relationshipBrainstormTopicHasAttachedSalesThread } from './relationship-brainstorm-topic-has-attached-sales-thread';
+import { relationshipBrainstormTopicHasAttachedSupportThread } from './relationship-brainstorm-topic-has-attached-support-thread';
+import { relationshipBrainstormTopicHasAttachedThread } from './relationship-brainstorm-topic-has-attached-thread';
+import { relationshipChartConfigurationIsAttachedToView } from './relationship-chart-configuration-is-attached-to-view';
+import { relationshipCheckinIsAttendedByUser } from './relationship-checkin-is-attended-by-user';
+import { relationshipFeedbackItemIsFeedbackForUser } from './relationship-feedback-item-is-feedback-for-user';
+import { relationshipGroupHasGroupMemberUser } from './relationship-group-has-group-member-user';
+import { relationshipImprovementHasAttachedMilestone } from './relationship-improvement-has-attached-milestone';
+import { relationshipImprovementHasDedicatedUserUser } from './relationship-improvement-has-dedicated-user-user';
+import { relationshipImprovementIsAttachedToPattern } from './relationship-improvement-is-attached-to-pattern';
+import { relationshipImprovementIsContributedToByUser } from './relationship-improvement-is-contributed-to-by-user';
+import { relationshipImprovementIsGuidedByUser } from './relationship-improvement-is-guided-by-user';
+import { relationshipImprovementIsImplementedByProject } from './relationship-improvement-is-implemented-by-project';
+import { relationshipImprovementIsOwnedByUser } from './relationship-improvement-is-owned-by-user';
+import { relationshipMessageIsAttachedToSupportThread } from './relationship-message-is-attached-to-support-thread';
+import { relationshipMessageIsAttachedToThread } from './relationship-message-is-attached-to-thread';
+import { relationshipMessageIsAttachedToUser } from './relationship-message-is-attached-to-user';
+import { relationshipMilestoneIsOwnedByUser } from './relationship-milestone-is-owned-by-user';
+import { relationshipMilestoneRequiresMilestone } from './relationship-milestone-requires-milestone';
+import { relationshipNotificationIsAttachedToAny } from './relationship-notification-is-attached-to-any';
+import { relationshipNotificationIsReadByUser } from './relationship-notification-is-read-by-user';
+import { relationshipOpportunityHasBackupOwnerUser } from './relationship-opportunity-has-backup-owner-user';
+import { relationshipOpportunityIsAttachedToAccount } from './relationship-opportunity-is-attached-to-account';
+import { relationshipOpportunityIsOwnedByUser } from './relationship-opportunity-is-owned-by-user';
+import { relationshipPatternIsAttachedToSalesThread } from './relationship-pattern-is-attached-to-sales-thread';
+import { relationshipPatternIsAttachedToSupportThread } from './relationship-pattern-is-attached-to-support-thread';
+import { relationshipPatternIsAttachedToThread } from './relationship-pattern-is-attached-to-thread';
+import { relationshipPatternIsOwnedByUser } from './relationship-pattern-is-owned-by-user';
+import { relationshipPatternRelatesToPattern } from './relationship-pattern-relates-to-pattern';
+import { relationshipProjectHasCheckin } from './relationship-project-has-checkin';
+import { relationshipProjectHasMemberUser } from './relationship-project-has-member-user';
+import { relationshipProjectImplementsMilestone } from './relationship-project-implements-milestone';
+import { relationshipProjectIsContributedToByUser } from './relationship-project-is-contributed-to-by-user';
+import { relationshipProjectIsGuidedByUser } from './relationship-project-is-guided-by-user';
+import { relationshipProjectIsObservedByUser } from './relationship-project-is-observed-by-user';
+import { relationshipProjectIsOwnedByUser } from './relationship-project-is-owned-by-user';
+import { relationshipSagaHasAttachedImprovement } from './relationship-saga-has-attached-improvement';
+import { relationshipSalesThreadIsAttachedToOpportunity } from './relationship-sales-thread-is-attached-to-opportunity';
+import { relationshipSalesThreadIsOwnedByUser } from './relationship-sales-thread-is-owned-by-user';
+import { relationshipSubscriptionIsAttachedToAny } from './relationship-subscription-is-attached-to-any';
+import { relationshipSupportThreadHasAttachedRating } from './relationship-support-thread-has-attached-rating';
+import { relationshipSupportThreadIsOwnedByUser } from './relationship-support-thread-is-owned-by-user';
+import { relationshipSupportThreadIsSourceForFeedbackItem } from './relationship-support-thread-is-source-for-feedback-item';
+import { relationshipUserOwnsRating } from './relationship-user-owns-rating';
+import { relationshipWhisperIsAttachedToSupportThread } from './relationship-whisper-is-attached-to-support-thread';
 import { roleUserExternalSupport } from './role-user-external-support';
 import { saga } from './saga';
 import { salesThread } from './sales-thread';
@@ -160,4 +212,58 @@ export const contracts: ContractDefinition[] = [
 	viewCustomerSuccessSupportThreads,
 	viewSecuritySupportThreads,
 	viewWorkflows,
+
+	// Relationships
+	relationshipAccountHasBackupOwnerUser,
+	relationshipAccountHasContact,
+	relationshipAccountIsOwnedByUser,
+	relationshipAnyIsBookmarkedByUser,
+	relationshipBrainstormCallHasAttachedBrainstormTopic,
+	relationshipBrainstormTopicHasAttachedImprovement,
+	relationshipBrainstormTopicHasAttachedPattern,
+	relationshipBrainstormTopicHasAttachedSalesThread,
+	relationshipBrainstormTopicHasAttachedSupportThread,
+	relationshipBrainstormTopicHasAttachedThread,
+	relationshipChartConfigurationIsAttachedToView,
+	relationshipCheckinIsAttendedByUser,
+	relationshipFeedbackItemIsFeedbackForUser,
+	relationshipGroupHasGroupMemberUser,
+	relationshipImprovementHasAttachedMilestone,
+	relationshipImprovementHasDedicatedUserUser,
+	relationshipImprovementIsAttachedToPattern,
+	relationshipImprovementIsContributedToByUser,
+	relationshipImprovementIsGuidedByUser,
+	relationshipImprovementIsImplementedByProject,
+	relationshipImprovementIsOwnedByUser,
+	relationshipMessageIsAttachedToSupportThread,
+	relationshipMessageIsAttachedToThread,
+	relationshipMessageIsAttachedToUser,
+	relationshipMilestoneIsOwnedByUser,
+	relationshipMilestoneRequiresMilestone,
+	relationshipNotificationIsAttachedToAny,
+	relationshipNotificationIsReadByUser,
+	relationshipOpportunityHasBackupOwnerUser,
+	relationshipOpportunityIsAttachedToAccount,
+	relationshipOpportunityIsOwnedByUser,
+	relationshipPatternIsAttachedToSalesThread,
+	relationshipPatternIsAttachedToSupportThread,
+	relationshipPatternIsAttachedToThread,
+	relationshipPatternIsOwnedByUser,
+	relationshipPatternRelatesToPattern,
+	relationshipProjectHasCheckin,
+	relationshipProjectHasMemberUser,
+	relationshipProjectImplementsMilestone,
+	relationshipProjectIsContributedToByUser,
+	relationshipProjectIsGuidedByUser,
+	relationshipProjectIsObservedByUser,
+	relationshipProjectIsOwnedByUser,
+	relationshipSagaHasAttachedImprovement,
+	relationshipSalesThreadIsAttachedToOpportunity,
+	relationshipSalesThreadIsOwnedByUser,
+	relationshipSubscriptionIsAttachedToAny,
+	relationshipSupportThreadHasAttachedRating,
+	relationshipSupportThreadIsOwnedByUser,
+	relationshipSupportThreadIsSourceForFeedbackItem,
+	relationshipUserOwnsRating,
+	relationshipWhisperIsAttachedToSupportThread,
 ];
