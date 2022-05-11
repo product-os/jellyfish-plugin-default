@@ -50,7 +50,7 @@
     "@balena/jellyfish-environment": "^11.0.3",
     "@balena/jellyfish-logger": "^5.0.31",
     "@balena/jellyfish-worker": "^24.0.0",
-    "autumndb": "^19.1.41",
+    "autumndb": "^19.3.0",
     "axios": "^0.26.1",
     "bcrypt": "^5.0.1",
     "blueimp-md5": "^2.19.0",
