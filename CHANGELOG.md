@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 25.1.0 - 2022-05-11
+
+* Add relationship definitions [Ramiro González Maciel]
+
 ## 25.0.1 - 2022-05-11
 
 * Update @balena/jellyfish-worker from 24.0.0 to 24.2.0 [Josh Bowling]

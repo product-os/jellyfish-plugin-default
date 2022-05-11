@@ -1,4 +1,20 @@
 - commits:
+    - subject: Add relationship definitions
+      hash: 793ffa58a1db836c7da67ef27dba17139742d283
+      body: |
+        Add relationships defined between contract types in the module,
+        or between contract types in the module and its dependencies
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Ramiro Gonzalez <ramiro.gonzalez@balena.io>
+        signed-off-by: Ramiro Gonzalez <ramiro.gonzalez@balena.io>
+      author: Ramiro González Maciel
+      nested: []
+  version: 25.1.0
+  title: "'Add relationship definitions'"
+  date: 2022-05-11T05:50:03.397Z
+- commits:
     - subject: Update @balena/jellyfish-worker from 24.0.0 to 24.2.0
       hash: 36afef56add73fa645cb5bfd08294834f6279a2b
       body: ""
