@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 25.0.0 - 2022-05-11
+
+* Update worker major version [karaxuna]
+
 ## 24.0.110 - 2022-05-10
 
 * Update internal-patch [Renovate Bot]
