@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 25.0.1 - 2022-05-11
+
+* Update @balena/jellyfish-worker from 24.0.0 to 24.2.0 [Josh Bowling]
+* Update autumndb from 19.1.41 to 19.3.0 [Renovate Bot]
+
 ## 25.0.0 - 2022-05-11
 
 * Update worker major version [karaxuna]
