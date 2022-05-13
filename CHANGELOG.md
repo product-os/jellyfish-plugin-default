@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 26.0.1 - 2022-05-13
+
+* Update @balena/jellyfish-worker from 25.0.1 to 26.0.0 [Renovate Bot]
+
 ## 26.0.0 - 2022-05-13
 
 * Oauth authorize with oauth-provider contract [karaxuna]

@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update @balena/jellyfish-worker from 25.0.1 to 26.0.0
+      hash: 4493a06dc6b52978b7503e1ef9dced97c7a04ed6
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 26.0.1
+  title: "'Update @balena/jellyfish-worker from 25.0.1 to 26.0.0'"
+  date: 2022-05-13T15:14:14.105Z
+- commits:
     - subject: Oauth authorize with oauth-provider contract
       hash: e9f558c51e7ecb316cdd9a8d7a92e4a5879d1679
       body: |
