@@ -49,9 +49,6 @@ export class FoobarIntegration implements Integration {
 export const foobarIntegrationDefinition: IntegrationDefinition = {
 	slug: SLUG,
 
-	OAUTH_BASE_URL: 'http://api.foobar.com',
-	OAUTH_SCOPES: ['foo.all', 'bar.all'],
-
 	initialize: async () => new FoobarIntegration(),
 
 	isEventValid: () => true,
