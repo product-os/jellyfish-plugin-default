@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update worker to v26
+      hash: 8e4184221c348f2a7e57ef6e22c66801cb50aa54
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+      author: karaxuna
+      nested: []
+  version: 27.0.0
+  title: "'Update worker to v26'"
+  date: 2022-05-13T15:17:39.410Z
+- commits:
     - subject: Oauth authorize with oauth-provider contract
       hash: e9f558c51e7ecb316cdd9a8d7a92e4a5879d1679
       body: |

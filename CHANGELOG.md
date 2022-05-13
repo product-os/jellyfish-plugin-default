@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.0.0 - 2022-05-13
+
+* Update worker to v26 [karaxuna]
+
 ## 26.0.0 - 2022-05-13
 
 * Oauth authorize with oauth-provider contract [karaxuna]
