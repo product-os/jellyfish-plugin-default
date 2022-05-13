@@ -44,7 +44,6 @@ export const actionOAuthAssociate: ActionDefinition = {
 			arguments: {
 				provider: {
 					type: 'string',
-					enum: ['outreach', 'balena-api'],
 				},
 				credentials: {
 					type: 'object',

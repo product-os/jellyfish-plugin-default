@@ -1,14 +1,11 @@
-import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { WorkerContext } from '@balena/jellyfish-worker';
-import { strict as assert } from 'assert';
 import { testUtils as autumndbTestUtils } from 'autumndb';
 import { isEmpty, isString } from 'lodash';
 import nock from 'nock';
 import sinon from 'sinon';
 import { defaultPlugin, testUtils } from '../../../lib';
 import { actionOAuthAuthorize } from '../../../lib/actions/action-oauth-authorize';
-import { foobarIntegrationDefinition } from './integrations/foobar';
 import { foobarPlugin } from './plugin';
 
 const handler = actionOAuthAuthorize.handler;
@@ -38,17 +35,23 @@ afterEach(() => {
 
 describe('action-oauth-authorize', () => {
 	test('should return token string', async () => {
-		assert(foobarIntegrationDefinition.OAUTH_BASE_URL);
-		nock(foobarIntegrationDefinition.OAUTH_BASE_URL)
+		const oauthProvider = await ctx.createContract(
+			ctx.adminUserId,
+			ctx.session,
+			'oauth-provider@1.0.0',
+			autumndbTestUtils.generateRandomSlug(),
+			{
+				authorizeUrl: 'http://api.foobar.com/auth/foobar',
+				tokenUrl: 'http://api.foobar.com/oauth/token',
+				clientId: 'someclient',
+				clientSecret: 'somesecret',
+				integration: 'foobar',
+			},
+		);
+
+		nock('http://api.foobar.com')
 			.post('/oauth/token')
 			.reply(200, autumndbTestUtils.generateRandomId());
-
-		sinon.stub(defaultEnvironment, 'getIntegration').callsFake(() => {
-			return {
-				appId: 'foo',
-				appSecret: 'bar',
-			};
-		});
 
 		const user = await ctx.createContract(
 			ctx.adminUserId,
@@ -69,9 +72,8 @@ describe('action-oauth-authorize', () => {
 			actor: ctx.adminUserId,
 			originator: autumndbTestUtils.generateRandomId(),
 			arguments: {
-				provider: 'foobar',
+				provider: `${oauthProvider.slug}@${oauthProvider.version}`,
 				code: autumndbTestUtils.generateRandomId(),
-				origin: 'http://localhost',
 			},
 		} as any);
 		expect(isString(result)).toBe(true);

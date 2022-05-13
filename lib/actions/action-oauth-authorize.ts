@@ -1,38 +1,25 @@
-import { defaultEnvironment } from '@balena/jellyfish-environment';
 import type { ActionDefinition } from '@balena/jellyfish-worker';
-import { isNull } from 'lodash';
+import type { OauthProviderContract } from '@balena/jellyfish-worker/build/contracts/oauth-provider';
+import { getAccessToken } from '@balena/jellyfish-worker/build/sync/oauth';
 
 const handler: ActionDefinition['handler'] = async (
-	session,
+	_session,
 	context,
 	_card,
 	request,
 ) => {
-	const syncContextInstance = context.sync.getActionContext(
+	const provider = (await context.getCardBySlug(
+		context.privilegedSession,
 		request.arguments.provider,
-		context,
-		request.logContext,
-		session,
-	);
+	)) as any as OauthProviderContract | null;
 
-	const integrationEnvVars = defaultEnvironment.getIntegration(
-		request.arguments.provider as string,
-	);
-	if (isNull(integrationEnvVars)) {
+	if (!provider) {
 		throw new Error(
-			`Environment variables not found for integration "${request.arguments.provider}"`,
+			`Provider with slug "${request.arguments.provider}" does not exist`,
 		);
 	}
 
-	return context.sync.authorize(
-		request.arguments.provider,
-		integrationEnvVars,
-		syncContextInstance,
-		{
-			code: request.arguments.code,
-			origin: request.arguments.origin,
-		},
-	);
+	return getAccessToken(provider, request.arguments.code);
 };
 
 export const actionOAuthAuthorize: ActionDefinition = {
@@ -55,12 +42,11 @@ export const actionOAuthAuthorize: ActionDefinition = {
 			arguments: {
 				provider: {
 					type: 'string',
-					enum: ['outreach', 'balena-api'],
 				},
 				code: {
 					type: 'string',
 				},
-				origin: {
+				redirectUrl: {
 					type: 'string',
 				},
 			},
