@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 26.0.0 - 2022-05-13
+
+* Oauth authorize with oauth-provider contract [karaxuna]
+
 ## 25.1.0 - 2022-05-11
 
 * Add relationship definitions [Ramiro González Maciel]

@@ -1,4 +1,17 @@
 - commits:
+    - subject: Oauth authorize with oauth-provider contract
+      hash: e9f558c51e7ecb316cdd9a8d7a92e4a5879d1679
+      body: |
+        Perform oauth authorisation step with data from oauth-provider contract.
+      footer:
+        Change-type: major
+        change-type: major
+      author: karaxuna
+      nested: []
+  version: 26.0.0
+  title: "'Add jellyfish as provider for oauth'"
+  date: 2022-05-13T11:46:59.565Z
+- commits:
     - subject: Add relationship definitions
       hash: 793ffa58a1db836c7da67ef27dba17139742d283
       body: |
