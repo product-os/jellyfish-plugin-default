@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.0.5 - 2022-05-16
+
+* Update @balena/jellyfish-worker from 26.0.3 to 27.0.0 [Renovate Bot]
+
 ## 27.0.4 - 2022-05-14
 
 * Update resinci/jellyfish-test from v3.0.10 to v3.0.11 [Renovate Bot]
