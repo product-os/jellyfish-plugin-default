@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.0.10 - 2022-05-18
+
+* Update internal-patch [Renovate Bot]
+
 ## 27.0.9 - 2022-05-18
 
 * Update internal-patch [Renovate Bot]
