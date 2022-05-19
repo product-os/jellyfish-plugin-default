@@ -1,4 +1,16 @@
 - commits:
+    - subject: Remove unused redirectUrl parameter
+      hash: db76f48cf7a68ba17efcffc26353a8a36591d647
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: karaxuna
+      nested: []
+  version: 27.2.1
+  title: "'Remove unused redirectUrl parameter'"
+  date: 2022-05-19T12:01:03.545Z
+- commits:
     - subject: Add sales-thread relationships
       hash: be9e9ea7abb7fe3e1806a11a6cff84c9e272f8a3
       body: ""
