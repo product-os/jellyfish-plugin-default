@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.3.0 - 2022-05-19
+
+* Milestone: slice by status [Lucian Buzzo]
+
 ## 27.2.1 - 2022-05-19
 
 * Remove unused redirectUrl parameter [karaxuna]

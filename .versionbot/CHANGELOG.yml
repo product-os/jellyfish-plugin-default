@@ -1,4 +1,18 @@
 - commits:
+    - subject: "Milestone: slice by status"
+      hash: cc945485a569cb3e04b5f89d0981c173cee1908c
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 27.3.0
+  title: "'Milestone: slice by status'"
+  date: 2022-05-19T15:18:27.050Z
+- commits:
     - subject: Remove unused redirectUrl parameter
       hash: db76f48cf7a68ba17efcffc26353a8a36591d647
       body: ""
