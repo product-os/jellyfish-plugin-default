@@ -38,6 +38,7 @@ import { relationshipBrainstormTopicHasAttachedThread } from './relationship-bra
 import { relationshipChartConfigurationIsAttachedToView } from './relationship-chart-configuration-is-attached-to-view';
 import { relationshipCheckinIsAttendedByUser } from './relationship-checkin-is-attended-by-user';
 import { relationshipFeedbackItemIsFeedbackForUser } from './relationship-feedback-item-is-feedback-for-user';
+import { relationshipFirstTimeLoginIsAttachedToUser } from './relationship-first-time-login-is-attached-to-user';
 import { relationshipGroupHasGroupMemberUser } from './relationship-group-has-group-member-user';
 import { relationshipImprovementHasAttachedMilestone } from './relationship-improvement-has-attached-milestone';
 import { relationshipImprovementHasDedicatedUserUser } from './relationship-improvement-has-dedicated-user-user';
@@ -56,6 +57,7 @@ import { relationshipNotificationIsReadByUser } from './relationship-notificatio
 import { relationshipOpportunityHasBackupOwnerUser } from './relationship-opportunity-has-backup-owner-user';
 import { relationshipOpportunityIsAttachedToAccount } from './relationship-opportunity-is-attached-to-account';
 import { relationshipOpportunityIsOwnedByUser } from './relationship-opportunity-is-owned-by-user';
+import { relationshipPasswordResetIsAttachedToUser } from './relationship-password-reset-is-attached-to-user';
 import { relationshipPatternIsAttachedToSalesThread } from './relationship-pattern-is-attached-to-sales-thread';
 import { relationshipPatternIsAttachedToSupportThread } from './relationship-pattern-is-attached-to-support-thread';
 import { relationshipPatternIsAttachedToThread } from './relationship-pattern-is-attached-to-thread';
@@ -77,6 +79,7 @@ import { relationshipSupportThreadIsOwnedByUser } from './relationship-support-t
 import { relationshipSupportThreadIsSourceForFeedbackItem } from './relationship-support-thread-is-source-for-feedback-item';
 import { relationshipUserOwnsRating } from './relationship-user-owns-rating';
 import { relationshipWhisperIsAttachedToSupportThread } from './relationship-whisper-is-attached-to-support-thread';
+import { relationshipWhisperIsAttachedToThread } from './relationship-whisper-is-attached-to-thread';
 import { roleUserExternalSupport } from './role-user-external-support';
 import { saga } from './saga';
 import { salesThread } from './sales-thread';
@@ -227,6 +230,7 @@ export const contracts: ContractDefinition[] = [
 	relationshipChartConfigurationIsAttachedToView,
 	relationshipCheckinIsAttendedByUser,
 	relationshipFeedbackItemIsFeedbackForUser,
+	relationshipFirstTimeLoginIsAttachedToUser,
 	relationshipGroupHasGroupMemberUser,
 	relationshipImprovementHasAttachedMilestone,
 	relationshipImprovementHasDedicatedUserUser,
@@ -245,6 +249,7 @@ export const contracts: ContractDefinition[] = [
 	relationshipOpportunityHasBackupOwnerUser,
 	relationshipOpportunityIsAttachedToAccount,
 	relationshipOpportunityIsOwnedByUser,
+	relationshipPasswordResetIsAttachedToUser,
 	relationshipPatternIsAttachedToSalesThread,
 	relationshipPatternIsAttachedToSupportThread,
 	relationshipPatternIsAttachedToThread,
@@ -266,4 +271,5 @@ export const contracts: ContractDefinition[] = [
 	relationshipSupportThreadIsSourceForFeedbackItem,
 	relationshipUserOwnsRating,
 	relationshipWhisperIsAttachedToSupportThread,
+	relationshipWhisperIsAttachedToThread,
 ];

@@ -37,7 +37,7 @@ describe('action-broadcast', () => {
 				status: 'open',
 			},
 		);
-		const message = await ctx.createMessage(
+		await ctx.createMessage(
 			ctx.adminUserId,
 			ctx.session,
 			supportThread,
@@ -45,7 +45,7 @@ describe('action-broadcast', () => {
 		);
 
 		expect.hasAssertions();
-		const result = await handler(ctx.session, actionContext, message, {
+		const result = await handler(ctx.session, actionContext, supportThread, {
 			context: {
 				id: `TEST-${autumndbTestUtils.generateRandomId()}`,
 			},
