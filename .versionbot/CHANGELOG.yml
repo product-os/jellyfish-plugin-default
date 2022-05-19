@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add missing relationships
+      hash: 1b3ae64f1e8a105c0e9180646ab2dafd41b2928c
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.1.0
+  title: "'Add missing relationships'"
+  date: 2022-05-19T07:36:29.379Z
+- commits:
     - subject: Update internal-patch
       hash: b5727718189aac474fbb8b8432347eeb2ac1600b
       body: ""

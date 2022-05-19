@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.1.0 - 2022-05-19
+
+* Add missing relationships [Josh Bowling]
+
 ## 27.0.10 - 2022-05-18
 
 * Update internal-patch [Renovate Bot]
