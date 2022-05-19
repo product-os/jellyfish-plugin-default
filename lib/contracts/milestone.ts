@@ -69,6 +69,7 @@ export const milestone: ContractDefinition = contractMixins.mixin(
 			},
 			required: ['name'],
 		},
+		slices: ['properties.data.properties.status'],
 		uiSchema: {
 			fields: {
 				data: {
