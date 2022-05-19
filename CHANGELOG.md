@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.1.1 - 2022-05-19
+
+* Test autumndb relationship validation [Josh Bowling]
+
 ## 27.1.0 - 2022-05-19
 
 * Add missing relationships [Josh Bowling]
