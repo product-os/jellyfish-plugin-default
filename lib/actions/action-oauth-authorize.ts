@@ -46,9 +46,6 @@ export const actionOAuthAuthorize: ActionDefinition = {
 				code: {
 					type: 'string',
 				},
-				redirectUrl: {
-					type: 'string',
-				},
 			},
 		},
 	},
