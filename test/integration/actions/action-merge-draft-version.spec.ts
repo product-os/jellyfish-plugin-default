@@ -27,6 +27,32 @@ afterAll(async () => {
 
 describe('action-merge-draft-version', () => {
 	test('should merge draft version contract without an artifact', async () => {
+		// Set up relationship for testing
+		await ctx.worker.replaceCard(
+			ctx.logContext,
+			ctx.session,
+			ctx.worker.typeContracts['relationship@1.0.0'],
+			{
+				attachEvents: false,
+			},
+			{
+				slug: `relationship-card-was-merged-as-card`,
+				type: 'relationship@1.0.0',
+				name: 'was merged as',
+				data: {
+					inverseName: 'was merged from',
+					title: 'Card',
+					inverseTitle: 'Card',
+					from: {
+						type: 'card',
+					},
+					to: {
+						type: `card`,
+					},
+				},
+			},
+		);
+
 		const targetContract = await ctx.worker.insertCard(
 			ctx.logContext,
 			ctx.session,
