@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add sales-thread relationships
+      hash: be9e9ea7abb7fe3e1806a11a6cff84c9e272f8a3
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.2.0
+  title: "'Add sales-thread relationships'"
+  date: 2022-05-19T08:23:04.975Z
+- commits:
     - subject: Add missing relationships
       hash: 1b3ae64f1e8a105c0e9180646ab2dafd41b2928c
       body: ""

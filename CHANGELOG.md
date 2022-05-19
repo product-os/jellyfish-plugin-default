@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.2.0 - 2022-05-19
+
+* Add sales-thread relationships [Josh Bowling]
+
 ## 27.1.0 - 2022-05-19
 
 * Add missing relationships [Josh Bowling]
