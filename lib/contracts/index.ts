@@ -47,6 +47,7 @@ import { relationshipImprovementIsContributedToByUser } from './relationship-imp
 import { relationshipImprovementIsGuidedByUser } from './relationship-improvement-is-guided-by-user';
 import { relationshipImprovementIsImplementedByProject } from './relationship-improvement-is-implemented-by-project';
 import { relationshipImprovementIsOwnedByUser } from './relationship-improvement-is-owned-by-user';
+import { relationshipMessageIsAttachedToSalesThread } from './relationship-message-is-attached-to-sales-thread';
 import { relationshipMessageIsAttachedToSupportThread } from './relationship-message-is-attached-to-support-thread';
 import { relationshipMessageIsAttachedToThread } from './relationship-message-is-attached-to-thread';
 import { relationshipMessageIsAttachedToUser } from './relationship-message-is-attached-to-user';
@@ -78,6 +79,7 @@ import { relationshipSupportThreadHasAttachedRating } from './relationship-suppo
 import { relationshipSupportThreadIsOwnedByUser } from './relationship-support-thread-is-owned-by-user';
 import { relationshipSupportThreadIsSourceForFeedbackItem } from './relationship-support-thread-is-source-for-feedback-item';
 import { relationshipUserOwnsRating } from './relationship-user-owns-rating';
+import { relationshipWhisperIsAttachedToSalesThread } from './relationship-whisper-is-attached-to-sales-thread';
 import { relationshipWhisperIsAttachedToSupportThread } from './relationship-whisper-is-attached-to-support-thread';
 import { relationshipWhisperIsAttachedToThread } from './relationship-whisper-is-attached-to-thread';
 import { roleUserExternalSupport } from './role-user-external-support';
@@ -239,6 +241,7 @@ export const contracts: ContractDefinition[] = [
 	relationshipImprovementIsGuidedByUser,
 	relationshipImprovementIsImplementedByProject,
 	relationshipImprovementIsOwnedByUser,
+	relationshipMessageIsAttachedToSalesThread,
 	relationshipMessageIsAttachedToSupportThread,
 	relationshipMessageIsAttachedToThread,
 	relationshipMessageIsAttachedToUser,
@@ -270,6 +273,7 @@ export const contracts: ContractDefinition[] = [
 	relationshipSupportThreadIsOwnedByUser,
 	relationshipSupportThreadIsSourceForFeedbackItem,
 	relationshipUserOwnsRating,
+	relationshipWhisperIsAttachedToSalesThread,
 	relationshipWhisperIsAttachedToSupportThread,
 	relationshipWhisperIsAttachedToThread,
 ];
