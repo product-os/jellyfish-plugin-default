@@ -1,4 +1,24 @@
 - commits:
+    - subject: Update internal-patch
+      hash: 40d1e229f86bbe5b6a0c051a1a9f6ac192cb8a5e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+    - subject: Update resinci/jellyfish-test from v3.0.12 to v3.0.13
+      hash: b63e3700cfb2b5ea872a1c87dcef30bfed9d0faa
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 27.3.1
+  title: "'Update internal-patch'"
+  date: 2022-05-23T03:45:08.623Z
+- commits:
     - subject: "Milestone: slice by status"
       hash: cc945485a569cb3e04b5f89d0981c173cee1908c
       body: ""

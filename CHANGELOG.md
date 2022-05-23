@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 27.3.1 - 2022-05-23
+
+* Update internal-patch [Renovate Bot]
+* Update resinci/jellyfish-test from v3.0.12 to v3.0.13 [Renovate Bot]
+
 ## 27.3.0 - 2022-05-19
 
 * Milestone: slice by status [Lucian Buzzo]
