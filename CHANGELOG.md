@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 27.3.2 - 2022-05-27
+
+* Update internal-patch (internal patch bumps) [Renovate Bot]
+* Update @balena/jellyfish-worker from 27.0.3 to 27.1.0 [Renovate Bot]
+
 ## 27.3.1 - 2022-05-23
 
 * Update internal-patch [Renovate Bot]
