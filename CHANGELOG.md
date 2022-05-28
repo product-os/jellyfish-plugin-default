@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.3.3 - 2022-05-28
+
+* Update external-non-major (external non-major bumps) [Renovate Bot]
+
 ## 27.3.2 - 2022-05-27
 
 * Update internal-patch (internal patch bumps) [Renovate Bot]
