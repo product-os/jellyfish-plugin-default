@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.3.4 - 2022-05-30
+
+* Test worker [Josh Bowling]
+
 ## 27.3.3 - 2022-05-28
 
 * Update external-non-major (external non-major bumps) [Renovate Bot]
