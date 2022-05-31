@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.3.4 - 2022-05-30
+
+* Update typedoc from 0.22.15 to 0.22.16 [Renovate Bot]
+
 ## 27.3.3 - 2022-05-28
 
 * Update external-non-major (external non-major bumps) [Renovate Bot]
