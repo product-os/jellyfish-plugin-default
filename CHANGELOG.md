@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.3.6 - 2022-05-31
+
+* Update @balena/jellyfish-logger from 5.0.33 to 5.1.0 [Renovate Bot]
+
 ## 27.3.5 - 2022-05-31
 
 * Update typescript from 4.6.4 to 4.7.2 [Renovate Bot]
