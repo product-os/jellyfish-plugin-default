@@ -1,4 +1,26 @@
 - commits:
+    - subject: Add reaction contract, export types
+      hash: d424a7b941a3cc14aa6846abe78a1b6a1954bf74
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Yingwen Chen <yingwenchen@balena.io>
+        signed-off-by: Yingwen Chen <yingwenchen@balena.io>
+      author: yingwen chen
+      nested: []
+    - subject: Update @balena/jellyfish-logger from 5.0.33 to 5.1.0
+      hash: 8b10ef4eb10825b014616e751e0b74a84628a14c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 27.4.0
+  title: "'Add reaction contract, export types'"
+  date: 2022-06-01T01:12:35.744Z
+- commits:
     - subject: Update typescript from 4.6.4 to 4.7.2
       hash: 41de91319d127396c93e8abf4094b0e5609e5f3e
       body: ""
