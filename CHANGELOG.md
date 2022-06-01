@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.4.2 - 2022-06-01
+
+* Update autumndb from 20.0.6 to 20.1.0 [Renovate Bot]
+
 ## 27.4.1 - 2022-06-01
 
 * Update @balena/jellyfish-worker from 27.1.0 to 27.2.1 [Renovate Bot]
