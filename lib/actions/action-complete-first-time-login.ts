@@ -201,6 +201,10 @@ const handler: ActionDefinition['handler'] = async (
 				},
 			},
 		)
+		.then(() => {
+			// TODO: Create link between authentication-password and user
+			// We might be able to do this in one step in context.insertCard - need to check
+		})
 		.catch((error: unknown) => {
 			console.dir(error, {
 				depth: null,
