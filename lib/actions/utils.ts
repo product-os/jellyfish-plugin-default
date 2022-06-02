@@ -1,6 +1,7 @@
 import type {
 	Contract,
 	TypeContract,
+	UserContract,
 } from '@balena/jellyfish-types/build/core';
 import type {
 	ActionHandlerRequest,
@@ -52,4 +53,41 @@ export async function addLinkCard(
 			},
 		},
 	);
+}
+
+export async function getPasswordContractForUser(
+	context: WorkerContext,
+	userContract: UserContract,
+): Promise<Contract> {
+	const results = await context.query(
+		context.privilegedSession,
+		{
+			type: 'object',
+			required: ['type'],
+			properties: {
+				type: {
+					const: 'authentication-password@1.0.0',
+				},
+			},
+			$$links: {
+				authenticates: {
+					type: 'object',
+					required: ['type', 'id'],
+					properties: {
+						type: {
+							type: 'string',
+							const: 'user@1.0.0',
+						},
+						id: {
+							type: 'string',
+							const: userContract.id,
+						},
+					},
+				},
+			},
+		},
+		{ limit: 1 },
+	);
+
+	return results[0];
 }
