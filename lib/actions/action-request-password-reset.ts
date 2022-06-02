@@ -1,4 +1,3 @@
-import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { getLogger } from '@balena/jellyfish-logger';
 import type {
 	Contract,
@@ -17,8 +16,6 @@ import { addLinkCard } from './utils';
 
 const logger = getLogger(__filename);
 const sendEmailHandler = actionSendEmail.handler;
-
-const ACTIONS = defaultEnvironment.actions;
 
 /**
  * @summary Get user card by slug
@@ -175,13 +172,9 @@ export async function invalidatePreviousPasswordResets(
 export async function addPasswordResetCard(
 	context: WorkerContext,
 	request: ActionHandlerRequest,
-	user: Contract,
 	typeCard: TypeContract,
 ): Promise<Contract> {
-	const resetToken = crypto
-		.createHmac('sha256', ACTIONS.resetPasswordSecretToken)
-		.update(user.data.hash as crypto.BinaryLike)
-		.digest('hex');
+	const resetToken = crypto.randomBytes(48).toString('hex');
 	const requestedAt = new Date();
 	const hourInFuture = requestedAt.setHours(requestedAt.getHours() + 1);
 	const expiresAt = new Date(hourInFuture);
@@ -288,7 +281,6 @@ const handler: ActionDefinition['handler'] = async (
 		const passwordResetCard = await addPasswordResetCard(
 			context,
 			request,
-			user,
 			typeCard,
 		);
 		await addLinkCard(context, request, passwordResetCard, user);
