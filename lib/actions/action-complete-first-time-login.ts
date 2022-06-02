@@ -3,6 +3,7 @@ import { getLogger } from '@balena/jellyfish-logger';
 import type {
 	Contract,
 	TypeContract,
+	UserContract,
 } from '@balena/jellyfish-types/build/core';
 import {
 	ActionDefinition,
@@ -13,7 +14,7 @@ import {
 import { errors as autumndbErrors } from 'autumndb';
 import { isNil } from 'lodash';
 import { actionCompletePasswordReset } from './action-complete-password-reset';
-import { PASSWORDLESS_USER_HASH } from './constants';
+import { getPasswordContractForUser } from './utils';
 
 const logger = getLogger(__filename);
 const pre = actionCompletePasswordReset.pre;
@@ -138,12 +139,8 @@ const handler: ActionDefinition['handler'] = async (
 
 	await invalidateFirstTimeLogin(context, request, firstTimeLogin);
 
-	const [user] =
-		firstTimeLogin &&
-		firstTimeLogin.links &&
-		firstTimeLogin.links['is attached to']
-			? firstTimeLogin.links['is attached to']
-			: [null];
+	const user = firstTimeLogin?.links?.['is attached to'][0] as UserContract;
+
 	if (isNil(user)) {
 		const error = new workerErrors.WorkerAuthenticationError(
 			'First-time login token invalid',
@@ -172,38 +169,37 @@ const handler: ActionDefinition['handler'] = async (
 		throw newError;
 	}
 
-	const isFirstTimeLogin = user.data.hash === PASSWORDLESS_USER_HASH;
+	const passwordContract = await getPasswordContractForUser(context, user);
 
 	assert.USER(
 		request.logContext,
-		isFirstTimeLogin,
+		passwordContract,
 		workerErrors.WorkerAuthenticationError,
 		'User already has a password set',
 	);
 
-	const userTypeCard = (await context.getCardBySlug(
+	const passwordTypeCard = (await context.getCardBySlug(
 		session,
-		'user@latest',
+		'authentication-password@latest',
 	))! as TypeContract;
 
 	return context
-		.patchCard(
+		.insertCard(
 			context.privilegedSession,
-			userTypeCard,
+			passwordTypeCard,
 			{
 				timestamp: request.timestamp,
 				actor: request.actor,
 				originator: request.originator,
 				attachEvents: false,
 			},
-			user,
-			[
-				{
-					op: 'replace',
-					path: '/data/hash',
-					value: request.arguments.newPassword,
+			{
+				type: 'authentication-password@1.0.0',
+				data: {
+					hash: request.arguments.newPassword,
+					actor: user.id,
 				},
-			],
+			},
 		)
 		.catch((error: unknown) => {
 			console.dir(error, {
