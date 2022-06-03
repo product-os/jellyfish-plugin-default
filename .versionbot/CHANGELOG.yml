@@ -1,4 +1,21 @@
 - commits:
+    - subject: "action-request-password-reset: Use crypto.randomBytes for reset token"
+      hash: a87222368fda318ef37a2fbb2f72e71c545d4949
+      body: |
+        Instead of using a combination of the existing password and a secret env
+        var, just generate a buffer of random bytes and transform to a hex
+        string. Much simpler!
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 27.4.5
+  title: "'action-request-password-reset: Use crypto.randomBytes for reset token'"
+  date: 2022-06-03T03:45:06.544Z
+- commits:
     - subject: Update @balena/jellyfish-worker from 27.2.1 to 28.0.0
       hash: 56c98b8856e7c55e35520d53182ae3321a0a3700
       body: ""

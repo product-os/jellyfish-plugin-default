@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.4.5 - 2022-06-03
+
+* action-request-password-reset: Use crypto.randomBytes for reset token [Lucian Buzzo]
+
 ## 27.4.4 - 2022-06-02
 
 * Update @balena/jellyfish-worker from 27.2.1 to 28.0.0 [Renovate Bot]
