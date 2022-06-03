@@ -15,7 +15,6 @@ import { buildSendEmailOptions } from './mail-utils';
 import { addLinkCard } from './utils';
 
 const logger = getLogger(__filename);
-const sendEmailHandler = actionSendEmail.handler;
 
 /**
  * @summary Get user card by slug
@@ -216,7 +215,7 @@ export async function sendEmail(
 	const username = userCard.slug.replace(/^user-/g, '');
 	const url = `https://jel.ly.fish/password_reset/${resetToken}/${username}`;
 	const html = `<p>Hello,</p><p>We have received a password reset request for the Jellyfish account attached to this email.</p><p>Please use the link below to reset your password:</p><a href="${url}">${url}</a><p>Cheers</p><p>Jellyfish Team</p><a href="https://jel.ly.fish">https://jel.ly.fish</a>`;
-
+	const sendEmailHandler = actionSendEmail.handler;
 	return sendEmailHandler(context.privilegedSession, context, userCard, {
 		arguments: buildSendEmailOptions(
 			userCard,

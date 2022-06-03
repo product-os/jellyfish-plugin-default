@@ -9,6 +9,7 @@ import { isArray, isNull } from 'lodash';
 import nock from 'nock';
 import { defaultPlugin, testUtils } from '../../../lib';
 import { actionCompletePasswordReset } from '../../../lib/actions/action-complete-password-reset';
+import { actionSendEmail } from '../../../lib/actions/action-send-email';
 import { makePreRequest } from './helpers';
 
 const ACTIONS = defaultEnvironment.actions;
@@ -19,7 +20,6 @@ const resetToken = crypto
 	.createHmac('sha256', ACTIONS.resetPasswordSecretToken)
 	.update(hash)
 	.digest('hex');
-
 const pre = actionCompletePasswordReset.pre;
 let ctx: testUtils.TestContext;
 let actionContext: WorkerContext;
@@ -94,6 +94,24 @@ describe('action-complete-password-reset', () => {
 		const user = await ctx.createUser(username, hash);
 		const session = await ctx.createSession(user);
 
+		// We need the resetToken; it's on the email body
+		// const url = `https://jel.ly.fish/password_reset/${resetToken}/${username}`;
+		let sentResetToken: string = 'init';
+		actionSendEmail.handler = async (_session, _context, _card, request) => {
+			const { html } = request.arguments;
+			const passwordResetPattern =
+				/href="https:\/\/jel\.ly\.fish\/password_reset\/(?<resetToken>[0-9a-fA-F]{64})\//;
+
+			const match = passwordResetPattern.exec(html);
+			if (!match || !match.groups) {
+				throw new Error(
+					`Could not extract the resetToken from the email body: ${html}`,
+				);
+			}
+			sentResetToken = match.groups.resetToken;
+			return null;
+		};
+
 		const passwordReset = await ctx.processAction(ctx.session, {
 			type: 'action-request@1.0.0',
 			data: {
@@ -114,13 +132,17 @@ describe('action-complete-password-reset', () => {
 		});
 		expect(passwordReset.error).toBe(false);
 
+		if (sentResetToken === 'init') {
+			throw new Error('Failed to recover resetToken');
+		}
+
 		const completePasswordReset = (await ctx.worker.pre(ctx.session, {
 			action: 'action-complete-password-reset@1.0.0',
 			logContext: ctx.logContext,
 			card: user.id,
 			type: user.type,
 			arguments: {
-				resetToken,
+				resetToken: sentResetToken,
 				newPassword: autumndbTestUtils.generateRandomId(),
 			},
 		})) as any;
