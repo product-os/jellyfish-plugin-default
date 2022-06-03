@@ -4,21 +4,37 @@ import type { WorkerContext } from '@balena/jellyfish-worker';
 import { strict as assert } from 'assert';
 import { testUtils as autumndbTestUtils } from 'autumndb';
 import bcrypt from 'bcrypt';
-import crypto from 'crypto';
 import { isArray, isNull } from 'lodash';
 import nock from 'nock';
 import { defaultPlugin, testUtils } from '../../../lib';
 import { actionCompletePasswordReset } from '../../../lib/actions/action-complete-password-reset';
+import { actionSendEmail } from '../../../lib/actions/action-send-email';
 import { makePreRequest } from './helpers';
 
-const ACTIONS = defaultEnvironment.actions;
 const MAIL_OPTIONS = defaultEnvironment.mail.options;
 let balenaOrg: any;
 const hash = 'foobar';
-const resetToken = crypto
-	.createHmac('sha256', ACTIONS.resetPasswordSecretToken)
-	.update(hash)
-	.digest('hex');
+
+// We grab the resetToken sent by action-request-password-reset by mocking the email sender and extracting it from the email body
+let resetToken: string = 'init';
+actionSendEmail.handler = async (_session, _context, _card, request) => {
+	const { html } = request.arguments;
+	// extract from: https://jel.ly.fish/password_reset/${resetToken}/${username}
+	const passwordResetPattern =
+		/href="https:\/\/jel\.ly\.fish\/password_reset\/(?<resetToken>[0-9a-fA-F]{64})\//;
+
+	const match = passwordResetPattern.exec(html);
+	if (!match || !match.groups) {
+		throw new Error(
+			`Could not extract the resetToken from the email body: ${html}`,
+		);
+	}
+	resetToken = match.groups.resetToken;
+	if (resetToken === 'init') {
+		throw new Error('Failed to recover resetToken');
+	}
+	return null;
+};
 
 const pre = actionCompletePasswordReset.pre;
 let ctx: testUtils.TestContext;
