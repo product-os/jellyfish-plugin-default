@@ -1,4 +1,18 @@
 - commits:
+    - subject: Simplify paid support view query
+      hash: f5f903f1e84eb2d0e5a831277b8b3a13df4283c3
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 27.4.6
+  title: "'Simplify paid support view query'"
+  date: 2022-06-03T10:07:48.563Z
+- commits:
     - subject: "action-request-password-reset: Use crypto.randomBytes for reset token"
       hash: a87222368fda318ef37a2fbb2f72e71c545d4949
       body: |

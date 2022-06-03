@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.4.6 - 2022-06-03
+
+* Simplify paid support view query [Lucian Buzzo]
+
 ## 27.4.5 - 2022-06-03
 
 * action-request-password-reset: Use crypto.randomBytes for reset token [Lucian Buzzo]
