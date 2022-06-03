@@ -174,7 +174,7 @@ export async function addPasswordResetCard(
 	request: ActionHandlerRequest,
 	typeCard: TypeContract,
 ): Promise<Contract> {
-	const resetToken = crypto.randomBytes(48).toString('hex');
+	const resetToken = crypto.randomBytes(32).toString('hex');
 	const requestedAt = new Date();
 	const hourInFuture = requestedAt.setHours(requestedAt.getHours() + 1);
 	const expiresAt = new Date(hourInFuture);
