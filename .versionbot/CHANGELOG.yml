@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update typescript from 4.7.2 to 4.7.3
+      hash: 2729b9d960ef7a97d88a5e8e678a7e43b6ff6c5d
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 27.4.7
+  title: "'Update typescript from 4.7.2 to 4.7.3'"
+  date: 2022-06-03T22:49:52.915Z
+- commits:
     - subject: Simplify paid support view query
       hash: f5f903f1e84eb2d0e5a831277b8b3a13df4283c3
       body: ""
