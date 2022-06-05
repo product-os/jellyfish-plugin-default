@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update lint-staged from 12.4.2 to 13.0.0
+      hash: 29f285859b3307887a24619960efba266749db5f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.4.8
+  title: "'Update lint-staged from 12.4.2 to 13.0.0'"
+  date: 2022-06-05T08:10:58.836Z
+- commits:
     - subject: Update typescript from 4.7.2 to 4.7.3
       hash: 2729b9d960ef7a97d88a5e8e678a7e43b6ff6c5d
       body: ""

@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.4.8 - 2022-06-05
+
+* Update lint-staged from 12.4.2 to 13.0.0 [Josh Bowling]
+
 ## 27.4.7 - 2022-06-03
 
 * Update typescript from 4.7.2 to 4.7.3 [Renovate Bot]
