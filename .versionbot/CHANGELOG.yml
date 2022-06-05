@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update external-major (external major bumps)
+      hash: 91d38fa8edd4a4a81500983510cea4687014565a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 27.4.9
+  title: "'Update external-major (external major bumps) (major)'"
+  date: 2022-06-05T08:33:50.382Z
+- commits:
     - subject: Update lint-staged from 12.4.2 to 13.0.0
       hash: 29f285859b3307887a24619960efba266749db5f
       body: ""
