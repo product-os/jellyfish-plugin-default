@@ -17,6 +17,7 @@ export const viewPaidSupportThreads: ViewContractDefinition = {
 							$$links: {
 								'is owned by': {
 									type: 'object',
+									required: ['type'],
 									properties: {
 										type: {
 											const: 'user@1.0.0',
@@ -25,44 +26,63 @@ export const viewPaidSupportThreads: ViewContractDefinition = {
 								},
 							},
 						},
-						{
-							$$links: {
-								'has attached element': {
-									type: 'object',
-									properties: {
-										type: {
-											enum: [
-												'message@1.0.0',
-												'create@1.0.0',
-												'whisper@1.0.0',
-												'update@1.0.0',
-												'rating@1.0.0',
-												'summary@1.0.0',
-											],
-										},
-									},
-								},
-							},
-						},
 						true,
 					],
+					$$links: {
+						'has attached element': {
+							type: 'object',
+							properties: {
+								type: {
+									enum: [
+										'message@1.0.0',
+										'create@1.0.0',
+										'whisper@1.0.0',
+										'update@1.0.0',
+										'rating@1.0.0',
+										'summary@1.0.0',
+									],
+								},
+							},
+							additionalProperties: true,
+						},
+					},
 					type: 'object',
 					properties: {
+						active: {
+							const: true,
+							type: 'boolean',
+						},
 						type: {
 							type: 'string',
 							const: 'support-thread@1.0.0',
 						},
 						data: {
 							type: 'object',
-							required: ['inbox'],
 							properties: {
-								inbox: {
-									type: 'string',
-									enum: ['paid', 'S/Paid_Support'],
+								mirrors: {
+									type: 'array',
+									items: {
+										type: 'string',
+										not: {
+											pattern: 'forums.balena.io',
+										},
+									},
+								},
+								category: {
+									description:
+										'This field is not required and should match cases where the field is not present OR is not in the enum',
+									not: {
+										enum: ['customer-success', 'security'],
+									},
+								},
+								product: {
+									const: 'balenaCloud',
 								},
 							},
 						},
 					},
+					required: ['active', 'type', 'data'],
+					additionalProperties: true,
 				},
 			},
 		],
