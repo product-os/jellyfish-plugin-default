@@ -1,4 +1,18 @@
 - commits:
+    - subject: Make inbox a required field for the paid support view
+      hash: 109b1cf96a764ec15f63a6065c0d9d8e30a3ecd2
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 27.4.10
+  title: "'Make inbox a required field for the paid support view'"
+  date: 2022-06-06T12:47:45.354Z
+- commits:
     - subject: Update external-major (external major bumps)
       hash: 91d38fa8edd4a4a81500983510cea4687014565a
       body: ""

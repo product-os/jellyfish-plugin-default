@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.4.10 - 2022-06-06
+
+* Make inbox a required field for the paid support view [Lucian Buzzo]
+
 ## 27.4.9 - 2022-06-05
 
 * Update external-major (external major bumps) [Renovate Bot]
