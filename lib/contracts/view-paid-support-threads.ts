@@ -54,6 +54,7 @@ export const viewPaidSupportThreads: ViewContractDefinition = {
 						},
 						data: {
 							type: 'object',
+							required: ['inbox'],
 							properties: {
 								inbox: {
 									type: 'string',
