@@ -1,4 +1,20 @@
 - commits:
+    - subject: Revert recent changes to the paid support view
+      hash: 4a89d396f5b01bf59a20344a87cbd53c641eb81b
+      body: |
+        The recent changes improved performance, but exposed a lot of stale
+        data, which needs to be cleaned up before we can use this correctly.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 27.4.11
+  title: "'Revert recent changes to the paid support view'"
+  date: 2022-06-06T20:26:56.423Z
+- commits:
     - subject: Make inbox a required field for the paid support view
       hash: 109b1cf96a764ec15f63a6065c0d9d8e30a3ecd2
       body: ""
