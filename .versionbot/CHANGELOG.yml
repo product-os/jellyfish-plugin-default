@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add message to brainstorm-topic relationship
+      hash: ac879c19a4ab095e9b05926a54c583a383110554
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.5.0
+  title: "'Add message to brainstorm-topic relationship'"
+  date: 2022-06-07T00:45:13.019Z
+- commits:
     - subject: Revert recent changes to the paid support view
       hash: 4a89d396f5b01bf59a20344a87cbd53c641eb81b
       body: |

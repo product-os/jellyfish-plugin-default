@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.5.0 - 2022-06-07
+
+* Add message to brainstorm-topic relationship [Josh Bowling]
+
 ## 27.4.11 - 2022-06-06
 
 * Revert recent changes to the paid support view [Lucian Buzzo]
