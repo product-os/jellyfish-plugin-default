@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.6.0 - 2022-06-08
+
+* Add message to improvement relationship [Josh Bowling]
+
 ## 27.5.0 - 2022-06-07
 
 * Add message to brainstorm-topic relationship [Josh Bowling]

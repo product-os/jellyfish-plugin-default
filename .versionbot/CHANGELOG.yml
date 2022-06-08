@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add message to improvement relationship
+      hash: 59ce5979221475ae664067c52f1b2efa4abe0c6c
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.6.0
+  title: "'Add message to improvement relationship'"
+  date: 2022-06-08T00:03:46.216Z
+- commits:
     - subject: Add message to brainstorm-topic relationship
       hash: ac879c19a4ab095e9b05926a54c583a383110554
       body: ""
