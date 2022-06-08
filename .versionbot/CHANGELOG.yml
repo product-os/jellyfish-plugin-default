@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update @balena/jellyfish-worker from 28.0.0 to 29.0.0
+      hash: 4448017b09cb66378e5fd5f078f06b128761ec63
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.7.1
+  title: "'Update @balena/jellyfish-worker from 28.0.0 to 29.0.0'"
+  date: 2022-06-08T01:56:30.081Z
+- commits:
     - subject: Add message to pattern relationship
       hash: 74986b4c80fc2c6be1e387803513a667992a34ce
       body: ""

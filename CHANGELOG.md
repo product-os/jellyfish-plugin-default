@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.7.1 - 2022-06-08
+
+* Update @balena/jellyfish-worker from 28.0.0 to 29.0.0 [Josh Bowling]
+
 ## 27.7.0 - 2022-06-08
 
 * Add message to pattern relationship [Josh Bowling]
