@@ -49,6 +49,7 @@ import { relationshipImprovementIsGuidedByUser } from './relationship-improvemen
 import { relationshipImprovementIsImplementedByProject } from './relationship-improvement-is-implemented-by-project';
 import { relationshipImprovementIsOwnedByUser } from './relationship-improvement-is-owned-by-user';
 import { relationshipMessageIsAttachedToBrainstormTopic } from './relationship-message-is-attached-to-brainstorm-topic';
+import { relationshipMessageIsAttachedToImprovement } from './relationship-message-is-attached-to-improvement';
 import { relationshipMessageIsAttachedToSalesThread } from './relationship-message-is-attached-to-sales-thread';
 import { relationshipMessageIsAttachedToSupportThread } from './relationship-message-is-attached-to-support-thread';
 import { relationshipMessageIsAttachedToThread } from './relationship-message-is-attached-to-thread';
@@ -247,6 +248,7 @@ export const contracts: ContractDefinition[] = [
 	relationshipImprovementIsImplementedByProject,
 	relationshipImprovementIsOwnedByUser,
 	relationshipMessageIsAttachedToBrainstormTopic,
+	relationshipMessageIsAttachedToImprovement,
 	relationshipMessageIsAttachedToSalesThread,
 	relationshipMessageIsAttachedToSupportThread,
 	relationshipMessageIsAttachedToThread,
