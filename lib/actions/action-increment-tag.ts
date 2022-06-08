@@ -4,7 +4,9 @@ import { castArray, isArray, isNull, trim } from 'lodash';
 import { actionIncrement } from './action-increment';
 
 const actionIncrementHandler = actionIncrement.handler;
-const actionCreateCardHandler = actions['action-create-card'].handler;
+const actionCreateCardHandler = actions.filter((action) => {
+	return action.contract.slug === 'action-create-card';
+})[0].handler;
 
 /**
  * @summary Merge increment results to ensure result set type validity

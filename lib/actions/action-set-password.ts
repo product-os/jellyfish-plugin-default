@@ -10,7 +10,9 @@ import bcrypt from 'bcrypt';
 import { isEmpty } from 'lodash';
 import { BCRYPT_SALT_ROUNDS, PASSWORDLESS_USER_HASH } from './constants';
 
-const actionCreateSession = actions['action-create-session'];
+const actionCreateSession = actions.filter((action) => {
+	return action.contract.slug === 'action-create-session';
+})[0];
 
 const pre: ActionDefinition['pre'] = async (session, context, request) => {
 	const card = await context.getCardById(
