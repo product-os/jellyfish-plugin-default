@@ -1,6 +1,8 @@
 import { ActionDefinition, actions } from '@balena/jellyfish-worker';
 
-const actionCreateEventHandler = actions['action-create-event'].handler;
+const actionCreateEventHandler = actions.filter((action) => {
+	return action.contract.slug === 'action-create-event';
+})[0].handler;
 
 const handler: ActionDefinition['handler'] = async (
 	session,
