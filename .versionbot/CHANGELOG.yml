@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add message to pattern relationship
+      hash: 74986b4c80fc2c6be1e387803513a667992a34ce
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.7.0
+  title: "'Add message to pattern relationship'"
+  date: 2022-06-08T01:17:02.404Z
+- commits:
     - subject: Add message to improvement relationship
       hash: 59ce5979221475ae664067c52f1b2efa4abe0c6c
       body: ""

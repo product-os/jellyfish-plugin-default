@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.7.0 - 2022-06-08
+
+* Add message to pattern relationship [Josh Bowling]
+
 ## 27.6.0 - 2022-06-08
 
 * Add message to improvement relationship [Josh Bowling]
