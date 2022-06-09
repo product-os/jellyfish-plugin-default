@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.8.0 - 2022-06-09
+
+* Add message to milestone relationship [Josh Bowling]
+
 ## 27.7.3 - 2022-06-08
 
 * Update resinci/jellyfish-test from v3.0.13 to v3.0.14 [Renovate Bot]

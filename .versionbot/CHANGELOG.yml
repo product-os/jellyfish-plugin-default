@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add message to milestone relationship
+      hash: 3e3c50a8508a40a16d40af8c046d9bb4fd4bd37d
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.8.0
+  title: "'Add message to milestone relationship'"
+  date: 2022-06-09T03:00:05.118Z
+- commits:
     - subject: Update resinci/jellyfish-test from v3.0.13 to v3.0.14
       hash: 10d571ef7db76070ec686cd31eab7bf8a9f1a734
       body: ""
