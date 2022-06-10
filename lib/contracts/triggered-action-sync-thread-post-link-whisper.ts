@@ -7,13 +7,16 @@ export const triggeredActionSyncThreadPostLinkWhisper: TriggeredActionContractDe
 		name: 'Triggered action for creating a whisper with link on thread sync',
 		markers: [],
 		data: {
-			schedule: 'async',
 			filter: {
 				title: "Support threads created with a 'mirrors' field",
 				$$links: {
 					'is attached to': {
 						type: 'object',
 						properties: {
+							type: {
+								type: 'string',
+								const: 'support-thread@1.0.0',
+							},
 							id: {
 								type: 'string',
 							},
