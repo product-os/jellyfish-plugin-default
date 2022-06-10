@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update internal packages
+      hash: 03a99913ad62260c53a24b9e4bd29225487ae1e5
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.8.1
+  title: "'Update internal packages'"
+  date: 2022-06-10T05:44:50.418Z
+- commits:
     - subject: Add message to milestone relationship
       hash: 3e3c50a8508a40a16d40af8c046d9bb4fd4bd37d
       body: ""

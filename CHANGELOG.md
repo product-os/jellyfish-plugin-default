@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.8.1 - 2022-06-10
+
+* Update internal packages [Josh Bowling]
+
 ## 27.8.0 - 2022-06-09
 
 * Add message to milestone relationship [Josh Bowling]
