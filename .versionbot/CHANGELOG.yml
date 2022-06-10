@@ -1,4 +1,20 @@
 - commits:
+    - subject: Improve performance of sync whisper triggered action
+      hash: dc1271f869da8beead2975e5afc85402acb033dd
+      body: |
+        By specifying the type of contract expanded in $$links, this trigger
+        becomes less likely to require a DB query to validate in the JF worker.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 27.8.2
+  title: "'Improve performance of sync whisper triggered action'"
+  date: 2022-06-10T21:22:53.581Z
+- commits:
     - subject: Update internal packages
       hash: 03a99913ad62260c53a24b9e4bd29225487ae1e5
       body: ""
