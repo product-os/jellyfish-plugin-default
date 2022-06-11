@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update dependencies
+      hash: f0bf90afd4fef172042a5549a3be24eb0d75ab06
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.8.3
+  title: "'Update dependencies'"
+  date: 2022-06-11T08:33:16.842Z
+- commits:
     - subject: Improve performance of sync whisper triggered action
       hash: dc1271f869da8beead2975e5afc85402acb033dd
       body: |

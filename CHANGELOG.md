@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.8.3 - 2022-06-11
+
+* Update dependencies [Josh Bowling]
+
 ## 27.8.2 - 2022-06-10
 
 * Improve performance of sync whisper triggered action [Lucian Buzzo]
