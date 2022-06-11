@@ -1,4 +1,18 @@
 - commits:
+    - subject: "CI: Update jellyfish-test image to v4.0.0"
+      hash: 36ea30a1b604bb695d4bc07edb7226d4e9503fa4
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.8.4
+  title: "'CI: Update jellyfish-test image to v4.0.0'"
+  date: 2022-06-11T10:36:21.750Z
+- commits:
     - subject: Update dependencies
       hash: f0bf90afd4fef172042a5549a3be24eb0d75ab06
       body: ""

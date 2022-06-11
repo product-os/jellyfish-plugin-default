@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.8.4 - 2022-06-11
+
+* CI: Update jellyfish-test image to v4.0.0 [Josh Bowling]
+
 ## 27.8.3 - 2022-06-11
 
 * Update dependencies [Josh Bowling]
