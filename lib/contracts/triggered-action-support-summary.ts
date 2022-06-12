@@ -7,14 +7,17 @@ export const triggeredActionSupportSummary: TriggeredActionContractDefinition =
 		name: 'Triggered action for support summaries',
 		markers: [],
 		data: {
-			schedule: 'sync',
 			filter: {
 				type: 'object',
 				$$links: {
 					'is attached to': {
 						type: 'object',
-						required: ['type', 'data'],
+						required: ['active', 'type', 'data'],
 						properties: {
+							active: {
+								type: 'boolean',
+								const: true,
+							},
 							type: {
 								type: 'string',
 								const: 'support-thread@1.0.0',
