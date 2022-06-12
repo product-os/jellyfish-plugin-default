@@ -1,4 +1,20 @@
 - commits:
+    - subject: Improve triggered-action-support-summary
+      hash: 3b284a89365f9e104613917514244b77705b8fb1
+      body: |
+        Remove defunct schedule property.
+        Update the matching schema to be slightly more strict.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.8.5
+  title: "'Improve triggered-action-support-summary'"
+  date: 2022-06-12T05:42:47.097Z
+- commits:
     - subject: "CI: Update jellyfish-test image to v4.0.0"
       hash: 36ea30a1b604bb695d4bc07edb7226d4e9503fa4
       body: ""
