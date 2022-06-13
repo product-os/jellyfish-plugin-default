@@ -173,7 +173,7 @@ const handler: ActionDefinition['handler'] = async (
 
 	assert.USER(
 		request.logContext,
-		passwordContract,
+		!passwordContract,
 		workerErrors.WorkerAuthenticationError,
 		'User already has a password set',
 	);
