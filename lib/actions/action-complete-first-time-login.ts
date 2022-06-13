@@ -183,45 +183,45 @@ const handler: ActionDefinition['handler'] = async (
 		'authentication-password@latest',
 	))! as TypeContract;
 
-	return context
-		.insertCard(
-			context.privilegedSession,
-			passwordTypeCard,
-			{
-				timestamp: request.timestamp,
-				actor: request.actor,
-				originator: request.originator,
-				attachEvents: false,
-			},
-			{
-				type: 'authentication-password@1.0.0',
-				data: {
-					hash: request.arguments.newPassword,
-					actor: user.id,
+	return (
+		context
+			.insertCard(
+				context.privilegedSession,
+				passwordTypeCard,
+				{
+					timestamp: request.timestamp,
+					actor: request.actor,
+					originator: request.originator,
+					attachEvents: false,
 				},
-			},
-		)
-		.then(() => {
+				{
+					type: 'authentication-password@1.0.0',
+					data: {
+						hash: request.arguments.newPassword,
+						actor: user.id,
+					},
+				},
+			)
 			// TODO: Create link between authentication-password and user
 			// We might be able to do this in one step in context.insertCard - need to check
-		})
-		.catch((error: unknown) => {
-			console.dir(error, {
-				depth: null,
-			});
+			.catch((error: unknown) => {
+				console.dir(error, {
+					depth: null,
+				});
 
-			// A schema mismatch here means that the patch could
-			// not be applied to the card due to permissions.
-			if (error instanceof autumndbErrors.JellyfishSchemaMismatch) {
-				// TS-TODO: Ensure this error is what is expected with Context type
-				const newError = new workerErrors.WorkerAuthenticationError(
-					'Password change not allowed',
-				);
-				throw newError;
-			}
+				// A schema mismatch here means that the patch could
+				// not be applied to the card due to permissions.
+				if (error instanceof autumndbErrors.JellyfishSchemaMismatch) {
+					// TS-TODO: Ensure this error is what is expected with Context type
+					const newError = new workerErrors.WorkerAuthenticationError(
+						'Password change not allowed',
+					);
+					throw newError;
+				}
 
-			throw error;
-		});
+				throw error;
+			})
+	);
 };
 
 export const actionCompleteFirstTimeLogin: ActionDefinition = {
