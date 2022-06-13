@@ -162,16 +162,10 @@ describe('action-complete-first-time-login', () => {
 			id: user.id,
 		};
 
-		const loginRequest = await ctx.processAction(ctx.session, {
+		const loginResult = await ctx.processAction(ctx.session, {
 			data: request2,
 		});
-		assert(loginRequest);
-		// await ctx.flushAll(ctx.session);
-
-		const loginResult: any = await ctx.worker.producer.waitResults(
-			ctx.logContext,
-			loginRequest,
-		);
+		assert(loginResult);
 		expect(loginResult.error).toBe(false);
 	});
 
