@@ -198,7 +198,7 @@ const handler: ActionDefinition['handler'] = async (
 					type: 'authentication-password@1.0.0',
 					data: {
 						hash: request.arguments.newPassword,
-						actor: user.id,
+						actorId: user.id,
 					},
 				},
 			)

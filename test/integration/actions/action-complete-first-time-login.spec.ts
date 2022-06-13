@@ -141,7 +141,38 @@ describe('action-complete-first-time-login', () => {
 			user.id,
 		);
 		assert(updated);
-		expect(updated.data.hash).not.toEqual(PASSWORDLESS_USER_HASH);
+
+		// Try to login with the new password
+		const request2: any = await ctx.worker.pre(ctx.session, {
+			action: 'action-create-session@1.0.0',
+			card: user.id,
+			logContext: ctx.logContext,
+			type: user.type,
+			arguments: {
+				password: newPassword,
+			},
+		});
+
+		// TODO: Remove this after converting action request context to logContext
+		request2.context = ctx.logContext;
+		request2.epoch = new Date().valueOf();
+		request2.timestamp = new Date().toISOString();
+		request2.actor = ctx.adminUserId;
+		request2.input = {
+			id: user.id,
+		};
+
+		const loginRequest = await ctx.processAction(ctx.session, {
+			data: request2,
+		});
+		assert(loginRequest);
+		// await ctx.flushAll(ctx.session);
+
+		const loginResult: any = await ctx.worker.producer.waitResults(
+			ctx.logContext,
+			loginRequest,
+		);
+		expect(loginResult.error).toBe(false);
 	});
 
 	test('should fail when the first-time login does not match a valid card', async () => {
