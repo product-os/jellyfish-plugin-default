@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.8.6 - 2022-06-14
+
+* Use standard postgres and redis images [Josh Bowling]
+
 ## 27.8.5 - 2022-06-12
 
 * Improve triggered-action-support-summary [Josh Bowling]

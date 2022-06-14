@@ -1,4 +1,18 @@
 - commits:
+    - subject: Use standard postgres and redis images
+      hash: ebe3cec846cc05bfc30303ca1b70aafc278e0b28
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.8.6
+  title: "'Use standard postgres and redis images'"
+  date: 2022-06-14T08:04:40.978Z
+- commits:
     - subject: Improve triggered-action-support-summary
       hash: 3b284a89365f9e104613917514244b77705b8fb1
       body: |
