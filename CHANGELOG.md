@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.8.7 - 2022-06-16
+
+* Update internal packages [Josh Bowling]
+
 ## 27.8.6 - 2022-06-14
 
 * Use standard postgres and redis images [Josh Bowling]

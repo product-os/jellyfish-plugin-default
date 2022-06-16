@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update internal packages
+      hash: 6ee5c3b74fcc968ca4d9e1a10feaca82a302b7c4
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.8.7
+  title: "'Update internal packages'"
+  date: 2022-06-16T00:58:13.572Z
+- commits:
     - subject: Use standard postgres and redis images
       hash: ebe3cec846cc05bfc30303ca1b70aafc278e0b28
       body: ""
