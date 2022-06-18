@@ -48,6 +48,7 @@ import { relationshipImprovementIsContributedToByUser } from './relationship-imp
 import { relationshipImprovementIsGuidedByUser } from './relationship-improvement-is-guided-by-user';
 import { relationshipImprovementIsImplementedByProject } from './relationship-improvement-is-implemented-by-project';
 import { relationshipImprovementIsOwnedByUser } from './relationship-improvement-is-owned-by-user';
+import { relationshipMessageIsAttachedToBlogPost } from './relationship-message-is-attached-to-blog-post';
 import { relationshipMessageIsAttachedToBrainstormTopic } from './relationship-message-is-attached-to-brainstorm-topic';
 import { relationshipMessageIsAttachedToImprovement } from './relationship-message-is-attached-to-improvement';
 import { relationshipMessageIsAttachedToMilestone } from './relationship-message-is-attached-to-milestone';
@@ -249,6 +250,7 @@ export const contracts: ContractDefinition[] = [
 	relationshipImprovementIsGuidedByUser,
 	relationshipImprovementIsImplementedByProject,
 	relationshipImprovementIsOwnedByUser,
+	relationshipMessageIsAttachedToBlogPost,
 	relationshipMessageIsAttachedToBrainstormTopic,
 	relationshipMessageIsAttachedToImprovement,
 	relationshipMessageIsAttachedToMilestone,
