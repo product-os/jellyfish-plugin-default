@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.8.8 - 2022-06-17
+
+* Update typescript from 4.7.3 to 4.7.4 [renovate[bot]]
+
 ## 27.8.7 - 2022-06-16
 
 * Update internal packages [Josh Bowling]
