@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.8.10 - 2022-06-18
+
+* Update redis image from 6 to 7 [Josh Bowling]
+
 ## 27.8.9 - 2022-06-18
 
 * Add message to blog-post relationship [Josh Bowling]

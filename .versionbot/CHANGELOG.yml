@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update redis image from 6 to 7
+      hash: 3a4f92c15fea807821f13bfbe621ff6d23892f3f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.8.10
+  title: "'Update redis image from 6 to 7'"
+  date: 2022-06-18T08:56:51.559Z
+- commits:
     - subject: Add message to blog-post relationship
       hash: 21b02641f3a7e7e14cf63053a9f9ea37a5a772d9
       body: ""
