@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.8.13 - 2022-06-21
+
+* Update dependencies [Josh Bowling]
+
 ## 27.8.12 - 2022-06-20
 
 * CI: Use standard node image [Josh Bowling]
