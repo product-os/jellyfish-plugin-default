@@ -5,10 +5,9 @@ import {
 	actions,
 	errors as workerErrors,
 } from '@balena/jellyfish-worker';
-import { errors as autumndbErrors } from 'autumndb';
 import bcrypt from 'bcrypt';
-import { isEmpty } from 'lodash';
 import { BCRYPT_SALT_ROUNDS, PASSWORDLESS_USER_HASH } from './constants';
+import { setPasswordContractForUser } from './utils';
 
 const actionCreateSession = actions.filter((action) => {
 	return action.contract.slug === 'action-create-session';
@@ -71,37 +70,13 @@ const handler: ActionDefinition['handler'] = async (
 		`No such type: ${card.type}`,
 	);
 
-	return context
-		.patchCard(
-			session,
-			typeCard,
-			{
-				timestamp: request.timestamp,
-				actor: request.actor,
-				originator: request.originator,
-				attachEvents: false,
-			},
-			card,
-			[
-				{
-					op: isEmpty(request.arguments.currentPassword) ? 'add' : 'replace',
-					path: '/data/hash',
-					value: request.arguments.newPassword,
-				},
-			],
-		)
-		.catch((error: unknown) => {
-			// A schema mismatch here means that the patch could
-			// not be applied to the card due to permissions.
-			if (error instanceof autumndbErrors.JellyfishSchemaMismatch) {
-				const newError = new workerErrors.WorkerAuthenticationError(
-					'Password change not allowed',
-				);
-				throw newError;
-			}
-
-			throw error;
-		});
+	return setPasswordContractForUser(
+		context,
+		session,
+		request,
+		card.id,
+		request.arguments.newPassword,
+	);
 };
 
 export const actionSetPassword: ActionDefinition = {

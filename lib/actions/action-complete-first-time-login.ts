@@ -11,11 +11,12 @@ import {
 	errors as workerErrors,
 	WorkerContext,
 } from '@balena/jellyfish-worker';
-import { strict as strictAssert } from 'assert';
-import { errors as autumndbErrors } from 'autumndb';
 import { isNil } from 'lodash';
 import { actionCompletePasswordReset } from './action-complete-password-reset';
-import { getPasswordContractForUser } from './utils';
+import {
+	getPasswordContractForUser,
+	setPasswordContractForUser,
+} from './utils';
 
 const logger = getLogger(__filename);
 const pre = actionCompletePasswordReset.pre;
@@ -121,7 +122,7 @@ export async function invalidateFirstTimeLogin(
 }
 
 const handler: ActionDefinition['handler'] = async (
-	_session,
+	session,
 	context,
 	_card,
 	request,
@@ -170,7 +171,11 @@ const handler: ActionDefinition['handler'] = async (
 		throw newError;
 	}
 
-	const passwordContract = await getPasswordContractForUser(context, user);
+	const passwordContract = await getPasswordContractForUser(
+		context,
+		session,
+		user.id,
+	);
 
 	assert.USER(
 		request.logContext,
@@ -179,73 +184,13 @@ const handler: ActionDefinition['handler'] = async (
 		'User already has a password set',
 	);
 
-	const passwordTypeCard = context.cards[
-		'authentication-password@1.0.0'
-	] as TypeContract;
-
-	try {
-		const authenticationContract = await context.insertCard(
-			context.privilegedSession,
-			passwordTypeCard,
-			{
-				timestamp: request.timestamp,
-				actor: request.actor,
-				originator: request.originator,
-				attachEvents: false,
-			},
-			{
-				type: 'authentication-password@1.0.0',
-				data: {
-					hash: request.arguments.newPassword,
-					actorId: user.id,
-				},
-			},
-		);
-		strictAssert(authenticationContract);
-		await context.insertCard(
-			context.privilegedSession,
-			context.cards['link@1.0.0'] as TypeContract,
-			{
-				timestamp: request.timestamp,
-				actor: request.actor,
-				originator: request.originator,
-				attachEvents: false,
-			},
-			{
-				type: 'link@1.0.0',
-				name: 'is authenticated with',
-				data: {
-					from: {
-						id: user.id,
-						type: 'user@1.0.0',
-					},
-					to: {
-						id: authenticationContract.id,
-						type: 'authentication-password@1.0.0',
-					},
-					inverseName: 'authenticates',
-				},
-			},
-		);
-
-		return authenticationContract;
-	} catch (error: unknown) {
-		console.dir(error, {
-			depth: null,
-		});
-
-		// A schema mismatch here means that the patch could
-		// not be applied to the card due to permissions.
-		if (error instanceof autumndbErrors.JellyfishSchemaMismatch) {
-			// TS-TODO: Ensure this error is what is expected with Context type
-			const newError = new workerErrors.WorkerAuthenticationError(
-				'Password change not allowed',
-			);
-			throw newError;
-		}
-
-		throw error;
-	}
+	return setPasswordContractForUser(
+		context,
+		session,
+		request,
+		user.id,
+		request.arguments.newPassword,
+	);
 };
 
 export const actionCompleteFirstTimeLogin: ActionDefinition = {
