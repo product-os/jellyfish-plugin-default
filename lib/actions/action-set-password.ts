@@ -1,49 +1,45 @@
-import * as assert from '@balena/jellyfish-assert';
-import type { TypeContract } from '@balena/jellyfish-types/build/core';
 import {
 	ActionDefinition,
-	actions,
 	errors as workerErrors,
 } from '@balena/jellyfish-worker';
 import bcrypt from 'bcrypt';
-import { BCRYPT_SALT_ROUNDS, PASSWORDLESS_USER_HASH } from './constants';
-import { setPasswordContractForUser } from './utils';
-
-const actionCreateSession = actions.filter((action) => {
-	return action.contract.slug === 'action-create-session';
-})[0];
+import { BCRYPT_SALT_ROUNDS } from './constants';
+import {
+	getPasswordContractForUser,
+	setPasswordContractForUser,
+} from './utils';
 
 const pre: ActionDefinition['pre'] = async (session, context, request) => {
-	const card = await context.getCardById(
-		context.privilegedSession,
+	const passwordContract = await getPasswordContractForUser(
+		context,
+		session,
 		request.card,
 	);
-	const isFirstTimePassword =
-		card &&
-		card.data &&
-		card.data.hash === PASSWORDLESS_USER_HASH &&
-		!request.arguments.currentPassword;
-
-	// TS-TODO: This is broken
-	const loginResult = {
-		password: '',
-	};
-	if (!isFirstTimePassword && actionCreateSession.pre) {
-		// This call will throw if the current password is incorrect.
-		await actionCreateSession.pre(session, context, {
-			action: 'TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO',
-			type: 'TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO',
-			card: request.card,
-			logContext: request.logContext,
-			arguments: {
-				password: String(request.arguments.currentPassword),
-			},
-		});
-		loginResult.password = 'CHECKED IN PRE HOOK';
+	const currentPassword = request.arguments.currentPassword;
+	let authenticated = false;
+	if (currentPassword) {
+		if (
+			passwordContract !== null &&
+			passwordContract.active &&
+			(await bcrypt.compare(
+				currentPassword,
+				passwordContract.data.hash as string,
+			))
+		) {
+			authenticated = true;
+		}
+	} else {
+		if (passwordContract === null || !passwordContract.active) {
+			authenticated = true;
+		}
+	}
+	if (!authenticated) {
+		throw new workerErrors.WorkerAuthenticationError(
+			'Password change not allowed',
+		);
 	}
 
-	// Don't store passwords in plain text
-	request.arguments.currentPassword = loginResult.password;
+	delete request.arguments.currentPassword;
 	request.arguments.newPassword = await bcrypt.hash(
 		request.arguments.newPassword,
 		BCRYPT_SALT_ROUNDS,
@@ -58,18 +54,6 @@ const handler: ActionDefinition['handler'] = async (
 	card,
 	request,
 ) => {
-	const typeCard = (await context.getCardBySlug(
-		session,
-		card.type,
-	))! as TypeContract;
-
-	assert.INTERNAL(
-		request.logContext,
-		typeCard,
-		workerErrors.WorkerNoElement,
-		`No such type: ${card.type}`,
-	);
-
 	return setPasswordContractForUser(
 		context,
 		session,

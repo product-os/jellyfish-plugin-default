@@ -12,6 +12,11 @@ import {
 	PASSWORDLESS_USER_HASH,
 } from '../../../lib/actions/constants';
 
+const VALID_PASSWORD_HASH = bcrypt.hash(
+	autumndbTestUtils.generateRandomId(),
+	BCRYPT_SALT_ROUNDS,
+);
+
 let ctx: testUtils.TestContext;
 
 beforeAll(async () => {
@@ -45,7 +50,7 @@ describe('action-set-password', () => {
 			},
 		});
 		assert(result);
-		expect(result.arguments.currentPassword).toEqual('CHECKED IN PRE HOOK');
+		expect(result.arguments.currentPassword).toBeFalsy();
 		expect(result.arguments.newPassword).toBeTruthy();
 		expect(result.arguments.newPassword).not.toBe(newPassword);
 	});
@@ -79,7 +84,7 @@ describe('action-set-password', () => {
 					timestamp: new Date().toISOString(),
 					arguments: {
 						currentPassword: null,
-						newPassword: autumndbTestUtils.generateRandomId(),
+						newPassword: await VALID_PASSWORD_HASH,
 					},
 				},
 			},
@@ -145,7 +150,7 @@ describe('action-set-password', () => {
 					timestamp: new Date().toISOString(),
 					arguments: {
 						currentPassword: password,
-						newPassword: autumndbTestUtils.generateRandomId(),
+						newPassword: await VALID_PASSWORD_HASH,
 					},
 				},
 			},
@@ -251,13 +256,12 @@ describe('action-set-password', () => {
 		expect(user.data.roles).toEqual(['user-community']);
 		const session = await ctx.createSession(user);
 
-		const password = autumndbTestUtils.generateRandomId().split('-')[0];
+		const password = autumndbTestUtils.generateRandomId();
 		const hash = await bcrypt.hash(password, BCRYPT_SALT_ROUNDS);
 		const otherUser = await ctx.createUser(
 			autumndbTestUtils.generateRandomSlug(),
 			hash,
 		);
-		expect(otherUser.data.hash).toEqual(hash);
 		expect(otherUser.data.roles).toEqual(['user-community']);
 
 		await ctx.worker.insertCard(
@@ -284,7 +288,7 @@ describe('action-set-password', () => {
 					timestamp: new Date().toISOString(),
 					arguments: {
 						currentPassword: password,
-						newPassword: 'foobarbaz',
+						newPassword: await VALID_PASSWORD_HASH,
 					},
 				},
 			},
@@ -304,7 +308,6 @@ describe('action-set-password', () => {
 			autumndbTestUtils.generateRandomSlug(),
 			PASSWORDLESS_USER_HASH,
 		);
-		expect(otherUser.data.hash).toEqual(PASSWORDLESS_USER_HASH);
 		expect(otherUser.data.roles).toEqual(['user-community']);
 
 		await ctx.worker.insertCard(
@@ -331,7 +334,7 @@ describe('action-set-password', () => {
 					timestamp: new Date().toISOString(),
 					arguments: {
 						currentPassword: null,
-						newPassword: 'foobarbaz',
+						newPassword: await VALID_PASSWORD_HASH,
 					},
 				},
 			},

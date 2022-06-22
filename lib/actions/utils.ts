@@ -101,20 +101,25 @@ export async function setPasswordContractForUser(
 	userId: string,
 	hash: string = '',
 ): Promise<Contract | null> {
+	// Get the current password authentication contract. Use the admin session
+	// so we can get the contract even if it's soft-deleted
 	const currentAuthenticationContract = await getPasswordContractForUser(
 		context,
-		session,
+		context.privilegedSession,
 		userId,
 	);
+
 	const passwordTypeCard = context.cards[
 		'authentication-password@1.0.0'
 	] as TypeContract;
 	try {
 		if (hash.charAt(0) === '$') {
-			// Valid hashes start with a dollar sign. Every other hash is invalid on purpose
+			// Valid hashes start with a dollar sign. Every other hash is
+			// invalid on purpose
 
 			if (currentAuthenticationContract === null) {
-				// Create a new password contract and link it with the user contract
+				// Create a new password contract and link it with the user
+				// contract
 				const authenticationContract = await context.insertCard(
 					session,
 					passwordTypeCard,
@@ -161,8 +166,8 @@ export async function setPasswordContractForUser(
 
 				return authenticationContract;
 			} else {
-				// Update the existing password contract
-				return context.patchCard(
+				// Activate the existing password contract and update its hash
+				return await context.patchCard(
 					session,
 					passwordTypeCard,
 					{
@@ -187,9 +192,13 @@ export async function setPasswordContractForUser(
 				);
 			}
 		} else {
-			// We received an invalid hash. Remove the `authentication-password` contract
+			// We received an invalid hash. Remove the `authentication-password
+			// contract
 
-			if (currentAuthenticationContract === null) {
+			if (
+				currentAuthenticationContract === null ||
+				!currentAuthenticationContract.active
+			) {
 				// Nothing to do
 				return null;
 			} else {
@@ -230,10 +239,9 @@ export async function setPasswordContractForUser(
 		// not be applied to the card due to permissions.
 		if (error instanceof autumndbErrors.JellyfishSchemaMismatch) {
 			// TS-TODO: Ensure this error is what is expected with Context type
-			const newError = new workerErrors.WorkerAuthenticationError(
+			throw new workerErrors.WorkerAuthenticationError(
 				'Password change not allowed',
 			);
-			throw newError;
 		}
 
 		throw error;
