@@ -1,4 +1,29 @@
 - commits:
+    - subject: "action-complete-first-time-login: Use new password contract"
+      hash: b95e40043e5592de9ae18db8c542871a03be1956
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+    - subject: "action-complete-password-reset: Use new authentication password
+        contract"
+      hash: 6b6d7091c5eb02b40a67a0ff1be3c2a3d8fa6215
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 27.8.15
+  title: "'Mob/use new password contract'"
+  date: 2022-06-22T21:16:54.321Z
+- commits:
     - subject: Add whisper to milestone relationship
       hash: 65eddf5348f73ae148bf0ef7a5fa967ea9c1557c
       body: ""
