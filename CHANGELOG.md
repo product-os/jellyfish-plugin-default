@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.8.14 - 2022-06-22
+
+* Add whisper to milestone relationship [Josh Bowling]
+
 ## 27.8.13 - 2022-06-21
 
 * Update dependencies [Josh Bowling]

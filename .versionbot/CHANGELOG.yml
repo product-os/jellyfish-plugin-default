@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add whisper to milestone relationship
+      hash: 65eddf5348f73ae148bf0ef7a5fa967ea9c1557c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.8.14
+  title: "'Add whisper to milestone relationship'"
+  date: 2022-06-22T00:28:41.321Z
+- commits:
     - subject: Update dependencies
       hash: e149eca204037444ef19925b0f152b8d89bc8506
       body: ""
