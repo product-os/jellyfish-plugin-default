@@ -87,6 +87,7 @@ import { relationshipSupportThreadHasAttachedRating } from './relationship-suppo
 import { relationshipSupportThreadIsOwnedByUser } from './relationship-support-thread-is-owned-by-user';
 import { relationshipSupportThreadIsSourceForFeedbackItem } from './relationship-support-thread-is-source-for-feedback-item';
 import { relationshipUserOwnsRating } from './relationship-user-owns-rating';
+import { relationshipWhisperIsAttachedToMilestone } from './relationship-whisper-is-attached-to-milestone';
 import { relationshipWhisperIsAttachedToSalesThread } from './relationship-whisper-is-attached-to-sales-thread';
 import { relationshipWhisperIsAttachedToSupportThread } from './relationship-whisper-is-attached-to-support-thread';
 import { relationshipWhisperIsAttachedToThread } from './relationship-whisper-is-attached-to-thread';
@@ -289,6 +290,7 @@ export const contracts: ContractDefinition[] = [
 	relationshipSupportThreadIsOwnedByUser,
 	relationshipSupportThreadIsSourceForFeedbackItem,
 	relationshipUserOwnsRating,
+	relationshipWhisperIsAttachedToMilestone,
 	relationshipWhisperIsAttachedToSalesThread,
 	relationshipWhisperIsAttachedToSupportThread,
 	relationshipWhisperIsAttachedToThread,
