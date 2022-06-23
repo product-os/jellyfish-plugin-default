@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.8.15 - 2022-06-23
+
+* Test worker [Josh Bowling]
+
 ## 27.8.14 - 2022-06-22
 
 * Add whisper to milestone relationship [Josh Bowling]

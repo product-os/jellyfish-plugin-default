@@ -1,4 +1,18 @@
 - commits:
+    - subject: Test worker
+      hash: ab1fa9e3c2c7084744ee8fae60c3dc7e389f286e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.8.15
+  title: "'Test worker'"
+  date: 2022-06-23T01:17:13.814Z
+- commits:
     - subject: Add whisper to milestone relationship
       hash: 65eddf5348f73ae148bf0ef7a5fa967ea9c1557c
       body: ""
