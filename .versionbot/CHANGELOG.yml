@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update typedoc from 0.22.17 to 0.22.18
+      hash: cb0827bf1658c2f7bae1bf8e0c906eccabfe646f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 27.8.15
+  title: "'Update typedoc from 0.22.17 to 0.22.18'"
+  date: 2022-06-25T02:55:10.055Z
+- commits:
     - subject: Add whisper to milestone relationship
       hash: 65eddf5348f73ae148bf0ef7a5fa967ea9c1557c
       body: ""
