@@ -53,6 +53,7 @@ import { relationshipMessageIsAttachedToBrainstormTopic } from './relationship-m
 import { relationshipMessageIsAttachedToImprovement } from './relationship-message-is-attached-to-improvement';
 import { relationshipMessageIsAttachedToMilestone } from './relationship-message-is-attached-to-milestone';
 import { relationshipMessageIsAttachedToPattern } from './relationship-message-is-attached-to-pattern';
+import { relationshipMessageIsAttachedToSaga } from './relationship-message-is-attached-to-saga';
 import { relationshipMessageIsAttachedToSalesThread } from './relationship-message-is-attached-to-sales-thread';
 import { relationshipMessageIsAttachedToSupportThread } from './relationship-message-is-attached-to-support-thread';
 import { relationshipMessageIsAttachedToThread } from './relationship-message-is-attached-to-thread';
@@ -256,6 +257,7 @@ export const contracts: ContractDefinition[] = [
 	relationshipMessageIsAttachedToImprovement,
 	relationshipMessageIsAttachedToMilestone,
 	relationshipMessageIsAttachedToPattern,
+	relationshipMessageIsAttachedToSaga,
 	relationshipMessageIsAttachedToSalesThread,
 	relationshipMessageIsAttachedToSupportThread,
 	relationshipMessageIsAttachedToThread,
