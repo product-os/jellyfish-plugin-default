@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.8.16 - 2022-06-27
+
+* Add message to saga relationship [Josh Bowling]
+
 ## 27.8.15 - 2022-06-25
 
 * Update typedoc from 0.22.17 to 0.22.18 [renovate[bot]]

@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add message to saga relationship
+      hash: dbb9fc9aa1da43e903c95b660592f1644dda1574
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.8.16
+  title: "'Add message to saga relationship'"
+  date: 2022-06-27T00:44:47.216Z
+- commits:
     - subject: Update typedoc from 0.22.17 to 0.22.18
       hash: cb0827bf1658c2f7bae1bf8e0c906eccabfe646f
       body: ""
