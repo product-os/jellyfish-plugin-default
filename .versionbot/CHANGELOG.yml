@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update typedoc from 0.22.18 to 0.23.1
+      hash: 749341f9e7cfbdb1bcc5a199f68847f7a3dde8ee
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.8.17
+  title: "'Update typedoc from 0.22.18 to 0.23.1'"
+  date: 2022-06-27T01:54:51.518Z
+- commits:
     - subject: Add message to saga relationship
       hash: dbb9fc9aa1da43e903c95b660592f1644dda1574
       body: ""
