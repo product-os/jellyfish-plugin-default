@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.8.20 - 2022-06-28
+
+* Add message to group relationship [Josh Bowling]
+
 ## 27.8.19 - 2022-06-27
 
 * Update: update internal-patch (internal patch bumps) [renovate[bot]]

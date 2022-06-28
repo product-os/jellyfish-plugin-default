@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add message to group relationship
+      hash: 91e05a5a4c3cb6ac880e016ba220398343396d7b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.8.20
+  title: "'Add message to group relationship'"
+  date: 2022-06-28T01:14:23.929Z
+- commits:
     - subject: "Update: update internal-patch (internal patch bumps)"
       hash: 10ff405deeb89fe25d410d9d0137516a8f98dc18
       body: ""
