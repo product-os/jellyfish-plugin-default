@@ -1,4 +1,16 @@
 - commits:
+    - subject: "Update: update typedoc from 0.23.1 to 0.23.2"
+      hash: 345be816a7aa9fc8fa7d580316a8881a310f0c0f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 27.8.21
+  title: "'Update: update typedoc from 0.23.1 to 0.23.2'"
+  date: 2022-06-28T01:31:13.295Z
+- commits:
     - subject: Add message to group relationship
       hash: 91e05a5a4c3cb6ac880e016ba220398343396d7b
       body: ""

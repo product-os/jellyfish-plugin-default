@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.8.21 - 2022-06-28
+
+* Update: update typedoc from 0.23.1 to 0.23.2 [renovate[bot]]
+
 ## 27.8.20 - 2022-06-28
 
 * Add message to group relationship [Josh Bowling]
