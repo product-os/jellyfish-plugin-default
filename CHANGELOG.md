@@ -5,6 +5,12 @@
 
 # v0.0.3
 
+## 27.8.24 - 2022-07-02
+
+* Update typedoc from 0.23.3 to 0.23.5 [renovate[bot]]
+* Update typedoc from 0.23.2 to 0.23.3 [renovate[bot]]
+* Update @balena/jellyfish-environment from 12.0.12 to 12.1.0 [renovate[bot]]
+
 ## 27.8.23 - 2022-06-28
 
 * Update autumndb from 20.1.23 to 20.2.0 [renovate[bot]]
