@@ -8,12 +8,11 @@
 
 import type { Contract, ContractDefinition } from 'autumndb';
 
-export interface ReactionData {
-	reaction: string;
+export interface PingData {
+	timestamp: string;
 	[k: string]: unknown;
 }
 
-export interface ReactionContractDefinition
-	extends ContractDefinition<ReactionData> {}
+export interface PingContractDefinition extends ContractDefinition<PingData> {}
 
-export interface ReactionContract extends Contract<ReactionData> {}
+export interface PingContract extends Contract<PingData> {}

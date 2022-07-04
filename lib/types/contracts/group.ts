@@ -8,12 +8,13 @@
 
 import type { Contract, ContractDefinition } from 'autumndb';
 
-export interface ReactionData {
-	reaction: string;
+export interface GroupData {
+	description?: string;
+	namespace?: string;
 	[k: string]: unknown;
 }
 
-export interface ReactionContractDefinition
-	extends ContractDefinition<ReactionData> {}
+export interface GroupContractDefinition
+	extends ContractDefinition<GroupData> {}
 
-export interface ReactionContract extends Contract<ReactionData> {}
+export interface GroupContract extends Contract<GroupData> {}
