@@ -1,4 +1,21 @@
 - commits:
+    - subject: Add notification test
+      hash: 76cdbb64af7766915acf16e5a9c095f482e11a1f
+      body: |
+        Bring notification integration test over from jellyfish-worker.
+        The notification generation logic depends on support-thread and
+        message contract types which do not exist in the worker.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 27.8.25
+  title: "'Add notification test'"
+  date: 2022-07-05T05:43:43.963Z
+- commits:
     - subject: Update typedoc from 0.23.3 to 0.23.5
       hash: 7209417bf981d12a84626d1d22695870efb1f287
       body: ""

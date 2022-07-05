@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.8.25 - 2022-07-05
+
+* Add notification test [Josh Bowling]
+
 ## 27.8.24 - 2022-07-02
 
 * Update typedoc from 0.23.3 to 0.23.5 [renovate[bot]]
