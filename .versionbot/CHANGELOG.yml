@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update @balena/jellyfish-plugin-product-os from 7.0.28 to 7.1.0
+      hash: 6a033a0612750259c778d56009f3b846794b1b35
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 27.9.1
+  title: "'Update @balena/jellyfish-plugin-product-os from 7.0.28 to 7.1.0'"
+  date: 2022-07-06T02:47:19.206Z
+- commits:
     - subject: Add contract type interface definitions
       hash: c768bef894e0314b87778bddc240cd7da33603fa
       body: ""

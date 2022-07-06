@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.9.1 - 2022-07-06
+
+* Update @balena/jellyfish-plugin-product-os from 7.0.28 to 7.1.0 [renovate[bot]]
+
 ## 27.9.0 - 2022-07-06
 
 * Add contract type interface definitions [Josh Bowling]
