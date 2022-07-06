@@ -1,5 +1,5 @@
-import type { ContractSummary } from '@balena/jellyfish-types/build/core';
 import { mergeIncrements } from '../../../lib/actions/action-increment-tag';
+import type { ContractSummary } from 'autumndb';
 
 describe('mergeIncrements()', () => {
 	test('should ignore null items', () => {

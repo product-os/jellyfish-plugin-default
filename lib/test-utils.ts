@@ -1,10 +1,9 @@
-import type { Contract } from '@balena/jellyfish-types/build/core';
 import {
 	ActionDefinition,
 	PluginDefinition,
 	testUtils as workerTestUtils,
 } from '@balena/jellyfish-worker';
-import { testUtils as autumndbTestUtils } from 'autumndb';
+import { Contract, testUtils as autumndbTestUtils } from 'autumndb';
 import _ from 'lodash';
 
 /**

@@ -1,16 +1,12 @@
 import * as assert from '@balena/jellyfish-assert';
 import { getLogger } from '@balena/jellyfish-logger';
-import type {
-	Contract,
-	TypeContract,
-} from '@balena/jellyfish-types/build/core';
 import {
 	ActionDefinition,
 	ActionHandlerRequest,
 	errors as workerErrors,
 	WorkerContext,
 } from '@balena/jellyfish-worker';
-import { errors as autumndbErrors } from 'autumndb';
+import { errors as autumndbErrors, Contract, TypeContract } from 'autumndb';
 import { isNil } from 'lodash';
 import { actionCompletePasswordReset } from './action-complete-password-reset';
 import { PASSWORDLESS_USER_HASH } from './constants';

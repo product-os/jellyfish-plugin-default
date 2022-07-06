@@ -1,5 +1,5 @@
-import type { TypeContract } from '@balena/jellyfish-types/build/core';
 import type { ActionDefinition } from '@balena/jellyfish-worker';
+import type { TypeContract } from 'autumndb';
 
 const handler: ActionDefinition['handler'] = async (
 	session,

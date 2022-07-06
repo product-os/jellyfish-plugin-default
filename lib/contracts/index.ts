@@ -1,4 +1,4 @@
-import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
+import type { ContractDefinition } from 'autumndb';
 import { account } from './account';
 import { blogPost } from './blog-post';
 import { brainstormCall } from './brainstorm-call';

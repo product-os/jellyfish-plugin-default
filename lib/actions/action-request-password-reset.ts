@@ -1,13 +1,10 @@
 import { getLogger } from '@balena/jellyfish-logger';
 import type {
-	Contract,
-	TypeContract,
-} from '@balena/jellyfish-types/build/core';
-import type {
 	ActionDefinition,
 	ActionHandlerRequest,
 	WorkerContext,
 } from '@balena/jellyfish-worker';
+import type { Contract, TypeContract } from 'autumndb';
 import crypto from 'crypto';
 import { actionSendEmail } from './action-send-email';
 import { PASSWORDLESS_USER_HASH } from './constants';

@@ -1,15 +1,12 @@
 import * as assert from '@balena/jellyfish-assert';
 import { getLogger } from '@balena/jellyfish-logger';
-import type {
-	Contract,
-	TypeContract,
-} from '@balena/jellyfish-types/build/core';
 import {
 	ActionDefinition,
 	ActionHandlerRequest,
 	errors as workerErrors,
 	WorkerContext,
 } from '@balena/jellyfish-worker';
+import type { Contract, TypeContract } from 'autumndb';
 import { get, includes, intersectionBy } from 'lodash';
 import { v4 as uuidv4 } from 'uuid';
 import { actionSendEmail } from './action-send-email';

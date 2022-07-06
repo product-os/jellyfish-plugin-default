@@ -1,5 +1,5 @@
 import { defaultEnvironment } from '@balena/jellyfish-environment';
-import type { Contract } from '@balena/jellyfish-types/build/core';
+import type { Contract } from 'autumndb';
 
 const MAIL_OPTIONS = defaultEnvironment.mail.options || {
 	domain: '',

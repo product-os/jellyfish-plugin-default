@@ -1,4 +1,4 @@
-import type { OrgContractDefinition } from '@balena/jellyfish-types/build/core';
+import type { OrgContractDefinition } from 'autumndb';
 
 export const orgBalena: OrgContractDefinition = {
 	slug: 'org-balena',

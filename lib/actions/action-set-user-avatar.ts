@@ -1,11 +1,11 @@
-import axios from 'axios';
 import * as assert from '@balena/jellyfish-assert';
 import { getLogger } from '@balena/jellyfish-logger';
-import type { TypeContract } from '@balena/jellyfish-types/build/core';
 import {
 	ActionDefinition,
 	errors as workerErrors,
 } from '@balena/jellyfish-worker';
+import type { TypeContract } from 'autumndb';
+import axios from 'axios';
 import md5 from 'blueimp-md5';
 import { get, isNil } from 'lodash';
 

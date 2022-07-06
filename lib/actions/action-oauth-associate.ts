@@ -30,6 +30,7 @@ export const actionOAuthAssociate: ActionDefinition = {
 		slug: 'action-oauth-associate',
 		version: '1.0.0',
 		type: 'action@1.0.0',
+		name: '',
 		data: {
 			filter: {
 				type: 'object',

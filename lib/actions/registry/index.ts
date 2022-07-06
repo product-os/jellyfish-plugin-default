@@ -1,7 +1,7 @@
-import axios from 'axios';
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { getLogger, LogContext } from '@balena/jellyfish-logger';
-import type { ContractSummary } from '@balena/jellyfish-types/build/core';
+import type { ContractSummary } from 'autumndb';
+import axios from 'axios';
 import { TypedError } from 'typed-error';
 
 const logger = getLogger(__filename);

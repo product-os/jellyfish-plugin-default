@@ -1,10 +1,10 @@
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import { UserContract } from '@balena/jellyfish-types/build/core';
 import {
 	ActionRequestContract,
 	testUtils as workerTestUtils,
 } from '@balena/jellyfish-worker';
 import { strict as assert } from 'assert';
+import type { UserContract } from 'autumndb';
 import { defaultPlugin } from '../../../lib';
 
 let ctx: workerTestUtils.TestContext;
