@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update autumndb from 20.2.0 to 20.3.0
+      hash: 4f595f35e7f5942d346070152d9ce1772e7fcc9e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 27.8.26
+  title: "'Update autumndb from 20.2.0 to 20.3.0'"
+  date: 2022-07-05T11:42:18.741Z
+- commits:
     - subject: Add notification test
       hash: 76cdbb64af7766915acf16e5a9c095f482e11a1f
       body: |

@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.8.26 - 2022-07-05
+
+* Update autumndb from 20.2.0 to 20.3.0 [renovate[bot]]
+
 ## 27.8.25 - 2022-07-05
 
 * Add notification test [Josh Bowling]
