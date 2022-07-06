@@ -1,11 +1,11 @@
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { getLogger } from '@balena/jellyfish-logger';
 import * as metrics from '@balena/jellyfish-metrics';
-import type { ContractSummary } from '@balena/jellyfish-types/build/core';
 import type {
 	ActionHandlerRequest,
 	WorkerContext,
 } from '@balena/jellyfish-worker';
+import type { ContractSummary } from 'autumndb';
 
 const logger = getLogger(__filename);
 

@@ -1,11 +1,10 @@
 import * as assert from '@balena/jellyfish-assert';
-import type { TypeContract } from '@balena/jellyfish-types/build/core';
 import {
 	ActionDefinition,
 	actions,
 	errors as workerErrors,
 } from '@balena/jellyfish-worker';
-import { errors as autumndbErrors } from 'autumndb';
+import { errors as autumndbErrors, TypeContract } from 'autumndb';
 import bcrypt from 'bcrypt';
 import { isEmpty } from 'lodash';
 import { BCRYPT_SALT_ROUNDS, PASSWORDLESS_USER_HASH } from './constants';

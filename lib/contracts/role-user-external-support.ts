@@ -1,4 +1,4 @@
-import type { RoleContractDefinition } from '@balena/jellyfish-types/build/core';
+import type { RoleContractDefinition } from 'autumndb';
 
 export const roleUserExternalSupport: RoleContractDefinition = {
 	slug: 'role-user-external-support',

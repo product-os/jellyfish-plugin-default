@@ -28,6 +28,7 @@ export const actionOAuthAuthorize: ActionDefinition = {
 		slug: 'action-oauth-authorize',
 		version: '1.0.0',
 		type: 'action@1.0.0',
+		name: '',
 		data: {
 			filter: {
 				type: 'object',

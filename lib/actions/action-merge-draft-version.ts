@@ -1,15 +1,11 @@
 import * as assert from '@balena/jellyfish-assert';
 import { getLogger } from '@balena/jellyfish-logger';
-import type {
-	Contract,
-	ContractSummary,
-	TypeContract,
-} from '@balena/jellyfish-types/build/core';
 import {
 	ActionDefinition,
 	errors as workerErrors,
 	WorkerContext,
 } from '@balena/jellyfish-worker';
+import type { Contract, ContractSummary, TypeContract } from 'autumndb';
 import _ from 'lodash';
 import * as semver from 'semver';
 import { retagArtifact } from './registry';

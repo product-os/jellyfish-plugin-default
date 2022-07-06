@@ -1,11 +1,8 @@
 import type {
-	Contract,
-	TypeContract,
-} from '@balena/jellyfish-types/build/core';
-import type {
 	ActionHandlerRequest,
 	WorkerContext,
 } from '@balena/jellyfish-worker';
+import type { Contract, TypeContract } from 'autumndb';
 
 /**
  * @summary Add link between user card and another card

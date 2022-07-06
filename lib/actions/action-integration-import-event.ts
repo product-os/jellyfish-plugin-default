@@ -1,7 +1,7 @@
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { getLogger } from '@balena/jellyfish-logger';
-import type { ContractSummary } from '@balena/jellyfish-types/build/core';
 import type { ActionDefinition } from '@balena/jellyfish-worker';
+import type { ContractSummary } from 'autumndb';
 
 const logger = getLogger(__filename);
 
@@ -52,6 +52,7 @@ export const actionIntegrationImportEvent: ActionDefinition = {
 		slug: 'action-integration-import-event',
 		version: '1.0.0',
 		type: 'action@1.0.0',
+		name: '',
 		data: {
 			filter: {
 				type: 'object',

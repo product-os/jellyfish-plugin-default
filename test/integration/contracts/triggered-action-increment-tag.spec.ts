@@ -1,7 +1,6 @@
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import type { Contract } from '@balena/jellyfish-types/build/core';
 import { strict as assert } from 'assert';
-import { testUtils as autumndbTestUtils } from 'autumndb';
+import { testUtils as autumndbTestUtils, Contract } from 'autumndb';
 import { defaultPlugin, testUtils } from '../../../lib';
 
 let ctx: testUtils.TestContext;

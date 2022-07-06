@@ -1,4 +1,4 @@
-import type { ViewContractDefinition } from '@balena/jellyfish-types/build/core';
+import type { ViewContractDefinition } from 'autumndb';
 
 export const viewMyOpportunities: ViewContractDefinition = {
 	slug: 'view-my-opportunities',

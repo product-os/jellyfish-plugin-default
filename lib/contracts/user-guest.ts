@@ -1,4 +1,4 @@
-import type { UserContractDefinition } from '@balena/jellyfish-types/build/core';
+import type { UserContractDefinition } from 'autumndb';
 
 export const userGuest: UserContractDefinition = {
 	slug: 'user-guest',

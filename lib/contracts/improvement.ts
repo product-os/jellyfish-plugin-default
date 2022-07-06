@@ -1,5 +1,5 @@
-import type { ContractDefinition } from '@balena/jellyfish-types/build/core';
 import { contractMixins } from '@balena/jellyfish-worker';
+import type { ContractDefinition } from 'autumndb';
 import * as fs from 'fs';
 import * as path from 'path';
 

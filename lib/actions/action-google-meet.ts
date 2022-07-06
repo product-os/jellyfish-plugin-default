@@ -1,10 +1,10 @@
 import * as assert from '@balena/jellyfish-assert';
 import { defaultEnvironment } from '@balena/jellyfish-environment';
-import type { TypeContract } from '@balena/jellyfish-types/build/core';
 import {
 	ActionDefinition,
 	errors as workerErrors,
 } from '@balena/jellyfish-worker';
+import type { TypeContract } from 'autumndb';
 import { add, sub } from 'date-fns';
 import { google } from 'googleapis';
 import { has } from 'lodash';

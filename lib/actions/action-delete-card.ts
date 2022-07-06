@@ -1,9 +1,9 @@
 import * as assert from '@balena/jellyfish-assert';
-import type { TypeContract } from '@balena/jellyfish-types/build/core';
 import {
 	ActionDefinition,
 	errors as workerErrors,
 } from '@balena/jellyfish-worker';
+import type { TypeContract } from 'autumndb';
 
 const handler: ActionDefinition['handler'] = async (
 	session,

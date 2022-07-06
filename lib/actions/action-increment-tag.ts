@@ -1,5 +1,5 @@
-import type { ContractSummary } from '@balena/jellyfish-types/build/core';
 import { ActionDefinition, actions } from '@balena/jellyfish-worker';
+import type { ContractSummary } from 'autumndb';
 import { castArray, isArray, isNull, trim } from 'lodash';
 import { actionIncrement } from './action-increment';
 
