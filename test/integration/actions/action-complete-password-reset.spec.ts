@@ -157,13 +157,26 @@ describe('action-complete-password-reset', () => {
 		});
 		expect(completePasswordResetResult.error).toBe(false);
 
-		const updated = await ctx.kernel.getContractById(
-			ctx.logContext,
-			ctx.session,
-			user.id,
-		);
-		assert(updated);
-		expect(updated.data.hash).not.toEqual(hash);
+		const updated = (await ctx.kernel.query(ctx.logContext, ctx.session, {
+			$$links: {
+				authenticates: {
+					additionalProperties: false,
+					properties: {
+						id: {
+							const: user.id,
+						},
+					},
+				},
+			},
+			additionalProperties: false,
+			required: ['data'],
+			properties: {
+				type: {
+					const: 'authentication-password@1.0.0',
+				},
+			},
+		})) as any;
+		expect(updated[0].data.hash).not.toEqual(hash);
 		await ctx.flushAll(ctx.session);
 	});
 

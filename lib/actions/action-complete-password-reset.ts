@@ -2,6 +2,7 @@ import * as assert from '@balena/jellyfish-assert';
 import type {
 	Contract,
 	TypeContract,
+	UserContract,
 } from '@balena/jellyfish-types/build/core';
 import {
 	ActionDefinition,
@@ -9,9 +10,9 @@ import {
 	errors as workerErrors,
 	WorkerContext,
 } from '@balena/jellyfish-worker';
-import { errors as autumndbErrors } from 'autumndb';
 import bcrypt from 'bcrypt';
 import { BCRYPT_SALT_ROUNDS } from './constants';
+import { setPasswordContractForUser } from './utils';
 
 const pre: ActionDefinition['pre'] = async (_session, _context, request) => {
 	// Convert the plaintext password into a hash so that we don't have a plain password stored in the DB
@@ -138,10 +139,9 @@ const handler: ActionDefinition['handler'] = async (
 
 	await invalidatePasswordReset(context, request, passwordReset);
 
-	const [user] =
-		passwordReset.links && passwordReset.links['is attached to']
-			? passwordReset.links['is attached to']
-			: [null];
+	const user: UserContract = passwordReset.links?.[
+		'is attached to'
+	][0] as UserContract;
 
 	assert.USER(
 		request.logContext,
@@ -159,43 +159,13 @@ const handler: ActionDefinition['handler'] = async (
 		throw newError;
 	}
 
-	const userTypeCard = (await context.getCardBySlug(
+	return setPasswordContractForUser(
+		context,
 		session,
-		'user@latest',
-	))! as TypeContract;
-
-	return context
-		.patchCard(
-			context.privilegedSession,
-			userTypeCard,
-			{
-				timestamp: request.timestamp,
-				actor: request.actor,
-				originator: request.originator,
-				attachEvents: false,
-			},
-			user!,
-			[
-				{
-					op: 'replace',
-					path: '/data/hash',
-					value: request.arguments.newPassword,
-				},
-			],
-		)
-		.catch((error: unknown) => {
-			// A schema mismatch here means that the patch could
-			// not be applied to the card due to permissions.
-			if (error instanceof autumndbErrors.JellyfishSchemaMismatch) {
-				// TS-TODO: Ensure this error is what is expected with Context type
-				const newError = new workerErrors.WorkerAuthenticationError(
-					'Password change not allowed',
-				);
-				throw newError;
-			}
-
-			throw error;
-		});
+		request,
+		user.id,
+		request.arguments.newPassword,
+	);
 };
 
 export const actionCompletePasswordReset: ActionDefinition = {
