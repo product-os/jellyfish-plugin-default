@@ -116,12 +116,12 @@ export type {
 	ReactionContractDefinition,
 	ReactionData,
 } from './reaction';
+export type { SagaContract, SagaContractDefinition, SagaData } from './saga';
 export type {
 	SalesThreadContract,
 	SalesThreadContractDefinition,
 	SalesThreadData,
 } from './sales-thread';
-export type { SagaContract, SagaContractDefinition, SagaData } from './saga';
 export type {
 	SubscriptionContract,
 	SubscriptionContractDefinition,
