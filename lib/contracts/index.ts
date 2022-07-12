@@ -48,17 +48,7 @@ import { relationshipImprovementIsContributedToByUser } from './relationship-imp
 import { relationshipImprovementIsGuidedByUser } from './relationship-improvement-is-guided-by-user';
 import { relationshipImprovementIsImplementedByProject } from './relationship-improvement-is-implemented-by-project';
 import { relationshipImprovementIsOwnedByUser } from './relationship-improvement-is-owned-by-user';
-import { relationshipMessageIsAttachedToBlogPost } from './relationship-message-is-attached-to-blog-post';
-import { relationshipMessageIsAttachedToBrainstormTopic } from './relationship-message-is-attached-to-brainstorm-topic';
-import { relationshipMessageIsAttachedToGroup } from './relationship-message-is-attached-to-group';
-import { relationshipMessageIsAttachedToImprovement } from './relationship-message-is-attached-to-improvement';
-import { relationshipMessageIsAttachedToMilestone } from './relationship-message-is-attached-to-milestone';
-import { relationshipMessageIsAttachedToPattern } from './relationship-message-is-attached-to-pattern';
-import { relationshipMessageIsAttachedToSaga } from './relationship-message-is-attached-to-saga';
-import { relationshipMessageIsAttachedToSalesThread } from './relationship-message-is-attached-to-sales-thread';
-import { relationshipMessageIsAttachedToSupportThread } from './relationship-message-is-attached-to-support-thread';
-import { relationshipMessageIsAttachedToThread } from './relationship-message-is-attached-to-thread';
-import { relationshipMessageIsAttachedToUser } from './relationship-message-is-attached-to-user';
+import { relationshipMessageIsAttachedToAny } from './relationship-message-is-attached-to-any';
 import { relationshipMilestoneIsOwnedByUser } from './relationship-milestone-is-owned-by-user';
 import { relationshipMilestoneRequiresMilestone } from './relationship-milestone-requires-milestone';
 import { relationshipNotificationIsAttachedToAny } from './relationship-notification-is-attached-to-any';
@@ -253,17 +243,7 @@ export const contracts: ContractDefinition[] = [
 	relationshipImprovementIsGuidedByUser,
 	relationshipImprovementIsImplementedByProject,
 	relationshipImprovementIsOwnedByUser,
-	relationshipMessageIsAttachedToBlogPost,
-	relationshipMessageIsAttachedToBrainstormTopic,
-	relationshipMessageIsAttachedToGroup,
-	relationshipMessageIsAttachedToImprovement,
-	relationshipMessageIsAttachedToMilestone,
-	relationshipMessageIsAttachedToPattern,
-	relationshipMessageIsAttachedToSaga,
-	relationshipMessageIsAttachedToSalesThread,
-	relationshipMessageIsAttachedToSupportThread,
-	relationshipMessageIsAttachedToThread,
-	relationshipMessageIsAttachedToUser,
+	relationshipMessageIsAttachedToAny,
 	relationshipMilestoneIsOwnedByUser,
 	relationshipMilestoneRequiresMilestone,
 	relationshipNotificationIsAttachedToAny,
