@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.9.6 - 2022-07-11
+
+* Switch to message wildcard relationship [Josh Bowling]
+
 ## 27.9.5 - 2022-07-10
 
 * Update typedoc from 0.23.6 to 0.23.7 [renovate[bot]]
