@@ -13,6 +13,9 @@ export interface WhisperData {
 	target: string;
 	actor: string;
 	payload: {
+		reactions?: {
+			[k: string]: unknown;
+		};
 		mentionsUser?: string[];
 		alertsUser?: string[];
 		mentionsGroup?: string[];

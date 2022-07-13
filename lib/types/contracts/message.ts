@@ -12,6 +12,9 @@ export interface MessageData {
 	timestamp: string;
 	actor: string;
 	payload: {
+		reactions?: {
+			[k: string]: unknown;
+		};
 		mentionsUser?: string[];
 		alertsUser?: string[];
 		mentionsGroup?: string[];
