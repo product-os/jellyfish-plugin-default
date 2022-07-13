@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.10.0 - 2022-07-13
+
+* Materialize linked reactions on message and whisper contracts [Lucian Buzzo]
+
 ## 27.9.6 - 2022-07-11
 
 * Switch to message wildcard relationship [Josh Bowling]

@@ -1,4 +1,18 @@
 - commits:
+    - subject: Materialize linked reactions on message and whisper contracts
+      hash: 77447c5267ee869151b5a13957c3a3d90f0f246f
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 27.10.0
+  title: "'Materialize linked reactions on message and whisper contracts'"
+  date: 2022-07-13T13:34:13.259Z
+- commits:
     - subject: Switch to message wildcard relationship
       hash: 0436731d07b6c04212cb8b6c2160209e9b41400f
       body: ""
