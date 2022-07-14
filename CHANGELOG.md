@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.10.1 - 2022-07-14
+
+* Update @balena/jellyfish-plugin-product-os from 7.1.3 to 8.0.0 [renovate[bot]]
+
 ## 27.10.0 - 2022-07-13
 
 * Materialize linked reactions on message and whisper contracts [Lucian Buzzo]
