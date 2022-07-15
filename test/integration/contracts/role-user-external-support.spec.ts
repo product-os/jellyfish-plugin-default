@@ -1,4 +1,3 @@
-import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { strict as assert } from 'assert';
 import { testUtils as autumndbTestUtils } from 'autumndb';
 import _ from 'lodash';
@@ -32,7 +31,7 @@ async function createUser(roles: string[], org: any): Promise<any> {
 beforeAll(async () => {
 	// TODO: Probably need to initialize with action-library after its updated
 	ctx = await testUtils.newContext({
-		plugins: [defaultPlugin(), productOsPlugin()],
+		plugins: [defaultPlugin()],
 	});
 
 	// Set balena org

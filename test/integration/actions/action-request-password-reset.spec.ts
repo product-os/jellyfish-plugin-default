@@ -1,5 +1,4 @@
 import { defaultEnvironment } from '@balena/jellyfish-environment';
-import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { strict as assert } from 'assert';
 import { testUtils as autumndbTestUtils } from 'autumndb';
 import nock from 'nock';
@@ -15,7 +14,7 @@ let ctx: testUtils.TestContext;
 
 beforeAll(async () => {
 	ctx = await testUtils.newContext({
-		plugins: [productOsPlugin(), defaultPlugin()],
+		plugins: [defaultPlugin()],
 	});
 
 	// Get org and add test user as member

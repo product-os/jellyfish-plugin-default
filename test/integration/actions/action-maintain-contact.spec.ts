@@ -1,4 +1,3 @@
-import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import {
 	ActionRequestContract,
 	testUtils as workerTestUtils,
@@ -11,7 +10,7 @@ let ctx: workerTestUtils.TestContext;
 
 beforeAll(async () => {
 	ctx = await workerTestUtils.newContext({
-		plugins: [defaultPlugin(), productOsPlugin()],
+		plugins: [defaultPlugin()],
 	});
 });
 

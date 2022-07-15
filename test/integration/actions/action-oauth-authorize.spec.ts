@@ -1,4 +1,3 @@
-import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { WorkerContext } from '@balena/jellyfish-worker';
 import { testUtils as autumndbTestUtils } from 'autumndb';
 import { isEmpty, isString } from 'lodash';
@@ -14,7 +13,7 @@ let actionContext: WorkerContext;
 
 beforeAll(async () => {
 	ctx = await testUtils.newContext({
-		plugins: [productOsPlugin(), defaultPlugin(), foobarPlugin()],
+		plugins: [defaultPlugin(), foobarPlugin()],
 	});
 	actionContext = ctx.worker.getActionContext({
 		id: `test-${autumndbTestUtils.generateRandomId()}`,

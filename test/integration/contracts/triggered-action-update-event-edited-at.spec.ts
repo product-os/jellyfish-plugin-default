@@ -1,4 +1,3 @@
-import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { strict as assert } from 'assert';
 import { testUtils as autumndbTestUtils } from 'autumndb';
 import { isBefore, isValid } from 'date-fns';
@@ -10,7 +9,7 @@ let session: any = {};
 
 beforeAll(async () => {
 	ctx = await testUtils.newContext({
-		plugins: [defaultPlugin(), productOsPlugin()],
+		plugins: [defaultPlugin()],
 	});
 
 	user = await ctx.createUser(autumndbTestUtils.generateRandomId());
