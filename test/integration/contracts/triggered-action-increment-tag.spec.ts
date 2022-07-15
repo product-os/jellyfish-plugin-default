@@ -1,4 +1,3 @@
-import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { strict as assert } from 'assert';
 import { testUtils as autumndbTestUtils, Contract } from 'autumndb';
 import { defaultPlugin, testUtils } from '../../../lib';
@@ -8,9 +7,8 @@ let user: any = {};
 let session: any = {};
 
 beforeAll(async () => {
-	// TODO: Probably need to initialize with action-library after its updated
 	ctx = await testUtils.newContext({
-		plugins: [defaultPlugin(), productOsPlugin()],
+		plugins: [defaultPlugin()],
 	});
 
 	user = await ctx.createUser(autumndbTestUtils.generateRandomId());

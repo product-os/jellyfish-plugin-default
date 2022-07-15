@@ -1,4 +1,3 @@
-import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { testUtils as autumndbTestUtils } from 'autumndb';
 import _ from 'lodash';
 import { defaultPlugin, testUtils } from '../../../lib';
@@ -9,7 +8,7 @@ let session: any = {};
 
 beforeAll(async () => {
 	ctx = await testUtils.newContext({
-		plugins: [defaultPlugin(), productOsPlugin()],
+		plugins: [defaultPlugin()],
 	});
 
 	user = await ctx.createUser(autumndbTestUtils.generateRandomId());

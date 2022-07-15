@@ -1,5 +1,4 @@
 import { defaultEnvironment } from '@balena/jellyfish-environment';
-import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import type { WorkerContext } from '@balena/jellyfish-worker';
 import { strict as assert } from 'assert';
 import { testUtils as autumndbTestUtils } from 'autumndb';
@@ -42,7 +41,7 @@ let actionContext: WorkerContext;
 
 beforeAll(async () => {
 	ctx = await testUtils.newContext({
-		plugins: [productOsPlugin(), defaultPlugin()],
+		plugins: [defaultPlugin()],
 	});
 	actionContext = ctx.worker.getActionContext({
 		id: `test-${autumndbTestUtils.generateRandomId()}`,
