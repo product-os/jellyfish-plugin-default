@@ -5,6 +5,11 @@
 
 # v0.0.3
 
+## 27.10.2 - 2022-07-15
+
+* Drop plugin-product-os [Josh Bowling]
+* Update @balena/jellyfish-worker from 31.1.0 to 31.2.0 [renovate[bot]]
+
 ## 27.10.1 - 2022-07-14
 
 * Update @balena/jellyfish-plugin-product-os from 7.1.3 to 8.0.0 [renovate[bot]]
