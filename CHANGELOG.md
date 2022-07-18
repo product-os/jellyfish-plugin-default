@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.10.4 - 2022-07-18
+
+* Update typedoc from 0.23.7 to 0.23.8 [renovate[bot]]
+
 ## 27.10.3 - 2022-07-15
 
 * Update @balena/jellyfish-worker from 31.2.0 to 31.4.0 [renovate[bot]]
