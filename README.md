@@ -1,3 +1,5 @@
+**Notice: This utility has been discontinued. The functionality provided by this module has been merged into [`jellyfish-worker`](https://github.com/product-os/jellyfish-worker).**
+
 # Jellyfish Default Plugin
 
 This plugin currently only provides the default set of cards necessary for normal operations.
