@@ -5,6 +5,10 @@
 
 # v0.0.3
 
+## 27.10.5 - 2022-07-19
+
+* Deprecate repo [Josh Bowling]
+
 ## 27.10.4 - 2022-07-18
 
 * Update typedoc from 0.23.7 to 0.23.8 [renovate[bot]]
